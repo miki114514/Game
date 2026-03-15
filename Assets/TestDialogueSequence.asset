@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc76937bbc916e4ca6b50984c2a9afa, type: 3}
+  m_Name: TestDialogueSequence
+  m_EditorClassIdentifier: 
+  lines:
+  - characterName: NPC_A
+    text: "\u4F60\u597D\uFF0C\u5192\u9669\u8005"
+    bubbleType: 0
+    offset: {x: -0.5, y: 1.2, z: 0}
+    typewriterDuration: 2
+    voiceClip: {fileID: 8300000, guid: b80e86c5db64a4f498ce6849dede3321, type: 3}
+    animationName: 
+  - characterName: Player_test
+    text: "\u4F60\u597D\uFF0C\u6211\u662F\u52C7\u8005"
+    bubbleType: 0
+    offset: {x: 0.3, y: 1.2, z: 0}
+    typewriterDuration: 2
+    voiceClip: {fileID: 8300000, guid: 09ffc52bdcb03d94d95d222599d676f2, type: 3}
+    animationName: Player_VictoryPose
+  - characterName: NPC_B
+    text: "\u6B22\u8FCE\u6765\u5230\u57CE\u9547"
+    bubbleType: 0
+    offset: {x: 0.6, y: 1.2, z: 0}
+    typewriterDuration: 2
+    voiceClip: {fileID: 8300000, guid: 4807f523c662c624e8f5e1c82eac2c94, type: 3}
+    animationName: 
+  - characterName: NPC_A
+    text: "\u5C0F\u5FC3\u9B54\u7269\uFF01\uFF01"
+    bubbleType: 1
+    offset: {x: -0.5, y: 1.2, z: 0}
+    typewriterDuration: 2
+    voiceClip: {fileID: 8300000, guid: 0f8110ceb50ebba4c9bdab7f7f79b618, type: 3}
+    animationName: 
+  - characterName: NPC_C
+    text: "\u55EF...\u8BA9\u6211\u60F3\u60F3..."
+    bubbleType: 2
+    offset: {x: 0.3, y: 1.2, z: 0}
+    typewriterDuration: 2
+    voiceClip: {fileID: 8300000, guid: 66022bc4dc35d1c43bba6d0c11c40645, type: 3}
+    animationName: 
