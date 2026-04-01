@@ -1,0 +1,6604 @@
+fileFormatVersion: 2
+guid: 94e2f2a89b770c049a3520f8dc1e4402
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c4bae1ecc5ac045997ae9b3eaa7071
+      internalID: -883432772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 484
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09aa7010d2109e844adab495d4bcd200
+      internalID: 698709652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 481
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757ca7c744ec75b448b9f60fef8b1b17
+      internalID: -789756987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_3
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 482
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66af9cdf30c536242bb3bf2b76dd5168
+      internalID: 800067032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_4
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 478
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e1e251a1d57dd4c9cacadc0ed81c8b
+      internalID: 38004532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d17ed73c4d01d42a50fc902d4797e0
+      internalID: -142198786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_6
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 484
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9ba83b6c527cd46b1d84af9dd4338c
+      internalID: 169633348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_7
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 481
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47647863332927b41840da629d26ad1a
+      internalID: -1700231109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_8
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 482
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6512c596de25f7418d58cddc4897f95
+      internalID: -1455303976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_9
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 478
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fdb8a011e287474da4d5daff519d8e3
+      internalID: -1499188696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_10
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a840558d238273c4597d58186d2c93da
+      internalID: 817387767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_11
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 479
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950bdf520bdf9874098a38e7f97ddb75
+      internalID: -1604844110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_12
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 481
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3179a2630e2d50041a0a835338083983
+      internalID: 751551105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_13
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 481
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b1fda1291204d4e801aa8dce59d3bb
+      internalID: 1473354462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_14
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 482
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa87894e2347a624ebb1c9919c8914b6
+      internalID: -518356594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 482
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81f8a300f60aa34eafc73a27f701944
+      internalID: -610695918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_16
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 482
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8836fbbc93cb6c14a85d475d516e7462
+      internalID: 1789606974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_17
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 481
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d5f462e99af084997c8d9d965b7450
+      internalID: 1044563205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_18
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 479
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018e862e42874944d832f80e8674be6c
+      internalID: -1026981571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_19
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12e428ea69f5be4e92374f9e5d5d2cd
+      internalID: 25542862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 444
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562cce50c5625f74cb75e3aaa552b168
+      internalID: 729170811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_21
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 446
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb34049857366f46a120d5c14704cee
+      internalID: -1332552651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_22
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 446
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8a36b41f51f694081c8baddc60ca03
+      internalID: -1396784302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_23
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 447
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f190509b31af18744adce00a55a64e94
+      internalID: 270069249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_24
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 447
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ba09386471c434eb7dfdca51564c6d
+      internalID: -598602635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_25
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 447
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad34cb8d5d61e27418888d96569e6444
+      internalID: -1363848649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_26
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 446
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f689d2bc0ad9ad49820f94c2eb04be4
+      internalID: -2048257934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_27
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 444
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7887a2d465968b43a51d55ebfec7d9e
+      internalID: 720954398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_28
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 445
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246c26f9ffbbcc549bcf49002dd6d715
+      internalID: 1811153834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_29
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 445
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766bf1dc3ee45494a9cd0ed56fb1a564
+      internalID: 922762892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_30
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 442
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5a5221cbd2f94429b4060f1fdc8d4b
+      internalID: -1421629617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_31
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 442
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f081208bf54bd4ca4bea9db25ae8e9
+      internalID: 1768063143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_32
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 451
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f0588d79357b943a9b7df9176a830c
+      internalID: -1536600213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_33
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 451
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90ce61c4ca453641b9da0f5acbc545e
+      internalID: -507643867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_34
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 451
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7e91d910eeb674da6aa273ce91df93
+      internalID: 626202613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_35
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 451
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb29b22fc2a449e49881a1934203dc9a
+      internalID: 1613379499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_36
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 451
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021037c64bf6cb04e920ee77f2318d73
+      internalID: 549914621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_37
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 451
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f06c8c7ae83d748a0b936e5fe4b6fd
+      internalID: 1597202906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_38
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 444
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24a45765fe31f54b98400b9d82a3451
+      internalID: -46494088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_39
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 438
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507131f5694eb4a46927a0acd789fe94
+      internalID: -1734424668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_40
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 446
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756a8c0215376cf45bd702e5fc0c78d0
+      internalID: -111394220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_41
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 408
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3ac5a7ce364424081aa4cb77ebde54
+      internalID: -1891071197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_42
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 408
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e033ca740d3e642854cc7eed45fe40
+      internalID: 227372431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_43
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 408
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9a47dc0edded54da0be8a44539069e
+      internalID: 718204198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_44
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 407
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc2bd8388fb9884c88b071bcc7ca204
+      internalID: -1843462819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_45
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 405
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e973db86c0b55f49970cb52a1161c9b
+      internalID: -279340015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_46
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 403
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4964bb1bbd3a2b94eb5e8c3ac8f6ea56
+      internalID: -1884351995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_47
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 405
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfd13e89beea9d47a37c5b74110aee0
+      internalID: -1895850448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_48
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 399
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc15cea437f24e4ab6aad61f32318c3
+      internalID: -55307214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_49
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 407
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b47305fb000224bbe67c1a4d06beba
+      internalID: 55723114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_50
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 408
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e823ebe81361674787c55a42100fcfa
+      internalID: 1954101608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_51
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 408
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15435fff3f179744870becee6f59f5c
+      internalID: -1064122058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_52
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 408
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba56a4fcfe43db4f9e9f4fccda2dd99
+      internalID: -2129866447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_53
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 407
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80785b74157eb9343b29025fae4e7e9a
+      internalID: -1924863692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_54
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 405
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f8fb98bc5f1efd4a843d74db97d69b9
+      internalID: 529150955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_55
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 364
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1520aaf4eeeb624449bf6b6ff18a2155
+      internalID: 1163072120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_56
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 365
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a0a78c8d5141a459cefb6e44fca404
+      internalID: -709707031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_57
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 366
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c46621512a5a242b059e20ba6d5b1d
+      internalID: 1104583510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_58
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 366
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c94a6ae0abc2d142b928afb5fd90b74
+      internalID: -1617506976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_59
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 365
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767d45ac51e6e8a4f9a3f5e264ac479e
+      internalID: 1029806707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_60
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 364
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8af810833a7534aa5bea8bf2e54d90
+      internalID: 2126233266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_61
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 365
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2c8344efd01544cb96f454ec2b941b
+      internalID: -33039009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_62
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 366
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06c4cfd9dd18b345939195a1d6effa4
+      internalID: -1909668560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_63
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 366
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c949aa36b55527544aa83b6cf7e3d356
+      internalID: 1258985308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_64
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 365
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5656addbfa2e0c545a926392a4968c47
+      internalID: -517668035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_65
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 367
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ffb38f2aa4afb4bb556bd6683dc345
+      internalID: 2116351110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_66
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 367
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11abb6f846cb18944bc366c5b407942b
+      internalID: -345974698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_67
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 364
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e8784d3dc0ff744aaa221c7ecc6673
+      internalID: 113470200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_68
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 364
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34dca3b5a9aaad42a9e2306e1b361b5
+      internalID: -1050217016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_69
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 364
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1dae0a5664e454a8e175431a243533
+      internalID: -1457031008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_70
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 364
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28652d45fb399c84f8b9dd649ad4c3ff
+      internalID: -1038273857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_71
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 364
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535bf6c49eb9406449f517d72d5b06d5
+      internalID: -808576594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_72
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 364
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdcc8dde4b75b2439c86e9bcfe30de1
+      internalID: -1067276771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_73
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 364
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374948f3d73ed4947b061ee7ae40e58b
+      internalID: -454937093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_74
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 364
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327eaad746c62674eb8e1b2ea900d856
+      internalID: 2043747775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_75
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 330
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86ab57b57c882942b98b3609b04a801
+      internalID: -1549142593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_76
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 330
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b241b41111b865d4281791033fcf9cc8
+      internalID: 1991270695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_77
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 329
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde13c2d4dee8494290cf5631327e3ec
+      internalID: 428096392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_78
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 329
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d653936a337404bbf4f5e94b41d8cf
+      internalID: -1507395250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_79
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 350
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d30cfdea80c6e49a893d2e1cd8c586
+      internalID: -1450423396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_80
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 350
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b8a5eea5b2a8c41bc107133b057e03
+      internalID: 1012377987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_81
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 331
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d926b009c1588246837128782d19767
+      internalID: 645270948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_82
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 331
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93563c7a5a5761f4b8b5e41bf835e6db
+      internalID: 769763776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_83
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 331
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9ae210ba5940c428148de6e73ac70d
+      internalID: 1644490750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_84
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 331
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f609c3a7ee817449a752ee2a0d0771
+      internalID: 476740077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_85
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 331
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7547fa812a425b5448c1a85052b54b5d
+      internalID: 1401981528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_86
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 331
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82e8f8ff35539e4e90db5a6fe6ef380
+      internalID: 1823132101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_87
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 331
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b817e0dd8d4cf2d47b75d85481c2a974
+      internalID: -154372172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_88
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 331
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a001ce9e8ca62f4d97bf9a7a6851cc7
+      internalID: 262861993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_89
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 329
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31cd0944579d5242a6a54bf0ac08919
+      internalID: 1560878063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_90
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 329
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0313a40e347ce42bf8ac7b648b35be
+      internalID: -1654484792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_91
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 329
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1607d25add8910c4fbfe6482e076a5fc
+      internalID: 287717517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_92
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 329
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198bbb92c7faf104e93ab63671cb4d0e
+      internalID: -21817856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_93
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 329
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6692a634de13549b9f977c2a9cc2a6
+      internalID: 2122345778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_94
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 329
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc625f0bd213bf34ab1f92a2c04450f6
+      internalID: -1678278569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_95
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 329
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946a304407b4ee842a3ba3e5077196b3
+      internalID: 783138743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_96
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 294
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8718bf7dd7f29b14488c59b154b2cc55
+      internalID: -844767708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_97
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 294
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b5b94fab290f041b3834ed0d1f2397
+      internalID: 98892828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_98
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1e925ad957c20428f317d5ae57bf95
+      internalID: -1505148280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_99
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db59851454aa4047a7ef01feafb362b
+      internalID: 944932195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_100
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ad5923e99ea764f8a28dc86240fa5e
+      internalID: -1099863996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_101
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188cb25cb04247b42aaf9722be71330f
+      internalID: 439463703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_102
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c0719ab6afd3245ba4269d0d356fc5
+      internalID: 1663980943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_103
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328c07aa59a26ea43ab037c89b3dd02f
+      internalID: -1957751732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_104
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3247c490136ad042902355ef24d1ee1
+      internalID: 209949694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_105
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f6d18169c51e147ad76f3add9743e9
+      internalID: 1082016175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_106
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317dfc9b7a7b5b241a9031a159cd462e
+      internalID: -2068591768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_107
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 294
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd19516254dbea45a8451ef886265fd
+      internalID: -2122735931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_108
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 294
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a916a575bc1a444bd3169245bcacc7
+      internalID: 830572790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_109
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 294
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80270feb2c7a2764ea754fd71ca33008
+      internalID: 993047389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_110
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 294
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a867241b03cec644a26170d6e0e7516
+      internalID: 1165328355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_111
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 294
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd6f9c17331f494fbef0c2490140304
+      internalID: 315927610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_112
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 294
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3405202663e323640967bf35536069ca
+      internalID: -1742267492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_113
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 294
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d44213ece7b504c885847c123d1b97
+      internalID: -1745214527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_114
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36c6a27e8d4ecb41b575fc509b29e35
+      internalID: 1394710729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_115
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 294
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3437a5e1e01ad548afe1303fa99dfc2
+      internalID: -1495596679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_116
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c723edd1b5b9d4e89c9d932be30f4b
+      internalID: 472038509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_117
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 295
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42adc47b61f6344d8843f03bdec9080
+      internalID: -167888912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_118
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 295
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa66f40af41fc2f43a0e2e5997e25a92
+      internalID: -1574353317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_119
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 294
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53398d8578dfb0d4f8860d64c15e1148
+      internalID: 455906657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_120
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 260
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23265f76e0bc0d2498d4d604d50b1ca7
+      internalID: 1867943876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_121
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 260
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bf6d91e43878940b9d05a736713e89
+      internalID: 1691166079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_122
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 259
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765ee2beb1bf0ff48b41ee273e6d7d68
+      internalID: 39494747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_123
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 259
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17aceefd222946478215a0cb33bd18f
+      internalID: -1430653476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_124
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 259
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74ff076e3068814eb81265e42764e91
+      internalID: -1802346317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_125
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 259
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6cb7ff2eaaff549873e74ee25eebe8
+      internalID: -1053066859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_126
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 259
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd67c8c6e7572fb41a6fba6d83f92b9b
+      internalID: -868636233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_127
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 259
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da0f9855faee964d97fcb65a1c69e17
+      internalID: -1710180290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_128
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 259
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb411d4e329efa547ae56da0d3228dfc
+      internalID: 384987539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_129
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 259
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77382ab0cc6990f49b865dc97cc3e008
+      internalID: -1354893571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_130
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 259
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4ae1d4b0f07784988047f7a6d9b442
+      internalID: 857148435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_131
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 259
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8eef1b11e87e14fb163b31644fc017
+      internalID: -1688439718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_132
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 277
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb778ddda4fe5d4397a0940f2da60fb
+      internalID: 71508621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_133
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 277
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b18fc970ee2a1148b65f164a13b0acf
+      internalID: -1770358392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_134
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 259
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee594462bae3354b93b2c8113093c01
+      internalID: 1473634494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_135
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 259
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8889faa5e060364e8f1e6e95204cded
+      internalID: 256046553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_136
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 259
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67542aada0400504898ccc1ac72a51d7
+      internalID: 827566512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_137
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 259
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa36618a468c91428e9817bc586a0dd
+      internalID: 1185468794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_138
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 267
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2d883e690ccf24b91dda05a8ceec72
+      internalID: 1050439279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_139
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 267
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e22b1d9bfc89114cb213c7677927801
+      internalID: 1140191856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_140
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 266
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edf1f7509b5e77428fd70e2f0bf5129
+      internalID: 491422447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_141
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 266
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfbe21916340594d86d920a7bfbb991
+      internalID: -1672771340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_142
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 224
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f346cb61e168d69498a50fe8d9794987
+      internalID: 477862237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_143
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 224
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd2d0369bbb1b44b9b8562896399561
+      internalID: 1324091001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_144
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 224
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9912ba2b217d65b46aac7b9d87379e65
+      internalID: 1863396113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_145
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 224
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870fadd8047ee804baaec1a727b25525
+      internalID: 1564167493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_146
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 224
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc0a6f4be1ef6d41837fcfee22dd956
+      internalID: 1316455721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_147
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 224
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73338aa0e5a85124fb38f6060607db6b
+      internalID: 1856618550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_148
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 224
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0768fb8174ada41af1cc0bcd90d027
+      internalID: -1919501023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_149
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 224
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe43b19823ed45f4da05f3a4be97734c
+      internalID: -437035941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_150
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 227
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090f9108a3a79f1468fe04eab53810d8
+      internalID: 1052741839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_151
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 225
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f353238765d1d498b455de47a94f09
+      internalID: -1407863826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_152
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 224
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3452101362e5904eb08f5352a65526a
+      internalID: -2130661624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_153
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 227
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4805ea93dcca2814fb90e327d656e536
+      internalID: 1355171647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_154
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 225
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d8aaae07484f040b07eebd01035aaa
+      internalID: -1478803014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_155
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 224
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42790b47d46862043ae8824810cfaf1b
+      internalID: -1818469457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_156
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 227
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41fa9a1c3c411447aead3c6d339cced
+      internalID: -965961232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_157
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 225
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7409553a0edf614f88184073170f12f
+      internalID: 1287997617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_158
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 224
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bcbcf0b98a49148a92507576ffc2fc
+      internalID: 1953049966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_159
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 227
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c983dbff68031ea4e8ad9e540b5092d9
+      internalID: 1383457100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_160
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 225
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f876621492b1f84f95c884f50db9d00
+      internalID: -1097494170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_161
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 224
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62103fea50beff4abe0316bebedd8f7
+      internalID: 779236368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_162
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 227
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6098f7b906df8564ba9840a0ebbe5825
+      internalID: -1719916313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_163
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 226
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035e54895d8e47e4a91c82390d4444bc
+      internalID: 734969199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_164
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 225
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2bd73d27e01d3439da9437e85e2ab4
+      internalID: 1532037243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_165
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 227
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbf0b0ace3fb334dae8f03012a30403
+      internalID: -329490189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_166
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 226
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58861c770f1179549901174910150903
+      internalID: 1898179477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_167
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 225
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b415a664d79f3e43a263d8365fffa6f
+      internalID: -1585282405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_168
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 192
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3afb827e6410e6f489af4b4f2eeb345d
+      internalID: 1862714867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_169
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 191
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa61c620f61e4145b51bc45d84e8c1c
+      internalID: 897424942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_170
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 190
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3738f8c878f651e4797fc74e6ceb6f58
+      internalID: 1123035933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_171
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 192
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51107326b720b984c873a4665b895d3a
+      internalID: 1934935075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_172
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 191
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae13543fa5e9ef64d98223a28bf796d6
+      internalID: -1944327111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_173
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 190
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c386877b1fca95641b9829609ec37ef9
+      internalID: -499910879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_174
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 190
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc518025653ca649ac7307945545817
+      internalID: 1132824150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_175
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 189
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b818491c5c4607e41bade8d38ff507b0
+      internalID: -1768233553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_176
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 188
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dab98f738fa2d147acd6daf721c9276
+      internalID: 681950637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_177
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 191
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bc421a531c4f94cb6cfc6d0541affc
+      internalID: -1505247037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_178
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 190
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e5b3fad66268e43aaad1a23039cb56
+      internalID: 751031774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_179
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 189
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc78c1418915334479db888aedb12391
+      internalID: 151867894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_180
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 190
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b2edb4fca526748a8615ccfcda6fbb
+      internalID: -2003470602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_181
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 189
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f40a450809cf9444bd72e3697d7514e
+      internalID: 1816442020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_182
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 188
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534d8474c98a9694e8f744e16e9748c3
+      internalID: -719690627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_183
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 191
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e91aab0f1c4934aa8f0dacd5983130
+      internalID: -2021975725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_184
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 190
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6aa57f4140cb74d9f37c9401c4aab6
+      internalID: -217700518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_185
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 189
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd95ded4235938845a1006dbbadbbcc1
+      internalID: -1665438633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_186
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 190
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1c9ad10a477e940a8b71e1e0f24b04
+      internalID: 2141177381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_187
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 189
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61cfd4db2bb4f34bbe8e43906a7c625
+      internalID: -1874292906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_188
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 188
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a330986812c8184a94fca1aa6cd3269
+      internalID: -130568988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_189
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 191
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505bbb8e9a86999459216a56ee48ed5d
+      internalID: -237758121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_190
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 190
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91416f8fc3d254e4da27610af157c1b7
+      internalID: -382746377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_191
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 153
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146e70a98bdbccc468ee9e0de58bf88a
+      internalID: 510674261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_192
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 154
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0013b566b3963d41bfbff3c000315fd
+      internalID: 1992879997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_193
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 153
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d781dee7e78715408be3ac781015aab
+      internalID: -27858631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_194
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 152
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1734ec7a2aaaf294e84d0ee7921e7893
+      internalID: 604826576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_195
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 155
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb19e41fee0b464a94c8b12e2ac780e
+      internalID: 2143936691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_196
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 154
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303deb37036deae4fadda59c6315d93b
+      internalID: 1454044034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_197
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 153
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e2485adf712b14f97a8d0b5949ab14
+      internalID: 1217568265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_198
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 155
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1de9b45a0b86048b3414835cdf321b
+      internalID: -1909972986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_199
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 153
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39342b2e1fd22d74daed3996e6f02878
+      internalID: 990068073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_200
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 152
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a922e74b9e7ae4897081bc765f2337
+      internalID: -853211786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_201
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 155
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05a40eb0e966ec4ba0689300cff98df
+      internalID: 855199739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_202
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 153
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485fc30b922eb1245ab51ed82dc7fb24
+      internalID: -1892732162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_203
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 152
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dc32e5454cbf54683c7a6dabd265ff
+      internalID: 2140656435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_204
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 155
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e8e391cad86434eb7953b387cfe970
+      internalID: 1979186494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_205
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 153
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 169e33260a8f7914fb85d5c57745d0b7
+      internalID: 134206761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_206
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 152
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198b3de32c71a1a4d88067a93d65a1b3
+      internalID: -544832811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_207
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 155
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b7f6b81a339b4448c83d4df40fb5d5
+      internalID: 1349191439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_208
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 153
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8583cdc4767cb7248bcaff3fca05dfb0
+      internalID: 1092301955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_209
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 152
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289857573f135124abefb5a8f159c453
+      internalID: 595009084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_210
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 155
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109bdeda697f3554989354d991bcaf59
+      internalID: 1851618119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_211
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 154
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46de81c8ef7d7f4dbcea51dc2c8aacc
+      internalID: 162813702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_212
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 153
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e56a8ab931d51c4eb5627d6af22cdee
+      internalID: -116219649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_213
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 155
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94f57b765ac44e41a906e6ae5ea0a67
+      internalID: -508971010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_214
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 154
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5be2d0a2db1c06438bb934911f942ed
+      internalID: 388171047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_215
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 153
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a323f1dc3e1109f48965fb36240be8d3
+      internalID: 671615939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_216
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 155
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0471e93a14b1e7c4582c11aed2ae95c5
+      internalID: 1907684933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_217
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 118
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95079eeecd6724478144920fdd603f4
+      internalID: -1804403012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_218
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 117
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9608bef28aa5be46ad0e7fd354752e1
+      internalID: -1821115357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_219
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 119
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26a59b3e6af6184b9729d9a6772dc4f
+      internalID: 133500412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_220
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 118
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac2df1cc2721a14b98ba5c0a13acb52
+      internalID: -638108203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_221
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 117
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ddd15bb74534148af2d500119c3ba1
+      internalID: 798783363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_222
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 118
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae58b9c49a42f347b942d1851cc063c
+      internalID: 153222171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_223
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 117
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56dfe6021750b6e4b8e70f5587b222bb
+      internalID: -669847897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_224
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 116
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7766783421157274cbbe7cbaf4c88896
+      internalID: -756304534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_225
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 119
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110263aeacfdbd14681048af1fb57cd9
+      internalID: -1465952840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_226
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 118
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954a3be543951ab489efb815dbcb39be
+      internalID: -1191401444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_227
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 117
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0c06decd9635b43832440e97da6032
+      internalID: 1979916834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_228
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 118
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425419e7a9386a647b4c9d254d5bce37
+      internalID: -722579943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_229
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 117
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f5e451b646f53428d7d432c65933ee
+      internalID: 1564775452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_230
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 116
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe42813bf10e5f4e8e6aa2e356f442e
+      internalID: -998312351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_231
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 119
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d322c4776e33f46b05f93e271da31c
+      internalID: -1756362686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_232
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 118
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c079d4a8412ae1a41bacbe1d28dcf2f3
+      internalID: 45162631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_233
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 117
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac40719051bda044bf01bdc68f63498
+      internalID: -1199171834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_234
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 118
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf745787a8c3a94a98b3c1160a853db
+      internalID: -2144270208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_235
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 117
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e664f6077631b384083aad41fb2f4268
+      internalID: 1304578854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_236
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 116
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba6f2c15b1997f4f9e298b8f8b38195
+      internalID: 1658879163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_237
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 119
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb8a280c0b6f1a4da6b3d4cd22017e8
+      internalID: 996595803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_238
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 118
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7974588e50268c4b8f08178e32e0bb4
+      internalID: -286681072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_239
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 117
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2400bb7a86370c247a5e1dd54e4b1a84
+      internalID: 2111074349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_240
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 118
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570eba0e2154b0d48aee9f4700ca7fbe
+      internalID: -757542941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_241
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 81
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a805c5e679475ce4e90738794a223836
+      internalID: -111925145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_242
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 80
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed9d5d66b1147e240b26e4b15974a91c
+      internalID: 600972768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_243
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 83
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d64801e3cef14c43ae6a8cf7efc4e31
+      internalID: -693323751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_244
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 82
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb95c67544edb4244b1a0d234413e9db
+      internalID: -25598926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_245
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 81
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7753ce373ca8a2c4fbb68149449eebb6
+      internalID: -1508215313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_246
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 81
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c658d31ece66df43963a478615a31fd
+      internalID: -1208807226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_247
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 81
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c1103e32e3f1d4e917622f4de609e9
+      internalID: 1471325530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_248
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 81
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ed6dc4cb4b8ed40bd4321cec61dd5f
+      internalID: -924533612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_249
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 81
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7dd89368a18f724c9cc41432a730029
+      internalID: -1397552438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_250
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 81
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affd5277ce5f1aa4fbc25fef5612aac6
+      internalID: -672022848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_251
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 81
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc96b4d1264869a43873f8eac39ad092
+      internalID: 1718097194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_252
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 81
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b8e3f647f6bc14084d6a09568d5fec
+      internalID: -1869144395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_253
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 81
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e198232d9c8e09498056fb0d3cc3d65
+      internalID: 1497500485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_254
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 81
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef508c88f71dc0469d23f59b7667781
+      internalID: -1635944365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_255
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 81
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a23bd6eece0fd42b4d7695002b390d
+      internalID: -1831092343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_256
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 81
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70dcb99b23ffba7409fb6d8b7ed7b69a
+      internalID: 2130566758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_257
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 81
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f54cc7c54208247b703ab4fcc2b86a
+      internalID: -709064571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_258
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 81
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f2426b32f76bf4eab0c8819df4ec2e
+      internalID: -1611180203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_259
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 81
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf280b0fc693e94597ae357414d13da
+      internalID: 848566644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_260
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 81
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81efb142f504bbe40bd4e8591f19a074
+      internalID: 2034649598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_261
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 81
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0eacb78e3fd054fb7cd2c062c1dafa
+      internalID: 1712199175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_262
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 81
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8afc45bf096d65c4abf78925924043b1
+      internalID: 1041196723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_263
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 81
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c686af8e7d9848046963aa504b3da839
+      internalID: 145258577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_264
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 81
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8db5ceb3797ea34ebdd5c655327eb92
+      internalID: -1761687546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_265
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 81
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1884335d4fd444ca1ca09c46455497
+      internalID: 779402981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_266
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 81
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ed0d76f62029b468c0fb108b7b7fdf
+      internalID: -1535757685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_267
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 45
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6664d2d4f83768459c807660357e7df
+      internalID: -8699284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_268
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 45
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35457d8c7e62eb440b04b9fe008e8256
+      internalID: 1215946272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_269
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 45
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d35a1a04ca2ca43ab2ab0bf8546fbc
+      internalID: -568324018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_270
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 46
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b171f5d3a06eb154bb55f5a78ca1ec76
+      internalID: 654273834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_271
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 45
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c7ac02fb05c4b4ab87e14da51c10c0
+      internalID: 959906017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_272
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 45
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df446b813d34c4a42b48a6a2a6c1351c
+      internalID: -15358566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_273
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 46
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a4b19410289254ca0e510f87055ef6
+      internalID: 1711263405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_274
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 45
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03cf5af4c360bac4b8619e24d71162fd
+      internalID: 2020617366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_275
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 45
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d4d7d16c836d649aaa569b0bae7e81
+      internalID: 828333062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_276
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 46
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2646f44f41f3efe4dbf54a097bcfd4fa
+      internalID: -607168616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_277
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 45
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66faf83fd3df23942a8ab215c255caba
+      internalID: -328056195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_278
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 45
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a765c639e72cb4f809535021bc1f22
+      internalID: 1146993022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_279
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 46
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d040421259d8a24d818a5eab8c25815
+      internalID: 1344752707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_280
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 45
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06194f272a32bb44eb60f73e1e2c3ae7
+      internalID: -208126603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_281
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 45
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbf73f35b2ef8344b1648cb974fc306
+      internalID: -1278042197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_282
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 46
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b036131f7a97f4478a4d8adf02d75f8
+      internalID: 2099719858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_283
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 45
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3156bd38bccca7346bcdce94992dade6
+      internalID: -1469283221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_284
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 45
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0917910006f983948ad1ad6316002f4d
+      internalID: -1655911783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_285
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 46
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f51f053fbdb17499fd2589c46bf41c
+      internalID: -1770895820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_286
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 45
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e03a423d62a78a4b9f9a8e1d3d8465c
+      internalID: -1406941363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_287
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 45
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bd2b563c0c667429a293188b621a09
+      internalID: 1503948987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_288
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 46
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de67b7ae5d43e743b1d0a33fea69efa
+      internalID: -542142527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_289
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 45
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34991974bb05e4f48a544bae49b2fe3b
+      internalID: 320615072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_290
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 45
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68778ca859d6e114c80de839d7ae10af
+      internalID: -912612982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_291
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 46
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff68bd4625cd0a4e920cdbc36264986
+      internalID: -1307032726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_292
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 10
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d4b60dfc8c36f44a40ea2bb770b3c7
+      internalID: -1123039786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_293
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 10
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45c5c73fb5b93c41a2ab37a0ed798ed
+      internalID: 1401044728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyGil_E00_cl_294
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 10
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8f13293118bbc41b08f753bb79307e
+      internalID: -946716321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d1464c05078523f439373c8cad5406a2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChrTX_PlyGil_E00_cl_0: -883432772
+      ChrTX_PlyGil_E00_cl_1: 698709652
+      ChrTX_PlyGil_E00_cl_10: 817387767
+      ChrTX_PlyGil_E00_cl_100: -1099863996
+      ChrTX_PlyGil_E00_cl_101: 439463703
+      ChrTX_PlyGil_E00_cl_102: 1663980943
+      ChrTX_PlyGil_E00_cl_103: -1957751732
+      ChrTX_PlyGil_E00_cl_104: 209949694
+      ChrTX_PlyGil_E00_cl_105: 1082016175
+      ChrTX_PlyGil_E00_cl_106: -2068591768
+      ChrTX_PlyGil_E00_cl_107: -2122735931
+      ChrTX_PlyGil_E00_cl_108: 830572790
+      ChrTX_PlyGil_E00_cl_109: 993047389
+      ChrTX_PlyGil_E00_cl_11: -1604844110
+      ChrTX_PlyGil_E00_cl_110: 1165328355
+      ChrTX_PlyGil_E00_cl_111: 315927610
+      ChrTX_PlyGil_E00_cl_112: -1742267492
+      ChrTX_PlyGil_E00_cl_113: -1745214527
+      ChrTX_PlyGil_E00_cl_114: 1394710729
+      ChrTX_PlyGil_E00_cl_115: -1495596679
+      ChrTX_PlyGil_E00_cl_116: 472038509
+      ChrTX_PlyGil_E00_cl_117: -167888912
+      ChrTX_PlyGil_E00_cl_118: -1574353317
+      ChrTX_PlyGil_E00_cl_119: 455906657
+      ChrTX_PlyGil_E00_cl_12: 751551105
+      ChrTX_PlyGil_E00_cl_120: 1867943876
+      ChrTX_PlyGil_E00_cl_121: 1691166079
+      ChrTX_PlyGil_E00_cl_122: 39494747
+      ChrTX_PlyGil_E00_cl_123: -1430653476
+      ChrTX_PlyGil_E00_cl_124: -1802346317
+      ChrTX_PlyGil_E00_cl_125: -1053066859
+      ChrTX_PlyGil_E00_cl_126: -868636233
+      ChrTX_PlyGil_E00_cl_127: -1710180290
+      ChrTX_PlyGil_E00_cl_128: 384987539
+      ChrTX_PlyGil_E00_cl_129: -1354893571
+      ChrTX_PlyGil_E00_cl_13: 1473354462
+      ChrTX_PlyGil_E00_cl_130: 857148435
+      ChrTX_PlyGil_E00_cl_131: -1688439718
+      ChrTX_PlyGil_E00_cl_132: 71508621
+      ChrTX_PlyGil_E00_cl_133: -1770358392
+      ChrTX_PlyGil_E00_cl_134: 1473634494
+      ChrTX_PlyGil_E00_cl_135: 256046553
+      ChrTX_PlyGil_E00_cl_136: 827566512
+      ChrTX_PlyGil_E00_cl_137: 1185468794
+      ChrTX_PlyGil_E00_cl_138: 1050439279
+      ChrTX_PlyGil_E00_cl_139: 1140191856
+      ChrTX_PlyGil_E00_cl_14: -518356594
+      ChrTX_PlyGil_E00_cl_140: 491422447
+      ChrTX_PlyGil_E00_cl_141: -1672771340
+      ChrTX_PlyGil_E00_cl_142: 477862237
+      ChrTX_PlyGil_E00_cl_143: 1324091001
+      ChrTX_PlyGil_E00_cl_144: 1863396113
+      ChrTX_PlyGil_E00_cl_145: 1564167493
+      ChrTX_PlyGil_E00_cl_146: 1316455721
+      ChrTX_PlyGil_E00_cl_147: 1856618550
+      ChrTX_PlyGil_E00_cl_148: -1919501023
+      ChrTX_PlyGil_E00_cl_149: -437035941
+      ChrTX_PlyGil_E00_cl_15: -610695918
+      ChrTX_PlyGil_E00_cl_150: 1052741839
+      ChrTX_PlyGil_E00_cl_151: -1407863826
+      ChrTX_PlyGil_E00_cl_152: -2130661624
+      ChrTX_PlyGil_E00_cl_153: 1355171647
+      ChrTX_PlyGil_E00_cl_154: -1478803014
+      ChrTX_PlyGil_E00_cl_155: -1818469457
+      ChrTX_PlyGil_E00_cl_156: -965961232
+      ChrTX_PlyGil_E00_cl_157: 1287997617
+      ChrTX_PlyGil_E00_cl_158: 1953049966
+      ChrTX_PlyGil_E00_cl_159: 1383457100
+      ChrTX_PlyGil_E00_cl_16: 1789606974
+      ChrTX_PlyGil_E00_cl_160: -1097494170
+      ChrTX_PlyGil_E00_cl_161: 779236368
+      ChrTX_PlyGil_E00_cl_162: -1719916313
+      ChrTX_PlyGil_E00_cl_163: 734969199
+      ChrTX_PlyGil_E00_cl_164: 1532037243
+      ChrTX_PlyGil_E00_cl_165: -329490189
+      ChrTX_PlyGil_E00_cl_166: 1898179477
+      ChrTX_PlyGil_E00_cl_167: -1585282405
+      ChrTX_PlyGil_E00_cl_168: 1862714867
+      ChrTX_PlyGil_E00_cl_169: 897424942
+      ChrTX_PlyGil_E00_cl_17: 1044563205
+      ChrTX_PlyGil_E00_cl_170: 1123035933
+      ChrTX_PlyGil_E00_cl_171: 1934935075
+      ChrTX_PlyGil_E00_cl_172: -1944327111
+      ChrTX_PlyGil_E00_cl_173: -499910879
+      ChrTX_PlyGil_E00_cl_174: 1132824150
+      ChrTX_PlyGil_E00_cl_175: -1768233553
+      ChrTX_PlyGil_E00_cl_176: 681950637
+      ChrTX_PlyGil_E00_cl_177: -1505247037
+      ChrTX_PlyGil_E00_cl_178: 751031774
+      ChrTX_PlyGil_E00_cl_179: 151867894
+      ChrTX_PlyGil_E00_cl_18: -1026981571
+      ChrTX_PlyGil_E00_cl_180: -2003470602
+      ChrTX_PlyGil_E00_cl_181: 1816442020
+      ChrTX_PlyGil_E00_cl_182: -719690627
+      ChrTX_PlyGil_E00_cl_183: -2021975725
+      ChrTX_PlyGil_E00_cl_184: -217700518
+      ChrTX_PlyGil_E00_cl_185: -1665438633
+      ChrTX_PlyGil_E00_cl_186: 2141177381
+      ChrTX_PlyGil_E00_cl_187: -1874292906
+      ChrTX_PlyGil_E00_cl_188: -130568988
+      ChrTX_PlyGil_E00_cl_189: -237758121
+      ChrTX_PlyGil_E00_cl_19: 25542862
+      ChrTX_PlyGil_E00_cl_190: -382746377
+      ChrTX_PlyGil_E00_cl_191: 510674261
+      ChrTX_PlyGil_E00_cl_192: 1992879997
+      ChrTX_PlyGil_E00_cl_193: -27858631
+      ChrTX_PlyGil_E00_cl_194: 604826576
+      ChrTX_PlyGil_E00_cl_195: 2143936691
+      ChrTX_PlyGil_E00_cl_196: 1454044034
+      ChrTX_PlyGil_E00_cl_197: 1217568265
+      ChrTX_PlyGil_E00_cl_198: -1909972986
+      ChrTX_PlyGil_E00_cl_199: 990068073
+      ChrTX_PlyGil_E00_cl_2: -789756987
+      ChrTX_PlyGil_E00_cl_20: 729170811
+      ChrTX_PlyGil_E00_cl_200: -853211786
+      ChrTX_PlyGil_E00_cl_201: 855199739
+      ChrTX_PlyGil_E00_cl_202: -1892732162
+      ChrTX_PlyGil_E00_cl_203: 2140656435
+      ChrTX_PlyGil_E00_cl_204: 1979186494
+      ChrTX_PlyGil_E00_cl_205: 134206761
+      ChrTX_PlyGil_E00_cl_206: -544832811
+      ChrTX_PlyGil_E00_cl_207: 1349191439
+      ChrTX_PlyGil_E00_cl_208: 1092301955
+      ChrTX_PlyGil_E00_cl_209: 595009084
+      ChrTX_PlyGil_E00_cl_21: -1332552651
+      ChrTX_PlyGil_E00_cl_210: 1851618119
+      ChrTX_PlyGil_E00_cl_211: 162813702
+      ChrTX_PlyGil_E00_cl_212: -116219649
+      ChrTX_PlyGil_E00_cl_213: -508971010
+      ChrTX_PlyGil_E00_cl_214: 388171047
+      ChrTX_PlyGil_E00_cl_215: 671615939
+      ChrTX_PlyGil_E00_cl_216: 1907684933
+      ChrTX_PlyGil_E00_cl_217: -1804403012
+      ChrTX_PlyGil_E00_cl_218: -1821115357
+      ChrTX_PlyGil_E00_cl_219: 133500412
+      ChrTX_PlyGil_E00_cl_22: -1396784302
+      ChrTX_PlyGil_E00_cl_220: -638108203
+      ChrTX_PlyGil_E00_cl_221: 798783363
+      ChrTX_PlyGil_E00_cl_222: 153222171
+      ChrTX_PlyGil_E00_cl_223: -669847897
+      ChrTX_PlyGil_E00_cl_224: -756304534
+      ChrTX_PlyGil_E00_cl_225: -1465952840
+      ChrTX_PlyGil_E00_cl_226: -1191401444
+      ChrTX_PlyGil_E00_cl_227: 1979916834
+      ChrTX_PlyGil_E00_cl_228: -722579943
+      ChrTX_PlyGil_E00_cl_229: 1564775452
+      ChrTX_PlyGil_E00_cl_23: 270069249
+      ChrTX_PlyGil_E00_cl_230: -998312351
+      ChrTX_PlyGil_E00_cl_231: -1756362686
+      ChrTX_PlyGil_E00_cl_232: 45162631
+      ChrTX_PlyGil_E00_cl_233: -1199171834
+      ChrTX_PlyGil_E00_cl_234: -2144270208
+      ChrTX_PlyGil_E00_cl_235: 1304578854
+      ChrTX_PlyGil_E00_cl_236: 1658879163
+      ChrTX_PlyGil_E00_cl_237: 996595803
+      ChrTX_PlyGil_E00_cl_238: -286681072
+      ChrTX_PlyGil_E00_cl_239: 2111074349
+      ChrTX_PlyGil_E00_cl_24: -598602635
+      ChrTX_PlyGil_E00_cl_240: -757542941
+      ChrTX_PlyGil_E00_cl_241: -111925145
+      ChrTX_PlyGil_E00_cl_242: 600972768
+      ChrTX_PlyGil_E00_cl_243: -693323751
+      ChrTX_PlyGil_E00_cl_244: -25598926
+      ChrTX_PlyGil_E00_cl_245: -1508215313
+      ChrTX_PlyGil_E00_cl_246: -1208807226
+      ChrTX_PlyGil_E00_cl_247: 1471325530
+      ChrTX_PlyGil_E00_cl_248: -924533612
+      ChrTX_PlyGil_E00_cl_249: -1397552438
+      ChrTX_PlyGil_E00_cl_25: -1363848649
+      ChrTX_PlyGil_E00_cl_250: -672022848
+      ChrTX_PlyGil_E00_cl_251: 1718097194
+      ChrTX_PlyGil_E00_cl_252: -1869144395
+      ChrTX_PlyGil_E00_cl_253: 1497500485
+      ChrTX_PlyGil_E00_cl_254: -1635944365
+      ChrTX_PlyGil_E00_cl_255: -1831092343
+      ChrTX_PlyGil_E00_cl_256: 2130566758
+      ChrTX_PlyGil_E00_cl_257: -709064571
+      ChrTX_PlyGil_E00_cl_258: -1611180203
+      ChrTX_PlyGil_E00_cl_259: 848566644
+      ChrTX_PlyGil_E00_cl_26: -2048257934
+      ChrTX_PlyGil_E00_cl_260: 2034649598
+      ChrTX_PlyGil_E00_cl_261: 1712199175
+      ChrTX_PlyGil_E00_cl_262: 1041196723
+      ChrTX_PlyGil_E00_cl_263: 145258577
+      ChrTX_PlyGil_E00_cl_264: -1761687546
+      ChrTX_PlyGil_E00_cl_265: 779402981
+      ChrTX_PlyGil_E00_cl_266: -1535757685
+      ChrTX_PlyGil_E00_cl_267: -8699284
+      ChrTX_PlyGil_E00_cl_268: 1215946272
+      ChrTX_PlyGil_E00_cl_269: -568324018
+      ChrTX_PlyGil_E00_cl_27: 720954398
+      ChrTX_PlyGil_E00_cl_270: 654273834
+      ChrTX_PlyGil_E00_cl_271: 959906017
+      ChrTX_PlyGil_E00_cl_272: -15358566
+      ChrTX_PlyGil_E00_cl_273: 1711263405
+      ChrTX_PlyGil_E00_cl_274: 2020617366
+      ChrTX_PlyGil_E00_cl_275: 828333062
+      ChrTX_PlyGil_E00_cl_276: -607168616
+      ChrTX_PlyGil_E00_cl_277: -328056195
+      ChrTX_PlyGil_E00_cl_278: 1146993022
+      ChrTX_PlyGil_E00_cl_279: 1344752707
+      ChrTX_PlyGil_E00_cl_28: 1811153834
+      ChrTX_PlyGil_E00_cl_280: -208126603
+      ChrTX_PlyGil_E00_cl_281: -1278042197
+      ChrTX_PlyGil_E00_cl_282: 2099719858
+      ChrTX_PlyGil_E00_cl_283: -1469283221
+      ChrTX_PlyGil_E00_cl_284: -1655911783
+      ChrTX_PlyGil_E00_cl_285: -1770895820
+      ChrTX_PlyGil_E00_cl_286: -1406941363
+      ChrTX_PlyGil_E00_cl_287: 1503948987
+      ChrTX_PlyGil_E00_cl_288: -542142527
+      ChrTX_PlyGil_E00_cl_289: 320615072
+      ChrTX_PlyGil_E00_cl_29: 922762892
+      ChrTX_PlyGil_E00_cl_290: -912612982
+      ChrTX_PlyGil_E00_cl_291: -1307032726
+      ChrTX_PlyGil_E00_cl_292: -1123039786
+      ChrTX_PlyGil_E00_cl_293: 1401044728
+      ChrTX_PlyGil_E00_cl_294: -946716321
+      ChrTX_PlyGil_E00_cl_3: 800067032
+      ChrTX_PlyGil_E00_cl_30: -1421629617
+      ChrTX_PlyGil_E00_cl_31: 1768063143
+      ChrTX_PlyGil_E00_cl_32: -1536600213
+      ChrTX_PlyGil_E00_cl_33: -507643867
+      ChrTX_PlyGil_E00_cl_34: 626202613
+      ChrTX_PlyGil_E00_cl_35: 1613379499
+      ChrTX_PlyGil_E00_cl_36: 549914621
+      ChrTX_PlyGil_E00_cl_37: 1597202906
+      ChrTX_PlyGil_E00_cl_38: -46494088
+      ChrTX_PlyGil_E00_cl_39: -1734424668
+      ChrTX_PlyGil_E00_cl_4: 38004532
+      ChrTX_PlyGil_E00_cl_40: -111394220
+      ChrTX_PlyGil_E00_cl_41: -1891071197
+      ChrTX_PlyGil_E00_cl_42: 227372431
+      ChrTX_PlyGil_E00_cl_43: 718204198
+      ChrTX_PlyGil_E00_cl_44: -1843462819
+      ChrTX_PlyGil_E00_cl_45: -279340015
+      ChrTX_PlyGil_E00_cl_46: -1884351995
+      ChrTX_PlyGil_E00_cl_47: -1895850448
+      ChrTX_PlyGil_E00_cl_48: -55307214
+      ChrTX_PlyGil_E00_cl_49: 55723114
+      ChrTX_PlyGil_E00_cl_5: -142198786
+      ChrTX_PlyGil_E00_cl_50: 1954101608
+      ChrTX_PlyGil_E00_cl_51: -1064122058
+      ChrTX_PlyGil_E00_cl_52: -2129866447
+      ChrTX_PlyGil_E00_cl_53: -1924863692
+      ChrTX_PlyGil_E00_cl_54: 529150955
+      ChrTX_PlyGil_E00_cl_55: 1163072120
+      ChrTX_PlyGil_E00_cl_56: -709707031
+      ChrTX_PlyGil_E00_cl_57: 1104583510
+      ChrTX_PlyGil_E00_cl_58: -1617506976
+      ChrTX_PlyGil_E00_cl_59: 1029806707
+      ChrTX_PlyGil_E00_cl_6: 169633348
+      ChrTX_PlyGil_E00_cl_60: 2126233266
+      ChrTX_PlyGil_E00_cl_61: -33039009
+      ChrTX_PlyGil_E00_cl_62: -1909668560
+      ChrTX_PlyGil_E00_cl_63: 1258985308
+      ChrTX_PlyGil_E00_cl_64: -517668035
+      ChrTX_PlyGil_E00_cl_65: 2116351110
+      ChrTX_PlyGil_E00_cl_66: -345974698
+      ChrTX_PlyGil_E00_cl_67: 113470200
+      ChrTX_PlyGil_E00_cl_68: -1050217016
+      ChrTX_PlyGil_E00_cl_69: -1457031008
+      ChrTX_PlyGil_E00_cl_7: -1700231109
+      ChrTX_PlyGil_E00_cl_70: -1038273857
+      ChrTX_PlyGil_E00_cl_71: -808576594
+      ChrTX_PlyGil_E00_cl_72: -1067276771
+      ChrTX_PlyGil_E00_cl_73: -454937093
+      ChrTX_PlyGil_E00_cl_74: 2043747775
+      ChrTX_PlyGil_E00_cl_75: -1549142593
+      ChrTX_PlyGil_E00_cl_76: 1991270695
+      ChrTX_PlyGil_E00_cl_77: 428096392
+      ChrTX_PlyGil_E00_cl_78: -1507395250
+      ChrTX_PlyGil_E00_cl_79: -1450423396
+      ChrTX_PlyGil_E00_cl_8: -1455303976
+      ChrTX_PlyGil_E00_cl_80: 1012377987
+      ChrTX_PlyGil_E00_cl_81: 645270948
+      ChrTX_PlyGil_E00_cl_82: 769763776
+      ChrTX_PlyGil_E00_cl_83: 1644490750
+      ChrTX_PlyGil_E00_cl_84: 476740077
+      ChrTX_PlyGil_E00_cl_85: 1401981528
+      ChrTX_PlyGil_E00_cl_86: 1823132101
+      ChrTX_PlyGil_E00_cl_87: -154372172
+      ChrTX_PlyGil_E00_cl_88: 262861993
+      ChrTX_PlyGil_E00_cl_89: 1560878063
+      ChrTX_PlyGil_E00_cl_9: -1499188696
+      ChrTX_PlyGil_E00_cl_90: -1654484792
+      ChrTX_PlyGil_E00_cl_91: 287717517
+      ChrTX_PlyGil_E00_cl_92: -21817856
+      ChrTX_PlyGil_E00_cl_93: 2122345778
+      ChrTX_PlyGil_E00_cl_94: -1678278569
+      ChrTX_PlyGil_E00_cl_95: 783138743
+      ChrTX_PlyGil_E00_cl_96: -844767708
+      ChrTX_PlyGil_E00_cl_97: 98892828
+      ChrTX_PlyGil_E00_cl_98: -1505148280
+      ChrTX_PlyGil_E00_cl_99: 944932195
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

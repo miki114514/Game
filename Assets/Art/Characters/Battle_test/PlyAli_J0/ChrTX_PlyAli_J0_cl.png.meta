@@ -1,0 +1,5284 @@
+fileFormatVersion: 2
+guid: fb89d4ba55e6337458c7e76bd5a0c723
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 476
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1730687887f57544903b14d1464dbdb
+      internalID: 164003905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 479
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f492d1b4c4e2f24c9156bb241ef92f8
+      internalID: -1747578275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_2
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 480
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cca0c57318831f48a3f1e784d031602
+      internalID: 330173192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_3
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 499
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73116fa63b336f46a163536602b485d
+      internalID: 1066533937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 480
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e580653ba1ec5764db0ef11b894d6c2f
+      internalID: -56298427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_5
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 480
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbf2617872535c4d9d1e682f39e529e
+      internalID: -1984544753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_6
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 476
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bca2746a3ac8d9498214f21400b2357
+      internalID: -947604195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_7
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 479
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284adf28c53817348b5a1d66f7ed9280
+      internalID: 313317441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_8
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 480
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286083c0e8b6efd449226867610256f9
+      internalID: 40973382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_9
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 480
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c59ce9fb6824074eb6351a7e7f9a45b
+      internalID: 421453778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_10
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 499
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3977c271c6967448483f5fe6bb7d9c
+      internalID: 6407090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_11
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 480
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d592dcd4d972e24daac030801b7b4e3
+      internalID: -1694996843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_12
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 476
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c707f32ae1267fb489b598d8b3093e23
+      internalID: -1484386767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_13
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 478
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b26875c0443154fb75d43b96c8fdd7
+      internalID: -1933720267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_14
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 480
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0adc21e5df0fa443b758f70e34562c1
+      internalID: -1920528656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_15
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 480
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c825112bc2baf344a8c3858a80433d3
+      internalID: 1136496619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_16
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 481
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3202cb69a69f4446a0c714ad771cc26
+      internalID: -562977896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_17
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 481
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e7834ec226d9e48a596be4c570342b
+      internalID: -319225406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_18
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 481
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed0a237ffa77664588aa358b6787b4d
+      internalID: 2039540538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_19
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 480
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adce0734681318e40b46cfd67b07baf3
+      internalID: -372921325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_20
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 478
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9f3c4ee211cc24f8ae01248bf91c1e
+      internalID: -1534758802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_21
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 476
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c5470941c96cf41bdaf5c358b162b7
+      internalID: -62619314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_22
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 478
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e215d08f13deb4540b61b9ab6a5d6916
+      internalID: 418610857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_23
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 480
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4803d6787fe5f9d4c8d84de977968089
+      internalID: -1257387880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 444
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9dcb4584aa3c941bf9fd7d26964a27
+      internalID: 332624799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_25
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 445
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f40ebb33513e094bbcbb550243defe9
+      internalID: -1780441690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_26
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 445
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384acd7934f2465408d67ed83a2d5a14
+      internalID: 110215463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_27
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 445
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44875982a1407f741847c04ffee5e488
+      internalID: 563800132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_28
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 444
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2d19ffb028b8041906c36928996b50
+      internalID: -746599619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_29
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 442
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f706df1e37a314fbf364135dd5f76a
+      internalID: 762042332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_30
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 443
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ed7957c23c5654ea80342c0550bf38
+      internalID: -424921120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_31
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 443
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7c501d4714fa34c9b8cb20ac0d4c5b
+      internalID: -26496501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_32
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 440
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e784c5687e604b34092238644975b326
+      internalID: -1665622547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_33
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 440
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c224b8edd824224e8684342c467bb89
+      internalID: 449109395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_34
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 440
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aeb8c16b70928d4d8f0281f0eabeab1
+      internalID: 1390478474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_35
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 440
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbb4f0bb1765a1489736e319b3b324d
+      internalID: -2090429488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_36
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28333b0470d1f1b429dc7ff1b71f2a63
+      internalID: -1637054444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_37
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be64343ed1e99846a98595de0273356
+      internalID: 1143351289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_38
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209b83197a3aead4587b49485651b476
+      internalID: -1231073911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_39
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de13351a4f4b5764e9d00c35e93b5d49
+      internalID: 824582533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_40
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eebb910cef5c15e46950cb08784e8a8c
+      internalID: 1153199681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_41
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba9cf3f5608a1a4ab216211657adb89
+      internalID: -2002244834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_42
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384e2b3e392398344bf1b359870cf6f0
+      internalID: -1258466776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_43
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75cc9ec6fc8814d4abb46b3428ae8e62
+      internalID: -519520748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_44
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 440
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11757fc9d13f3a446855019d7bf59c3e
+      internalID: 431163577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_45
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 405
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebd81b42eb136a48a6bed79d28db801
+      internalID: 311539114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_46
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 406
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6ced4baef28f74c8ef15994ce90fb5
+      internalID: 1729540403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_47
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 406
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f017647b8a59fe8449f0109d3594b0a9
+      internalID: -1416787348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_48
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 404
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51506ee20b8a4c7468c8afaae2c2ae98
+      internalID: 877441281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_49
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 405
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936b25a5b14a72c4c9f1dfdfb33fb19f
+      internalID: -2121048439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_50
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 406
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee3eaf3ab40fda4a8bce0483ce4dfd9
+      internalID: -225857216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_51
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 406
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d3d36b396c57c47905a3ac7c0e0e60
+      internalID: 304249221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_52
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 404
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772c1a19307a89241bb888a80d7c7f56
+      internalID: -154946091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_53
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 405
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741e417cdd1eba04980914b0515a5dbe
+      internalID: 349742926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_54
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 406
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7605d4f50ecf1345a6ecd143fd6545d
+      internalID: -209364151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_55
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 406
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21be933c855734459ace875fb519eb7
+      internalID: -2036366277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_56
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 406
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d8e0874ff63b649b27f62bd03f612b
+      internalID: 134247738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_57
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 406
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ecd396b2e4f3242a6e367cdb4234fa
+      internalID: -1665295680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_58
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 405
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68cf056599f51a4e884df8ff9cfc1ec
+      internalID: -110067190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_59
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8c39dbe96f0ea458d2431756f615bc
+      internalID: 352875095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_60
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 369
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee756f549f08484fbe8e8d4ad19f7a1
+      internalID: -250008909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_61
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 370
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8ac1c685df7a843886dc576f3d2b60
+      internalID: 2144347102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_62
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 370
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0d0dbb2fb0e90419f2ee5260bc6032
+      internalID: 2126570213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_63
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 370
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4cfa8ef31aa3cd4eb19a363b9c2e88e
+      internalID: -1854398579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_64
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 370
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879bf3affb5707f42acd9bbd5a1a1f54
+      internalID: -1372404832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_65
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 369
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466efa9341760c447ba353ef63965f0d
+      internalID: 714079997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_66
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 371
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9135f87331959d4c9f66d1e35cdd5e7
+      internalID: 1482972565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_67
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 371
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca88ff0a73bb0b541a6fb73ec4bc95f6
+      internalID: -1186254310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_68
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 369
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688203330eb32584ba8abaf0e4286080
+      internalID: -1001622249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_69
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 369
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a4b3d09186fa345a35808cb18b47ec
+      internalID: -1948975520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_70
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 369
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686e473a7bac1a3468557a958219b989
+      internalID: 1538653295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_71
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 369
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566074399f40a7845b6ca5a707ee0bbc
+      internalID: 1545755545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_72
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 369
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62348cf7d10180e4394a42d6559075d9
+      internalID: -349794527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_73
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 369
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120785211ae65d9418e1502fe83fb640
+      internalID: 599993591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_74
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 369
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733c092d925a2c14d9d3f0f213c9764d
+      internalID: 155488394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_75
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 369
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca5a3b1ff8e1754b8c4045a02cd5e20
+      internalID: 1050702484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_76
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 369
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367ae93921ab1e34eb432fe5da329a8f
+      internalID: -970971186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_77
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 369
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785ba1fcc461e1340838ae53dab14ffb
+      internalID: -1607463678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_78
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 369
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4fa33e53645c44b819dab65256e85b
+      internalID: -374916841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_79
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 369
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645f7aaf3172f504a81e494599d37893
+      internalID: 1910264142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_80
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 368
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35983bc13dcf19643a4318f0be2cdc5a
+      internalID: -670978784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_81
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 332
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70548da517b7da34f82ce017399f016d
+      internalID: -2033758374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_82
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 349
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c68d268aadfb547b51e92584b9007b
+      internalID: -1288160590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_83
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 349
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dabc9afcf44144594f6ae9b356ef2c
+      internalID: 750113248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_84
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 337
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5bef955acf051440b4eccc0215b8c22
+      internalID: 68317411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_85
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 337
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8beb2af1221f234891add2be9901f18
+      internalID: 1204859950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_86
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 334
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15070c935a61a554194db6de1f9bae45
+      internalID: -1938864188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_87
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 334
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7347403d1d24bf468874cc8c630e66a
+      internalID: 758979494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_88
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 334
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907f01f056ee8df4a8d5980bf9ada21f
+      internalID: 596347021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_89
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 334
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4c6aa73b75fee4089ccac8e1d6e3d7
+      internalID: 594817228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_90
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 334
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ccebcd6a54d9404bb7b048f256d282e
+      internalID: 1095393057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_91
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 334
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec30f591530459648baf10cd3025c3de
+      internalID: 1233396816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_92
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 333
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b1ea601a3d1904c8cec99e5b1b77e8
+      internalID: 278734331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_93
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 333
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e4a169ceba2514a8e8319e5ea12532
+      internalID: -1870964296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_94
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 333
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73950f7f0dc58e04fa8fb4908ee6cc64
+      internalID: 65793240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_95
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 333
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac3ffd52d524f04285b89f49f88fda9
+      internalID: -923304389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_96
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 333
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe9c476637878547863158f330ad772
+      internalID: 410564836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_97
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 333
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c16555d793953a4dba7973bce10495f
+      internalID: 1694680606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_98
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 332
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4498e060ae4b4cb478df13c45ff1487d
+      internalID: 254703096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_99
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 332
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680ee7dd4f2682f45a0ae3367189419d
+      internalID: -414770948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_100
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 332
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3a1032d2bee7542a0555be7835f6d6
+      internalID: -439928480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_101
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 332
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538357141c778ea41b8977a1d884df6c
+      internalID: 1780330880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_102
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 332
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2f8787e31798c44bb00a62ec306af1
+      internalID: 2130450347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_103
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 296
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962f2705628b99f4abd831eae2cabbec
+      internalID: 825166375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_104
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 296
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d2b86acd78a29419fd515d3752ccb4
+      internalID: 1841493934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_105
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 296
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a67074252d7714d851f911f731a5c2
+      internalID: -620757521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_106
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8855b3a8ba7554f8cbcb128407222b
+      internalID: -663051220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_107
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8336fcb4fcc1e43a323afd8b6517c2
+      internalID: 1468778259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_108
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f117602858156e2438d201e04070d1d8
+      internalID: -2020493571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_109
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7087fd4f2618e4544b54158c6968091d
+      internalID: 280566539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_110
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9c03266bb0729458e42f42c02e8173
+      internalID: -1818423275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_111
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9734b30cfa7acbe42b4256e06517f017
+      internalID: 141483814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_112
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f6f2b755e69044eafe9065a6051aa6
+      internalID: -594187636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_113
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5388b04840b23594091ec9c0e2a34cd7
+      internalID: -1236478589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_114
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a222b910b95a21943abfe1ad35f340d2
+      internalID: 725172445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_115
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 297
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1be0146dcd6bf4589b74baf688d6f5
+      internalID: 959080826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_116
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 297
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2945af23aea24b4b8abc33241b16bdf
+      internalID: -1391441114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_117
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 297
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e03c352ecd2bd46a9fa670053da4b3
+      internalID: 972724330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_118
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 296
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d31220c9451104fb9e1aca1b4a1d34
+      internalID: -1032533071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_119
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 296
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77223a1748203c24595279145c85ec10
+      internalID: 1638178075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_120
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 296
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8b1c7c3b6313a46a9076ce749c679e
+      internalID: -1464695392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_121
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 296
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9c17b2d181a7e4ca62edb60c2e8d71
+      internalID: 352916240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_122
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 297
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56211136cfe54174f94b9521e9362dcb
+      internalID: 2134470384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_123
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 297
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2d89d6e9e325b46abbc47e26177412
+      internalID: -1024434772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_124
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 297
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f290140945d80b149a8df2dac52bb5b2
+      internalID: 1388739750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_125
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 297
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b9c95970d809344b1dffa1e0fe607a
+      internalID: 1838213322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_126
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 296
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009665cae96d9ae4b9b661b4610a02b3
+      internalID: 1379622511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_127
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 260
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900fa12b07cc38b438343e72a66a1c81
+      internalID: -1250233680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_128
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 260
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5912e3e270e3a2499e42f45fba184a7
+      internalID: -1678015845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_129
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 260
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4913d935525a77d42a40d167b5433478
+      internalID: -2022714600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_130
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 260
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a721e830f98afc74580ceceae6c1a98c
+      internalID: 28042034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_131
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 259
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9cc438fcf72c644a7cc6f6b3e18f73
+      internalID: 2107194272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_132
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 260
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d9ecc9e1683b0409e1693992648e93
+      internalID: 1471582955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_133
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 260
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8a93be079a1fa4b8aca8249401dfbf
+      internalID: 1562487873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_134
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 259
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c612d79448a1a834491a94ca35bdb33e
+      internalID: -1868945713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_135
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 260
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23dea197cf5ab1046b86833ed344aa1f
+      internalID: -2040769387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_136
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 278
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d837cf39a04c6304bb0d2c3d9650a888
+      internalID: -1992532955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_137
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 278
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96bd05f98c8d0f46866d34bfee43ece
+      internalID: -932464597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_138
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 260
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1180195464ab3b4a8577e1be4a8f0f2
+      internalID: 1122098154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_139
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 260
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8ceb73aad34a5429bdb8a84fdfcf97
+      internalID: 422717438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_140
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 260
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c8e37e39ddd7f49aa3e47327021903
+      internalID: 170616939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_141
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 260
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2710312f1b02242af7cb08c003179f
+      internalID: -1573373420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_142
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 260
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730370d53c96c9045b8548a791043beb
+      internalID: -192729568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_143
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 261
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1beb15105dd3c6e498fc709f259bbfcc
+      internalID: 589150943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_144
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 261
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddbc143e4ceb0e844b76c259525c00d2
+      internalID: 1204814124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_145
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 260
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83f1405196f08a4694777901930e6a6
+      internalID: -1518781849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_146
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 260
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e902ebede6aab8643b25e51af6ad43a9
+      internalID: 303106384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_147
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 260
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea488ca7142740546b7b65d435c0a057
+      internalID: -308298454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_148
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 223
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3d7081949c7454c8e98852cfa445a4
+      internalID: 358032490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_149
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 242
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90325c7a259af1d4ca9fa4e212b99f10
+      internalID: -958178358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_150
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 228
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52068d38543f63546bb6e977fcd6a3b8
+      internalID: 1865354293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_151
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 228
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304cf18ed310925499e6e2d58ee26ab7
+      internalID: 1590191015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_152
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 228
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12588e81fd49bb749854d488797694bb
+      internalID: -1620901904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_153
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 228
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a8d33b1d797b34faaffac1dd6d4bad
+      internalID: -1732364369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_154
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 229
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b23232de5e47494ebc5334bb3f47717
+      internalID: 2030634355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_155
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 228
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017714b2f8746a14e9a4a880a0206caa
+      internalID: -1674099485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_156
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 228
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1374fd6b2b718cc4a91cc1cc3ee6d288
+      internalID: -1599976922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_157
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 242
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eafcc23e44d6e644945dc15c71e759e
+      internalID: 459630318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_158
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 228
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce9ef9c2c2e98a44b7a28a0d275f56b
+      internalID: 332270587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_159
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 228
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c42316edd2e3c4a8866bb49e0aa658
+      internalID: -1565919117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_160
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 228
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f187630c2dad7045b70c3cebd25c78a
+      internalID: -1457823138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_161
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 228
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94430088fa1877f4eaf0167035e96971
+      internalID: 31786783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_162
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 229
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82f8740085d7604d99a2b951fdcfb10
+      internalID: -940000970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_163
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 228
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0441de7abd58548b0c73c448c5386a
+      internalID: -2101796466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_164
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 228
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e61c2194c08bb44979b27fa35879b9
+      internalID: 1763330222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_165
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 226
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4045f039800604b4eadc241113450c47
+      internalID: 68505867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_166
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 224
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60be37678f5b74b44b6d5ccdc8c39484
+      internalID: 1413487502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_167
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 223
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b6d494637ca464b822371798b42480
+      internalID: -541026684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_168
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 225
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c04e3840217ec48b12daa38105157f
+      internalID: -588398881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_169
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 188
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82453ad0980b4a14c9cfc6cbe4006a5f
+      internalID: 883668627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_170
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 187
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44310ba888f2c564ab37105e158d5c72
+      internalID: -602951505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_171
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 190
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e778fa2a284a1424f92667fc31f3af71
+      internalID: 1251193116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_172
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 189
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56de777742515da4f821c232c282d5da
+      internalID: -1917627558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_173
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 188
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7818d144bd2bb454e99e7dc2bdbe429e
+      internalID: -1178159523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_174
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 190
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf335ce00b32a804092eb61467cef376
+      internalID: 162063706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_175
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 189
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83dffa37fc8a9bd43b27477573e85e93
+      internalID: -604188913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_176
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 188
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54998f7fcf70c6489281d840db2c80f
+      internalID: -2125377154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_177
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 188
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d00803743d0e04c8570e84f9e5a762
+      internalID: 699940911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_178
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 187
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207da256e16db8d4bb212b70884567f5
+      internalID: -412357301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_179
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 186
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d10f8c16a0c47b408b914002f74b5ad
+      internalID: 1190233930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_180
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 189
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4a5b94f8f969d4281c538f10a7bcea
+      internalID: 306205350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_181
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 188
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7220a9b9c096d954990825fc1ab8aa43
+      internalID: 5112139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_182
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 187
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a891ab4d5408c40b935ebe4592122c
+      internalID: -119437856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_183
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 188
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bd260098f151945899c2dad4f00d6c
+      internalID: -787751153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_184
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 187
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc3eeda0e1e1ee4886d4946a54d98a2
+      internalID: 1642716705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_185
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 186
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb44ec7261ab6a418ac4910c906b4aa
+      internalID: 1841708229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_186
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 189
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9bc05ddf56c0041896d364de7e540e
+      internalID: -1587317825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_187
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 188
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea5a6cb95284f6419e8bdbb193b41b3
+      internalID: 350163172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_188
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 187
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e224a61fe2a354fa427f25538fdd06
+      internalID: 124237686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_189
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 189
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e90b03346eba746a255127cb87abfd
+      internalID: 910447195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_190
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 187
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a911b67017a24846a386d32180cbc62
+      internalID: -120198357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_191
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 186
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33b5a3237c7be143b57b306b7a50b84
+      internalID: 36833409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_192
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 188
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76623f6731d0f4f4ca4803fdda34fe75
+      internalID: -543198087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_193
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 150
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a99d1cf331fe4845bf78c478c933ec2
+      internalID: 833372946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_194
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 149
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b745bd069e942ff43a10a1ad422a7214
+      internalID: 1727429501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_195
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 152
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438873aa42f4e764fab2114e659efb7a
+      internalID: 18518965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_196
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 151
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2bfeba706e72845919e7694c1e3940
+      internalID: -760987306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_197
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 150
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32782b1966b2424bb84789a58322241
+      internalID: -559444131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_198
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 152
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3665a7e6986c614db5727b1f29d98dd
+      internalID: -1883539481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_199
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 151
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a4126aefb29ff419ad177e11299319
+      internalID: -1945268527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_200
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 150
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a72fa05448adcd4296468bd142d4ca6
+      internalID: -843726096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_201
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 151
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056d48b7445df024aa0665b912de3e50
+      internalID: 1025916727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_202
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 150
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7162c0d55fd19b8488ea60ef47f85ace
+      internalID: -1618276222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_203
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 149
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df701b67b758f94f9ffe6598b70a347
+      internalID: 2031335237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_204
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 152
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3222ccd1834b14ea2f3bd6cfe47576
+      internalID: 391906475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_205
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 151
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8cc6934eb117f74f8132a5dd387a7ee
+      internalID: 1490049946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_206
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 150
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb6730a94a382f41afcf374747b138d
+      internalID: -1906106548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_207
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 151
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d2fd83022d1f747b99fa0789d5bbcd
+      internalID: 1294833018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_208
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 150
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cfaeaa12e53fe4a9250e4d0743cc4f
+      internalID: 737204138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_209
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 149
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93afce8347a64b740b3e91a4d5c4e3ff
+      internalID: -311723820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_210
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 152
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7138aa5bb8272804bbd2904457f03721
+      internalID: -1568804182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_211
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 151
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cacafe9b51e60446be8cdac7fbe7861
+      internalID: -608966118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_212
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 150
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968a46c4474493245819fb5aae3ad636
+      internalID: -453023774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_213
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 150
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad7ed27604d574419fbcfa747515ca6
+      internalID: 54932950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_214
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 150
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd68106d14c3dfa43ae67a0bba7f035e
+      internalID: 792645332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_215
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 150
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644ba72d9f9f34f48a0b06716f7363ab
+      internalID: -311822159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_216
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 150
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703df56b53e089f4a946bc9f9e1183e6
+      internalID: -1113704203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_217
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 150
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d067a0bb63c14244c995feb8eecf0ff3
+      internalID: 1457974317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_218
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 113
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24979e4e8ee529946bf26010b7725314
+      internalID: 2041987831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_219
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 113
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca4ea9c57e23914f9bb8195bf12d58b
+      internalID: -455849161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_220
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 113
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec64d687f9ade2944a0a7179365e14dc
+      internalID: -547652386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_221
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 113
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e760b01315f5fc64886481dad0b3e265
+      internalID: 699821162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_222
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 113
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fced8b6e23f11e429c8439b33b93313
+      internalID: -857675010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_223
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 114
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9600c25db85e4be43b9b30f5f2d121ae
+      internalID: -1495245986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_224
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 113
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2c241c02bb35641986b41c66c79396
+      internalID: 731884971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_225
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 113
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3629c4c4885f8f046a042e71b6f23850
+      internalID: -1308714166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_226
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 114
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aaa34cd68a745941a01407720151439
+      internalID: 952930729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_227
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 113
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751c1f4de5070e542a3e576c3d5ae16c
+      internalID: -516715356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_228
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 113
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95557f569fbd5e46a2c3c3c3cf86738
+      internalID: 1830879156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_229
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 114
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd291e65a13a434c90cf972336b5872
+      internalID: -103009664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_230
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 113
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe4dcafde9f0e6468c7305b509303b9
+      internalID: -1813006928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_231
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 113
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a04d9b614a792c4aaf9b49870ed04da
+      internalID: -161673199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_232
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 114
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d67781c404dca48a660603508bf15a
+      internalID: -810930642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_233
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 113
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e27a64472cbec4ebd8890bce8532b7
+      internalID: 366451707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyAli_J0_cl_234
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 113
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32ac1017412b4f4592e28c0a6f524af
+      internalID: 793473027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 32fe766e443774f4b9f7c01bfbaf9a32
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChrTX_PlyAli_J0_cl_0: 164003905
+      ChrTX_PlyAli_J0_cl_1: -1747578275
+      ChrTX_PlyAli_J0_cl_10: 6407090
+      ChrTX_PlyAli_J0_cl_100: -439928480
+      ChrTX_PlyAli_J0_cl_101: 1780330880
+      ChrTX_PlyAli_J0_cl_102: 2130450347
+      ChrTX_PlyAli_J0_cl_103: 825166375
+      ChrTX_PlyAli_J0_cl_104: 1841493934
+      ChrTX_PlyAli_J0_cl_105: -620757521
+      ChrTX_PlyAli_J0_cl_106: -663051220
+      ChrTX_PlyAli_J0_cl_107: 1468778259
+      ChrTX_PlyAli_J0_cl_108: -2020493571
+      ChrTX_PlyAli_J0_cl_109: 280566539
+      ChrTX_PlyAli_J0_cl_11: -1694996843
+      ChrTX_PlyAli_J0_cl_110: -1818423275
+      ChrTX_PlyAli_J0_cl_111: 141483814
+      ChrTX_PlyAli_J0_cl_112: -594187636
+      ChrTX_PlyAli_J0_cl_113: -1236478589
+      ChrTX_PlyAli_J0_cl_114: 725172445
+      ChrTX_PlyAli_J0_cl_115: 959080826
+      ChrTX_PlyAli_J0_cl_116: -1391441114
+      ChrTX_PlyAli_J0_cl_117: 972724330
+      ChrTX_PlyAli_J0_cl_118: -1032533071
+      ChrTX_PlyAli_J0_cl_119: 1638178075
+      ChrTX_PlyAli_J0_cl_12: -1484386767
+      ChrTX_PlyAli_J0_cl_120: -1464695392
+      ChrTX_PlyAli_J0_cl_121: 352916240
+      ChrTX_PlyAli_J0_cl_122: 2134470384
+      ChrTX_PlyAli_J0_cl_123: -1024434772
+      ChrTX_PlyAli_J0_cl_124: 1388739750
+      ChrTX_PlyAli_J0_cl_125: 1838213322
+      ChrTX_PlyAli_J0_cl_126: 1379622511
+      ChrTX_PlyAli_J0_cl_127: -1250233680
+      ChrTX_PlyAli_J0_cl_128: -1678015845
+      ChrTX_PlyAli_J0_cl_129: -2022714600
+      ChrTX_PlyAli_J0_cl_13: -1933720267
+      ChrTX_PlyAli_J0_cl_130: 28042034
+      ChrTX_PlyAli_J0_cl_131: 2107194272
+      ChrTX_PlyAli_J0_cl_132: 1471582955
+      ChrTX_PlyAli_J0_cl_133: 1562487873
+      ChrTX_PlyAli_J0_cl_134: -1868945713
+      ChrTX_PlyAli_J0_cl_135: -2040769387
+      ChrTX_PlyAli_J0_cl_136: -1992532955
+      ChrTX_PlyAli_J0_cl_137: -932464597
+      ChrTX_PlyAli_J0_cl_138: 1122098154
+      ChrTX_PlyAli_J0_cl_139: 422717438
+      ChrTX_PlyAli_J0_cl_14: -1920528656
+      ChrTX_PlyAli_J0_cl_140: 170616939
+      ChrTX_PlyAli_J0_cl_141: -1573373420
+      ChrTX_PlyAli_J0_cl_142: -192729568
+      ChrTX_PlyAli_J0_cl_143: 589150943
+      ChrTX_PlyAli_J0_cl_144: 1204814124
+      ChrTX_PlyAli_J0_cl_145: -1518781849
+      ChrTX_PlyAli_J0_cl_146: 303106384
+      ChrTX_PlyAli_J0_cl_147: -308298454
+      ChrTX_PlyAli_J0_cl_148: 358032490
+      ChrTX_PlyAli_J0_cl_149: -958178358
+      ChrTX_PlyAli_J0_cl_15: 1136496619
+      ChrTX_PlyAli_J0_cl_150: 1865354293
+      ChrTX_PlyAli_J0_cl_151: 1590191015
+      ChrTX_PlyAli_J0_cl_152: -1620901904
+      ChrTX_PlyAli_J0_cl_153: -1732364369
+      ChrTX_PlyAli_J0_cl_154: 2030634355
+      ChrTX_PlyAli_J0_cl_155: -1674099485
+      ChrTX_PlyAli_J0_cl_156: -1599976922
+      ChrTX_PlyAli_J0_cl_157: 459630318
+      ChrTX_PlyAli_J0_cl_158: 332270587
+      ChrTX_PlyAli_J0_cl_159: -1565919117
+      ChrTX_PlyAli_J0_cl_16: -562977896
+      ChrTX_PlyAli_J0_cl_160: -1457823138
+      ChrTX_PlyAli_J0_cl_161: 31786783
+      ChrTX_PlyAli_J0_cl_162: -940000970
+      ChrTX_PlyAli_J0_cl_163: -2101796466
+      ChrTX_PlyAli_J0_cl_164: 1763330222
+      ChrTX_PlyAli_J0_cl_165: 68505867
+      ChrTX_PlyAli_J0_cl_166: 1413487502
+      ChrTX_PlyAli_J0_cl_167: -541026684
+      ChrTX_PlyAli_J0_cl_168: -588398881
+      ChrTX_PlyAli_J0_cl_169: 883668627
+      ChrTX_PlyAli_J0_cl_17: -319225406
+      ChrTX_PlyAli_J0_cl_170: -602951505
+      ChrTX_PlyAli_J0_cl_171: 1251193116
+      ChrTX_PlyAli_J0_cl_172: -1917627558
+      ChrTX_PlyAli_J0_cl_173: -1178159523
+      ChrTX_PlyAli_J0_cl_174: 162063706
+      ChrTX_PlyAli_J0_cl_175: -604188913
+      ChrTX_PlyAli_J0_cl_176: -2125377154
+      ChrTX_PlyAli_J0_cl_177: 699940911
+      ChrTX_PlyAli_J0_cl_178: -412357301
+      ChrTX_PlyAli_J0_cl_179: 1190233930
+      ChrTX_PlyAli_J0_cl_18: 2039540538
+      ChrTX_PlyAli_J0_cl_180: 306205350
+      ChrTX_PlyAli_J0_cl_181: 5112139
+      ChrTX_PlyAli_J0_cl_182: -119437856
+      ChrTX_PlyAli_J0_cl_183: -787751153
+      ChrTX_PlyAli_J0_cl_184: 1642716705
+      ChrTX_PlyAli_J0_cl_185: 1841708229
+      ChrTX_PlyAli_J0_cl_186: -1587317825
+      ChrTX_PlyAli_J0_cl_187: 350163172
+      ChrTX_PlyAli_J0_cl_188: 124237686
+      ChrTX_PlyAli_J0_cl_189: 910447195
+      ChrTX_PlyAli_J0_cl_19: -372921325
+      ChrTX_PlyAli_J0_cl_190: -120198357
+      ChrTX_PlyAli_J0_cl_191: 36833409
+      ChrTX_PlyAli_J0_cl_192: -543198087
+      ChrTX_PlyAli_J0_cl_193: 833372946
+      ChrTX_PlyAli_J0_cl_194: 1727429501
+      ChrTX_PlyAli_J0_cl_195: 18518965
+      ChrTX_PlyAli_J0_cl_196: -760987306
+      ChrTX_PlyAli_J0_cl_197: -559444131
+      ChrTX_PlyAli_J0_cl_198: -1883539481
+      ChrTX_PlyAli_J0_cl_199: -1945268527
+      ChrTX_PlyAli_J0_cl_2: 330173192
+      ChrTX_PlyAli_J0_cl_20: -1534758802
+      ChrTX_PlyAli_J0_cl_200: -843726096
+      ChrTX_PlyAli_J0_cl_201: 1025916727
+      ChrTX_PlyAli_J0_cl_202: -1618276222
+      ChrTX_PlyAli_J0_cl_203: 2031335237
+      ChrTX_PlyAli_J0_cl_204: 391906475
+      ChrTX_PlyAli_J0_cl_205: 1490049946
+      ChrTX_PlyAli_J0_cl_206: -1906106548
+      ChrTX_PlyAli_J0_cl_207: 1294833018
+      ChrTX_PlyAli_J0_cl_208: 737204138
+      ChrTX_PlyAli_J0_cl_209: -311723820
+      ChrTX_PlyAli_J0_cl_21: -62619314
+      ChrTX_PlyAli_J0_cl_210: -1568804182
+      ChrTX_PlyAli_J0_cl_211: -608966118
+      ChrTX_PlyAli_J0_cl_212: -453023774
+      ChrTX_PlyAli_J0_cl_213: 54932950
+      ChrTX_PlyAli_J0_cl_214: 792645332
+      ChrTX_PlyAli_J0_cl_215: -311822159
+      ChrTX_PlyAli_J0_cl_216: -1113704203
+      ChrTX_PlyAli_J0_cl_217: 1457974317
+      ChrTX_PlyAli_J0_cl_218: 2041987831
+      ChrTX_PlyAli_J0_cl_219: -455849161
+      ChrTX_PlyAli_J0_cl_22: 418610857
+      ChrTX_PlyAli_J0_cl_220: -547652386
+      ChrTX_PlyAli_J0_cl_221: 699821162
+      ChrTX_PlyAli_J0_cl_222: -857675010
+      ChrTX_PlyAli_J0_cl_223: -1495245986
+      ChrTX_PlyAli_J0_cl_224: 731884971
+      ChrTX_PlyAli_J0_cl_225: -1308714166
+      ChrTX_PlyAli_J0_cl_226: 952930729
+      ChrTX_PlyAli_J0_cl_227: -516715356
+      ChrTX_PlyAli_J0_cl_228: 1830879156
+      ChrTX_PlyAli_J0_cl_229: -103009664
+      ChrTX_PlyAli_J0_cl_23: -1257387880
+      ChrTX_PlyAli_J0_cl_230: -1813006928
+      ChrTX_PlyAli_J0_cl_231: -161673199
+      ChrTX_PlyAli_J0_cl_232: -810930642
+      ChrTX_PlyAli_J0_cl_233: 366451707
+      ChrTX_PlyAli_J0_cl_234: 793473027
+      ChrTX_PlyAli_J0_cl_24: 332624799
+      ChrTX_PlyAli_J0_cl_25: -1780441690
+      ChrTX_PlyAli_J0_cl_26: 110215463
+      ChrTX_PlyAli_J0_cl_27: 563800132
+      ChrTX_PlyAli_J0_cl_28: -746599619
+      ChrTX_PlyAli_J0_cl_29: 762042332
+      ChrTX_PlyAli_J0_cl_3: 1066533937
+      ChrTX_PlyAli_J0_cl_30: -424921120
+      ChrTX_PlyAli_J0_cl_31: -26496501
+      ChrTX_PlyAli_J0_cl_32: -1665622547
+      ChrTX_PlyAli_J0_cl_33: 449109395
+      ChrTX_PlyAli_J0_cl_34: 1390478474
+      ChrTX_PlyAli_J0_cl_35: -2090429488
+      ChrTX_PlyAli_J0_cl_36: -1637054444
+      ChrTX_PlyAli_J0_cl_37: 1143351289
+      ChrTX_PlyAli_J0_cl_38: -1231073911
+      ChrTX_PlyAli_J0_cl_39: 824582533
+      ChrTX_PlyAli_J0_cl_4: -56298427
+      ChrTX_PlyAli_J0_cl_40: 1153199681
+      ChrTX_PlyAli_J0_cl_41: -2002244834
+      ChrTX_PlyAli_J0_cl_42: -1258466776
+      ChrTX_PlyAli_J0_cl_43: -519520748
+      ChrTX_PlyAli_J0_cl_44: 431163577
+      ChrTX_PlyAli_J0_cl_45: 311539114
+      ChrTX_PlyAli_J0_cl_46: 1729540403
+      ChrTX_PlyAli_J0_cl_47: -1416787348
+      ChrTX_PlyAli_J0_cl_48: 877441281
+      ChrTX_PlyAli_J0_cl_49: -2121048439
+      ChrTX_PlyAli_J0_cl_5: -1984544753
+      ChrTX_PlyAli_J0_cl_50: -225857216
+      ChrTX_PlyAli_J0_cl_51: 304249221
+      ChrTX_PlyAli_J0_cl_52: -154946091
+      ChrTX_PlyAli_J0_cl_53: 349742926
+      ChrTX_PlyAli_J0_cl_54: -209364151
+      ChrTX_PlyAli_J0_cl_55: -2036366277
+      ChrTX_PlyAli_J0_cl_56: 134247738
+      ChrTX_PlyAli_J0_cl_57: -1665295680
+      ChrTX_PlyAli_J0_cl_58: -110067190
+      ChrTX_PlyAli_J0_cl_59: 352875095
+      ChrTX_PlyAli_J0_cl_6: -947604195
+      ChrTX_PlyAli_J0_cl_60: -250008909
+      ChrTX_PlyAli_J0_cl_61: 2144347102
+      ChrTX_PlyAli_J0_cl_62: 2126570213
+      ChrTX_PlyAli_J0_cl_63: -1854398579
+      ChrTX_PlyAli_J0_cl_64: -1372404832
+      ChrTX_PlyAli_J0_cl_65: 714079997
+      ChrTX_PlyAli_J0_cl_66: 1482972565
+      ChrTX_PlyAli_J0_cl_67: -1186254310
+      ChrTX_PlyAli_J0_cl_68: -1001622249
+      ChrTX_PlyAli_J0_cl_69: -1948975520
+      ChrTX_PlyAli_J0_cl_7: 313317441
+      ChrTX_PlyAli_J0_cl_70: 1538653295
+      ChrTX_PlyAli_J0_cl_71: 1545755545
+      ChrTX_PlyAli_J0_cl_72: -349794527
+      ChrTX_PlyAli_J0_cl_73: 599993591
+      ChrTX_PlyAli_J0_cl_74: 155488394
+      ChrTX_PlyAli_J0_cl_75: 1050702484
+      ChrTX_PlyAli_J0_cl_76: -970971186
+      ChrTX_PlyAli_J0_cl_77: -1607463678
+      ChrTX_PlyAli_J0_cl_78: -374916841
+      ChrTX_PlyAli_J0_cl_79: 1910264142
+      ChrTX_PlyAli_J0_cl_8: 40973382
+      ChrTX_PlyAli_J0_cl_80: -670978784
+      ChrTX_PlyAli_J0_cl_81: -2033758374
+      ChrTX_PlyAli_J0_cl_82: -1288160590
+      ChrTX_PlyAli_J0_cl_83: 750113248
+      ChrTX_PlyAli_J0_cl_84: 68317411
+      ChrTX_PlyAli_J0_cl_85: 1204859950
+      ChrTX_PlyAli_J0_cl_86: -1938864188
+      ChrTX_PlyAli_J0_cl_87: 758979494
+      ChrTX_PlyAli_J0_cl_88: 596347021
+      ChrTX_PlyAli_J0_cl_89: 594817228
+      ChrTX_PlyAli_J0_cl_9: 421453778
+      ChrTX_PlyAli_J0_cl_90: 1095393057
+      ChrTX_PlyAli_J0_cl_91: 1233396816
+      ChrTX_PlyAli_J0_cl_92: 278734331
+      ChrTX_PlyAli_J0_cl_93: -1870964296
+      ChrTX_PlyAli_J0_cl_94: 65793240
+      ChrTX_PlyAli_J0_cl_95: -923304389
+      ChrTX_PlyAli_J0_cl_96: 410564836
+      ChrTX_PlyAli_J0_cl_97: 1694680606
+      ChrTX_PlyAli_J0_cl_98: 254703096
+      ChrTX_PlyAli_J0_cl_99: -414770948
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
