@@ -14,21 +14,15 @@ public class PlayerStatus : MonoBehaviour
     [Header("绑定单位")]
     public BattleUnit unit;
 
-    void Start()
+    void OnEnable()
     {
-        if (unit == null)
-        {
-            Debug.LogError("PlayerStatus 未绑定 BattleUnit！");
-            return;
-        }
+        if (unit != null)
+            Bind(unit);
+    }
 
-        // 初始化UI
-        UpdateHP(unit.currentHP, unit.maxHP);
-        UpdateSP(unit.currentSP, unit.maxSP);
-
-        // 监听事件
-        unit.OnHPChanged += UpdateHP;
-        unit.OnSPChanged += UpdateSP;
+    void OnDisable()
+    {
+        Unbind();
     }
 
     // =========================
@@ -63,28 +57,44 @@ public class PlayerStatus : MonoBehaviour
         foreach (char c in str)
         {
             // <sprite=数字>
-            result += $"<sprite={c}>"; 
+            result += $"<sprite={c}>";
         }
 
         return result;
     }
-    
+
     public void Init(BattleUnit unit)
     {
-        this.unit = unit;
+        if (this.unit != unit)
+            Unbind();
 
-        if (unit == null)
+        this.unit = unit;
+        Bind(unit);
+    }
+
+    void Bind(BattleUnit targetUnit)
+    {
+        if (targetUnit == null)
         {
             Debug.LogError("PlayerStatus 未绑定 BattleUnit！");
             return;
         }
 
-        // 初始化UI
-        UpdateHP(unit.currentHP, unit.maxHP);
-        UpdateSP(unit.currentSP, unit.maxSP);
+        UpdateHP(targetUnit.currentHP, targetUnit.maxHP);
+        UpdateSP(targetUnit.currentSP, targetUnit.maxSP);
 
-        // 监听事件
-        unit.OnHPChanged += UpdateHP;
-        unit.OnSPChanged += UpdateSP;
+        targetUnit.OnHPChanged -= UpdateHP;
+        targetUnit.OnHPChanged += UpdateHP;
+        targetUnit.OnSPChanged -= UpdateSP;
+        targetUnit.OnSPChanged += UpdateSP;
+    }
+
+    void Unbind()
+    {
+        if (unit == null)
+            return;
+
+        unit.OnHPChanged -= UpdateHP;
+        unit.OnSPChanged -= UpdateSP;
     }
 }

@@ -15,18 +15,27 @@ public class BattleManager : MonoBehaviour
 
     [Header("UI")]
     public Canvas uiCanvas;
+    public BattleStatusUIManager statusUIManager;
+    public TurnOrderUIManager turnOrderUIManager;
     public GameObject commandMenuPrefab;
-    public GameObject subCommandPanelPrefab;  // ✅ 新增：次级菜单预制体
+    public GameObject subCommandPanelPrefab;
+    public GameObject confirmSubCommandPanelPrefab;
 
     private CommandMenuUi currentCommandMenuUi;
-    private SubCommandPanelUi currentSubCommandPanelUi;  // ✅ 新增：缓存次级菜单
+    private SubCommandPanelUi currentSubCommandPanelUi;
+    private ConfirmSubCommandPanelUi currentConfirmSubCommandPanelUi;
 
     [Header("当前行动单位 (只读)")]
     [SerializeField] private BattleUnit currentUnit;
     public BattleUnit CurrentUnit => currentUnit;
 
-    private List<BattleUnit> turnOrder = new List<BattleUnit>();
-    private int currentTurnIndex = 0;
+    private TurnOrderSystem turnOrderSystem = new TurnOrderSystem();
+    private int currentTurnIndexInRound = 0;
+
+    // ── TurnOrderUIManager 需要的对外属性 ──────────────
+    public int CurrentTurnIndexInRound => currentTurnIndexInRound;
+    public IReadOnlyList<BattleUnit> CurrentOrderList => turnOrderSystem.CurrentOrder;
+    public IReadOnlyList<BattleUnit> NextOrderList    => turnOrderSystem.NextOrder;
 
     [Header("目标选择")]
     public GameObject enemySelectArrowPrefab;
@@ -58,39 +67,133 @@ public class BattleManager : MonoBehaviour
     void StartBattle()
     {
         state = BattleState.Start;
+        EnsureStatusUIManager();
         ResetBattle();
+        statusUIManager?.InitStatusUI(players);
         InitTurnOrder();
+        turnOrderUIManager?.Init(this);
         Debug.Log("[BattleManager] 战斗初始化完成");
+    }
+
+    void EnsureStatusUIManager()
+    {
+        if (statusUIManager == null)
+            statusUIManager = FindObjectOfType<BattleStatusUIManager>();
+
+        if (statusUIManager == null)
+            Debug.LogWarning("[BattleManager] 未找到 BattleStatusUIManager，人物状态UI不会显示");
     }
 
     void InitTurnOrder()
     {
-        turnOrder.Clear();
-        turnOrder.AddRange(players);
-        turnOrder.AddRange(enemies);
-        turnOrder.Sort((a, b) => b.speed.CompareTo(a.speed));
+        List<BattleUnit> allUnits = new List<BattleUnit>(players);
+        allUnits.AddRange(enemies);
+        turnOrderSystem.Initialize(allUnits);
 
-        currentTurnIndex = 0;
-        currentUnit = turnOrder[currentTurnIndex];
-        Debug.Log("[BattleManager] 当前回合单位: " + currentUnit.name);
-
+        currentTurnIndexInRound = 0;
+        currentUnit = turnOrderSystem.CurrentOrder[0];
+        turnOrderUIManager?.RefreshAll();
         StartTurn();
     }
 
     void StartTurn()
     {
-        if (currentUnit.currentHP <= 0)
+        if (currentUnit == null || currentUnit.currentHP <= 0)
         {
             AdvanceTurn();
             return;
         }
 
-        Debug.Log("[BattleManager] 开始回合: " + currentUnit.name);
+        // ── Break 状态：按剩余次数跳过行动 ──
+        if (currentUnit.ConsumeBreakActionSkip())
+        {
+            Debug.Log($"[BattleManager] {currentUnit.unitName} 处于 Break 状态，跳过行动");
+            AdvanceTurn();
+            return;
+        }
+
+        // ── 回合开始处理 DoT（Poison / Burn）──
+        if (!ProcessTurnStartEffects(currentUnit))
+        {
+            CheckBattleEnd();
+            if (state != BattleState.End)
+                AdvanceTurn();
+            return;
+        }
+
+        // ── 无法行动：Sleep / Freeze ──
+        if (!currentUnit.CanAct)
+        {
+            string reason = currentUnit.HasStatus(StatusEffectType.Sleep) ? "Sleep" : "Freeze";
+            Debug.Log($"[BattleManager] {currentUnit.unitName} 无法行动（{reason}）");
+            AdvanceTurn();
+            return;
+        }
+
+        // ── Shock：50% 概率行动失败 ──
+        if (currentUnit.IsShocked && UnityEngine.Random.value < 0.5f)
+        {
+            Debug.Log($"[BattleManager] {currentUnit.unitName} 受 Shock 影响，行动失败！");
+            AdvanceTurn();
+            return;
+        }
+
+        // ── Confuse：随机攻击己方 ──
+        if (currentUnit.IsConfused)
+        {
+            StartCoroutine(ConfusedActionCoroutine(currentUnit));
+            return;
+        }
+
+        Debug.Log("[BattleManager] 开始回合: " + currentUnit.unitName);
 
         if (currentUnit.unitType == UnitType.Player)
             EnterCommandSelect();
         else
             StartCoroutine(EnemyTurnCoroutine(currentUnit));
+    }
+
+    /// <summary>处理回合开始的持续伤害（Poison / Burn），返回存活否</summary>
+    bool ProcessTurnStartEffects(BattleUnit unit)
+    {
+        if (unit.HasStatus(StatusEffectType.Poison))
+        {
+            int dmg = Mathf.Max(1, Mathf.RoundToInt(unit.maxHP * 0.05f));
+            unit.TakeDamage(dmg);
+            Debug.Log($"[Status] {unit.unitName} 中毒，损失 {dmg} HP");
+            if (unit.currentHP <= 0) return false;
+        }
+        if (unit.HasStatus(StatusEffectType.Burn))
+        {
+            int dmg = Mathf.Max(1, Mathf.RoundToInt(unit.maxHP * 0.03f));
+            unit.TakeDamage(dmg);
+            Debug.Log($"[Status] {unit.unitName} 灸烧，损失 {dmg} HP");
+            if (unit.currentHP <= 0) return false;
+        }
+        return true;
+    }
+
+    /// <summary>混乱状态：随机攻击己方随机目标</summary>
+    IEnumerator ConfusedActionCoroutine(BattleUnit confusedUnit)
+    {
+        state = BattleState.Busy;
+        yield return new WaitForSeconds(0.5f);
+
+        List<BattleUnit> friendlyTargets = confusedUnit.unitType == UnitType.Player
+            ? players.FindAll(p => p.currentHP > 0)
+            : enemies.FindAll(e => e.currentHP > 0);
+
+        if (friendlyTargets.Count > 0)
+        {
+            BattleUnit randomTarget = friendlyTargets[UnityEngine.Random.Range(0, friendlyTargets.Count)];
+            Debug.Log($"[Status] {confusedUnit.unitName} 陷入混乱，随机攻击 {randomTarget.unitName}！");
+            BasicAttack(confusedUnit, randomTarget);
+        }
+
+        yield return new WaitForSeconds(0.5f);
+        CheckBattleEnd();
+        if (state != BattleState.End)
+            AdvanceTurn();
     }
 
     void EnterCommandSelect()
@@ -110,13 +213,11 @@ public class BattleManager : MonoBehaviour
             {
                 GameObject subPanelObj = Instantiate(subCommandPanelPrefab, uiCanvas.transform);
                 currentSubCommandPanelUi = subPanelObj.GetComponent<SubCommandPanelUi>();
-                
+
                 if (currentSubCommandPanelUi != null)
                 {
-                    // ✅ 确保初始时隐藏
                     currentSubCommandPanelUi.gameObject.SetActive(false);
                     currentSubCommandPanelUi.isActive = false;
-                    
                     currentSubCommandPanelUi.battleManager = this;
                     currentCommandMenuUi.subCommandPanelUi = currentSubCommandPanelUi;
                     Debug.Log("[BattleManager] 创建次级菜单 UI 并关联（初始隐藏）");
@@ -130,15 +231,42 @@ public class BattleManager : MonoBehaviour
             {
                 Debug.LogWarning("[BattleManager] subCommandPanelPrefab 未配置");
             }
+
+            // 创建 ConfirmSubCommandPanel（初始隐藏）
+            if (confirmSubCommandPanelPrefab != null)
+            {
+                GameObject confirmPanelObj = Instantiate(confirmSubCommandPanelPrefab, uiCanvas.transform);
+                currentConfirmSubCommandPanelUi = confirmPanelObj.GetComponent<ConfirmSubCommandPanelUi>();
+                if (currentConfirmSubCommandPanelUi != null)
+                {
+                    currentConfirmSubCommandPanelUi.gameObject.SetActive(false);
+                    currentConfirmSubCommandPanelUi.isActive = false;
+                    currentConfirmSubCommandPanelUi.battleManager = this;
+                    currentCommandMenuUi.confirmSubCommandPanelUi = currentConfirmSubCommandPanelUi;
+                    Debug.Log("[BattleManager] 创建确认次级菜单 UI 并关联（初始隐藏）");
+                }
+                else
+                {
+                    Debug.LogError("[BattleManager] ConfirmSubCommandPanel 未能获取 ConfirmSubCommandPanelUi 组件");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("[BattleManager] confirmSubCommandPanelPrefab 未配置");
+            }
         }
         else if (currentCommandMenuUi != null)
         {
             currentCommandMenuUi.gameObject.SetActive(true);
             if (currentSubCommandPanelUi != null)
             {
-                // ✅ 确保次级菜单隐藏
                 currentSubCommandPanelUi.gameObject.SetActive(false);
                 currentSubCommandPanelUi.isActive = false;
+            }
+            if (currentConfirmSubCommandPanelUi != null)
+            {
+                currentConfirmSubCommandPanelUi.gameObject.SetActive(false);
+                currentConfirmSubCommandPanelUi.isActive = false;
             }
             Debug.Log("[BattleManager] 指令菜单 UI 激活");
         }
@@ -282,7 +410,12 @@ public class BattleManager : MonoBehaviour
                 break;
             case BattleCommand.Skill:
             case BattleCommand.Arts:
-                skill?.Execute(unit, target);
+                if (!unit.CanUseSkill)
+                {
+                    Debug.Log($"[Status] {unit.unitName} 处于沉默状态，无法使用技能");
+                    break;
+                }
+                skill?.Execute(this, unit, target);
                 break;
             case BattleCommand.Item:
                 UseItem(unit, item, target);
@@ -310,21 +443,135 @@ public class BattleManager : MonoBehaviour
     void BasicAttack(BattleUnit attacker, BattleUnit target)
     {
         if (target == null) return;
-        int damage = Mathf.Max(attacker.physicalAttack - target.physicalDefense, 0);
+
+        if (!attacker.CheckHit(target))
+        {
+            Debug.Log($"[BattleManager] {attacker.unitName} 的普通攻击未命中 {target.unitName}");
+            return;
+        }
+
+        // Terror 降低攻击方攻击力，Freeze 增加被攻方受伤
+        int baseAtk = Mathf.RoundToInt(attacker.physicalAttack * attacker.AttackMultiplier);
+        int damage  = Mathf.Max(baseAtk - target.physicalDefense, 0);
+
+        if (attacker.CheckCrit())
+            damage = Mathf.RoundToInt(damage * 1.5f);
+
+        damage = Mathf.RoundToInt(damage * target.IncomingDamageMultiplier);
         target.TakeDamage(damage);
-        Debug.Log($"[BattleManager] {attacker.name} 攻击 {target.name}, 造成 {damage} 伤害");
+
+        TryApplyShieldDamage(target, attacker.normalAttackType, 1);
+        Debug.Log($"[BattleManager] {attacker.unitName} 攻击 {target.unitName}, 造成 {damage} 伤害");
     }
 
     void AdvanceTurn()
     {
-        do
-        {
-            currentTurnIndex = (currentTurnIndex + 1) % turnOrder.Count;
-            currentUnit = turnOrder[currentTurnIndex];
-        } while (currentUnit.currentHP <= 0);
+        // 回合结束：递减当前单位的状态持续时间
+        currentUnit?.TickStatusEffects();
 
-        Debug.Log("[BattleManager] 下一回合单位: " + currentUnit.name);
+        currentTurnIndexInRound++;
+
+        // 跳过本轮中已死亡的单位
+        while (currentTurnIndexInRound < turnOrderSystem.CurrentOrder.Count
+               && turnOrderSystem.CurrentOrder[currentTurnIndexInRound].currentHP <= 0)
+        {
+            currentTurnIndexInRound++;
+        }
+
+        // 本轮所有单位已行动完毕，进入下一轮
+        if (currentTurnIndexInRound >= turnOrderSystem.CurrentOrder.Count)
+        {
+            List<BattleUnit> alive = GetAllAliveUnits();
+            if (alive.Count == 0) return;
+
+            turnOrderSystem.AdvanceToNextRound(alive);
+            currentTurnIndexInRound = 0;
+
+            // 跳过新轮头部已死亡单位（极端情况保护）
+            while (currentTurnIndexInRound < turnOrderSystem.CurrentOrder.Count
+                   && turnOrderSystem.CurrentOrder[currentTurnIndexInRound].currentHP <= 0)
+            {
+                currentTurnIndexInRound++;
+            }
+        }
+
+        if (currentTurnIndexInRound >= turnOrderSystem.CurrentOrder.Count)
+        {
+            Debug.LogWarning("[BattleManager] 没有可行动的存活单位");
+            return;
+        }
+
+        currentUnit = turnOrderSystem.CurrentOrder[currentTurnIndexInRound];
+        Debug.Log("[BattleManager] 下一行动单位: " + currentUnit.unitName);
+        turnOrderUIManager?.RefreshCurrentOrder(currentTurnIndexInRound);
         StartTurn();
+    }
+
+    List<BattleUnit> GetAllAliveUnits()
+    {
+        var result = new List<BattleUnit>();
+        foreach (var p in players) if (p != null && p.currentHP > 0) result.Add(p);
+        foreach (var e in enemies) if (e != null && e.currentHP > 0) result.Add(e);
+        return result;
+    }
+
+    /// <summary>命中后尝试削减护盾并触发 Break</summary>
+    public void TryApplyShieldDamage(BattleUnit target, AttackType attackType, int hitCount)
+    {
+        if (target == null)
+            return;
+
+        bool didBreak = target.ApplyShieldDamage(attackType, hitCount);
+        if (!didBreak)
+            return;
+
+        int skipTurns = CalculateBreakSkipTurns(target);
+        ApplyBreak(target, skipTurns);
+    }
+
+    int CalculateBreakSkipTurns(BattleUnit target)
+    {
+        if (target == null)
+            return 1;
+
+        int targetIndexInCurrentRound = -1;
+        for (int i = 0; i < turnOrderSystem.CurrentOrder.Count; i++)
+        {
+            if (turnOrderSystem.CurrentOrder[i] == target)
+            {
+                targetIndexInCurrentRound = i;
+                break;
+            }
+        }
+
+        if (targetIndexInCurrentRound < 0)
+            return 1;
+
+        // 本轮未行动：本轮立即打断 + 下一轮跳过；已行动：仅下一轮跳过
+        bool notActedYet = targetIndexInCurrentRound > currentTurnIndexInRound;
+        return notActedYet ? 2 : 1;
+    }
+
+    /// <summary>外部调用：使目标进入 Break 状态，自动重算下轮顺序</summary>
+    public void ApplyBreak(BattleUnit unit, int skipTurns = 1)
+    {
+        if (unit == null)
+            return;
+
+        unit.EnterBreak(skipTurns);
+        Debug.Log($"[BattleManager] {unit.unitName} 进入 Break 状态！");
+        turnOrderSystem.RecalculateNextRound(GetAllAliveUnits());
+        turnOrderUIManager?.RefreshNextOrder();
+        turnOrderUIManager?.RefreshStateMarks();
+    }
+
+    /// <summary>外部调用：为目标施加异常状态，自动重算下轮顺序</summary>
+    public void ApplyStatus(BattleUnit target, StatusEffectType type, int rounds)
+    {
+        target.ApplyStatusEffect(new StatusEffect(type, rounds));
+        turnOrderSystem.RecalculateNextRound(GetAllAliveUnits());
+        turnOrderUIManager?.RefreshNextOrder();
+        turnOrderUIManager?.RefreshStateMarks();
     }
 
     void CheckBattleEnd()
@@ -374,14 +621,14 @@ public class BattleManager : MonoBehaviour
     {
         foreach (var p in players)
         {
-            p.currentHP = p.maxHP;
-            p.currentSP = p.maxSP;
+            p.InitializeBattleState();
+            p.ClearAllStatusEffects();
         }
 
         foreach (var e in enemies)
         {
-            e.currentHP = e.maxHP;
-            e.currentSP = e.maxSP;
+            e.InitializeBattleState();
+            e.ClearAllStatusEffects();
         }
 
         Debug.Log("[BattleManager] 重置所有单位状态");
@@ -394,10 +641,13 @@ public class BattleManager : MonoBehaviour
 
     private IEnumerator EnemyTurnCoroutine(BattleUnit enemy)
     {
+        state = BattleState.Busy;
         yield return new WaitForSeconds(0.5f);
         BattleUnit target = players.Find(p => p.currentHP > 0);
         BasicAttack(enemy, target);
         yield return new WaitForSeconds(0.5f);
-        AdvanceTurn();
+        CheckBattleEnd();
+        if (state != BattleState.End)
+            AdvanceTurn();
     }
 }

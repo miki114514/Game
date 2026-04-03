@@ -2123,6 +2123,10 @@ MonoBehaviour:
   canvasGroup: {fileID: 3630730371993990171}
   subCommandPanelUi: {fileID: 6934295074486094902, guid: 5b3e5502b223d9f439461288be2c154c,
     type: 3}
+  confirmSubCommandPanelUi: {fileID: 4836625619805317228, guid: a4afe5269615fed4180a550131f13deb,
+    type: 3}
+  subMenuOverlapOffset: {x: 72, y: -8}
+  subMenuSafeMargin: 16
 --- !u!225 &3630730371993990171
 CanvasGroup:
   m_ObjectHideFlags: 0

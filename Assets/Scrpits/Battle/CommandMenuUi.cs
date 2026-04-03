@@ -22,6 +22,7 @@ public class CommandMenuUi : MonoBehaviour
 
     [Header("次级菜单")]
     public SubCommandPanelUi subCommandPanelUi;
+    public ConfirmSubCommandPanelUi confirmSubCommandPanelUi;
 
     [Header("次级菜单位置")]
     public Vector2 subMenuOverlapOffset = new Vector2(72f, -8f);
@@ -59,6 +60,15 @@ public class CommandMenuUi : MonoBehaviour
             {
                 Debug.Log("[CommandMenuUi] ✅ 自动找到SubCommandPanelUi");
             }
+        }
+
+        if (confirmSubCommandPanelUi == null)
+        {
+            confirmSubCommandPanelUi = FindObjectOfType<ConfirmSubCommandPanelUi>();
+            if (confirmSubCommandPanelUi != null)
+                Debug.Log("[CommandMenuUi] ✅ 自动找到ConfirmSubCommandPanelUi");
+            else
+                Debug.LogWarning("[CommandMenuUi] 无法自动查找到ConfirmSubCommandPanelUi，请在Inspector中手动配置");
         }
 
         UpdateUI();
@@ -152,26 +162,46 @@ public class CommandMenuUi : MonoBehaviour
     #region 次级菜单逻辑
     void OpenSubMenu(BattleCommand cmd)
     {
-        inSubMenu = true;           // 确保切换到子菜单模式
+        inSubMenu = true;
         mainIndex = currentIndex;
-        subCommands = GenerateSubCommands(cmd);
-        subIndex = 0;
 
         if (canvasGroup != null)
             canvasGroup.alpha = 0.5f;
 
-        if (subCommandPanelUi != null)
+        if (cmd == BattleCommand.Defend || cmd == BattleCommand.Run)
         {
-            subCommandPanelUi.battleManager = battleManager;
-            subCommandPanelUi.commandMenuUi = this;  // ✅ 确保设置回调关联
-            subCommandPanelUi.isActive = true;  // ✅ 激活次级菜单
-            subCommandPanelUi.ShowSubCommands(subCommands, cmd);
-            PositionSubMenuNearMain();
-            Debug.Log($"[CommandMenuUi] 打开次级菜单: {cmd}");
+            if (confirmSubCommandPanelUi != null)
+            {
+                confirmSubCommandPanelUi.battleManager = battleManager;
+                confirmSubCommandPanelUi.commandMenuUi = this;
+                confirmSubCommandPanelUi.isActive = true;
+                confirmSubCommandPanelUi.ShowConfirmPanel(cmd);
+                PositionSubMenuNearMain();
+                Debug.Log($"[CommandMenuUi] 打开确认面板: {cmd}");
+            }
+            else
+            {
+                Debug.LogError("[CommandMenuUi] ConfirmSubCommandPanelUi 未配置");
+            }
         }
         else
         {
-            Debug.LogError("[CommandMenuUi] SubCommandPanelUi 未配置");
+            subCommands = GenerateSubCommands(cmd);
+            subIndex = 0;
+
+            if (subCommandPanelUi != null)
+            {
+                subCommandPanelUi.battleManager = battleManager;
+                subCommandPanelUi.commandMenuUi = this;
+                subCommandPanelUi.isActive = true;
+                subCommandPanelUi.ShowSubCommands(subCommands, cmd);
+                PositionSubMenuNearMain();
+                Debug.Log($"[CommandMenuUi] 打开次级菜单: {cmd}");
+            }
+            else
+            {
+                Debug.LogError("[CommandMenuUi] SubCommandPanelUi 未配置");
+            }
         }
     }
 
@@ -179,18 +209,22 @@ public class CommandMenuUi : MonoBehaviour
     {
         inSubMenu = false;
 
-        // 恢复主菜单不透明
         if (canvasGroup != null)
             canvasGroup.alpha = 1f;
 
-        // 隐藏次级菜单
         if (subCommandPanelUi != null)
         {
-            subCommandPanelUi.isActive = false;  // ✅ 禁用次级菜单
+            subCommandPanelUi.isActive = false;
             subCommandPanelUi.HideSubCommands();
-            Debug.Log("[CommandMenuUi] 关闭次级菜单");
         }
 
+        if (confirmSubCommandPanelUi != null)
+        {
+            confirmSubCommandPanelUi.isActive = false;
+            confirmSubCommandPanelUi.HideConfirmPanel();
+        }
+
+        Debug.Log("[CommandMenuUi] 关闭次级菜单");
         currentIndex = mainIndex;
         UpdateUI();
     }
@@ -235,11 +269,15 @@ public class CommandMenuUi : MonoBehaviour
 
     void PositionSubMenuNearMain()
     {
-        if (subCommandPanelUi == null || !subCommandPanelUi.gameObject.activeSelf)
-            return;
+        RectTransform subRect = null;
+        if (subCommandPanelUi != null && subCommandPanelUi.gameObject.activeSelf)
+            subRect = subCommandPanelUi.transform as RectTransform;
+        else if (confirmSubCommandPanelUi != null && confirmSubCommandPanelUi.gameObject.activeSelf)
+            subRect = confirmSubCommandPanelUi.transform as RectTransform;
+
+        if (subRect == null) return;
 
         RectTransform mainRect = transform as RectTransform;
-        RectTransform subRect = subCommandPanelUi.transform as RectTransform;
         RectTransform canvasRect = GetComponentInParent<Canvas>()?.GetComponent<RectTransform>();
 
         if (mainRect == null || subRect == null || canvasRect == null)
