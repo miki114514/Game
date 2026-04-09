@@ -17,6 +17,11 @@ public class SubCommandPanelUi : MonoBehaviour
     public GameObject itemPrefab;              // Item预制体 (从Inspector中直接拖入)
     public RectTransform arrow;                // 箭头
     public ScrollRect scrollRect;              // ✅ 新增：ScrollRect 用于瀑布流
+    public TextMeshProUGUI currentBPText;
+    public TextMeshProUGUI boostPreviewText;
+    public GameObject boostHelpRoot;
+    public GameObject keyCapQ;
+    public GameObject keyCapE;
 
     [Header("箭头偏移")]
     public Vector2 arrowOffset = new Vector2(-50f, 0f);
@@ -30,6 +35,11 @@ public class SubCommandPanelUi : MonoBehaviour
     private int selectedIndex = 0;
     public bool isActive = false;  // ✅ 改为 public，便于 CommandMenuUi 控制
     private BattleCommand parentCommand;
+
+    void Awake()
+    {
+        ResolveBoostHelpReferences();
+    }
 
     /// <summary>
     /// 显示次级菜单（带父命令）
@@ -93,7 +103,7 @@ public class SubCommandPanelUi : MonoBehaviour
                 var text = itemObj.transform.Find("Text")?.GetComponent<TextMeshProUGUI>();
                 if (text != null)
                 {
-                    text.text = commands[i].name;
+                    text.text = GetSubCommandDisplayText(commands[i], i == selectedIndex);
                     Debug.Log($"[SubCommandPanelUi] Item_{i:D2} 文字已设置: {commands[i].name}");
                 }
                 else
@@ -142,6 +152,10 @@ public class SubCommandPanelUi : MonoBehaviour
         gameObject.SetActive(false);
         ResetScrollPosition();
         ClearItems();
+
+        if (boostHelpRoot != null)
+            boostHelpRoot.SetActive(false);
+
         Debug.Log("[SubCommandPanelUi] 次级菜单已隐藏");
     }
 
@@ -160,6 +174,20 @@ public class SubCommandPanelUi : MonoBehaviour
         }
     }
 
+    void ResolveBoostHelpReferences()
+    {
+        if (boostHelpRoot == null)
+            boostHelpRoot = transform.Find("BoostHelp")?.gameObject;
+
+        if (boostHelpRoot != null)
+        {
+            if (keyCapQ == null)
+                keyCapQ = boostHelpRoot.transform.Find("KeyCap-Q")?.gameObject;
+            if (keyCapE == null)
+                keyCapE = boostHelpRoot.transform.Find("KeyCap-E")?.gameObject;
+        }
+    }
+
     void NormalizeItemLayout(GameObject itemObj)
     {
         RectTransform itemRect = itemObj.GetComponent<RectTransform>();
@@ -169,10 +197,14 @@ public class SubCommandPanelUi : MonoBehaviour
         }
 
         LayoutElement layoutElement = itemObj.GetComponent<LayoutElement>();
-        float preferredHeight = 30f;
+        float preferredHeight = itemRect.sizeDelta.y;
         if (layoutElement != null && layoutElement.preferredHeight > 0f)
         {
             preferredHeight = layoutElement.preferredHeight;
+        }
+        if (preferredHeight <= 0f)
+        {
+            preferredHeight = 30f;
         }
 
         itemRect.anchorMin = new Vector2(0.5f, 1f);
@@ -183,6 +215,13 @@ public class SubCommandPanelUi : MonoBehaviour
         CenterChildRect(itemObj.transform.Find("Base") as RectTransform);
         CenterChildRect(itemObj.transform.Find("Select") as RectTransform);
         CenterChildRect(itemObj.transform.Find("Text") as RectTransform);
+        AlignOverlayRect(itemObj.transform.Find("BoostTag") as RectTransform, true);
+
+        RectTransform boostTagTextRect = itemObj.transform.Find("BoostTag/Text (TMP)") as RectTransform;
+        if (boostTagTextRect == null)
+            boostTagTextRect = itemObj.transform.Find("BoostTag/Text") as RectTransform;
+
+        CenterChildRect(boostTagTextRect);
     }
 
     void CenterChildRect(RectTransform childRect)
@@ -196,6 +235,20 @@ public class SubCommandPanelUi : MonoBehaviour
         childRect.anchorMax = new Vector2(0.5f, 0.5f);
         childRect.pivot = new Vector2(0.5f, 0.5f);
         childRect.anchoredPosition = Vector2.zero;
+    }
+
+    void AlignOverlayRect(RectTransform childRect, bool preserveX = false)
+    {
+        if (childRect == null)
+        {
+            return;
+        }
+
+        Vector2 anchoredPosition = childRect.anchoredPosition;
+        childRect.anchorMin = new Vector2(0.5f, 0.5f);
+        childRect.anchorMax = new Vector2(0.5f, 0.5f);
+        childRect.pivot = new Vector2(0.5f, 0.5f);
+        childRect.anchoredPosition = new Vector2(preserveX ? anchoredPosition.x : 0f, 0f);
     }
 
     /// <summary>
@@ -244,6 +297,7 @@ public class SubCommandPanelUi : MonoBehaviour
         if (!isActive) return;
 
         HandleInput();
+        RefreshBoostPreviewUI();
         UpdateArrowPosition();
     }
 
@@ -264,6 +318,16 @@ public class SubCommandPanelUi : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             selectedIndex = (selectedIndex + 1) % currentSubCommands.Count;
+            UpdateSelectionUI();
+        }
+        if (Input.GetKeyDown(KeyCode.E) && battleManager != null)
+        {
+            battleManager.TryAdjustBoostLevel(1, parentCommand, GetSelectedSkill());
+            UpdateSelectionUI();
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && battleManager != null)
+        {
+            battleManager.TryAdjustBoostLevel(-1, parentCommand, GetSelectedSkill());
             UpdateSelectionUI();
         }
         if (Input.GetKeyDown(KeyCode.Return))
@@ -294,8 +358,118 @@ public class SubCommandPanelUi : MonoBehaviour
             itemInstances[i].transform.Find("Select")?.gameObject.SetActive(selected);
         }
 
+        RefreshItemTexts();
+        RefreshBoostPreviewUI();
+
         // ✅ 自动滚动到选中项
         ScrollToSelected();
+    }
+
+    Skill GetSelectedSkill()
+    {
+        if (selectedIndex < 0 || selectedIndex >= currentSubCommands.Count)
+            return null;
+
+        return currentSubCommands[selectedIndex].skill;
+    }
+
+    string GetSubCommandDisplayText(SubCommand command, bool isSelected)
+    {
+        if (command == null)
+            return string.Empty;
+
+        return command.name;
+    }
+
+    void UpdateItemBoostTag(GameObject itemInstance, SubCommand command, bool isSelected)
+    {
+        if (itemInstance == null || command == null)
+            return;
+
+        Transform tagRoot = itemInstance.transform.Find("BoostTag");
+        if (tagRoot == null)
+            return;
+
+        bool showTag = isSelected
+            && battleManager != null
+            && command.ShouldShowBoostTag
+            && battleManager.IsBoostableCommand(parentCommand, command.skill)
+            && battleManager.SelectedBoostLevel > 0;
+
+        tagRoot.gameObject.SetActive(showTag);
+
+        TextMeshProUGUI tagText = tagRoot.GetComponentInChildren<TextMeshProUGUI>(true);
+        if (tagText == null)
+            return;
+
+        if (!showTag)
+        {
+            tagText.text = string.Empty;
+            return;
+        }
+
+        switch (battleManager.SelectedBoostLevel)
+        {
+            case 1:
+                tagText.text = "Level1";
+                break;
+            case 2:
+                tagText.text = "Level2";
+                break;
+            case 3:
+                tagText.text = "Max!!!";
+                break;
+            default:
+                tagText.text = string.Empty;
+                break;
+        }
+    }
+
+    void RefreshItemTexts()
+    {
+        for (int i = 0; i < itemInstances.Count && i < currentSubCommands.Count; i++)
+        {
+            bool isSelected = i == selectedIndex;
+            var text = itemInstances[i].transform.Find("Text")?.GetComponent<TextMeshProUGUI>();
+            if (text != null)
+                text.text = GetSubCommandDisplayText(currentSubCommands[i], isSelected);
+
+            UpdateItemBoostTag(itemInstances[i], currentSubCommands[i], isSelected);
+        }
+    }
+
+    void RefreshBoostPreviewUI()
+    {
+        if (battleManager == null)
+            return;
+
+        BattleUnit unit = battleManager.CurrentUnit;
+        if (currentBPText != null)
+            currentBPText.text = unit != null ? $"BP {unit.CurrentBP}/{unit.MaxBP}" : "BP 0/0";
+
+        if (boostPreviewText != null)
+            boostPreviewText.text = battleManager.GetBoostPreviewLabel(parentCommand, GetSelectedSkill());
+
+        RefreshBoostHelpUI();
+    }
+
+    void RefreshBoostHelpUI()
+    {
+        ResolveBoostHelpReferences();
+
+        bool showHelp = battleManager != null
+            && parentCommand == BattleCommand.Arts
+            && battleManager.IsBoostableCommand(parentCommand, GetSelectedSkill());
+        bool showDecrease = showHelp && battleManager.SelectedBoostLevel > 0;
+
+        if (boostHelpRoot != null)
+            boostHelpRoot.SetActive(showHelp);
+
+        if (keyCapE != null)
+            keyCapE.SetActive(showHelp && !showDecrease);
+
+        if (keyCapQ != null)
+            keyCapQ.SetActive(showHelp && showDecrease);
     }
 
     /// <summary>

@@ -10,6 +10,14 @@ public class CommandMenuUi : MonoBehaviour
     public List<GameObject> baseList;
     public List<GameObject> selectList;
     public RectTransform arrow;
+    public RectTransform boostTagRoot;
+    public TextMeshProUGUI boostTagText;
+    public TextMeshProUGUI currentBPText;
+    public TextMeshProUGUI boostPreviewText;
+    public GameObject boostHelpRoot;
+    public GameObject keyCapQ;
+    public GameObject keyCapE;
+    public Vector2 boostTagOffset = new Vector2(150f, 0f);
 
     [Header("箭头偏移")]
     public Vector2 arrowOffset = new Vector2(-50f, 0f);
@@ -39,6 +47,7 @@ public class CommandMenuUi : MonoBehaviour
     void Start()
     {
         mainCommandList = new List<BattleCommand>(commandList);
+        ResolveBoostHelpReferences();
 
         // ✅ 自动查找 SubCommandPanelUi（如果未在Inspector中配置）
         if (subCommandPanelUi == null)
@@ -76,6 +85,8 @@ public class CommandMenuUi : MonoBehaviour
 
     void Update()
     {
+        RefreshBoostPreviewUI();
+
         if (!inSubMenu)
         {
             HandleMainMenuInput();
@@ -97,6 +108,12 @@ public class CommandMenuUi : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
             currentIndex = (currentIndex + 1) % commandList.Count;
+
+        if (Input.GetKeyDown(KeyCode.E) && battleManager != null && currentIndex < commandList.Count)
+            battleManager.TryAdjustBoostLevel(1, commandList[currentIndex]);
+
+        if (Input.GetKeyDown(KeyCode.Q) && battleManager != null && currentIndex < commandList.Count)
+            battleManager.TryAdjustBoostLevel(-1, commandList[currentIndex]);
 
         if (Input.GetKeyDown(KeyCode.Return))
             ConfirmMainSelection();
@@ -246,20 +263,20 @@ public class CommandMenuUi : MonoBehaviour
         {
             case BattleCommand.Arts:
                 foreach (var sk in unit.artsList)
-                    list.Add(new SubCommand(sk.skillName, sk));
+                    list.Add(new SubCommand(sk.skillName, sk, null, false, SubCommandEntryType.Arts));
                 break;
             case BattleCommand.Skill:
                 foreach (var sk in unit.skillList)
-                    list.Add(new SubCommand(sk.skillName, sk));
+                    list.Add(new SubCommand(sk.skillName, sk, null, false, SubCommandEntryType.CharacterSkill));
                 break;
             case BattleCommand.Item:
                 foreach (var item in battleManager.GetUsableItems())
-                    list.Add(new SubCommand(item.itemName, null, item));
+                    list.Add(new SubCommand(item.itemName, null, item, false, SubCommandEntryType.Item));
                 break;
             case BattleCommand.Defend:
             case BattleCommand.Run:
-                list.Add(new SubCommand("确认", null, null, true));
-                list.Add(new SubCommand("取消", null, null, true));
+                list.Add(new SubCommand("确认", null, null, true, SubCommandEntryType.Confirm));
+                list.Add(new SubCommand("取消", null, null, true, SubCommandEntryType.Confirm));
                 break;
         }
 
@@ -329,15 +346,17 @@ public class CommandMenuUi : MonoBehaviour
             if (i < commandList.Count)
             {
                 var textComp = baseList[i].GetComponentInChildren<TextMeshProUGUI>();
+                string displayText = GetCommandDisplayText(commandList[i], isSelected);
+
                 if (textComp != null)
                 {
-                    textComp.text = commandList[i].ToString();
+                    textComp.text = displayText;
                     textComp.alpha = 1f; // 确保文字可见
                 }
 
                 var selText = selectList[i].GetComponentInChildren<TextMeshProUGUI>();
                 if (selText != null)
-                    selText.text = commandList[i].ToString();
+                    selText.text = displayText;
             }
         }
     }
@@ -368,6 +387,85 @@ public class CommandMenuUi : MonoBehaviour
         }
     }
     #endregion
+
+    void ResolveBoostHelpReferences()
+    {
+        if (boostHelpRoot == null)
+            boostHelpRoot = transform.Find("BoostHelp")?.gameObject;
+
+        if (boostHelpRoot != null)
+        {
+            if (keyCapQ == null)
+                keyCapQ = boostHelpRoot.transform.Find("KeyCap-Q")?.gameObject;
+            if (keyCapE == null)
+                keyCapE = boostHelpRoot.transform.Find("KeyCap-E")?.gameObject;
+        }
+    }
+
+    bool ShouldUseDedicatedBoostTag()
+    {
+        return boostTagRoot != null || boostTagText != null || boostPreviewText != null;
+    }
+
+    bool ShouldShowMainCommandBoost(BattleCommand command)
+    {
+        return command == BattleCommand.Attack;
+    }
+
+    string GetCommandDisplayText(BattleCommand command, bool isSelected)
+    {
+        string label = command.ToString();
+
+        if (!isSelected || battleManager == null || !ShouldShowMainCommandBoost(command))
+            return label;
+
+        if (ShouldUseDedicatedBoostTag())
+            return label;
+
+        int previewBoostLevel = command == BattleCommand.Attack ? battleManager.SelectedBoostLevel : 0;
+        int attackHitCount = BattleFormula.GetBoostedAttackHitCount(previewBoostLevel);
+        return $"{label} <size=72%><color=#FFD966>x{attackHitCount}</color></size>";
+    }
+
+    void RefreshBoostPreviewUI()
+    {
+        BattleCommand selectedCommand = currentIndex < commandList.Count ? commandList[currentIndex] : BattleCommand.Attack;
+        bool isAttackSelected = battleManager != null && ShouldShowMainCommandBoost(selectedCommand);
+        BattleUnit unit = battleManager != null ? battleManager.CurrentUnit : null;
+        int previewBoostLevel = isAttackSelected && battleManager != null ? battleManager.SelectedBoostLevel : 0;
+        int attackHitCount = BattleFormula.GetBoostedAttackHitCount(previewBoostLevel);
+
+        if (currentBPText != null)
+            currentBPText.text = unit != null ? $"BP {unit.CurrentBP}/{unit.MaxBP}" : "BP 0/0";
+
+        if (boostPreviewText != null)
+            boostPreviewText.text = isAttackSelected ? $"x{attackHitCount}" : string.Empty;
+
+        if (boostTagText != null)
+            boostTagText.text = $"x{attackHitCount}";
+
+        if (boostTagRoot != null)
+            boostTagRoot.gameObject.SetActive(true);
+
+        RefreshBoostHelpUI(selectedCommand);
+    }
+
+    void RefreshBoostHelpUI(BattleCommand selectedCommand)
+    {
+        ResolveBoostHelpReferences();
+
+        bool showHelp = battleManager != null && battleManager.IsBoostableCommand(selectedCommand);
+        bool showDecrease = showHelp && battleManager.SelectedBoostLevel > 0;
+
+        if (boostHelpRoot != null)
+            boostHelpRoot.SetActive(showHelp);
+
+        if (keyCapE != null)
+            keyCapE.SetActive(showHelp && !showDecrease);
+
+        if (keyCapQ != null)
+            keyCapQ.SetActive(showHelp && showDecrease);
+    }
 
     void UpdateArrowPosition()
     {

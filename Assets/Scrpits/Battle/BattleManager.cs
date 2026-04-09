@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,24 @@ public class BattleManager : MonoBehaviour
     [Header("当前行动单位 (只读)")]
     [SerializeField] private BattleUnit currentUnit;
     public BattleUnit CurrentUnit => currentUnit;
+    public BattleUnit CurrentSelectedTarget
+    {
+        get
+        {
+            if (state != BattleState.TargetSelect || selectableEnemies == null || selectableEnemies.Count == 0)
+                return null;
+
+            if (targetIndex < 0 || targetIndex >= selectableEnemies.Count)
+                return null;
+
+            return selectableEnemies[targetIndex];
+        }
+    }
+
+    [Header("BP / Boost 预览")]
+    [SerializeField, Range(0, BattleFormula.MaxBoostLevel)] private int selectedBoostLevel = 0;
+    public int SelectedBoostLevel => selectedBoostLevel;
+    public event Action<BattleUnit, int, int> OnBoostSelectionChanged;
 
     private TurnOrderSystem turnOrderSystem = new TurnOrderSystem();
     private int currentTurnIndexInRound = 0;
@@ -70,6 +89,7 @@ public class BattleManager : MonoBehaviour
         EnsureStatusUIManager();
         ResetBattle();
         statusUIManager?.InitStatusUI(players);
+        statusUIManager?.InitEnemyBreakUI(this, enemies);
         InitTurnOrder();
         turnOrderUIManager?.Init(this);
         Debug.Log("[BattleManager] 战斗初始化完成");
@@ -103,6 +123,10 @@ public class BattleManager : MonoBehaviour
             AdvanceTurn();
             return;
         }
+
+        currentUnit.BeginTurn();
+        currentUnit.HandleTurnStartBP();
+        ResetSelectedBoost();
 
         // ── Break 状态：按剩余次数跳过行动 ──
         if (currentUnit.ConsumeBreakActionSkip())
@@ -196,9 +220,14 @@ public class BattleManager : MonoBehaviour
             AdvanceTurn();
     }
 
-    void EnterCommandSelect()
+    void EnterCommandSelect(bool resetBoost = true)
     {
         state = BattleState.CommandSelect;
+
+        if (resetBoost)
+            ResetSelectedBoost();
+        else
+            NotifyBoostSelectionChanged();
 
         if (currentCommandMenuUi == null && commandMenuPrefab != null && currentUnit != null)
         {
@@ -311,6 +340,12 @@ public class BattleManager : MonoBehaviour
 
         Debug.Log("[BattleManager] 玩家选择命令: " + cmd);
 
+        if ((cmd == BattleCommand.Skill || cmd == BattleCommand.Arts) && skill != null && skill.targetType == SkillTargetType.Self)
+        {
+            ExecuteCommand(currentUnit, cmd, skill, item, currentUnit);
+            return;
+        }
+
         if (cmd == BattleCommand.Attack || cmd == BattleCommand.Skill || cmd == BattleCommand.Arts || cmd == BattleCommand.Item)
         {
             StartCoroutine(StartTargetSelectionFlow());
@@ -340,8 +375,12 @@ public class BattleManager : MonoBehaviour
         // 决定可选目标
         if (pendingCommand == BattleCommand.Item && pendingItem != null)
             selectableEnemies = players.FindAll(p => p.currentHP > 0);  // 道具作用玩家
+        else if ((pendingCommand == BattleCommand.Skill || pendingCommand == BattleCommand.Arts) && pendingSkill != null)
+            selectableEnemies = GetSelectableTargetsForSkill(currentUnit, pendingSkill);
         else
-            selectableEnemies = enemies.FindAll(e => e.currentHP > 0);  // 攻击/技能作用敌人
+            selectableEnemies = currentUnit.unitType == UnitType.Player
+                ? enemies.FindAll(e => e.currentHP > 0)
+                : players.FindAll(p => p.currentHP > 0);
 
         if (selectableEnemies.Count == 0)
         {
@@ -375,6 +414,12 @@ public class BattleManager : MonoBehaviour
             UpdateArrowPosition();
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+            TryAdjustBoostLevel(1, pendingCommand, pendingSkill);
+
+        if (Input.GetKeyDown(KeyCode.Q))
+            TryAdjustBoostLevel(-1, pendingCommand, pendingSkill);
+
         if (Input.GetKeyDown(KeyCode.Return))
             ConfirmTarget();
 
@@ -394,7 +439,7 @@ public class BattleManager : MonoBehaviour
     {
         Destroy(currentArrow);
         Debug.Log("[BattleManager] 目标选择取消");
-        EnterCommandSelect();
+        EnterCommandSelect(false);
     }
 
     public void ExecuteCommand(BattleUnit unit, BattleCommand cmd, Skill skill, Item item, BattleUnit target)
@@ -403,10 +448,13 @@ public class BattleManager : MonoBehaviour
 
         Debug.Log($"[BattleManager] 执行命令: {cmd}, 施法者: {unit.name}, 目标: {(target != null ? target.name : "无")}");
 
+        int runtimeBoostLevel = 0;
+
         switch (cmd)
         {
             case BattleCommand.Attack:
-                BasicAttack(unit, target);
+                runtimeBoostLevel = ConsumeSelectedBoost(unit, cmd, skill);
+                BasicAttack(unit, target, runtimeBoostLevel);
                 break;
             case BattleCommand.Skill:
             case BattleCommand.Arts:
@@ -415,16 +463,32 @@ public class BattleManager : MonoBehaviour
                     Debug.Log($"[Status] {unit.unitName} 处于沉默状态，无法使用技能");
                     break;
                 }
-                skill?.Execute(this, unit, target);
+                if (skill == null)
+                {
+                    Debug.LogWarning($"[BattleManager] {unit.unitName} 没有选择技能，命令取消");
+                    break;
+                }
+                if (!unit.HasEnoughSP(skill.costSP))
+                {
+                    Debug.Log($"[BattleManager] {unit.unitName} 的 SP 不足，无法使用 {skill.skillName}（需要 {skill.costSP}，当前 {unit.currentSP}）");
+                    break;
+                }
+                runtimeBoostLevel = ConsumeSelectedBoost(unit, cmd, skill);
+                skill.Execute(this, unit, target, runtimeBoostLevel);
                 break;
             case BattleCommand.Item:
                 UseItem(unit, item, target);
                 break;
             case BattleCommand.Defend:
+                unit.SetDefending(true);
+                Debug.Log($"[BattleManager] {unit.unitName} 进入防御姿态");
                 break;
             case BattleCommand.Run:
                 break;
         }
+
+        if (!IsBoostableCommand(cmd, skill))
+            ResetSelectedBoost();
 
         CheckBattleEnd();
 
@@ -440,28 +504,47 @@ public class BattleManager : MonoBehaviour
         Debug.Log("[BattleManager] 使用道具: " + item.itemName + " 目标: " + target.name);
     }
 
-    void BasicAttack(BattleUnit attacker, BattleUnit target)
+    void BasicAttack(BattleUnit attacker, BattleUnit target, int boostLevel = 0)
     {
-        if (target == null) return;
-
-        if (!attacker.CheckHit(target))
-        {
-            Debug.Log($"[BattleManager] {attacker.unitName} 的普通攻击未命中 {target.unitName}");
+        if (attacker == null || target == null)
             return;
+
+        int totalHits = BattleFormula.GetBoostedAttackHitCount(boostLevel);
+        int successHits = 0;
+        int totalDamage = 0;
+
+        for (int i = 0; i < totalHits; i++)
+        {
+            if (target.currentHP <= 0)
+                break;
+
+            if (!attacker.CheckHit(target))
+            {
+                Debug.Log($"[BattleManager] {attacker.unitName} 的普通攻击第 {i + 1}/{totalHits} 段未命中 {target.unitName}");
+                continue;
+            }
+
+            int damage = BattleFormula.CalculateNormalAttackDamage(attacker, target);
+
+            if (attacker.CheckCrit())
+                damage = Mathf.Min(9999, Mathf.RoundToInt(damage * 1.5f));
+
+            target.TakeDamage(damage);
+            TryApplyShieldDamage(
+                target,
+                attacker.GetResolvedNormalAttackWeaponType(),
+                attacker.GetResolvedNormalAttackElementType(),
+                1);
+
+            successHits++;
+            totalDamage += damage;
+            Debug.Log($"[BattleManager] {attacker.unitName} 的普通攻击第 {i + 1}/{totalHits} 段命中 {target.unitName}，造成 {damage} 伤害");
         }
 
-        // Terror 降低攻击方攻击力，Freeze 增加被攻方受伤
-        int baseAtk = Mathf.RoundToInt(attacker.physicalAttack * attacker.AttackMultiplier);
-        int damage  = Mathf.Max(baseAtk - target.physicalDefense, 0);
-
-        if (attacker.CheckCrit())
-            damage = Mathf.RoundToInt(damage * 1.5f);
-
-        damage = Mathf.RoundToInt(damage * target.IncomingDamageMultiplier);
-        target.TakeDamage(damage);
-
-        TryApplyShieldDamage(target, attacker.normalAttackType, 1);
-        Debug.Log($"[BattleManager] {attacker.unitName} 攻击 {target.unitName}, 造成 {damage} 伤害");
+        if (successHits == 0)
+            Debug.Log($"[BattleManager] {attacker.unitName} 的普通攻击全部未命中 {target.unitName}");
+        else
+            Debug.Log($"[BattleManager] {attacker.unitName} 攻击 {target.unitName}，共命中 {successHits}/{totalHits} 段，总伤害 {totalDamage}（Boost {boostLevel}）");
     }
 
     void AdvanceTurn()
@@ -515,13 +598,24 @@ public class BattleManager : MonoBehaviour
         return result;
     }
 
-    /// <summary>命中后尝试削减护盾并触发 Break</summary>
+    /// <summary>旧接口兼容：基于单一 AttackType 的弱点判定</summary>
     public void TryApplyShieldDamage(BattleUnit target, AttackType attackType, int hitCount)
+    {
+        TryApplyShieldDamage(
+            target,
+            BattleFormula.ToWeaponType(attackType),
+            BattleFormula.ToElementType(attackType),
+            hitCount,
+            false);
+    }
+
+    /// <summary>命中后尝试按武器/属性弱点削减护盾并触发 Break</summary>
+    public void TryApplyShieldDamage(BattleUnit target, WeaponType weaponType, ElementType elementType, int hitCount, bool countBothWeaknessesSeparately = false)
     {
         if (target == null)
             return;
 
-        bool didBreak = target.ApplyShieldDamage(attackType, hitCount);
+        bool didBreak = target.ApplyShieldDamage(weaponType, elementType, hitCount, countBothWeaknessesSeparately);
         if (!didBreak)
             return;
 
@@ -568,10 +662,107 @@ public class BattleManager : MonoBehaviour
     /// <summary>外部调用：为目标施加异常状态，自动重算下轮顺序</summary>
     public void ApplyStatus(BattleUnit target, StatusEffectType type, int rounds)
     {
+        if (target == null || type == StatusEffectType.None)
+            return;
+
         target.ApplyStatusEffect(new StatusEffect(type, rounds));
         turnOrderSystem.RecalculateNextRound(GetAllAliveUnits());
         turnOrderUIManager?.RefreshNextOrder();
         turnOrderUIManager?.RefreshStateMarks();
+    }
+
+    public bool IsBoostableCommand(BattleCommand cmd, Skill skill = null)
+    {
+        bool commandSupportsBoost = cmd == BattleCommand.Attack || cmd == BattleCommand.Arts;
+        if (!commandSupportsBoost)
+            return false;
+
+        return skill == null || skill.CanBoost;
+    }
+
+    public bool TryAdjustBoostLevel(int delta, BattleCommand cmd, Skill skill = null)
+    {
+        if (!IsBoostableCommand(cmd, skill) || currentUnit == null)
+        {
+            if (selectedBoostLevel != 0)
+                selectedBoostLevel = 0;
+
+            NotifyBoostSelectionChanged();
+            return false;
+        }
+
+        int oldBoostLevel = selectedBoostLevel;
+        selectedBoostLevel = Mathf.Clamp(selectedBoostLevel + delta, 0, currentUnit.GetMaxAvailableBoostLevel());
+
+        if (oldBoostLevel != selectedBoostLevel)
+            Debug.Log($"[BP] {currentUnit.unitName} 当前设定 Boost {selectedBoostLevel}（BP {currentUnit.CurrentBP}/{currentUnit.MaxBP}）");
+
+        NotifyBoostSelectionChanged();
+        return oldBoostLevel != selectedBoostLevel;
+    }
+
+    public string GetBoostPreviewLabel(BattleCommand cmd, Skill skill = null)
+    {
+        if (!IsBoostableCommand(cmd, skill) || currentUnit == null)
+            return string.Empty;
+
+        string boostCore = skill != null
+            ? skill.GetBoostPreviewText(selectedBoostLevel)
+            : $"Boost {selectedBoostLevel}";
+
+        return string.IsNullOrEmpty(boostCore)
+            ? string.Empty
+            : $"{boostCore}  BP {currentUnit.CurrentBP}/{currentUnit.MaxBP}";
+    }
+
+    void ResetSelectedBoost(bool notify = true)
+    {
+        selectedBoostLevel = 0;
+
+        if (notify)
+            NotifyBoostSelectionChanged();
+    }
+
+    void NotifyBoostSelectionChanged()
+    {
+        int currentBP = currentUnit != null ? currentUnit.CurrentBP : 0;
+        OnBoostSelectionChanged?.Invoke(currentUnit, selectedBoostLevel, currentBP);
+    }
+
+    int ConsumeSelectedBoost(BattleUnit unit, BattleCommand cmd, Skill skill = null)
+    {
+        if (unit == null || !IsBoostableCommand(cmd, skill))
+        {
+            ResetSelectedBoost();
+            return 0;
+        }
+
+        int actualBoostLevel = unit.ConsumeBoostLevel(selectedBoostLevel);
+        ResetSelectedBoost();
+        return actualBoostLevel;
+    }
+
+    List<BattleUnit> GetSelectableTargetsForSkill(BattleUnit actingUnit, Skill skill)
+    {
+        if (actingUnit == null || skill == null)
+            return new List<BattleUnit>();
+
+        if (skill.targetType == SkillTargetType.Self)
+            return new List<BattleUnit> { actingUnit };
+
+        bool targetAllies = skill.targetType == SkillTargetType.AllySingle;
+        bool actingPlayer = actingUnit.unitType == UnitType.Player;
+
+        if (targetAllies)
+        {
+            return actingPlayer
+                ? players.FindAll(unit => unit.currentHP > 0)
+                : enemies.FindAll(unit => unit.currentHP > 0);
+        }
+
+        return actingPlayer
+            ? enemies.FindAll(unit => unit.currentHP > 0)
+            : players.FindAll(unit => unit.currentHP > 0);
     }
 
     void CheckBattleEnd()
@@ -619,6 +810,8 @@ public class BattleManager : MonoBehaviour
 
     public void ResetBattle()
     {
+        ResetSelectedBoost();
+
         foreach (var p in players)
         {
             p.InitializeBattleState();

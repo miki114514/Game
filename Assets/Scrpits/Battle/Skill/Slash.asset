@@ -14,6 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Slash
   type: 0
-  costSP: 5
-  power: 15
-  description: "\u7269\u7406\u653B\u51FB\u6280\u80FD"
+  attackType: 1
+  requiredWeaponType: 1
+  targetType: 0
+  hitCount: 1
+  allowBoost: 1
+  boostAddsHitCount: 0
+  boostExtendsDuration: 0
+  roundsPerBoost: 1
+  costSP: 4
+  baseMultiplier: 1
+  triggerChance: 100
+  judgementEffect: -1
+  judgementRounds: 1
+  description: "\u5BF9\u5355\u4F53\u654C\u4EBA\u9020\u6210\u5251\u5C5E\u6027\u7269\u7406\u4F24\u5BB3"

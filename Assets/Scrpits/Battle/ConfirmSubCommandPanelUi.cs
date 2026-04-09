@@ -39,7 +39,11 @@ public class ConfirmSubCommandPanelUi : MonoBehaviour
         selectedIndex = 0;
         isActive = true;
         gameObject.SetActive(true);
+
+        Canvas.ForceUpdateCanvases();
         UpdateSelectionUI();
+        UpdateArrowPosition();
+
         Debug.Log($"[ConfirmSubCommandPanelUi] 显示确认面板: {cmd}");
     }
 
@@ -127,31 +131,44 @@ public class ConfirmSubCommandPanelUi : MonoBehaviour
         optionCancel.transform.Find("Base")?.gameObject.SetActive(confirmSelected);
         optionCancel.transform.Find("Select")?.gameObject.SetActive(!confirmSelected);
 
+        Canvas.ForceUpdateCanvases();
+        UpdateArrowPosition();
+
         Debug.Log($"[ConfirmSubCommandPanelUi] 选中: {(confirmSelected ? "确认" : "取消")}");
+    }
+
+    RectTransform GetSelectedOptionRect()
+    {
+        GameObject selectedOption = (selectedIndex == 0) ? optionConfirm : optionCancel;
+        if (selectedOption == null)
+            return null;
+
+        RectTransform selectRect = selectedOption.transform.Find("Select") as RectTransform;
+        if (selectRect != null && selectRect.rect.size.sqrMagnitude > 0f)
+            return selectRect;
+
+        RectTransform baseRect = selectedOption.transform.Find("Base") as RectTransform;
+        if (baseRect != null && baseRect.rect.size.sqrMagnitude > 0f)
+            return baseRect;
+
+        return selectedOption.GetComponent<RectTransform>();
     }
 
     void UpdateArrowPosition()
     {
-        if (arrow == null) return;
+        if (arrow == null)
+            return;
 
-        GameObject selectedOption = (selectedIndex == 0) ? optionConfirm : optionCancel;
-        if (selectedOption == null) return;
-
-        RectTransform selectedRect = selectedOption.GetComponent<RectTransform>();
-        if (selectedRect == null) return;
-
-        // 与 SubCommandPanelUi 保持相同的世界坐标转换逻辑
-        Vector3 itemWorldPos = selectedRect.TransformPoint(
-            new Vector3(-selectedRect.rect.width / 2f, 0f, 0f));
-
+        RectTransform selectedRect = GetSelectedOptionRect();
         RectTransform arrowParent = arrow.parent as RectTransform;
-        if (arrowParent == null) return;
+        if (selectedRect == null || arrowParent == null)
+            return;
 
-        Vector3 localPos = arrowParent.InverseTransformPoint(itemWorldPos);
-        float arrowWidth = arrow.rect.width;
+        Vector3 targetWorldCenter = selectedRect.TransformPoint(selectedRect.rect.center);
+        Vector2 targetLocalCenter = arrowParent.InverseTransformPoint(targetWorldCenter);
 
         arrow.anchoredPosition = new Vector2(
-            localPos.x - arrowWidth / 2f + arrowOffset.x,
-            localPos.y + arrowOffset.y);
+            targetLocalCenter.x + arrowOffset.x,
+            targetLocalCenter.y + arrowOffset.y);
     }
 }

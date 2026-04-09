@@ -278,6 +278,10 @@ MonoBehaviour:
   currentHP: 80
   maxSP: 30
   currentSP: 30
+  maxBP: 5
+  currentBP: 0
+  startBattleBP: 0
+  bpRecoveryPerTurn: 1
   physicalAttack: 15
   magicAttack: 10
   physicalDefense: 3
@@ -286,6 +290,19 @@ MonoBehaviour:
   speed: 8
   critRate: 5
   evasion: 5
+  normalAttackDamageType: 0
+  normalAttackWeaponType: 1
+  normalAttackElementType: 0
+  normalAttackType: 1
+  weaponAttackEntries: []
+  currentExp: 0
+  expToNextLevel: 100
+  maxShield: 2
+  currentShield: 2
+  weaknessTypes: 0100000002000000
+  statusImmunities: 
+  artsAbilityMultiplier: 1
+  forcedDamageReductionMultiplier: 1
   artsList:
   - {fileID: 11400000, guid: 1480ea9c15efb314280fd7490633162c, type: 2}
   skillList: []
@@ -406,6 +423,7 @@ MonoBehaviour:
   confirmSubCommandPanelPrefab: {fileID: 7452763341342691973, guid: a4afe5269615fed4180a550131f13deb,
     type: 3}
   currentUnit: {fileID: 0}
+  selectedBoostLevel: 0
   enemySelectArrowPrefab: {fileID: 6215686195812506736, guid: 97c7989b6d4e14e4aadaa6f5a2b529e9,
     type: 3}
 --- !u!4 &612085626
@@ -461,6 +479,10 @@ MonoBehaviour:
   currentHP: 0
   maxSP: 300
   currentSP: 0
+  maxBP: 5
+  currentBP: 0
+  startBattleBP: 0
+  bpRecoveryPerTurn: 1
   physicalAttack: 20
   magicAttack: 15
   physicalDefense: 10
@@ -469,6 +491,19 @@ MonoBehaviour:
   speed: 7
   critRate: 10
   evasion: 5
+  normalAttackDamageType: 0
+  normalAttackWeaponType: 1
+  normalAttackElementType: 0
+  normalAttackType: 1
+  weaponAttackEntries: []
+  currentExp: 0
+  expToNextLevel: 100
+  maxShield: 0
+  currentShield: 0
+  weaknessTypes: 
+  statusImmunities: 
+  artsAbilityMultiplier: 1
+  forcedDamageReductionMultiplier: 1
   artsList:
   - {fileID: 11400000, guid: d52c4f6cc01f5b541a635bf5757fbb3f, type: 2}
   - {fileID: 11400000, guid: 1480ea9c15efb314280fd7490633162c, type: 2}
@@ -577,7 +612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -238, y: -240}
+  m_AnchoredPosition: {x: -238, y: -270}
   m_SizeDelta: {x: 288, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &885175604
@@ -595,6 +630,9 @@ MonoBehaviour:
   container: {fileID: 885175603}
   playerStatusPrefab: {fileID: 8779279357253468763, guid: 5f030ec1bf15fae40a35537cc818d3dc,
     type: 3}
+  enemyBreakPanelPrefab: {fileID: 0}
+  enemyBreakPanelParent: {fileID: 0}
+  autoCreateEnemyBreakPanels: 1
 --- !u!114 &885175605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,6 +711,10 @@ MonoBehaviour:
   currentHP: 0
   maxSP: 30
   currentSP: 0
+  maxBP: 5
+  currentBP: 0
+  startBattleBP: 0
+  bpRecoveryPerTurn: 1
   physicalAttack: 20
   magicAttack: 15
   physicalDefense: 10
@@ -681,6 +723,19 @@ MonoBehaviour:
   speed: 9
   critRate: 10
   evasion: 5
+  normalAttackDamageType: 0
+  normalAttackWeaponType: 1
+  normalAttackElementType: 0
+  normalAttackType: 1
+  weaponAttackEntries: []
+  currentExp: 0
+  expToNextLevel: 100
+  maxShield: 0
+  currentShield: 0
+  weaknessTypes: 
+  statusImmunities: 
+  artsAbilityMultiplier: 1
+  forcedDamageReductionMultiplier: 1
   artsList:
   - {fileID: 11400000, guid: d52c4f6cc01f5b541a635bf5757fbb3f, type: 2}
   - {fileID: 11400000, guid: 1480ea9c15efb314280fd7490633162c, type: 2}
@@ -1071,6 +1126,10 @@ MonoBehaviour:
   currentHP: 0
   maxSP: 50
   currentSP: 0
+  maxBP: 5
+  currentBP: 0
+  startBattleBP: 0
+  bpRecoveryPerTurn: 1
   physicalAttack: 20
   magicAttack: 15
   physicalDefense: 10
@@ -1079,6 +1138,19 @@ MonoBehaviour:
   speed: 10
   critRate: 10
   evasion: 5
+  normalAttackDamageType: 0
+  normalAttackWeaponType: 1
+  normalAttackElementType: 0
+  normalAttackType: 1
+  weaponAttackEntries: []
+  currentExp: 0
+  expToNextLevel: 100
+  maxShield: 0
+  currentShield: 0
+  weaknessTypes: 
+  statusImmunities: 
+  artsAbilityMultiplier: 1
+  forcedDamageReductionMultiplier: 1
   artsList:
   - {fileID: 11400000, guid: d52c4f6cc01f5b541a635bf5757fbb3f, type: 2}
   - {fileID: 11400000, guid: 1480ea9c15efb314280fd7490633162c, type: 2}
@@ -1257,6 +1329,10 @@ MonoBehaviour:
   currentHP: 0
   maxSP: 15
   currentSP: 0
+  maxBP: 5
+  currentBP: 0
+  startBattleBP: 0
+  bpRecoveryPerTurn: 1
   physicalAttack: 20
   magicAttack: 15
   physicalDefense: 10
@@ -1265,6 +1341,19 @@ MonoBehaviour:
   speed: 8
   critRate: 10
   evasion: 5
+  normalAttackDamageType: 0
+  normalAttackWeaponType: 1
+  normalAttackElementType: 0
+  normalAttackType: 1
+  weaponAttackEntries: []
+  currentExp: 0
+  expToNextLevel: 100
+  maxShield: 0
+  currentShield: 0
+  weaknessTypes: 
+  statusImmunities: 
+  artsAbilityMultiplier: 1
+  forcedDamageReductionMultiplier: 1
   artsList:
   - {fileID: 11400000, guid: d52c4f6cc01f5b541a635bf5757fbb3f, type: 2}
   - {fileID: 11400000, guid: 1480ea9c15efb314280fd7490633162c, type: 2}
@@ -1642,18 +1731,35 @@ MonoBehaviour:
   unitType: 1
   portrait: {fileID: 1908423686, guid: 874372934b789c94589b3273f979f4e2, type: 3}
   level: 1
-  maxHP: 80
-  currentHP: 80
-  maxSP: 30
-  currentSP: 30
-  physicalAttack: 15
-  magicAttack: 10
-  physicalDefense: 3
-  magicDefense: 2
-  accuracy: 85
-  speed: 8
+  maxHP: 120
+  currentHP: 120
+  maxSP: 20
+  currentSP: 20
+  maxBP: 5
+  currentBP: 0
+  startBattleBP: 0
+  bpRecoveryPerTurn: 1
+  physicalAttack: 12
+  magicAttack: 8
+  physicalDefense: 4
+  magicDefense: 3
+  accuracy: 90
+  speed: 6
   critRate: 5
   evasion: 5
+  normalAttackDamageType: 0
+  normalAttackWeaponType: 1
+  normalAttackElementType: 0
+  normalAttackType: 1
+  weaponAttackEntries: []
+  currentExp: 0
+  expToNextLevel: 100
+  maxShield: 4
+  currentShield: 4
+  weaknessTypes: 0100000002000000030000000a000000
+  statusImmunities: 
+  artsAbilityMultiplier: 1
+  forcedDamageReductionMultiplier: 1
   artsList:
   - {fileID: 11400000, guid: 1480ea9c15efb314280fd7490633162c, type: 2}
   skillList: []
@@ -1755,7 +1861,6 @@ RectTransform:
   m_Children:
   - {fileID: 885175603}
   - {fileID: 86124668925280242}
-  - {fileID: 2071278257}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1763,24 +1868,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!224 &2071278257 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-    type: 3}
-  m_PrefabInstance: {fileID: 3337312461107404384}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2071278258 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5097772231991250019, guid: 3495be657d01dd64fa5a0d594cc46920,
-    type: 3}
-  m_PrefabInstance: {fileID: 3337312461107404384}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eef42165e44fed54b95f30c8bbc841ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2103053243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,129 +2073,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &3337312461107404384
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1953119126}
-    m_Modifications:
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410106703366402557, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7433455741560580044, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_Name
-      value: TurnOrderItem
-      objectReference: {fileID: 0}
-    - target: {fileID: 7433455741560580044, guid: 3495be657d01dd64fa5a0d594cc46920,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3495be657d01dd64fa5a0d594cc46920, type: 3}
 --- !u!224 &3461363088756110779
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2255,7 +2219,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTurnList: {fileID: 7615756604181983799}
   nextTurnList: {fileID: 6361922668239454032}
-  turnOrderItemPrefab: {fileID: 2071278258}
+  turnOrderItemPrefab: {fileID: 5097772231991250019, guid: 3495be657d01dd64fa5a0d594cc46920,
+    type: 3}
   useManualHorizontalPack: 1
   currentSpacing: -15
   nextSpacing: -12

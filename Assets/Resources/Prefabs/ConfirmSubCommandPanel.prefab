@@ -880,7 +880,7 @@ MonoBehaviour:
   optionConfirm: {fileID: 7936899681820482334}
   optionCancel: {fileID: 6688188974128525908}
   arrow: {fileID: 4610020586852298725}
-  arrowOffset: {x: 0, y: 0}
+  arrowOffset: {x: -120, y: 0}
   battleManager: {fileID: 0}
   commandMenuUi: {fileID: 1090534866659235656, guid: c89e6da34cdc72845a23baa8e1d31e8b,
     type: 3}

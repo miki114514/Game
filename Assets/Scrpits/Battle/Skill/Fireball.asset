@@ -13,7 +13,22 @@ MonoBehaviour:
   m_Name: Fireball
   m_EditorClassIdentifier: 
   skillName: Fireball
-  type: 0
+  type: 1
+  damageType: 1
+  weaponType: 0
+  elementType: 0
+  attackType: 2
+  requiredWeaponType: 0
+  countBothWeaknessesSeparately: 0
+  targetType: 0
+  hitCount: 1
+  allowBoost: 1
+  boostAddsHitCount: 0
+  boostExtendsDuration: 1
+  roundsPerBoost: 1
   costSP: 10
-  power: 25
-  description: "\u9B54\u6CD5\u653B\u51FB\u6280\u80FD"
+  baseMultiplier: 1
+  triggerChance: 100
+  judgementEffect: -1
+  judgementRounds: 1
+  description: "\u5BF9\u5355\u4F53\u654C\u4EBA\u9020\u6210\u706B\u5C5E\u6027\u9B54\u6CD5\u4F24\u5BB3"

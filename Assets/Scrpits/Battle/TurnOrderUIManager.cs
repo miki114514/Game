@@ -67,12 +67,156 @@ public class TurnOrderUIManager : MonoBehaviour
     // ── BattleManager 引用 ────────────────────────
     private BattleManager _battleManager;
 
+    void Awake()
+    {
+        AutoAssignReferences();
+    }
+
+    void AutoAssignReferences()
+    {
+        if (currentTurnList == null)
+            currentTurnList = FindListRect("CurrentTurnPanel/CurrentTurnList", "CurrentTurnList");
+
+        if (nextTurnList == null)
+            nextTurnList = FindListRect("NextTurnPanel/NextTurnList", "NextTurnList");
+    }
+
+    RectTransform FindListRect(params string[] candidatePaths)
+    {
+        foreach (string path in candidatePaths)
+        {
+            if (string.IsNullOrWhiteSpace(path))
+                continue;
+
+            Transform direct = transform.Find(path);
+            if (direct is RectTransform directRect)
+                return directRect;
+
+            string name = path.Contains("/")
+                ? path.Substring(path.LastIndexOf('/') + 1)
+                : path;
+
+            RectTransform[] allRects = GetComponentsInChildren<RectTransform>(true);
+            foreach (RectTransform rect in allRects)
+            {
+                if (rect != null && rect != transform && rect.name == name)
+                    return rect;
+            }
+        }
+
+        return null;
+    }
+
+    bool EnsureRuntimeReferences()
+    {
+        AutoAssignReferences();
+
+        if (currentTurnList == null || nextTurnList == null)
+        {
+            Debug.LogError("[TurnOrderUI] CurrentTurnList / NextTurnList 未绑定，无法刷新行动顺序 UI。", this);
+            return false;
+        }
+
+        if (turnOrderItemPrefab == null)
+        {
+            turnOrderItemPrefab = Resources.Load<TurnOrderItem>("Prefabs/TurnOrderItem");
+            if (turnOrderItemPrefab != null)
+            {
+                Debug.LogWarning("[TurnOrderUI] `turnOrderItemPrefab` 未在 Inspector 绑定，已自动加载 `Resources/Prefabs/TurnOrderItem`。", this);
+            }
+            else
+            {
+                turnOrderItemPrefab = FindExistingItemTemplate(currentTurnList);
+                if (turnOrderItemPrefab == null)
+                    turnOrderItemPrefab = FindExistingItemTemplate(nextTurnList);
+
+                if (turnOrderItemPrefab != null)
+                {
+                    turnOrderItemPrefab.gameObject.SetActive(false);
+                    Debug.LogWarning("[TurnOrderUI] `turnOrderItemPrefab` 未在 Inspector 绑定，已自动使用列表中的 TurnOrderItem 模板。", this);
+                }
+                else
+                {
+                    turnOrderItemPrefab = CreateRuntimeFallbackItemPrefab();
+                    Debug.LogWarning("[TurnOrderUI] `turnOrderItemPrefab` 为空，已创建简易运行时图标以避免报错。建议仍在 Inspector 中绑定正式的 `TurnOrderItem` 预制体。", this);
+                }
+            }
+        }
+
+        return turnOrderItemPrefab != null;
+    }
+
+    TurnOrderItem FindExistingItemTemplate(RectTransform container)
+    {
+        if (container == null)
+            return null;
+
+        TurnOrderItem[] candidates = container.GetComponentsInChildren<TurnOrderItem>(true);
+        foreach (TurnOrderItem candidate in candidates)
+        {
+            if (candidate != null)
+                return candidate;
+        }
+
+        return null;
+    }
+
+    TurnOrderItem CreateRuntimeFallbackItemPrefab()
+    {
+        GameObject root = new GameObject("TurnOrderItem_RuntimeFallback", typeof(RectTransform), typeof(LayoutElement), typeof(TurnOrderItem));
+        root.hideFlags = HideFlags.DontSave;
+
+        RectTransform rootRect = root.GetComponent<RectTransform>();
+        rootRect.sizeDelta = iconSize;
+
+        TurnOrderItem item = root.GetComponent<TurnOrderItem>();
+        item.defaultGroup = CreatePortraitGroup("DefaultGroup", root.transform, out Image defaultPortrait, new Color(1f, 1f, 1f, 0.92f));
+        item.activeGroup = CreatePortraitGroup("ActiveGroup", root.transform, out Image activePortrait, Color.white);
+        item.defaultPortrait = defaultPortrait;
+        item.activePortrait = activePortrait;
+
+        if (item.activeGroup != null)
+            item.activeGroup.SetActive(false);
+
+        root.SetActive(false);
+        return item;
+    }
+
+    GameObject CreatePortraitGroup(string groupName, Transform parent, out Image portrait, Color tint)
+    {
+        GameObject group = new GameObject(groupName, typeof(RectTransform));
+        RectTransform groupRect = group.GetComponent<RectTransform>();
+        groupRect.SetParent(parent, false);
+        groupRect.anchorMin = Vector2.zero;
+        groupRect.anchorMax = Vector2.one;
+        groupRect.offsetMin = Vector2.zero;
+        groupRect.offsetMax = Vector2.zero;
+
+        GameObject portraitObject = new GameObject("Portrait", typeof(RectTransform), typeof(Image));
+        RectTransform portraitRect = portraitObject.GetComponent<RectTransform>();
+        portraitRect.SetParent(group.transform, false);
+        portraitRect.anchorMin = Vector2.zero;
+        portraitRect.anchorMax = Vector2.one;
+        portraitRect.offsetMin = Vector2.zero;
+        portraitRect.offsetMax = Vector2.zero;
+
+        portrait = portraitObject.GetComponent<Image>();
+        portrait.color = tint;
+        portrait.raycastTarget = false;
+        portrait.preserveAspect = true;
+
+        return group;
+    }
+
     // ==========================================================
     // 初始化（由 BattleManager.StartBattle 调用）
     // ==========================================================
     public void Init(BattleManager battleManager)
     {
         _battleManager = battleManager;
+
+        if (!EnsureRuntimeReferences())
+            return;
 
         ApplyLayoutSettings();
 
@@ -197,7 +341,7 @@ public class TurnOrderUIManager : MonoBehaviour
     /// <summary>仅刷新当前回合队列（高亮移动到 activeIndex）</summary>
     public void RefreshCurrentOrder(int activeIndex)
     {
-        if (_battleManager == null) return;
+        if (_battleManager == null || !EnsureRuntimeReferences()) return;
         var order = _battleManager.CurrentOrderList;
         SyncItemList(_currentItems, currentTurnList, order, activeIndex);
     }
@@ -205,7 +349,7 @@ public class TurnOrderUIManager : MonoBehaviour
     /// <summary>仅刷新下一回合队列（全部为默认状态）</summary>
     public void RefreshNextOrder()
     {
-        if (_battleManager == null) return;
+        if (_battleManager == null || !EnsureRuntimeReferences()) return;
         var order = _battleManager.NextOrderList;
         SyncItemList(_nextItems, nextTurnList, order, activeIndex: -1);
     }
@@ -231,6 +375,15 @@ public class TurnOrderUIManager : MonoBehaviour
         IReadOnlyList<BattleUnit> order,
         int activeIndex)
     {
+        if (container == null || order == null)
+            return;
+
+        if (turnOrderItemPrefab == null)
+        {
+            Debug.LogError("[TurnOrderUI] `turnOrderItemPrefab` 为空，无法生成人物行动顺序节点。", this);
+            return;
+        }
+
         // 扩容：按需实例化
         while (itemList.Count < order.Count)
         {

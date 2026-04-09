@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -5,17 +6,37 @@ using TMPro;
 public class PlayerStatus : MonoBehaviour
 {
     [Header("UI组件")]
+    public TextMeshProUGUI playerNameText;
+    public Text legacyPlayerNameText;
     public TextMeshProUGUI hpText;
     public Image hpFill;
 
     public TextMeshProUGUI spText;
     public Image spFill;
 
+    [Header("BP显示（可选）")]
+    public TextMeshProUGUI bpText;
+    public bool updateBpTextValue = false;
+    public string bpTextPrefix = "BP";
+    public List<GameObject> bpPips = new List<GameObject>();
+    public List<Image> bpPipImages = new List<Image>();
+    public Sprite bpEmptySprite;
+    public Sprite bpFilledSprite;
+    public Color bpEmptyColor = new Color(1f, 1f, 1f, 0.28f);
+    public Color bpFilledColor = Color.white;
+
     [Header("绑定单位")]
     public BattleUnit unit;
 
+    void Awake()
+    {
+        AutoAssignOptionalReferences();
+    }
+
     void OnEnable()
     {
+        AutoAssignOptionalReferences();
+
         if (unit != null)
             Bind(unit);
     }
@@ -23,6 +44,20 @@ public class PlayerStatus : MonoBehaviour
     void OnDisable()
     {
         Unbind();
+    }
+
+    // =========================
+    // 名字更新
+    // =========================
+    void UpdateName(string displayName)
+    {
+        string safeName = string.IsNullOrWhiteSpace(displayName) ? "-" : displayName;
+
+        if (playerNameText != null)
+            playerNameText.text = safeName;
+
+        if (legacyPlayerNameText != null)
+            legacyPlayerNameText.text = safeName;
     }
 
     // =========================
@@ -44,6 +79,45 @@ public class PlayerStatus : MonoBehaviour
     {
         spText.text = FormatNumber(current) + " / " + FormatNumber(max);
         spFill.fillAmount = (float)current / max;
+    }
+
+    // =========================
+    // BP更新
+    // =========================
+    void UpdateBP(int current, int max)
+    {
+        if (bpText != null)
+        {
+            if (updateBpTextValue)
+                bpText.text = string.IsNullOrEmpty(bpTextPrefix)
+                    ? FormatNumber(current)
+                    : $"{bpTextPrefix} {FormatNumber(current)}";
+            else if (!string.IsNullOrEmpty(bpTextPrefix))
+                bpText.text = bpTextPrefix;
+        }
+
+        for (int i = 0; i < bpPips.Count; i++)
+        {
+            if (bpPips[i] != null)
+                bpPips[i].SetActive(i < Mathf.Max(1, max));
+        }
+
+        for (int i = 0; i < bpPipImages.Count; i++)
+        {
+            Image pipImage = bpPipImages[i];
+            if (pipImage == null)
+                continue;
+
+            bool isFilled = i < current;
+            pipImage.enabled = i < Mathf.Max(1, max);
+
+            if (isFilled && bpFilledSprite != null)
+                pipImage.sprite = bpFilledSprite;
+            else if (!isFilled && bpEmptySprite != null)
+                pipImage.sprite = bpEmptySprite;
+
+            pipImage.color = isFilled ? bpFilledColor : bpEmptyColor;
+        }
     }
 
     // =========================
@@ -72,6 +146,19 @@ public class PlayerStatus : MonoBehaviour
         Bind(unit);
     }
 
+    void AutoAssignOptionalReferences()
+    {
+        Transform nameNode = transform.Find("PlayerName");
+        if (nameNode == null)
+            return;
+
+        if (playerNameText == null)
+            playerNameText = nameNode.GetComponent<TextMeshProUGUI>();
+
+        if (legacyPlayerNameText == null)
+            legacyPlayerNameText = nameNode.GetComponent<Text>();
+    }
+
     void Bind(BattleUnit targetUnit)
     {
         if (targetUnit == null)
@@ -80,13 +167,21 @@ public class PlayerStatus : MonoBehaviour
             return;
         }
 
+        string displayName = string.IsNullOrWhiteSpace(targetUnit.unitName)
+            ? targetUnit.gameObject.name
+            : targetUnit.unitName;
+
+        UpdateName(displayName);
         UpdateHP(targetUnit.currentHP, targetUnit.maxHP);
         UpdateSP(targetUnit.currentSP, targetUnit.maxSP);
+        UpdateBP(targetUnit.CurrentBP, targetUnit.MaxBP);
 
         targetUnit.OnHPChanged -= UpdateHP;
         targetUnit.OnHPChanged += UpdateHP;
         targetUnit.OnSPChanged -= UpdateSP;
         targetUnit.OnSPChanged += UpdateSP;
+        targetUnit.OnBPChanged -= UpdateBP;
+        targetUnit.OnBPChanged += UpdateBP;
     }
 
     void Unbind()
@@ -96,5 +191,6 @@ public class PlayerStatus : MonoBehaviour
 
         unit.OnHPChanged -= UpdateHP;
         unit.OnSPChanged -= UpdateSP;
+        unit.OnBPChanged -= UpdateBP;
     }
 }
