@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 973c117e45e90934189645ddfaee909a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1762
+        width: 288
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81311aed3f2f3040ba12027a117bae5
+      internalID: 1060272830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_1
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1762
+        width: 288
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302d6fb284fb293419b7c94ca2197326
+      internalID: -1042489184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_2
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1760
+        width: 288
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15a79d5617fd054fba488858ed482f2
+      internalID: 1819432257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_3
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 1760
+        width: 288
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec0799d16912f646a25bdec61bb7bb5
+      internalID: 1623433740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_4
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1760
+        width: 290
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df325b7ff1815c4e8acd9a6cbfd0c73
+      internalID: -1977169960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_5
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 1760
+        width: 290
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5322c3b4fe84f4cb07876c7bc5f757
+      internalID: -270115136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1470
+        width: 290
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12b01646771ac14eb67c23e12b5788e
+      internalID: -928491784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_7
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1470
+        width: 290
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e06e7012b69d884693f02c3b361b2ce
+      internalID: -1291645405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_8
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1470
+        width: 290
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b5eec38e2c47a4a9f8912111ec60fa
+      internalID: 1315903492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_9
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1496
+        width: 292
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c023142f594759444870c52242e1aa34
+      internalID: 2012104473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_10
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 1468
+        width: 298
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5f1c4c9a2251b4ba14c7c04e1a6518
+      internalID: -326010636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_11
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 1436
+        width: 306
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aeebc518d2f36048a1e4d1503e95d48
+      internalID: 902011353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1238
+        width: 376
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d58fb15e76e68e4f8d59835f241e284
+      internalID: 1263553449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_13
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1012
+        width: 450
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4a10c7fa6f7c542bf8c726b65c7903
+      internalID: 2125479296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_14
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1012
+        width: 454
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e144bbd5be4f8e409b3136366274f8e
+      internalID: -1551885679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_15
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 1012
+        width: 456
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2fb1628b3bf87c4aba807a0dd9b4a8a
+      internalID: -2010791443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 782
+        width: 480
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb034f743a828804fb63dfdf7df5a42c
+      internalID: -980760460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_17
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 746
+        width: 546
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8598a127c55a75540b5b12f90eb2bd11
+      internalID: 979879668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_18
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 746
+        width: 546
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c05607a08d9064fb3f14353d02b3c1
+      internalID: -2082637164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 466
+        width: 558
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b5a5fe968e4aa42b48de34f427a78c
+      internalID: 1317662979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_20
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 466
+        width: 60
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c925bfc5054df2540981c4750c3ad4b0
+      internalID: 1156313772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnmTX_WrmDst_L_A_21
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 464
+        width: 560
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5eb261b2088524a87194dc776ee6e1
+      internalID: -838867249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: bd1d612ff668f93418d91620703c36a7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      EnmTX_WrmDst_L_A_0: 1060272830
+      EnmTX_WrmDst_L_A_1: -1042489184
+      EnmTX_WrmDst_L_A_10: -326010636
+      EnmTX_WrmDst_L_A_11: 902011353
+      EnmTX_WrmDst_L_A_12: 1263553449
+      EnmTX_WrmDst_L_A_13: 2125479296
+      EnmTX_WrmDst_L_A_14: -1551885679
+      EnmTX_WrmDst_L_A_15: -2010791443
+      EnmTX_WrmDst_L_A_16: -980760460
+      EnmTX_WrmDst_L_A_17: 979879668
+      EnmTX_WrmDst_L_A_18: -2082637164
+      EnmTX_WrmDst_L_A_19: 1317662979
+      EnmTX_WrmDst_L_A_2: 1819432257
+      EnmTX_WrmDst_L_A_20: 1156313772
+      EnmTX_WrmDst_L_A_21: -838867249
+      EnmTX_WrmDst_L_A_3: 1623433740
+      EnmTX_WrmDst_L_A_4: -1977169960
+      EnmTX_WrmDst_L_A_5: -270115136
+      EnmTX_WrmDst_L_A_6: -928491784
+      EnmTX_WrmDst_L_A_7: -1291645405
+      EnmTX_WrmDst_L_A_8: 1315903492
+      EnmTX_WrmDst_L_A_9: 2012104473
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -478,8 +478,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player_Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 45474b7ff6e6f424b9351bbd409b78a0, type: 2}
+  m_sharedMaterial: {fileID: -8821383429395994804, guid: 45474b7ff6e6f424b9351bbd409b78a0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1941,11 +1942,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07e9921a253a6a45bbb6c7815427a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNameText: {fileID: 0}
+  legacyPlayerNameText: {fileID: 0}
   hpText: {fileID: 8150543745013890811}
   hpFill: {fileID: 4146663279839665020}
   spText: {fileID: 1536074031327970507}
   spFill: {fileID: 5548768281159434395}
   bpText: {fileID: 487796948129803509}
+  updateBpTextValue: 0
+  bpTextPrefix: BP
   bpPips:
   - {fileID: 0}
   - {fileID: 0}
@@ -1963,3 +1968,4 @@ MonoBehaviour:
   bpEmptyColor: {r: 1, g: 1, b: 1, a: 0.28}
   bpFilledColor: {r: 1, g: 1, b: 1, a: 1}
   unit: {fileID: 0}
+  battleManager: {fileID: 0}

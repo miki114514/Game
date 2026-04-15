@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76690641ea2786a4daf2cebb0a009a1d, type: 3}
+  m_Name: ACC_Starter_FocusCharm
+  m_EditorClassIdentifier: 
+  equipmentName: ACC_Starter_FocusCharm
+  description: "\u5F00\u5C40 BP+1\uFF0C\u9002\u5408 BP \u9A71\u52A8\u89D2\u8272"
+  icon: {fileID: 0}
+  pAtk: 0
+  eAtk: 2
+  pDef: 0
+  eDef: 1
+  speed: 1
+  accuracy: 0
+  crit: 0
+  hp: 0
+  sp: 10
+  resistances: []
+  specialEffects:
+  - effectType: 1
+    value: 1
+    buffType: -1
+    buffDuration: 1

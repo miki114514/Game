@@ -436,7 +436,10 @@ public class CommandMenuUi : MonoBehaviour
         int attackHitCount = BattleFormula.GetBoostedAttackHitCount(previewBoostLevel);
 
         if (currentBPText != null)
-            currentBPText.text = unit != null ? $"BP {unit.CurrentBP}/{unit.MaxBP}" : "BP 0/0";
+        {
+            int previewCurrentBP = unit != null ? Mathf.Max(0, unit.CurrentBP - previewBoostLevel) : 0;
+            currentBPText.text = unit != null ? $"BP {previewCurrentBP}/{unit.MaxBP}" : "BP 0/0";
+        }
 
         if (boostPreviewText != null)
             boostPreviewText.text = isAttackSelected ? $"x{attackHitCount}" : string.Empty;

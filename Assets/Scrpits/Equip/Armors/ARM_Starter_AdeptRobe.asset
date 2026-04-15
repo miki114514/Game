@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b54efca0935c54ebc56a9210a001e9, type: 3}
+  m_Name: ARM_Starter_AdeptRobe
+  m_EditorClassIdentifier: 
+  equipmentName: ARM_Starter_AdeptRobe
+  description: "\u57FA\u7840\u9632\u5177\u6A21\u677F\uFF1ABody"
+  icon: {fileID: 0}
+  pAtk: 0
+  eAtk: 0
+  pDef: 5
+  eDef: 9
+  speed: 0
+  accuracy: 0
+  crit: 0
+  hp: 0
+  sp: 0
+  resistances: []
+  slot: 1

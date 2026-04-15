@@ -32,6 +32,11 @@ public class BattleStatusUIManager : MonoBehaviour
     // 初始化战斗UI
     public void InitStatusUI(List<BattleUnit> players)
     {
+        InitStatusUI(null, players);
+    }
+
+    public void InitStatusUI(BattleManager battleManager, List<BattleUnit> players)
+    {
         if (container == null)
         {
             Debug.LogError("[BattleStatusUIManager] 未配置 container，无法生成人物状态UI");
@@ -72,7 +77,7 @@ public class BattleStatusUIManager : MonoBehaviour
                 continue;
             }
 
-            ps.Init(players[i]);  // 公共初始化方法
+            ps.Init(players[i], battleManager);  // 公共初始化方法
             statusUIs.Add(ps);
         }
 

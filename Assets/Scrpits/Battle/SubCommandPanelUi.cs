@@ -445,7 +445,10 @@ public class SubCommandPanelUi : MonoBehaviour
 
         BattleUnit unit = battleManager.CurrentUnit;
         if (currentBPText != null)
-            currentBPText.text = unit != null ? $"BP {unit.CurrentBP}/{unit.MaxBP}" : "BP 0/0";
+        {
+            int previewCurrentBP = unit != null ? Mathf.Max(0, unit.CurrentBP - battleManager.SelectedBoostLevel) : 0;
+            currentBPText.text = unit != null ? $"BP {previewCurrentBP}/{unit.MaxBP}" : "BP 0/0";
+        }
 
         if (boostPreviewText != null)
             boostPreviewText.text = battleManager.GetBoostPreviewLabel(parentCommand, GetSelectedSkill());

@@ -75,7 +75,40 @@ public class BattleUnit : MonoBehaviour
     public UnitType unitType;
 
     [Header("头像")]
-    public Sprite portrait;   // 队列图标用头像（菱形裁切）
+    [Tooltip("角色立绘素材，将自动裁剪头部区域生成 Portrait 头像")]
+    public Sprite tachie;
+
+    [Header("头像裁剪参数")]
+    public bool adaptiveCropByOpaqueBounds = true;
+    [Range(0f, 1f)] public float alphaThreshold = 0.1f;
+    [Range(0.3f, 0.9f)] public float headSearchPortion = 0.62f;
+    [Range(0f, 0.6f)] public float headTopPadding = 0.20f;
+    [Range(0f, 0.6f)] public float headBottomPadding = 0.08f;
+    [Range(0f, 0.6f)] public float headSidePadding = 0.16f;
+    [Range(0.2f, 1.0f)] public float minSizeRelativeToBodyWidth = 0.60f;
+    [Range(0.2f, 1.0f)] public float minSizeRelativeToBodyHeight = 0.35f;
+    [Range(0.2f, 0.8f)] public float adaptiveHeadPortion = 0.45f;
+    [Range(0.5f, 1.6f)] public float adaptiveWidthFactor = 1.0f;
+    [Range(0.8f, 2.0f)] public float adaptiveHeightFactor = 1.15f;
+    [Range(-0.3f, 0.3f)] public float adaptiveVerticalOffset = -0.03f;
+    [Range(0f, 1f)] public float cropCenterX = 0.5f;
+    [Range(0f, 1f)] public float cropCenterY = 0.72f;
+    [Range(0.05f, 1f)] public float cropWidth = 0.48f;
+    [Range(0.05f, 1f)] public float cropHeight = 0.48f;
+
+    [System.NonSerialized] private Sprite _generatedPortrait;
+
+    /// <summary>由立绘（tachie）自动裁剪头部生成的头像，供行动队列与角色数据结构读取</summary>
+    public Sprite portrait
+    {
+        get
+        {
+            if (_generatedPortrait != null) return _generatedPortrait;
+            if (tachie == null) return null;
+            _generatedPortrait = GeneratePortraitCrop(tachie);
+            return _generatedPortrait;
+        }
+    }
 
     [Range(1, MaxLevel)]
     public int level = 1;
@@ -128,6 +161,16 @@ public class BattleUnit : MonoBehaviour
     public List<Skill> artsList = new List<Skill>();   // 战技列表（Arts）
     public List<Skill> skillList = new List<Skill>();  // 角色技能列表（Skill）
 
+    [Header("装备栏")]
+    public WeaponData    equippedWeapon;
+    public ArmorData     equippedHead;
+    public ArmorData     equippedBody;
+    public AccessoryData[] equippedAccessories = new AccessoryData[2];
+
+    // 装备提供的 HP / SP 上限加成缓存（由 RecalculateEquipmentBonuses 计算）
+    private int equipmentHPBonus;
+    private int equipmentSPBonus;
+
     public event Action<int, int> OnHPChanged;
     public event Action<int, int> OnSPChanged;
     public event Action<int, int> OnBPChanged;
@@ -146,8 +189,27 @@ public class BattleUnit : MonoBehaviour
     public int MaxBP => maxBP;
     public float LevelMultiplier => BattleFormula.GetLevelMultiplier(level);
 
+    // ── 装备加成后有效属性上限 ──
+    /// <summary>含装备 HP 加成的最大 HP</summary>
+    public int EffectiveMaxHP => maxHP + equipmentHPBonus;
+    /// <summary>含装备 SP 加成的最大 SP</summary>
+    public int EffectiveMaxSP => maxSP + equipmentSPBonus;
+
+    // ── 含装备加成的最终战斗属性 ──
+    /// <summary>最终速度 = 基础 + 装备合计</summary>
+    public int FinalSpeed    => speed    + GetEquipmentTotalSpeed();
+    /// <summary>最终命中 = 基础 + 装备合计</summary>
+    public int FinalAccuracy => accuracy + GetEquipmentTotalAccuracy();
+    /// <summary>最终暴击 = 基础 + 装备合计</summary>
+    public int FinalCritRate => critRate + GetEquipmentTotalCrit();
+
+#if UNITY_EDITOR
+    void OnValidate() { _generatedPortrait = null; }
+#endif
+
     void Awake()
     {
+        _generatedPortrait = null;
         InitializeBattleState();
     }
 
@@ -157,8 +219,9 @@ public class BattleUnit : MonoBehaviour
         maxBP = Mathf.Max(0, maxBP);
         startBattleBP = Mathf.Clamp(startBattleBP, 0, maxBP);
         bpRecoveryPerTurn = Mathf.Max(0, bpRecoveryPerTurn);
-        currentHP = maxHP;
-        currentSP = maxSP;
+        RecalculateEquipmentBonuses();
+        currentHP = EffectiveMaxHP;
+        currentSP = EffectiveMaxSP;
         ResetBP();
         isBreak = false;
         breakSkipTurnCount = 0;
@@ -178,7 +241,7 @@ public class BattleUnit : MonoBehaviour
 
         Debug.Log($"{unitName} 受到伤害: {damage}");
 
-        OnHPChanged?.Invoke(currentHP, maxHP);
+        OnHPChanged?.Invoke(currentHP, EffectiveMaxHP);
     }
 
     // =========================
@@ -189,7 +252,7 @@ public class BattleUnit : MonoBehaviour
         currentSP -= cost;
         currentSP = Mathf.Max(currentSP, 0);
 
-        OnSPChanged?.Invoke(currentSP, maxSP);
+        OnSPChanged?.Invoke(currentSP, EffectiveMaxSP);
     }
 
     public bool HasEnoughSP(int cost)
@@ -288,11 +351,11 @@ public class BattleUnit : MonoBehaviour
         magicDefense += 3;
 
         // 升级时全回复
-        currentHP = maxHP;
-        currentSP = maxSP;
+        currentHP = EffectiveMaxHP;
+        currentSP = EffectiveMaxSP;
 
-        OnHPChanged?.Invoke(currentHP, maxHP);
-        OnSPChanged?.Invoke(currentSP, maxSP);
+        OnHPChanged?.Invoke(currentHP, EffectiveMaxHP);
+        OnSPChanged?.Invoke(currentSP, EffectiveMaxSP);
         OnEXPChanged?.Invoke(currentExp, expToNextLevel);
 
         Debug.Log($"{unitName} 升级到 {level} 级！");
@@ -348,9 +411,9 @@ public class BattleUnit : MonoBehaviour
     public void Heal(int amount)
     {
         currentHP += amount;
-        currentHP = Mathf.Min(currentHP, maxHP);
+        currentHP = Mathf.Min(currentHP, EffectiveMaxHP);
 
-        OnHPChanged?.Invoke(currentHP, maxHP);
+        OnHPChanged?.Invoke(currentHP, EffectiveMaxHP);
     }
 
     // =========================
@@ -359,7 +422,7 @@ public class BattleUnit : MonoBehaviour
     public bool CheckHit(BattleUnit target)
     {
         // Blind 状态：命中率 × 0.5
-        float effectiveAccuracy = accuracy * (HasStatus(StatusEffectType.Blind) ? 0.5f : 1.0f);
+        float effectiveAccuracy = FinalAccuracy * (HasStatus(StatusEffectType.Blind) ? 0.5f : 1.0f);
         int hitChance = Mathf.RoundToInt(effectiveAccuracy) - target.evasion;
         hitChance = Mathf.Clamp(hitChance, 5, 100);
         return UnityEngine.Random.Range(0, 100) < hitChance;
@@ -370,7 +433,7 @@ public class BattleUnit : MonoBehaviour
     // =========================
     public bool CheckCrit()
     {
-        return UnityEngine.Random.Range(0, 100) < critRate;
+        return UnityEngine.Random.Range(0, 100) < FinalCritRate;
     }
 
     public void SetDefending(bool defending)
@@ -394,6 +457,10 @@ public class BattleUnit : MonoBehaviour
 
     public WeaponType GetResolvedNormalAttackWeaponType()
     {
+        // 装备武器优先决定普攻击打类型
+        if (equippedWeapon != null && equippedWeapon.weaponType != WeaponType.None)
+            return equippedWeapon.weaponType;
+
         return normalAttackWeaponType != WeaponType.None
             ? normalAttackWeaponType
             : BattleFormula.ToWeaponType(normalAttackType);
@@ -423,6 +490,11 @@ public class BattleUnit : MonoBehaviour
         if (weaponType == WeaponType.None)
             return 0;
 
+        // 已装备武器且类型匹配时，使用 WeaponData.pAtk
+        if (equippedWeapon != null && equippedWeapon.weaponType == weaponType)
+            return Mathf.Max(0, equippedWeapon.pAtk);
+
+        // 回退到 Inspector 配置的 weaponAttackEntries（兼容旧数据）
         WeaponAttackEntry entry = weaponAttackEntries.Find(item => item != null && item.ResolveWeaponType() == weaponType);
         return entry != null ? Mathf.Max(0, entry.attackPower) : 0;
     }
@@ -437,8 +509,20 @@ public class BattleUnit : MonoBehaviour
         bool usesElementalFormula = damageType == DamageType.Elemental;
         int attributeValue = usesElementalFormula ? magicAttack : physicalAttack;
         float adjustedAttributeValue = attributeValue * AttackMultiplier;
-        int weaponValue = usesElementalFormula ? 0 : GetWeaponAttack(requiredWeaponType);
-        return Mathf.Max(0, Mathf.RoundToInt(adjustedAttributeValue) + weaponValue);
+
+        if (usesElementalFormula)
+        {
+            // 属性攻击：基础 E.Atk + 所有装备 E.Atk
+            int equipEAtk = GetEquipmentTotalEAtk();
+            return Mathf.Max(0, Mathf.RoundToInt(adjustedAttributeValue) + equipEAtk);
+        }
+        else
+        {
+            // 物理攻击：基础 P.Atk + 武器攻击（按武器类型） + 防具/饰品 P.Atk
+            int weaponValue       = GetWeaponAttack(requiredWeaponType);
+            int armorAccessoryAtk = GetEquipmentArmorAccessoryPAtk();
+            return Mathf.Max(0, Mathf.RoundToInt(adjustedAttributeValue) + weaponValue + armorAccessoryAtk);
+        }
     }
 
     public int GetCombatAttackValue(bool useMagicAttack, AttackType requiredWeaponType)
@@ -450,12 +534,281 @@ public class BattleUnit : MonoBehaviour
 
     public int GetCombatDefenseValue(DamageType damageType)
     {
-        return Mathf.Max(0, damageType == DamageType.Elemental ? magicDefense : physicalDefense);
+        int baseValue  = damageType == DamageType.Elemental ? magicDefense   : physicalDefense;
+        int equipBonus = damageType == DamageType.Elemental ? GetEquipmentTotalEDef() : GetEquipmentTotalPDef();
+        return Mathf.Max(0, baseValue + equipBonus);
     }
 
     public int GetCombatDefenseValue(bool useMagicDefense)
     {
         return GetCombatDefenseValue(useMagicDefense ? DamageType.Elemental : DamageType.Physical);
+    }
+
+    // ============================================================
+    // 装备系统
+    // ============================================================
+
+    /// <summary>
+    /// 装备武器（自动更新属性缓存）。
+    /// 传入 null 等效于 UnequipWeapon。
+    /// </summary>
+    public void EquipWeapon(WeaponData weapon)
+    {
+        equippedWeapon = weapon;
+        RecalculateEquipmentBonuses();
+        Debug.Log($"[Equip] {unitName} 装备武器: {(weapon != null ? weapon.equipmentName : "无")}");
+    }
+
+    /// <summary>
+    /// 装备防具（根据 ArmorData.slot 自动路由到 Head 或 Body 槽位）。
+    /// 传入 null 会清空对应槽位（需配合 UnequipArmor）。
+    /// </summary>
+    public void EquipArmor(ArmorData armor)
+    {
+        if (armor == null) return;
+        if (armor.slot == ArmorSlot.Head)
+            equippedHead = armor;
+        else
+            equippedBody = armor;
+        RecalculateEquipmentBonuses();
+        Debug.Log($"[Equip] {unitName} 装备{armor.slot}: {armor.equipmentName}");
+    }
+
+    /// <summary>
+    /// 装备饰品到指定槽位（0 或 1）。
+    /// 传入 null 等效于 UnequipAccessory(slot)。
+    /// </summary>
+    public void EquipAccessory(AccessoryData accessory, int slot = 0)
+    {
+        int safeSlot = Mathf.Clamp(slot, 0, equippedAccessories.Length - 1);
+        equippedAccessories[safeSlot] = accessory;
+        RecalculateEquipmentBonuses();
+        Debug.Log($"[Equip] {unitName} 装备饰品[{safeSlot}]: {(accessory != null ? accessory.equipmentName : "无")}");
+    }
+
+    /// <summary>卸下武器</summary>
+    public void UnequipWeapon()
+    {
+        equippedWeapon = null;
+        RecalculateEquipmentBonuses();
+    }
+
+    /// <summary>卸下指定槽位的防具</summary>
+    public void UnequipArmor(ArmorSlot slot)
+    {
+        if (slot == ArmorSlot.Head) equippedHead = null;
+        else                        equippedBody = null;
+        RecalculateEquipmentBonuses();
+    }
+
+    /// <summary>卸下指定槽位的饰品</summary>
+    public void UnequipAccessory(int slot)
+    {
+        int safeSlot = Mathf.Clamp(slot, 0, equippedAccessories.Length - 1);
+        equippedAccessories[safeSlot] = null;
+        RecalculateEquipmentBonuses();
+    }
+
+    /// <summary>
+    /// 重新计算所有装备的 HP / SP 上限加成缓存。
+    /// 装备发生变化时自动调用；战斗初始化（InitializeBattleState）也会触发。
+    /// </summary>
+    public void RecalculateEquipmentBonuses()
+    {
+        equipmentHPBonus = 0;
+        equipmentSPBonus = 0;
+
+        if (equippedWeapon != null) { equipmentHPBonus += equippedWeapon.hp; equipmentSPBonus += equippedWeapon.sp; }
+        if (equippedHead   != null) { equipmentHPBonus += equippedHead.hp;   equipmentSPBonus += equippedHead.sp;   }
+        if (equippedBody   != null) { equipmentHPBonus += equippedBody.hp;   equipmentSPBonus += equippedBody.sp;   }
+        foreach (var acc in equippedAccessories)
+        {
+            if (acc == null) continue;
+            equipmentHPBonus += acc.hp;
+            equipmentSPBonus += acc.sp;
+        }
+
+        equipmentHPBonus = Mathf.Max(0, equipmentHPBonus);
+        equipmentSPBonus = Mathf.Max(0, equipmentSPBonus);
+    }
+
+    // ── 装备属性聚合（内部使用） ──────────────────────────────────
+
+    /// <summary>物理攻击：防具 + 饰品 pAtk 之和（武器 pAtk 由 GetWeaponAttack 按类型处理）</summary>
+    private int GetEquipmentArmorAccessoryPAtk()
+    {
+        int bonus = 0;
+        if (equippedHead != null) bonus += equippedHead.pAtk;
+        if (equippedBody != null) bonus += equippedBody.pAtk;
+        foreach (var acc in equippedAccessories)
+            if (acc != null) bonus += acc.pAtk;
+        return Mathf.Max(0, bonus);
+    }
+
+    /// <summary>属性攻击：全部装备 eAtk 之和</summary>
+    private int GetEquipmentTotalEAtk()
+    {
+        int bonus = 0;
+        if (equippedWeapon != null) bonus += equippedWeapon.eAtk;
+        if (equippedHead   != null) bonus += equippedHead.eAtk;
+        if (equippedBody   != null) bonus += equippedBody.eAtk;
+        foreach (var acc in equippedAccessories)
+            if (acc != null) bonus += acc.eAtk;
+        return Mathf.Max(0, bonus);
+    }
+
+    /// <summary>物理防御：防具 + 饰品 pDef 之和</summary>
+    private int GetEquipmentTotalPDef()
+    {
+        int bonus = 0;
+        if (equippedHead != null) bonus += equippedHead.pDef;
+        if (equippedBody != null) bonus += equippedBody.pDef;
+        foreach (var acc in equippedAccessories)
+            if (acc != null) bonus += acc.pDef;
+        return Mathf.Max(0, bonus);
+    }
+
+    /// <summary>属性防御：防具 + 饰品 eDef 之和</summary>
+    private int GetEquipmentTotalEDef()
+    {
+        int bonus = 0;
+        if (equippedHead != null) bonus += equippedHead.eDef;
+        if (equippedBody != null) bonus += equippedBody.eDef;
+        foreach (var acc in equippedAccessories)
+            if (acc != null) bonus += acc.eDef;
+        return Mathf.Max(0, bonus);
+    }
+
+    /// <summary>速度：全部装备 speed 之和</summary>
+    private int GetEquipmentTotalSpeed()
+    {
+        int bonus = 0;
+        if (equippedWeapon != null) bonus += equippedWeapon.speed;
+        if (equippedHead   != null) bonus += equippedHead.speed;
+        if (equippedBody   != null) bonus += equippedBody.speed;
+        foreach (var acc in equippedAccessories)
+            if (acc != null) bonus += acc.speed;
+        return bonus;
+    }
+
+    /// <summary>命中：全部装备 accuracy 之和</summary>
+    private int GetEquipmentTotalAccuracy()
+    {
+        int bonus = 0;
+        if (equippedWeapon != null) bonus += equippedWeapon.accuracy;
+        if (equippedHead   != null) bonus += equippedHead.accuracy;
+        if (equippedBody   != null) bonus += equippedBody.accuracy;
+        foreach (var acc in equippedAccessories)
+            if (acc != null) bonus += acc.accuracy;
+        return bonus;
+    }
+
+    /// <summary>暴击：全部装备 crit 之和</summary>
+    private int GetEquipmentTotalCrit()
+    {
+        int bonus = 0;
+        if (equippedWeapon != null) bonus += equippedWeapon.crit;
+        if (equippedHead   != null) bonus += equippedHead.crit;
+        if (equippedBody   != null) bonus += equippedBody.crit;
+        foreach (var acc in equippedAccessories)
+            if (acc != null) bonus += acc.crit;
+        return bonus;
+    }
+
+    /// <summary>
+    /// 返回对指定异常状态的最终抗性比例（0~1）。
+    /// 多件装备的同类抗性取最大值（而非叠加），避免完全免疫失控。
+    /// FinalChance = BaseChance × (1 - resistance)
+    /// </summary>
+    public float GetEquipmentStatusResistance(StatusEffectType type)
+    {
+        float max = 0f;
+        CheckResistance(equippedWeapon, type, ref max);
+        CheckResistance(equippedHead,   type, ref max);
+        CheckResistance(equippedBody,   type, ref max);
+        foreach (var acc in equippedAccessories)
+            CheckResistance(acc, type, ref max);
+        return Mathf.Clamp01(max);
+    }
+
+    private static void CheckResistance(EquipmentData equip, StatusEffectType type, ref float max)
+    {
+        if (equip == null) return;
+        float r = equip.GetResistance(type);
+        if (r > max) max = r;
+    }
+
+    /// <summary>
+    /// 判断装备后是否对指定状态实际免疫（抗性 = 1.0 视为完全免疫）。
+    /// 优先于基础 statusImmunities 列表检查，两者任一满足即免疫。
+    /// </summary>
+    public bool IsImmuneByEquipment(StatusEffectType type)
+    {
+        return Mathf.Approximately(GetEquipmentStatusResistance(type), 1f);
+    }
+
+    /// <summary>
+    /// 饰品开局 Buff 应用：战斗开始时由 BattleManager 调用。
+    /// 遍历两枚饰品的所有 OpeningBuff 效果并施加到自身。
+    /// </summary>
+    public void ApplyAccessoryOpeningBuffs()
+    {
+        foreach (var acc in equippedAccessories)
+        {
+            if (acc == null) continue;
+            foreach (var fx in acc.GetOpeningBuffEffects())
+            {
+                if (fx.buffType == StatusEffectType.None) continue;
+                ApplyStatusEffect(new StatusEffect(fx.buffType, Mathf.Max(1, fx.buffDuration)));
+                Debug.Log($"[Equip] {unitName} 饰品开局Buff: {fx.buffType} x{fx.buffDuration}回合");
+            }
+        }
+    }
+
+    /// <summary>
+    /// 饰品开局 BP 加成：战斗开始时由 BattleManager 调用（在 ResetBP 之后）。
+    /// </summary>
+    public void ApplyAccessoryStartBPBonus()
+    {
+        foreach (var acc in equippedAccessories)
+        {
+            if (acc == null) continue;
+            int bonus = Mathf.RoundToInt(acc.GetEffectValue(AccessoryEffectType.StartBPBonus));
+            if (bonus > 0) GainBP(bonus);
+        }
+    }
+
+    /// <summary>
+    /// 获取饰品提供的 Break 期间伤害倍率额外加成（叠加于基础 ×2 之上）。
+    /// </summary>
+    public float GetAccessoryBreakDamageBonus()
+    {
+        float total = 0f;
+        foreach (var acc in equippedAccessories)
+            if (acc != null) total += acc.GetEffectValue(AccessoryEffectType.BreakDamageBonus);
+        return total;
+    }
+
+    /// <summary>
+    /// 获取饰品提供的全局伤害倍率加成（乘算，与基础倍率累乘）。
+    /// </summary>
+    public float GetAccessoryDamageMultiplierBonus()
+    {
+        float total = 0f;
+        foreach (var acc in equippedAccessories)
+            if (acc != null) total += acc.GetEffectValue(AccessoryEffectType.DamageMultiplierBonus);
+        return total;
+    }
+
+    /// <summary>
+    /// 获取饰品提供的命中弱点时额外护盾削减次数。
+    /// </summary>
+    public int GetAccessoryExtraShieldDamage()
+    {
+        int total = 0;
+        foreach (var acc in equippedAccessories)
+            if (acc != null) total += Mathf.RoundToInt(acc.GetEffectValue(AccessoryEffectType.ExtraShieldDamage));
+        return total;
     }
 
     // =========================
@@ -716,6 +1069,172 @@ public class BattleUnit : MonoBehaviour
             currentShield = 0;
 
         OnShieldChanged?.Invoke(currentShield, maxShield);
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────────
+    // 头像自动裁剪（从立绘生成 Portrait）
+    // ─────────────────────────────────────────────────────────────────────────────
+
+    private Sprite GeneratePortraitCrop(Sprite source)
+    {
+        if (source == null || source.texture == null)
+            return source;
+
+        Rect cropRect = BuildAdaptiveCropRect(source);
+        return Sprite.Create(
+            source.texture,
+            cropRect,
+            new Vector2(0.5f, 0.5f),
+            source.pixelsPerUnit,
+            0,
+            SpriteMeshType.FullRect,
+            Vector4.zero,
+            false);
+    }
+
+    private Rect BuildAdaptiveCropRect(Sprite source)
+    {
+        Rect src = source.rect;
+
+        if (adaptiveCropByOpaqueBounds && TryGetOpaqueBounds(source, out Rect opaque))
+        {
+            if (TryBuildHeadPriorityCropRect(source, opaque, out Rect headPriorityCrop))
+                return headPriorityCrop;
+
+            float bodyW = Mathf.Max(1f, opaque.width);
+            float bodyH = Mathf.Max(1f, opaque.height);
+            float headH = bodyH * Mathf.Clamp(adaptiveHeadPortion, 0.2f, 0.8f);
+            float size = Mathf.Max(
+                bodyW * Mathf.Clamp(adaptiveWidthFactor, 0.5f, 1.6f),
+                headH * Mathf.Clamp(adaptiveHeightFactor, 0.8f, 2.0f));
+            float centerX = opaque.x + bodyW * 0.5f;
+            float centerY = opaque.y + bodyH * (1f - adaptiveHeadPortion * 0.5f + adaptiveVerticalOffset);
+            return ClampRectIntoSource(src, new Rect(centerX - size * 0.5f, centerY - size * 0.5f, size, size));
+        }
+
+        float w = src.width * Mathf.Clamp(cropWidth, 0.05f, 1f);
+        float h = src.height * Mathf.Clamp(cropHeight, 0.05f, 1f);
+        float cx = src.x + src.width * Mathf.Clamp01(cropCenterX);
+        float cy = src.y + src.height * Mathf.Clamp01(cropCenterY);
+        return ClampRectIntoSource(src, new Rect(cx - w * 0.5f, cy - h * 0.5f, w, h));
+    }
+
+    private bool TryBuildHeadPriorityCropRect(Sprite source, Rect bodyOpaque, out Rect result)
+    {
+        result = default;
+        float portion = Mathf.Clamp(headSearchPortion, 0.3f, 0.9f);
+        float headRegionHeight = bodyOpaque.height * portion;
+        Rect headSearchRect = new Rect(
+            bodyOpaque.x,
+            bodyOpaque.yMax - headRegionHeight,
+            bodyOpaque.width,
+            headRegionHeight);
+
+        if (!TryGetOpaqueBoundsInRect(source, headSearchRect, out Rect headOpaque))
+            return false;
+
+        float headW = Mathf.Max(1f, headOpaque.width);
+        float headH = Mathf.Max(1f, headOpaque.height);
+        float bodyW = Mathf.Max(1f, bodyOpaque.width);
+        float bodyH = Mathf.Max(1f, bodyOpaque.height);
+        float paddedW = headW * (1f + Mathf.Clamp(headSidePadding, 0f, 0.6f) * 2f);
+        float paddedH = headH * (1f + Mathf.Clamp(headTopPadding, 0f, 0.6f) + Mathf.Clamp(headBottomPadding, 0f, 0.6f));
+        float minSizeW = bodyW * Mathf.Clamp(minSizeRelativeToBodyWidth, 0.2f, 1f);
+        float minSizeH = bodyH * Mathf.Clamp(minSizeRelativeToBodyHeight, 0.2f, 1f);
+        float size = Mathf.Max(paddedW, paddedH, minSizeW, minSizeH);
+        float centerX = headOpaque.center.x;
+        float topY = headOpaque.yMax + headH * Mathf.Clamp(headTopPadding, 0f, 0.6f);
+        float centerY = topY - size * 0.5f;
+        result = ClampRectIntoSource(source.rect, new Rect(centerX - size * 0.5f, centerY - size * 0.5f, size, size));
+        return true;
+    }
+
+    private Rect ClampRectIntoSource(Rect src, Rect r)
+    {
+        float w = Mathf.Min(src.width, Mathf.Max(1f, r.width));
+        float h = Mathf.Min(src.height, Mathf.Max(1f, r.height));
+        float x = Mathf.Clamp(r.x, src.x, src.xMax - w);
+        float y = Mathf.Clamp(r.y, src.y, src.yMax - h);
+        return new Rect(x, y, w, h);
+    }
+
+    private bool TryGetOpaqueBounds(Sprite source, out Rect bounds)
+    {
+        bounds = default;
+        Texture2D tex = source.texture;
+        if (tex == null || !tex.isReadable) return false;
+
+        Rect src = source.rect;
+        int x0 = Mathf.FloorToInt(src.x);
+        int y0 = Mathf.FloorToInt(src.y);
+        int w  = Mathf.FloorToInt(src.width);
+        int h  = Mathf.FloorToInt(src.height);
+        if (w <= 0 || h <= 0) return false;
+
+        Color[] px;
+        try { px = tex.GetPixels(x0, y0, w, h); }
+        catch { return false; }
+
+        int minX = w, minY = h, maxX = -1, maxY = -1;
+        float threshold = Mathf.Clamp01(alphaThreshold);
+        for (int y = 0; y < h; y++)
+        {
+            int row = y * w;
+            for (int x = 0; x < w; x++)
+            {
+                if (px[row + x].a < threshold) continue;
+                if (x < minX) minX = x;
+                if (y < minY) minY = y;
+                if (x > maxX) maxX = x;
+                if (y > maxY) maxY = y;
+            }
+        }
+        if (maxX < minX || maxY < minY) return false;
+        bounds = new Rect(src.x + minX, src.y + minY, maxX - minX + 1, maxY - minY + 1);
+        return true;
+    }
+
+    private bool TryGetOpaqueBoundsInRect(Sprite source, Rect searchRect, out Rect bounds)
+    {
+        bounds = default;
+        Rect src = source.rect;
+        Rect clipped = Rect.MinMaxRect(
+            Mathf.Max(src.xMin, searchRect.xMin),
+            Mathf.Max(src.yMin, searchRect.yMin),
+            Mathf.Min(src.xMax, searchRect.xMax),
+            Mathf.Min(src.yMax, searchRect.yMax));
+        if (clipped.width <= 0f || clipped.height <= 0f) return false;
+
+        Texture2D tex = source.texture;
+        if (tex == null || !tex.isReadable) return false;
+
+        int x0 = Mathf.FloorToInt(clipped.x);
+        int y0 = Mathf.FloorToInt(clipped.y);
+        int w  = Mathf.FloorToInt(clipped.width);
+        int h  = Mathf.FloorToInt(clipped.height);
+        if (w <= 0 || h <= 0) return false;
+
+        Color[] px;
+        try { px = tex.GetPixels(x0, y0, w, h); }
+        catch { return false; }
+
+        int minX = w, minY = h, maxX = -1, maxY = -1;
+        float threshold = Mathf.Clamp01(alphaThreshold);
+        for (int y = 0; y < h; y++)
+        {
+            int row = y * w;
+            for (int x = 0; x < w; x++)
+            {
+                if (px[row + x].a < threshold) continue;
+                if (x < minX) minX = x;
+                if (y < minY) minY = y;
+                if (x > maxX) maxX = x;
+                if (y > maxY) maxY = y;
+            }
+        }
+        if (maxX < minX || maxY < minY) return false;
+        bounds = new Rect(clipped.x + minX, clipped.y + minY, maxX - minX + 1, maxY - minY + 1);
+        return true;
     }
 }
 

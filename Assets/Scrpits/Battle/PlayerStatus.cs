@@ -27,6 +27,7 @@ public class PlayerStatus : MonoBehaviour
 
     [Header("绑定单位")]
     public BattleUnit unit;
+    public BattleManager battleManager;
 
     void Awake()
     {
@@ -139,16 +140,41 @@ public class PlayerStatus : MonoBehaviour
 
     public void Init(BattleUnit unit)
     {
-        if (this.unit != unit)
+        Init(unit, null);
+    }
+
+    public void Init(BattleUnit unit, BattleManager manager)
+    {
+        bool shouldRebind = this.unit != unit || (manager != null && battleManager != manager);
+        if (shouldRebind)
             Unbind();
 
         this.unit = unit;
+        if (manager != null)
+            battleManager = manager;
+
         Bind(unit);
     }
 
     void AutoAssignOptionalReferences()
     {
-        Transform nameNode = transform.Find("PlayerName");
+        Transform nameNode = transform.Find("PlayerName")
+            ?? transform.Find("Name")
+            ?? transform.Find("NameText");
+
+        if (nameNode == null)
+        {
+            foreach (Transform child in GetComponentsInChildren<Transform>(true))
+            {
+                string lowerName = child.name.ToLowerInvariant();
+                if (!lowerName.Contains("name"))
+                    continue;
+
+                nameNode = child;
+                break;
+            }
+        }
+
         if (nameNode == null)
             return;
 
@@ -167,30 +193,75 @@ public class PlayerStatus : MonoBehaviour
             return;
         }
 
-        string displayName = string.IsNullOrWhiteSpace(targetUnit.unitName)
-            ? targetUnit.gameObject.name
-            : targetUnit.unitName;
+        if (battleManager == null)
+            battleManager = FindObjectOfType<BattleManager>();
 
-        UpdateName(displayName);
+        UpdateName(ResolveDisplayName(targetUnit));
         UpdateHP(targetUnit.currentHP, targetUnit.maxHP);
         UpdateSP(targetUnit.currentSP, targetUnit.maxSP);
-        UpdateBP(targetUnit.CurrentBP, targetUnit.MaxBP);
+        RefreshBPDisplay();
 
         targetUnit.OnHPChanged -= UpdateHP;
         targetUnit.OnHPChanged += UpdateHP;
         targetUnit.OnSPChanged -= UpdateSP;
         targetUnit.OnSPChanged += UpdateSP;
-        targetUnit.OnBPChanged -= UpdateBP;
-        targetUnit.OnBPChanged += UpdateBP;
+        targetUnit.OnBPChanged -= HandleUnitBPChanged;
+        targetUnit.OnBPChanged += HandleUnitBPChanged;
+
+        if (battleManager != null)
+        {
+            battleManager.OnBoostSelectionChanged -= HandleBoostSelectionChanged;
+            battleManager.OnBoostSelectionChanged += HandleBoostSelectionChanged;
+        }
     }
 
-    void Unbind()
+    string ResolveDisplayName(BattleUnit targetUnit)
+    {
+        if (targetUnit == null)
+            return "-";
+
+        BattleUnitRuntimeLink runtimeLink = targetUnit.GetComponent<BattleUnitRuntimeLink>();
+        if (runtimeLink != null && runtimeLink.characterDefinition != null && !string.IsNullOrWhiteSpace(runtimeLink.characterDefinition.displayName))
+            return runtimeLink.characterDefinition.displayName;
+
+        return string.IsNullOrWhiteSpace(targetUnit.unitName)
+            ? targetUnit.gameObject.name
+            : targetUnit.unitName;
+    }
+
+    void HandleUnitBPChanged(int current, int max)
+    {
+        RefreshBPDisplay();
+    }
+
+    void HandleBoostSelectionChanged(BattleUnit actingUnit, int selectedBoostLevel, int currentBP)
+    {
+        RefreshBPDisplay();
+    }
+
+    void RefreshBPDisplay()
     {
         if (unit == null)
             return;
 
-        unit.OnHPChanged -= UpdateHP;
-        unit.OnSPChanged -= UpdateSP;
-        unit.OnBPChanged -= UpdateBP;
+        int previewCost = 0;
+        if (battleManager != null && battleManager.CurrentUnit == unit)
+            previewCost = Mathf.Clamp(battleManager.SelectedBoostLevel, 0, unit.CurrentBP);
+
+        int previewBP = Mathf.Clamp(unit.CurrentBP - previewCost, 0, unit.MaxBP);
+        UpdateBP(previewBP, unit.MaxBP);
+    }
+
+    void Unbind()
+    {
+        if (unit != null)
+        {
+            unit.OnHPChanged -= UpdateHP;
+            unit.OnSPChanged -= UpdateSP;
+            unit.OnBPChanged -= HandleUnitBPChanged;
+        }
+
+        if (battleManager != null)
+            battleManager.OnBoostSelectionChanged -= HandleBoostSelectionChanged;
     }
 }

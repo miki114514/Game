@@ -139,8 +139,8 @@ public class TurnOrderItem : MonoBehaviour
         defaultGroup.SetActive(!isActive);
         activeGroup.SetActive(isActive);
 
-        // 头像：支持整图自动裁剪为头像区域，并启用菱形遮罩
-        ApplyPortrait(unit.portrait);
+        // 头像：传入立绘，内部自动裁剪头像区域，并启用菱形遮罩
+        ApplyPortrait(unit.tachie);
 
         // 颜色标记（我方 / 敌方）
         ApplyColorBadge(unit, isActive);

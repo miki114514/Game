@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8898164235960423267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8741949865682502007}
+  - component: {fileID: 1922058153212446473}
+  - component: {fileID: 563642034781819077}
+  m_Layer: 0
+  m_Name: Enemy_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8741949865682502007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8898164235960423267}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.77, y: 1.375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1922058153212446473
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8898164235960423267}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1413800207, guid: 0732ac0635d4fff47b1add81e4cc15e7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.5, y: 3.5625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &563642034781819077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8898164235960423267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f70e167e610584791e9de85fcc76c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: Goblin
+  unitType: 1
+  tachie: {fileID: -1413800207, guid: 0732ac0635d4fff47b1add81e4cc15e7, type: 3}
+  adaptiveCropByOpaqueBounds: 1
+  alphaThreshold: 0.1
+  headSearchPortion: 0.62
+  headTopPadding: 0.2
+  headBottomPadding: 0.08
+  headSidePadding: 0.16
+  minSizeRelativeToBodyWidth: 0.6
+  minSizeRelativeToBodyHeight: 0.35
+  adaptiveHeadPortion: 0.45
+  adaptiveWidthFactor: 1
+  adaptiveHeightFactor: 1.15
+  adaptiveVerticalOffset: -0.03
+  cropCenterX: 0.5
+  cropCenterY: 0.72
+  cropWidth: 0.48
+  cropHeight: 0.48
+  level: 1
+  maxHP: 120
+  currentHP: 120
+  maxSP: 20
+  currentSP: 20
+  maxBP: 5
+  currentBP: 0
+  startBattleBP: 0
+  bpRecoveryPerTurn: 1
+  physicalAttack: 12
+  magicAttack: 8
+  physicalDefense: 4
+  magicDefense: 3
+  accuracy: 90
+  speed: 6
+  critRate: 5
+  evasion: 5
+  normalAttackDamageType: 0
+  normalAttackWeaponType: 1
+  normalAttackElementType: 0
+  normalAttackType: 1
+  weaponAttackEntries: []
+  currentExp: 0
+  expToNextLevel: 100
+  maxShield: 4
+  currentShield: 4
+  weaknessTypes: 0100000002000000030000000a000000
+  statusImmunities: 
+  artsAbilityMultiplier: 1
+  forcedDamageReductionMultiplier: 1
+  artsList:
+  - {fileID: 11400000, guid: 1480ea9c15efb314280fd7490633162c, type: 2}
+  skillList: []
+  equippedWeapon: {fileID: 0}
+  equippedHead: {fileID: 0}
+  equippedBody: {fileID: 0}
+  equippedAccessories:
+  - {fileID: 0}
+  - {fileID: 0}
+  isBreak: 0
+  activeEffects: []

@@ -5,11 +5,16 @@ using UnityEngine;
 using BattleSystem;
 using PlayerCommand;
 
+[DefaultExecutionOrder(100)]
 public class BattleManager : MonoBehaviour
 {
     [Header("战斗单位")]
     public List<BattleUnit> players;
     public List<BattleUnit> enemies;
+
+    [Header("战斗启动 / 结算")]
+    public BattleBootstrapper battleBootstrapper;
+    public bool preservePlayerResourcesBetweenBattles = true;
 
     [Header("战斗状态")]
     public BattleState state;
@@ -67,28 +72,53 @@ public class BattleManager : MonoBehaviour
     private Item pendingItem;
 
     private bool waitConfirmRelease = false;
+    private bool hasReportedBattleEnd = false;
 
     void Start()
     {
+        if (battleBootstrapper == null)
+            battleBootstrapper = FindObjectOfType<BattleBootstrapper>();
+
+        if ((players == null || players.Count == 0 || enemies == null || enemies.Count == 0) && battleBootstrapper != null)
+            battleBootstrapper.PrepareBattle();
+
         Debug.Log("[BattleManager] 战斗开始");
         StartBattle();
     }
 
     void Update()
     {
-        if (state == BattleState.CommandSelect)
-            UpdateCommandMenuPosition();
-
         if (state == BattleState.TargetSelect)
             HandleTargetInput();
     }
 
+    void LateUpdate()
+    {
+        if (state == BattleState.CommandSelect)
+            UpdateCommandMenuPosition();
+
+        if (state == BattleState.TargetSelect && currentArrow != null)
+            UpdateArrowPosition();
+    }
+
     void StartBattle()
     {
+        if (players == null)
+            players = new List<BattleUnit>();
+        if (enemies == null)
+            enemies = new List<BattleUnit>();
+
+        if (players.Count == 0 || enemies.Count == 0)
+        {
+            Debug.LogWarning("[BattleManager] 玩家或敌人列表为空，已中止战斗初始化。请先通过 BattleBootstrapper 准备战斗单位。", this);
+            return;
+        }
+
+        hasReportedBattleEnd = false;
         state = BattleState.Start;
         EnsureStatusUIManager();
         ResetBattle();
-        statusUIManager?.InitStatusUI(players);
+        statusUIManager?.InitStatusUI(this, players);
         statusUIManager?.InitEnemyBreakUI(this, enemies);
         InitTurnOrder();
         turnOrderUIManager?.Init(this);
@@ -109,6 +139,12 @@ public class BattleManager : MonoBehaviour
         List<BattleUnit> allUnits = new List<BattleUnit>(players);
         allUnits.AddRange(enemies);
         turnOrderSystem.Initialize(allUnits);
+
+        if (turnOrderSystem.CurrentOrder == null || turnOrderSystem.CurrentOrder.Count == 0)
+        {
+            Debug.LogWarning("[BattleManager] 当前没有可行动单位，无法初始化行动顺序。", this);
+            return;
+        }
 
         currentTurnIndexInRound = 0;
         currentUnit = turnOrderSystem.CurrentOrder[0];
@@ -767,11 +803,22 @@ public class BattleManager : MonoBehaviour
 
     void CheckBattleEnd()
     {
-        if (players.TrueForAll(p => p.currentHP <= 0) || enemies.TrueForAll(e => e.currentHP <= 0))
-        {
-            state = BattleState.End;
-            Debug.Log("[BattleManager] 战斗结束");
-        }
+        bool playersDefeated = players == null || players.Count == 0 || players.TrueForAll(p => p == null || p.currentHP <= 0);
+        bool enemiesDefeated = enemies == null || enemies.Count == 0 || enemies.TrueForAll(e => e == null || e.currentHP <= 0);
+
+        if (!playersDefeated && !enemiesDefeated)
+            return;
+
+        state = BattleState.End;
+
+        if (hasReportedBattleEnd)
+            return;
+
+        hasReportedBattleEnd = true;
+        bool isVictory = !playersDefeated && enemiesDefeated;
+
+        Debug.Log(isVictory ? "[BattleManager] 战斗结束：玩家胜利" : "[BattleManager] 战斗结束：玩家败北");
+        battleBootstrapper?.HandleBattleEnded(this, isVictory);
     }
 
     void CreateArrow()
@@ -789,23 +836,68 @@ public class BattleManager : MonoBehaviour
 
     void UpdateArrowPosition()
     {
-        if (currentArrow != null && selectableEnemies.Count > 0)
+        if (currentArrow == null || selectableEnemies.Count == 0 || targetIndex < 0 || targetIndex >= selectableEnemies.Count)
+            return;
+
+        BattleUnit target = selectableEnemies[targetIndex];
+        if (target == null)
+            return;
+
+        Camera sourceCamera = ResolveCanvasEventCamera();
+        Vector3 worldPos = GetTargetArrowWorldPosition(target);
+        Vector3 screenPos = (sourceCamera != null ? sourceCamera : Camera.main).WorldToScreenPoint(worldPos);
+
+        RectTransform canvasRect = uiCanvas.GetComponent<RectTransform>();
+        RectTransform arrowRect = currentArrow.GetComponent<RectTransform>();
+
+        Vector2 localPos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvasRect,
+            screenPos,
+            sourceCamera,
+            out localPos
+        );
+
+        arrowRect.anchoredPosition = localPos;
+    }
+
+    Camera ResolveCanvasEventCamera()
+    {
+        if (uiCanvas == null || uiCanvas.renderMode == RenderMode.ScreenSpaceOverlay)
+            return null;
+
+        return uiCanvas.worldCamera != null ? uiCanvas.worldCamera : Camera.main;
+    }
+
+    Vector3 GetTargetArrowWorldPosition(BattleUnit target)
+    {
+        if (target == null)
+            return Vector3.zero;
+
+        Renderer[] renderers = target.GetComponentsInChildren<Renderer>();
+        bool hasBounds = false;
+        Bounds bounds = new Bounds(target.transform.position, Vector3.zero);
+
+        foreach (Renderer renderer in renderers)
         {
-            Vector3 worldPos = selectableEnemies[targetIndex].transform.position + Vector3.up * 2f;
-            Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPos);
-            RectTransform canvasRect = uiCanvas.GetComponent<RectTransform>();
-            RectTransform arrowRect = currentArrow.GetComponent<RectTransform>();
+            if (renderer == null || !renderer.enabled)
+                continue;
 
-            Vector2 localPos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvasRect,
-                screenPos,
-                uiCanvas.worldCamera,
-                out localPos
-            );
-
-            arrowRect.anchoredPosition = localPos;
+            if (!hasBounds)
+            {
+                bounds = renderer.bounds;
+                hasBounds = true;
+            }
+            else
+            {
+                bounds.Encapsulate(renderer.bounds);
+            }
         }
+
+        if (hasBounds)
+            return new Vector3(bounds.center.x, bounds.max.y + 0.35f, bounds.center.z);
+
+        return target.transform.position + Vector3.up * 2f;
     }
 
     public void ResetBattle()
@@ -814,17 +906,43 @@ public class BattleManager : MonoBehaviour
 
         foreach (var p in players)
         {
-            p.InitializeBattleState();
-            p.ClearAllStatusEffects();
+            if (p == null)
+                continue;
+
+            ResetUnitForBattleStart(p, preservePlayerResourcesBetweenBattles);
         }
 
         foreach (var e in enemies)
         {
-            e.InitializeBattleState();
-            e.ClearAllStatusEffects();
+            if (e == null)
+                continue;
+
+            ResetUnitForBattleStart(e, false);
         }
 
         Debug.Log("[BattleManager] 重置所有单位状态");
+    }
+
+    void ResetUnitForBattleStart(BattleUnit unit, bool preserveCurrentResources)
+    {
+        if (unit == null)
+            return;
+
+        int savedHP = unit.currentHP;
+        int savedSP = unit.currentSP;
+        int savedExp = unit.currentExp;
+        int savedExpToNextLevel = unit.expToNextLevel;
+
+        unit.InitializeBattleState();
+        unit.ClearAllStatusEffects();
+
+        if (!preserveCurrentResources)
+            return;
+
+        unit.currentHP = Mathf.Clamp(savedHP, 0, unit.maxHP);
+        unit.currentSP = Mathf.Clamp(savedSP, 0, unit.maxSP);
+        unit.currentExp = Mathf.Max(0, savedExp);
+        unit.expToNextLevel = Mathf.Max(0, savedExpToNextLevel);
     }
 
     public List<Item> GetUsableItems()

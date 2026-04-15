@@ -1,0 +1,6142 @@
+fileFormatVersion: 2
+guid: e2a5c79fe5a1d014a82a70b4c7477dca
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 476
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644e7c2a88ffd6f4392b9db3cdd635ed
+      internalID: -586571419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 476
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc965f1ff4b34d4eb50c68be3bcb585
+      internalID: 312666135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 476
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e742558e447a5374c8328abf9918d76f
+      internalID: 1137323815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_3
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 476
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78f76b27b0d9444bb41f5e046b25f92
+      internalID: 2110474710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_4
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 476
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be0a6490bef8034cb14e8fbc5898363
+      internalID: -930499234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_5
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 476
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5676d4d2228e034ca410843897adc74
+      internalID: 898956096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 476
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c28d45dfa9366439d1ffe27f05e23c
+      internalID: -677700680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_7
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 477
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff28aedd848b9b41aa67c9fc860fb3f
+      internalID: 156544813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c98c9ff424c2f499991d88638a6b72
+      internalID: 1290178193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_9
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 480
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191c0cd5d451d43479f1a9c8d8aff01d
+      internalID: -989575658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_10
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 481
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5699003e7772c8f4fb8e12ca58ff9c96
+      internalID: -681906968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_11
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 481
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce0515f53e1c1c4db33b87d21ade7b2
+      internalID: 777856509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_12
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 481
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce25e49fc088ad41a156a1594808f0f
+      internalID: -1783117553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_13
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 480
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5032ca150f1e3e47a5f891daf10bec0
+      internalID: 1824416752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_14
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 478
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcb2e604c13fbb4e96ea620c242503d
+      internalID: 915376240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_15
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 476
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83971ee189aa9534da718903182369b6
+      internalID: 24782856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_16
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 477
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da60c19c2d48de642bea842f16cce4e2
+      internalID: -1873548312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_17
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 480
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc9fce7450f36445a8b6507c436446a
+      internalID: 2021255760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_18
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 480
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96619ec6c6945014f90f3f8e726404ea
+      internalID: -1621753323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_19
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 481
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f856e7cb7bf7c604e863285d65abffad
+      internalID: -1035134924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 445
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41f05dc7edcd0448abbbfe3b1d59600
+      internalID: -1496652944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_21
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 445
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a481a82bfb41cc24e8016c47d4da9cd0
+      internalID: -1107247962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_22
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 444
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca77f2a548d98c24db5cd2509968d18e
+      internalID: 1954929976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_23
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 442
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 512324dfd17459d4ba297494acb38be2
+      internalID: 1832284161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 443
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7e84e9259d3fe42829d00d07b992b3
+      internalID: 1167750284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_25
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 443
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620f73bd379d6d74c926cecf3f42aab0
+      internalID: -1561456686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_26
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 448
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6cf0a6845e9bc4d869f28e8f39dd54
+      internalID: 351077646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_27
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 448
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22aff4e005f88cf4b98fb85376861695
+      internalID: 1198735042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_28
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 448
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85d693b8cf74204ea33d8527e2d01db
+      internalID: -1135985329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_29
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 448
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19ddfa053a22234d868043f1370e805
+      internalID: -799000020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_30
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 448
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f945cde817244544a9a6dba122f3107
+      internalID: 424934556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_31
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 448
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60acf1c969467b84aa218156969d7ee8
+      internalID: 1995710275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_32
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 440
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7993aba6e121c498455c28f3cc0747
+      internalID: 254627358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_33
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 440
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe1507e2ad55bf4790e10bc713720ac
+      internalID: -1224752112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_34
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ac7b32f9b1570448b37c894666c30c
+      internalID: -1489367064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_35
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6314e00fd7af97841bc2495c70a3ecae
+      internalID: -1176240679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_36
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 446
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af7655812e770441b0d0165d0014266
+      internalID: 1749798812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_37
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 446
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b973ee5ffd49f44591bcfcbeb2bf756
+      internalID: 2006991171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_38
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad6df3d2c00ccd41a405fad4a1f7e94
+      internalID: -1253572284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_39
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 447
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f4e2b51c56ea848b843d3fbc2b0a7f
+      internalID: 774773884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_40
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 446
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfd4e7536179944bbdf04ffd9d0e4b0
+      internalID: -24986034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_41
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 446
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c786b4c80c27914390a15eac122a5b4
+      internalID: 1902542757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_42
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 407
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a2ea59e71054d4fba01b7ac430aa59
+      internalID: 2123424032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_43
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 407
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ee3ff233f7ae446874ae648d0b6f27
+      internalID: 847432065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_44
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 404
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6432238d4907d7c4c9051f634f015c04
+      internalID: -1537473918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_45
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 404
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488a63e84b3972645bf79df198a2889e
+      internalID: 557286968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_46
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 404
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831d33a4c7ee4724a9fb821e39d3298c
+      internalID: 741890789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_47
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 404
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad44aeaa4b5739946b66604359d8cb73
+      internalID: 294828397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_48
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 404
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4eaa8d6e30c9945ac212f4e7ffd3d4
+      internalID: -1730360457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_49
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 404
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe49c4e3917eeb4bb0a08e68484ca03
+      internalID: -1225218281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_50
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 404
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e1b4a087cfdde4ab68349c3bc0f777
+      internalID: -171657447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_51
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 404
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c4ed0243275c046950282e12c2f170
+      internalID: -259703743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_52
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 424
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc98c5eb54cd47448228aa4fd56c360
+      internalID: -1757278065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_53
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 424
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c477af9bb6b5648a6d368c1d3366e3
+      internalID: -343587398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_54
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 405
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6dad36c428e94443b393d40bdec755d
+      internalID: -1966719085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_55
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 405
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b9ff825b67f8144bbf861a6dadadf4
+      internalID: -1731086575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_56
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 406
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40576ffc339bfed4ab1e5ac3deded4c7
+      internalID: 172027520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_57
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 406
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca1e2e46655347408a9a31e5831fa98
+      internalID: 2060744365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_58
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 406
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26bb4f632226ae54087534c569fac060
+      internalID: -1500810098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_59
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 406
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70150f7d615637a44bf89229398f3985
+      internalID: 1907798186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_60
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 406
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60f6bc57c804f749a69d4d26e1cff85
+      internalID: -1735999816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_61
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 406
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456a8d7715a237e47b0ba6f08524f9c1
+      internalID: -1200580938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_62
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 404
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9241498e7ebab9448510805c5896eb8
+      internalID: 2030173301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_63
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 368
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e0bda4a8f98ab4693c582d84d0ea12
+      internalID: 521891679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_64
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 368
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199eb20e6c3c10542b23d07e3b526c2d
+      internalID: 1358536634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_65
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 373
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445c7de4713c23447b0874ee6567ab36
+      internalID: -1122937306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_66
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 373
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdd30f3b5008ab4ab741431efdc4ced
+      internalID: -238973343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_67
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 368
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268231c8013e6184faa8ef7406541a64
+      internalID: -688208375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_68
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97f061e9f975a549a02ed93653e517d
+      internalID: -680541884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_69
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 368
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd72e8879eb428749b67b67bd50b5ae0
+      internalID: -817695214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_70
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9edbeebc9510e4fa553dd9212cbe4a
+      internalID: 970387350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_71
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 368
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c2da0466bfd1647a09ad5ce927b08a
+      internalID: -1706188693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_72
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef437a134b6978b449fdf23d6f1c5f11
+      internalID: 381424208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_73
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 368
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34ad90ff18ef2546b7342281b1effe8
+      internalID: 1003592962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_74
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 368
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8713e8f287da2b745a82d46ccdea8a9e
+      internalID: -164081699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_75
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e18e909c5b2ec445b5ec7351f924026
+      internalID: -250148370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_76
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129e6b4209ba04243846845eb541ef8d
+      internalID: -1023327607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_77
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595f46ca1ddf9dc44846eecbf88ea6c4
+      internalID: 840210427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_78
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22953c85f0ce0254fb19f3c09ef43aac
+      internalID: 46719583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_79
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd5b615c75a5984e8fcd39771b0ca32
+      internalID: 219094210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_80
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c23e6f88e83304a84abee5cafe29ff
+      internalID: 217195856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_81
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb26d230d579b348b579a894dadc2c3
+      internalID: -1769116935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_82
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 368
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e049d23d645b24280b76b79abd6b74
+      internalID: 1865060327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_83
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 368
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b46c6173595c684291c3f904b4321ff
+      internalID: -285157909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_84
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 368
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c650675de5f3c0d4390a06d1da8e5f09
+      internalID: -1358390728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_85
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 332
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2d451d9bea41840a9f6ceb238dbe46
+      internalID: 1656112687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_86
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 332
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f9d88e23195394d8c15732e363eb4a
+      internalID: -1894220489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_87
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 332
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c686988925888b459e344632bdef035
+      internalID: -486092009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_88
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 332
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f52cae3a87c704d8726ef2534b61d8
+      internalID: -1909715093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_89
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 332
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775955eee73c7624ebe141ee8673b71c
+      internalID: 1913698027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_90
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 333
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c6b6b7765b65845b3b0bf68b9d6e6e
+      internalID: -1579056130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_91
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 333
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1651ec3135cc6440b1ed68c3ef56537
+      internalID: -395156388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_92
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 333
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e76c5e5e6bb5e49a1ec73ed498032b
+      internalID: -2136291544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_93
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 333
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957cbb42380ba024bbdc5bc2f1cb1a3b
+      internalID: -264256914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_94
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 332
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4237d0ad1a4324ea83d0fe92f6dc3a
+      internalID: 351949468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_95
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 332
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251b970d489fab94a8583779247046b2
+      internalID: -341124370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_96
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 332
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28eba6037eb94b34995327da43e2d38c
+      internalID: -579199628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_97
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 332
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dbb49206112004ab2f87db4d802396
+      internalID: -198344270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_98
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 332
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17324efab7460d548b6f6d64eb86a170
+      internalID: 162634496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_99
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 332
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671b96bfb4af92a4e9ed307e849328a6
+      internalID: -328628565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_100
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 332
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6782692d9aaa5c43a66547505a29732
+      internalID: -677519636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_101
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 332
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a4ce4e54b398f4087ef1aa14c1be32
+      internalID: 364362182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_102
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 332
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9219df0ffaeee43bba82a6c80d8911
+      internalID: -1571981941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_103
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 332
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25fb23826c7790d44b88db836b187743
+      internalID: -3335138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_104
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 351
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ee56f455aa22b45930917590020217
+      internalID: -64002134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_105
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 351
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5497fc5ffa032c4897c14b5d5a3eafe
+      internalID: -488959607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_106
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 332
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509c6e5265c6f344fa803815b5f00c44
+      internalID: -1672504849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_107
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 296
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f69be35249e8c846b1226241b88dfd1
+      internalID: -579639613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_108
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 297
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee23f770fbb4ba448ace7fd96e2ea91c
+      internalID: -1043884545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_109
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 297
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c0155eefa3a9e4a8673d06e2a5097b
+      internalID: 2064332032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_110
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 297
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb15507fcbb9bc47b648060b12e3437
+      internalID: -1826204693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_111
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 297
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf16a3aa6e12c9346bedeff48ee43d11
+      internalID: 210262124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_112
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249741f96d21d60418a8bacb46c1aa43
+      internalID: 18148125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_113
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 296
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afd7c108f50af742a81ec7ccbad2ba0
+      internalID: 316808100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_114
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 296
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b218ae23dd059b47a4f31ef35da853e
+      internalID: 1384593088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_115
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96d3fbcd28ca1e48b35831a6ebaf2e8
+      internalID: 139740749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_116
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29aa2698cc4c7748afc187582c980fa
+      internalID: -750287117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_117
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2bd7aa3a18a49b4e8a62758d89843da
+      internalID: 914741864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_118
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fca603ba8c4cc44a9173e7617cebf40
+      internalID: 173208513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_119
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d8a45cdd041a34d93d1c468e69e28a
+      internalID: 800177051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_120
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 296
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8978d050a135b349a7604f05634d06e
+      internalID: 1004455172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_121
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 296
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7154945b164014aa3060b4488b97f3
+      internalID: 1577001035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_122
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 296
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c3d744d96b4ae4a837b477e030cf24
+      internalID: 1331934840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_123
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 296
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d71676e842b404faef8a5c5d328582
+      internalID: -1731622039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_124
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 296
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c620de6337dd944b0f535906e2afdb
+      internalID: -1072790715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_125
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 296
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e03cd6c6fd0164dbce5d17ac940807
+      internalID: 301937334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_126
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 296
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746174cb2b5e8a346a2c26ca78c2fa49
+      internalID: -1196755440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_127
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 296
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da40abfa93384224eba43767ddf6ba26
+      internalID: -790907797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_128
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 296
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07038af07ee1b4e488949961ecb6909e
+      internalID: 1600570953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_129
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 296
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa36905c63860af408ccf53e14e2894d
+      internalID: -1381599371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_130
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 299
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be05673aa9bc0c42ad6cac2a1bf9e59
+      internalID: 1256688047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_131
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 262
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2915405db96ad347aef99fcf4977fd5
+      internalID: 489606178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_132
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 260
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0df131af274c148a9b0838b5abd75c
+      internalID: 1262686687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_133
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 263
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314e95c7a4cd13749ae0e047b110b2a4
+      internalID: -60940693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_134
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 262
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d21d3c514650ff458e768d3e6b38304
+      internalID: -1334351658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_135
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 260
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6387c1517817740893a708a0a5ebfa
+      internalID: -1921554485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_136
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 263
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2469ed5fc061e4488c8296fb04e1b9
+      internalID: -296694529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_137
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 262
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436cb9762d1c7a146ab0f1930a6d84c9
+      internalID: -352766760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_138
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 260
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b448695482487418f7f7de59e0bcdf
+      internalID: -258980386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_139
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42266642682139d4fa76cd22f6ebcdd7
+      internalID: -1740258002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_140
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 262
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02494fec73f5554eb9b2b53afb814e0
+      internalID: 93924271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_141
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 260
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7762ceca5f1365240ac5ba201bec8f89
+      internalID: -669387841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_142
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 263
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0d846cb5b20cc498328ff9eb5b5c2a
+      internalID: -191886219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_143
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c797c2ad2d67d448809ae09be250aa
+      internalID: -264829595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_144
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 261
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f2972e8f5322b4a9b428ba066fa83a
+      internalID: 882507753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_145
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f891f4e3807784996556d972a879b4
+      internalID: -1678337081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_146
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6cc3987359b334c8db9923c4dfae22
+      internalID: 613587106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_147
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 261
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968bcdf5508adbf40b593bbad294a972
+      internalID: -1997070451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_148
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852764ab7fdf4e141bcfc7c81b22ee88
+      internalID: -1363861893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_149
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d23f0cb602d7824fa768f0a297f5118
+      internalID: 978247164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_150
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 261
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73d0b395e627b24394facff318f75c0
+      internalID: 1697335198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_151
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 263
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1de833ae4433d4caca506ca652631f
+      internalID: -1253946798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_152
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68ac390bb98e5946a39c0ca5a2d13a8
+      internalID: -28129914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_153
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 261
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f351cef6bdfc61a4696a7c5a7149e64d
+      internalID: -1634742191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_154
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 259
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99f17aa37a1e124e82ad7aecba6c745
+      internalID: 1641569487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_155
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 260
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe34cf52fe260ed40bf6211d175e7a98
+      internalID: 1345381133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_156
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 259
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683dc6c259af2a94b8c55b854c3201c1
+      internalID: -333937344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_157
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 224
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c698f4de09fd34fbdd3e9ffb55ae47
+      internalID: 1256940569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_158
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 224
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e96c85a1495cf84085cbbe26425a964
+      internalID: -929395214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_159
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 223
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22148b694a45e364ca0717add9648953
+      internalID: 266683071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_160
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 222
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8202c74943a4a504db4b61347e917d4d
+      internalID: -1789527398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_161
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 223
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933a7ebf3ccbdb846b95abb0bc095ce5
+      internalID: -1118586061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_162
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 222
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3362ab585f5fe41ab316867f708174
+      internalID: 1878809158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_163
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 224
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67410d5d84f6814c833c9a183b9e824
+      internalID: 830787781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_164
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 224
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aee41198728dfb4a8ff100567c7fe08
+      internalID: -1259498519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_165
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 223
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f3cabc9b78c044899a52a23ae5c879
+      internalID: -52679672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_166
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 222
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ed6dbdbd8b9a348b849dfeb980801d
+      internalID: -1843936753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_167
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 223
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8042d1eea7aa744aadc30b67a28cdf
+      internalID: -464556715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_168
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 222
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25922619854af434ab6c26dcc4e71c75
+      internalID: 390047228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_169
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 224
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb7d4d3a6cf80b4c9db800c88325f1b
+      internalID: -1878207770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_170
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 224
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad935f8416eb185499feecc1bd0376da
+      internalID: -1316956243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_171
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 223
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e21e65ee041ba41a98e66aec5533ec
+      internalID: 912990251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_172
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 222
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b650af80aca50747b0d5de4c11fc1cf
+      internalID: -738529328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_173
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 223
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cadaea122d7bf6438efde940b71e20e
+      internalID: -2123791676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_174
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 222
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a187ded53620445bc682a0fd416d9d
+      internalID: 212443738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_175
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 224
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e889c8541af6b4893436e848ddd026
+      internalID: -435045355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_176
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 224
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08df9d1ef007bd04aa1dcb5601d0fa1d
+      internalID: 238138053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_177
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 186
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02ae593204fce743bdf6874a35823c4
+      internalID: -191652260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_178
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 188
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c872ac590af624f8e2818cf031b4a0
+      internalID: 1644616017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_179
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 187
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b166376856f4d26499e8bc9415d3aa28
+      internalID: -852199618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_180
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 185
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb363bebc84e2d458cc284e246e0a5a
+      internalID: 2083865324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_181
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 188
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509cbe6d523f57947ab30c82a994354d
+      internalID: 863464333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_182
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 187
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f966be67677ca2c4aa5c5b76f773b1bf
+      internalID: 92999152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_183
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 185
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa630e492516d934ab1c7ae8a7968e03
+      internalID: -1177705864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_184
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 188
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901dfa6acc4e36542a6a8ec888aae248
+      internalID: -462432749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_185
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 187
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3925d251b4687e4aa651c3ba1fc8f44
+      internalID: 1197533581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_186
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 185
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166881d6fe577484b9d4808799a95282
+      internalID: 2053532180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_187
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 188
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6af4b10a5e94964886228b24970590c
+      internalID: -456756550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_188
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 187
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128ba8eb8701f314eb917d83dc1613d4
+      internalID: -258897170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_189
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 185
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb36d66263ef3de498c8495a0dee4e58
+      internalID: 468601941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_190
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 188
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357c06e549486b84bbda9c7c802c9a7c
+      internalID: 86595780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_191
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 188
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8685f70aeafb0e64c9eacea8f6e13cc4
+      internalID: 1444513765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_192
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 186
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429b0bca302af5848ba5cb3e5666a948
+      internalID: -468960686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_193
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 188
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b528390349b26754a817f29991b0c582
+      internalID: 1251748568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_194
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 188
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af0e4e278d834d40b21ddad3789fb69
+      internalID: -1292417946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_195
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 186
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bf41e870bf07747bd6ec1d0f68b207
+      internalID: -1143761374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_196
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 188
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f807cad2eac5b48b4fa36d9fc8e7e7
+      internalID: -1205521374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_197
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 188
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc757786e9f7e8e4cac89c36e12efd35
+      internalID: 1825725664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_198
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 186
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e5d1bf6aaa8fc47ba1e4f6e7bbdfa6
+      internalID: -1337056187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_199
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 188
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17dcd117cc4596644b05271762a00a67
+      internalID: 262475987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_200
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 188
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9019fe7c40b46884eb138936606bf082
+      internalID: 16698785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_201
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 186
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d268ae56e0780469e277edd0a3045a
+      internalID: -144188364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_202
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 185
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c47fcdd96276574594332023c1cdaff
+      internalID: 1893295398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_203
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 149
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57dff31ecd8e7d4cb5796d631937ebb
+      internalID: -1094731048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_204
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 148
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d11e09a9f4a2044bad528d7d2d175a
+      internalID: -1315324646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_205
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 150
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc7b4348efe7ef44880bae48044be07
+      internalID: -1387618898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_206
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 150
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa1790199ae8f243853ddad2f71925d
+      internalID: 448992206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_207
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 149
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cfd24969758da44c9e263aea45abf85
+      internalID: 1245520152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_208
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 148
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc94d9e449be0146acc14087e3ce361
+      internalID: -249075803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_209
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 149
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a875a99090f853f46902749a4f47d8e7
+      internalID: 2043288753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_210
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 148
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3752087d4b240a4c8a4833bba7ee22e
+      internalID: 1601893990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_211
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 150
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05db08de5a1eaa44fb454c581f173b3e
+      internalID: -1247220665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_212
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 150
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3853c970fcac4b48865a1d4c27845ad
+      internalID: -1592499386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_213
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 149
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085e5944005c2cb42a4629811db97e8c
+      internalID: -542551189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_214
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 148
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6547effd7d029f4fb529e77e71f5c74
+      internalID: 1980493153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_215
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 149
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45288304b3146e459bc479d22add894
+      internalID: 1469008996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_216
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 148
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793605f0838463f4ca88aa43a67aa446
+      internalID: -345214219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_217
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 150
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c9335c5f20e2e4d9b2a616f9b68a45
+      internalID: -1531258159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_218
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 150
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df96925acc708fc489f33fe3db53d29c
+      internalID: 178411464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_219
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 149
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7acea7e2568a124cba2906a5cf90574
+      internalID: -234807753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_220
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 148
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8b4b4e874842a4f9c1ee04b1dc5da4
+      internalID: -2003155651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_221
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 149
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58160b5b9ac024c41aef1a00440919ac
+      internalID: -1192890735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_222
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 148
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36865cbc7b43fa48bc38c9415c72bd4
+      internalID: -1727886233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_223
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 150
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8613298e59d9cd643bd1e9c5b4d1dd7e
+      internalID: -1470270775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_224
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 113
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5b1108a09838b41b104010255c8211
+      internalID: 559773024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_225
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 112
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4744ac0a9e219dd45a40bbd2397c8f6c
+      internalID: -125476465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_226
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bdc1cae7aade5e429f72880f0496ffd
+      internalID: 630507198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_227
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 112
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c772b6599ae8a40b511e1297cd499c
+      internalID: 1856952048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_228
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 112
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a440f1c42286fbc4eb28ef784a3b0028
+      internalID: 2140323042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_229
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 112
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c738a6d21def3b4aa47c2929763f85c
+      internalID: -63755036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_230
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 112
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cda9049ebc4d094f8e537a2502c2871
+      internalID: 438951276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_231
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 112
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43e3b95ab5aae74bbb550c76a4aa5e2
+      internalID: -612310940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_232
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 112
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba86cb618e210884aac50ddbc15aa38d
+      internalID: -466893855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_233
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 112
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74deee88e0957fb47844d381d924a4e6
+      internalID: -407081341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_234
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 112
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5be56759ebf154d818930434ffa1f6
+      internalID: 1066656131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_235
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 112
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675c1fc3e2ef52643840d70948c52cd9
+      internalID: 798075123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_236
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 112
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f49ab28eaac7e47a8d22ea22971188
+      internalID: -1641987985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_237
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 112
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6068e3c2c8b7b479fa7c5458fa59d2
+      internalID: 74543315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_238
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 112
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad29510fe35ab443aa434a5f90de5d7
+      internalID: -2059555996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_239
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 112
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b33c462aef85b34482b3e887210aee5
+      internalID: -473910596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_240
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 112
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd95ddb62a3f3c45ba4724936ce31af
+      internalID: 1869500883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_241
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 112
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4805d9665bfd0c549828b19ba0ea305e
+      internalID: -7043522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_242
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 112
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a4dd38ddf0b19428af28b6132f3c82
+      internalID: -596352699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_243
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 112
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61002184984b204794d4171cb97fb08
+      internalID: 141153040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_244
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 112
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6dd260e51a05a4b9c5319dc9752bb7
+      internalID: -904617929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_245
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 112
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5d3bdc064a97c448bf1ea795481162
+      internalID: -1540188604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_246
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 112
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407a67731468ec541a00e0fb365dee06
+      internalID: 1666697203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_247
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 112
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba80273cd3ca9e049be78f3427de36f6
+      internalID: 2145374149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_248
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 113
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b456ccba46fce40b83a4a9211a5b5b
+      internalID: 1184553675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_249
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 112
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bdbeaeaa01a954581bde670b4801a7
+      internalID: -1910334682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_250
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 76
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e31a1bc77b46443b7764454db75735
+      internalID: 675658757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_251
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 77
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e089a2cca9cac45a828fb429485ffc
+      internalID: -320595854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_252
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 76
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1734fefd817c943a3044ea68fa8cf0
+      internalID: 2059193115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_253
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 76
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e8ff4dbb39b244695cae8246b1671b
+      internalID: -1245446104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_254
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 77
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c117dbf9d4cad444afe47803331ec86
+      internalID: -1321327329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_255
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 76
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304e9409a8511fb4d9e35191514eefad
+      internalID: -1187121583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_256
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 76
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb13dc7d9e5e45f47b711839a0f06b87
+      internalID: -1460753644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_257
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 77
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa20dd968b3c2444b1606dba8af622e
+      internalID: 981151338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_258
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 76
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ebd8a476d560d4b80522137ca128ea
+      internalID: 263127791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_259
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 76
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd39541beb797ee4ab509d7082d2085c
+      internalID: 656792504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_260
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 77
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a373347e56e9c489f05d482baec26e
+      internalID: -1201488181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_261
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 76
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3096cb55f5e7bd049bc8c019c356d6d8
+      internalID: -2100733167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_262
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 76
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33838a0fcaf785843825a1fcc12c2efc
+      internalID: -87863984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_263
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 77
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baeaa28f803ed5a4caa465c3dd757951
+      internalID: -555536202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_264
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 76
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbcc634725d93148921761f5426bf93
+      internalID: -716601192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_265
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 76
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cb200ea2881e541811344af678dd27
+      internalID: 367627078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_266
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 77
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31be4e25d1dc98b41b9f366a9b845899
+      internalID: 171730830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_267
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 76
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c87996aca14b644828eece317e835a
+      internalID: -1797390182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_268
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 76
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5110c489aaf2bd444931e36f17377ad3
+      internalID: -396596962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_269
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 77
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7682eeab8bc2b47a07dde15e7b7e9c
+      internalID: -1730430918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_270
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 76
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084d1d70bb57495448be4d491b23b96a
+      internalID: 207410318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_271
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 76
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a0d99e04af8fb4ab168cfeee9e9fc3
+      internalID: 1737380958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_272
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 76
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8305f74890b937499e2ed4cbc39a153
+      internalID: 1645152900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_PlyThe_J0_cl_273
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 76
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb7381ddadb40440ad6495b68f2d932
+      internalID: 605789843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChrTX_PlyThe_J0_cl_0: -586571419
+      ChrTX_PlyThe_J0_cl_1: 312666135
+      ChrTX_PlyThe_J0_cl_10: -681906968
+      ChrTX_PlyThe_J0_cl_100: -677519636
+      ChrTX_PlyThe_J0_cl_101: 364362182
+      ChrTX_PlyThe_J0_cl_102: -1571981941
+      ChrTX_PlyThe_J0_cl_103: -3335138
+      ChrTX_PlyThe_J0_cl_104: -64002134
+      ChrTX_PlyThe_J0_cl_105: -488959607
+      ChrTX_PlyThe_J0_cl_106: -1672504849
+      ChrTX_PlyThe_J0_cl_107: -579639613
+      ChrTX_PlyThe_J0_cl_108: -1043884545
+      ChrTX_PlyThe_J0_cl_109: 2064332032
+      ChrTX_PlyThe_J0_cl_11: 777856509
+      ChrTX_PlyThe_J0_cl_110: -1826204693
+      ChrTX_PlyThe_J0_cl_111: 210262124
+      ChrTX_PlyThe_J0_cl_112: 18148125
+      ChrTX_PlyThe_J0_cl_113: 316808100
+      ChrTX_PlyThe_J0_cl_114: 1384593088
+      ChrTX_PlyThe_J0_cl_115: 139740749
+      ChrTX_PlyThe_J0_cl_116: -750287117
+      ChrTX_PlyThe_J0_cl_117: 914741864
+      ChrTX_PlyThe_J0_cl_118: 173208513
+      ChrTX_PlyThe_J0_cl_119: 800177051
+      ChrTX_PlyThe_J0_cl_12: -1783117553
+      ChrTX_PlyThe_J0_cl_120: 1004455172
+      ChrTX_PlyThe_J0_cl_121: 1577001035
+      ChrTX_PlyThe_J0_cl_122: 1331934840
+      ChrTX_PlyThe_J0_cl_123: -1731622039
+      ChrTX_PlyThe_J0_cl_124: -1072790715
+      ChrTX_PlyThe_J0_cl_125: 301937334
+      ChrTX_PlyThe_J0_cl_126: -1196755440
+      ChrTX_PlyThe_J0_cl_127: -790907797
+      ChrTX_PlyThe_J0_cl_128: 1600570953
+      ChrTX_PlyThe_J0_cl_129: -1381599371
+      ChrTX_PlyThe_J0_cl_13: 1824416752
+      ChrTX_PlyThe_J0_cl_130: 1256688047
+      ChrTX_PlyThe_J0_cl_131: 489606178
+      ChrTX_PlyThe_J0_cl_132: 1262686687
+      ChrTX_PlyThe_J0_cl_133: -60940693
+      ChrTX_PlyThe_J0_cl_134: -1334351658
+      ChrTX_PlyThe_J0_cl_135: -1921554485
+      ChrTX_PlyThe_J0_cl_136: -296694529
+      ChrTX_PlyThe_J0_cl_137: -352766760
+      ChrTX_PlyThe_J0_cl_138: -258980386
+      ChrTX_PlyThe_J0_cl_139: -1740258002
+      ChrTX_PlyThe_J0_cl_14: 915376240
+      ChrTX_PlyThe_J0_cl_140: 93924271
+      ChrTX_PlyThe_J0_cl_141: -669387841
+      ChrTX_PlyThe_J0_cl_142: -191886219
+      ChrTX_PlyThe_J0_cl_143: -264829595
+      ChrTX_PlyThe_J0_cl_144: 882507753
+      ChrTX_PlyThe_J0_cl_145: -1678337081
+      ChrTX_PlyThe_J0_cl_146: 613587106
+      ChrTX_PlyThe_J0_cl_147: -1997070451
+      ChrTX_PlyThe_J0_cl_148: -1363861893
+      ChrTX_PlyThe_J0_cl_149: 978247164
+      ChrTX_PlyThe_J0_cl_15: 24782856
+      ChrTX_PlyThe_J0_cl_150: 1697335198
+      ChrTX_PlyThe_J0_cl_151: -1253946798
+      ChrTX_PlyThe_J0_cl_152: -28129914
+      ChrTX_PlyThe_J0_cl_153: -1634742191
+      ChrTX_PlyThe_J0_cl_154: 1641569487
+      ChrTX_PlyThe_J0_cl_155: 1345381133
+      ChrTX_PlyThe_J0_cl_156: -333937344
+      ChrTX_PlyThe_J0_cl_157: 1256940569
+      ChrTX_PlyThe_J0_cl_158: -929395214
+      ChrTX_PlyThe_J0_cl_159: 266683071
+      ChrTX_PlyThe_J0_cl_16: -1873548312
+      ChrTX_PlyThe_J0_cl_160: -1789527398
+      ChrTX_PlyThe_J0_cl_161: -1118586061
+      ChrTX_PlyThe_J0_cl_162: 1878809158
+      ChrTX_PlyThe_J0_cl_163: 830787781
+      ChrTX_PlyThe_J0_cl_164: -1259498519
+      ChrTX_PlyThe_J0_cl_165: -52679672
+      ChrTX_PlyThe_J0_cl_166: -1843936753
+      ChrTX_PlyThe_J0_cl_167: -464556715
+      ChrTX_PlyThe_J0_cl_168: 390047228
+      ChrTX_PlyThe_J0_cl_169: -1878207770
+      ChrTX_PlyThe_J0_cl_17: 2021255760
+      ChrTX_PlyThe_J0_cl_170: -1316956243
+      ChrTX_PlyThe_J0_cl_171: 912990251
+      ChrTX_PlyThe_J0_cl_172: -738529328
+      ChrTX_PlyThe_J0_cl_173: -2123791676
+      ChrTX_PlyThe_J0_cl_174: 212443738
+      ChrTX_PlyThe_J0_cl_175: -435045355
+      ChrTX_PlyThe_J0_cl_176: 238138053
+      ChrTX_PlyThe_J0_cl_177: -191652260
+      ChrTX_PlyThe_J0_cl_178: 1644616017
+      ChrTX_PlyThe_J0_cl_179: -852199618
+      ChrTX_PlyThe_J0_cl_18: -1621753323
+      ChrTX_PlyThe_J0_cl_180: 2083865324
+      ChrTX_PlyThe_J0_cl_181: 863464333
+      ChrTX_PlyThe_J0_cl_182: 92999152
+      ChrTX_PlyThe_J0_cl_183: -1177705864
+      ChrTX_PlyThe_J0_cl_184: -462432749
+      ChrTX_PlyThe_J0_cl_185: 1197533581
+      ChrTX_PlyThe_J0_cl_186: 2053532180
+      ChrTX_PlyThe_J0_cl_187: -456756550
+      ChrTX_PlyThe_J0_cl_188: -258897170
+      ChrTX_PlyThe_J0_cl_189: 468601941
+      ChrTX_PlyThe_J0_cl_19: -1035134924
+      ChrTX_PlyThe_J0_cl_190: 86595780
+      ChrTX_PlyThe_J0_cl_191: 1444513765
+      ChrTX_PlyThe_J0_cl_192: -468960686
+      ChrTX_PlyThe_J0_cl_193: 1251748568
+      ChrTX_PlyThe_J0_cl_194: -1292417946
+      ChrTX_PlyThe_J0_cl_195: -1143761374
+      ChrTX_PlyThe_J0_cl_196: -1205521374
+      ChrTX_PlyThe_J0_cl_197: 1825725664
+      ChrTX_PlyThe_J0_cl_198: -1337056187
+      ChrTX_PlyThe_J0_cl_199: 262475987
+      ChrTX_PlyThe_J0_cl_2: 1137323815
+      ChrTX_PlyThe_J0_cl_20: -1496652944
+      ChrTX_PlyThe_J0_cl_200: 16698785
+      ChrTX_PlyThe_J0_cl_201: -144188364
+      ChrTX_PlyThe_J0_cl_202: 1893295398
+      ChrTX_PlyThe_J0_cl_203: -1094731048
+      ChrTX_PlyThe_J0_cl_204: -1315324646
+      ChrTX_PlyThe_J0_cl_205: -1387618898
+      ChrTX_PlyThe_J0_cl_206: 448992206
+      ChrTX_PlyThe_J0_cl_207: 1245520152
+      ChrTX_PlyThe_J0_cl_208: -249075803
+      ChrTX_PlyThe_J0_cl_209: 2043288753
+      ChrTX_PlyThe_J0_cl_21: -1107247962
+      ChrTX_PlyThe_J0_cl_210: 1601893990
+      ChrTX_PlyThe_J0_cl_211: -1247220665
+      ChrTX_PlyThe_J0_cl_212: -1592499386
+      ChrTX_PlyThe_J0_cl_213: -542551189
+      ChrTX_PlyThe_J0_cl_214: 1980493153
+      ChrTX_PlyThe_J0_cl_215: 1469008996
+      ChrTX_PlyThe_J0_cl_216: -345214219
+      ChrTX_PlyThe_J0_cl_217: -1531258159
+      ChrTX_PlyThe_J0_cl_218: 178411464
+      ChrTX_PlyThe_J0_cl_219: -234807753
+      ChrTX_PlyThe_J0_cl_22: 1954929976
+      ChrTX_PlyThe_J0_cl_220: -2003155651
+      ChrTX_PlyThe_J0_cl_221: -1192890735
+      ChrTX_PlyThe_J0_cl_222: -1727886233
+      ChrTX_PlyThe_J0_cl_223: -1470270775
+      ChrTX_PlyThe_J0_cl_224: 559773024
+      ChrTX_PlyThe_J0_cl_225: -125476465
+      ChrTX_PlyThe_J0_cl_226: 630507198
+      ChrTX_PlyThe_J0_cl_227: 1856952048
+      ChrTX_PlyThe_J0_cl_228: 2140323042
+      ChrTX_PlyThe_J0_cl_229: -63755036
+      ChrTX_PlyThe_J0_cl_23: 1832284161
+      ChrTX_PlyThe_J0_cl_230: 438951276
+      ChrTX_PlyThe_J0_cl_231: -612310940
+      ChrTX_PlyThe_J0_cl_232: -466893855
+      ChrTX_PlyThe_J0_cl_233: -407081341
+      ChrTX_PlyThe_J0_cl_234: 1066656131
+      ChrTX_PlyThe_J0_cl_235: 798075123
+      ChrTX_PlyThe_J0_cl_236: -1641987985
+      ChrTX_PlyThe_J0_cl_237: 74543315
+      ChrTX_PlyThe_J0_cl_238: -2059555996
+      ChrTX_PlyThe_J0_cl_239: -473910596
+      ChrTX_PlyThe_J0_cl_24: 1167750284
+      ChrTX_PlyThe_J0_cl_240: 1869500883
+      ChrTX_PlyThe_J0_cl_241: -7043522
+      ChrTX_PlyThe_J0_cl_242: -596352699
+      ChrTX_PlyThe_J0_cl_243: 141153040
+      ChrTX_PlyThe_J0_cl_244: -904617929
+      ChrTX_PlyThe_J0_cl_245: -1540188604
+      ChrTX_PlyThe_J0_cl_246: 1666697203
+      ChrTX_PlyThe_J0_cl_247: 2145374149
+      ChrTX_PlyThe_J0_cl_248: 1184553675
+      ChrTX_PlyThe_J0_cl_249: -1910334682
+      ChrTX_PlyThe_J0_cl_25: -1561456686
+      ChrTX_PlyThe_J0_cl_250: 675658757
+      ChrTX_PlyThe_J0_cl_251: -320595854
+      ChrTX_PlyThe_J0_cl_252: 2059193115
+      ChrTX_PlyThe_J0_cl_253: -1245446104
+      ChrTX_PlyThe_J0_cl_254: -1321327329
+      ChrTX_PlyThe_J0_cl_255: -1187121583
+      ChrTX_PlyThe_J0_cl_256: -1460753644
+      ChrTX_PlyThe_J0_cl_257: 981151338
+      ChrTX_PlyThe_J0_cl_258: 263127791
+      ChrTX_PlyThe_J0_cl_259: 656792504
+      ChrTX_PlyThe_J0_cl_26: 351077646
+      ChrTX_PlyThe_J0_cl_260: -1201488181
+      ChrTX_PlyThe_J0_cl_261: -2100733167
+      ChrTX_PlyThe_J0_cl_262: -87863984
+      ChrTX_PlyThe_J0_cl_263: -555536202
+      ChrTX_PlyThe_J0_cl_264: -716601192
+      ChrTX_PlyThe_J0_cl_265: 367627078
+      ChrTX_PlyThe_J0_cl_266: 171730830
+      ChrTX_PlyThe_J0_cl_267: -1797390182
+      ChrTX_PlyThe_J0_cl_268: -396596962
+      ChrTX_PlyThe_J0_cl_269: -1730430918
+      ChrTX_PlyThe_J0_cl_27: 1198735042
+      ChrTX_PlyThe_J0_cl_270: 207410318
+      ChrTX_PlyThe_J0_cl_271: 1737380958
+      ChrTX_PlyThe_J0_cl_272: 1645152900
+      ChrTX_PlyThe_J0_cl_273: 605789843
+      ChrTX_PlyThe_J0_cl_28: -1135985329
+      ChrTX_PlyThe_J0_cl_29: -799000020
+      ChrTX_PlyThe_J0_cl_3: 2110474710
+      ChrTX_PlyThe_J0_cl_30: 424934556
+      ChrTX_PlyThe_J0_cl_31: 1995710275
+      ChrTX_PlyThe_J0_cl_32: 254627358
+      ChrTX_PlyThe_J0_cl_33: -1224752112
+      ChrTX_PlyThe_J0_cl_34: -1489367064
+      ChrTX_PlyThe_J0_cl_35: -1176240679
+      ChrTX_PlyThe_J0_cl_36: 1749798812
+      ChrTX_PlyThe_J0_cl_37: 2006991171
+      ChrTX_PlyThe_J0_cl_38: -1253572284
+      ChrTX_PlyThe_J0_cl_39: 774773884
+      ChrTX_PlyThe_J0_cl_4: -930499234
+      ChrTX_PlyThe_J0_cl_40: -24986034
+      ChrTX_PlyThe_J0_cl_41: 1902542757
+      ChrTX_PlyThe_J0_cl_42: 2123424032
+      ChrTX_PlyThe_J0_cl_43: 847432065
+      ChrTX_PlyThe_J0_cl_44: -1537473918
+      ChrTX_PlyThe_J0_cl_45: 557286968
+      ChrTX_PlyThe_J0_cl_46: 741890789
+      ChrTX_PlyThe_J0_cl_47: 294828397
+      ChrTX_PlyThe_J0_cl_48: -1730360457
+      ChrTX_PlyThe_J0_cl_49: -1225218281
+      ChrTX_PlyThe_J0_cl_5: 898956096
+      ChrTX_PlyThe_J0_cl_50: -171657447
+      ChrTX_PlyThe_J0_cl_51: -259703743
+      ChrTX_PlyThe_J0_cl_52: -1757278065
+      ChrTX_PlyThe_J0_cl_53: -343587398
+      ChrTX_PlyThe_J0_cl_54: -1966719085
+      ChrTX_PlyThe_J0_cl_55: -1731086575
+      ChrTX_PlyThe_J0_cl_56: 172027520
+      ChrTX_PlyThe_J0_cl_57: 2060744365
+      ChrTX_PlyThe_J0_cl_58: -1500810098
+      ChrTX_PlyThe_J0_cl_59: 1907798186
+      ChrTX_PlyThe_J0_cl_6: -677700680
+      ChrTX_PlyThe_J0_cl_60: -1735999816
+      ChrTX_PlyThe_J0_cl_61: -1200580938
+      ChrTX_PlyThe_J0_cl_62: 2030173301
+      ChrTX_PlyThe_J0_cl_63: 521891679
+      ChrTX_PlyThe_J0_cl_64: 1358536634
+      ChrTX_PlyThe_J0_cl_65: -1122937306
+      ChrTX_PlyThe_J0_cl_66: -238973343
+      ChrTX_PlyThe_J0_cl_67: -688208375
+      ChrTX_PlyThe_J0_cl_68: -680541884
+      ChrTX_PlyThe_J0_cl_69: -817695214
+      ChrTX_PlyThe_J0_cl_7: 156544813
+      ChrTX_PlyThe_J0_cl_70: 970387350
+      ChrTX_PlyThe_J0_cl_71: -1706188693
+      ChrTX_PlyThe_J0_cl_72: 381424208
+      ChrTX_PlyThe_J0_cl_73: 1003592962
+      ChrTX_PlyThe_J0_cl_74: -164081699
+      ChrTX_PlyThe_J0_cl_75: -250148370
+      ChrTX_PlyThe_J0_cl_76: -1023327607
+      ChrTX_PlyThe_J0_cl_77: 840210427
+      ChrTX_PlyThe_J0_cl_78: 46719583
+      ChrTX_PlyThe_J0_cl_79: 219094210
+      ChrTX_PlyThe_J0_cl_8: 1290178193
+      ChrTX_PlyThe_J0_cl_80: 217195856
+      ChrTX_PlyThe_J0_cl_81: -1769116935
+      ChrTX_PlyThe_J0_cl_82: 1865060327
+      ChrTX_PlyThe_J0_cl_83: -285157909
+      ChrTX_PlyThe_J0_cl_84: -1358390728
+      ChrTX_PlyThe_J0_cl_85: 1656112687
+      ChrTX_PlyThe_J0_cl_86: -1894220489
+      ChrTX_PlyThe_J0_cl_87: -486092009
+      ChrTX_PlyThe_J0_cl_88: -1909715093
+      ChrTX_PlyThe_J0_cl_89: 1913698027
+      ChrTX_PlyThe_J0_cl_9: -989575658
+      ChrTX_PlyThe_J0_cl_90: -1579056130
+      ChrTX_PlyThe_J0_cl_91: -395156388
+      ChrTX_PlyThe_J0_cl_92: -2136291544
+      ChrTX_PlyThe_J0_cl_93: -264256914
+      ChrTX_PlyThe_J0_cl_94: 351949468
+      ChrTX_PlyThe_J0_cl_95: -341124370
+      ChrTX_PlyThe_J0_cl_96: -579199628
+      ChrTX_PlyThe_J0_cl_97: -198344270
+      ChrTX_PlyThe_J0_cl_98: 162634496
+      ChrTX_PlyThe_J0_cl_99: -328628565
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

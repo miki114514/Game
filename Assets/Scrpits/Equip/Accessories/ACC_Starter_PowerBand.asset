@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76690641ea2786a4daf2cebb0a009a1d, type: 3}
+  m_Name: ACC_Starter_PowerBand
+  m_EditorClassIdentifier: 
+  equipmentName: ACC_Starter_PowerBand
+  description: "\u57FA\u7840\u653B\u51FB\u9970\u54C1\uFF1A\u5C11\u91CF P.Atk \u4E0E\u6700\u5927
+    HP"
+  icon: {fileID: 0}
+  pAtk: 3
+  eAtk: 0
+  pDef: 0
+  eDef: 0
+  speed: 0
+  accuracy: 0
+  crit: 1
+  hp: 20
+  sp: 0
+  resistances: []
+  specialEffects: []

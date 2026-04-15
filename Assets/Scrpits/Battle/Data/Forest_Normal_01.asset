@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49068bdd2b65da43837c9c58380f94d, type: 3}
+  m_Name: Forest_Normal_01
+  m_EditorClassIdentifier: 
+  encounterId: Forest_Normal_01
+  displayName: "\u68EE\u6797\u6742\u5175\u6218 01"
+  notes: "\u6559\u5B66\u7EA7\u53CC\u6742\u5175\u6218"
+  encounterType: 0
+  layoutTemplateType: 1
+  canEscape: 1
+  isStoryBattle: 0
+  backgroundPrefab: {fileID: 0}
+  battleBgm: {fileID: 0}
+  enemyEntries:
+  - enemyDefinition: {fileID: 11400000, guid: 1921cb666f1d456489729d68d1ada9ac, type: 2}
+    role: 0
+    slotNameOverride: Slot_01
+    localPositionOffset: {x: 0, y: 0, z: 0}
+    levelOverride: -1
+    hpMultiplier: 1
+    attackMultiplier: 1
+    scaleMultiplier: 1
+  - enemyDefinition: {fileID: 11400000, guid: 1921cb666f1d456489729d68d1ada9ac, type: 2}
+    role: 0
+    slotNameOverride: Slot_02
+    localPositionOffset: {x: 0, y: 0, z: 0}
+    levelOverride: -1
+    hpMultiplier: 1
+    attackMultiplier: 1
+    scaleMultiplier: 1
+  bonusExp: 0
+  bonusMoney: 0
+  guaranteedRewardItems: []
