@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Slash
   type: 0
+  damageType: 0
+  weaponType: 0
+  elementType: 0
   attackType: 1
   requiredWeaponType: 1
+  countBothWeaknessesSeparately: 0
   targetType: 0
   hitCount: 1
   allowBoost: 1
@@ -27,4 +31,7 @@ MonoBehaviour:
   triggerChance: 100
   judgementEffect: -1
   judgementRounds: 1
+  restrictLearnableClasses: 1
+  learnableClasses:
+  - {fileID: 11400000, guid: 4ce991c0554b77941a10743d08c9638c, type: 2}
   description: "\u5BF9\u5355\u4F53\u654C\u4EBA\u9020\u6210\u5251\u5C5E\u6027\u7269\u7406\u4F24\u5BB3"

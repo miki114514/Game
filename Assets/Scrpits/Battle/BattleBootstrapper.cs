@@ -312,6 +312,7 @@ public class BattleBootstrapper : MonoBehaviour
             return;
 
         int totalExp = encounter != null ? encounter.bonusExp : 0;
+        int totalJP = encounter != null ? encounter.bonusJP : 0;
         int totalMoney = encounter != null ? encounter.bonusMoney : 0;
 
         foreach (BattleUnit enemy in sourceManager.enemies)
@@ -325,19 +326,23 @@ public class BattleBootstrapper : MonoBehaviour
                 continue;
 
             totalExp += Mathf.Max(0, definition.expReward);
+            totalJP += Mathf.Max(0, definition.jpReward);
             totalMoney += Mathf.Max(0, definition.moneyReward);
         }
 
         foreach (BattleUnit player in sourceManager.players)
         {
             if (player != null)
+            {
                 player.AddExperience(totalExp);
+                player.AddJP(totalJP);
+            }
         }
 
         if (partyManager != null)
             partyManager.AddMoney(totalMoney);
 
-        Debug.Log($"[BattleBootstrapper] 胜利奖励：全队 EXP +{totalExp}，金钱 +{totalMoney}。", this);
+        Debug.Log($"[BattleBootstrapper] 胜利奖励：全队 EXP +{totalExp}，JP +{totalJP}，金钱 +{totalMoney}。", this);
     }
 
     void SpawnBackground(BattleEncounterData encounter)

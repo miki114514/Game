@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1c65e0984cc26459c13a779e6302df, type: 3}
+  m_Name: ShadowEyes
+  m_EditorClassIdentifier: 
+  skillName: ShadowEyes
+  type: 3
+  damageType: 0
+  weaponType: 0
+  elementType: 0
+  attackType: 0
+  requiredWeaponType: 0
+  countBothWeaknessesSeparately: 0
+  targetType: 2
+  hitCount: 1
+  allowBoost: 0
+  boostAddsHitCount: 0
+  boostExtendsDuration: 1
+  roundsPerBoost: 1
+  costSP: 0
+  baseMultiplier: 1
+  triggerChance: 100
+  judgementEffect: 10
+  judgementRounds: 1
+  restrictLearnableClasses: 1
+  learnableClasses:
+  - {fileID: 11400000, guid: 4ce991c0554b77941a10743d08c9638c, type: 2}
+  description: "\u52A0\u653B"

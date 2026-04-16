@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76690641ea2786a4daf2cebb0a009a1d, type: 3}
   m_Name: ACC_Starter_FocusCharm
   m_EditorClassIdentifier: 
-  equipmentName: ACC_Starter_FocusCharm
+  equipmentName: "\u4E13\u6CE8\u62A4\u7B26"
   description: "\u5F00\u5C40 BP+1\uFF0C\u9002\u5408 BP \u9A71\u52A8\u89D2\u8272"
   icon: {fileID: 0}
   pAtk: 0

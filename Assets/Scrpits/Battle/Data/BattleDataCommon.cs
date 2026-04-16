@@ -103,6 +103,7 @@ public static class BattleUnitDefinitionUtility
 
         target.currentExp = source.currentExp;
         target.expToNextLevel = source.expToNextLevel;
+        target.currentJP = source.currentJP;
 
         target.maxShield = source.maxShield;
         target.weaknessTypes = source.weaknessTypes != null
@@ -116,6 +117,7 @@ public static class BattleUnitDefinitionUtility
 
         target.artsAbilityMultiplier = source.artsAbilityMultiplier;
         target.forcedDamageReductionMultiplier = source.forcedDamageReductionMultiplier;
+        target.classDefinition = source.classDefinition;
 
         target.artsList = source.artsList != null
             ? new List<Skill>(source.artsList)

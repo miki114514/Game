@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3a4fa7cc6fb5a47a29e55e67808f58, type: 3}
+  m_Name: CLS_GaleStrider
+  m_EditorClassIdentifier: 
+  classId: class_galestrider
+  displayName: "\u75BE\u98CE\u58EB"
+  description: "\u9AD8\u901F\u8FD1\u8EAB\u5207\u5272\uFF0C\u8282\u594F\u7075\u6D3B\u3002"
+  allowedWeaponTypes: 03000000

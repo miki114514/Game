@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum SkillType { Physical, Magical, Heal, Buff, Debuff, Judgement }
@@ -25,6 +26,12 @@ public class Skill : ScriptableObject
     [Range(0, 100)] public int triggerChance = 100;
     public StatusEffectType judgementEffect = StatusEffectType.None;
     public int judgementRounds = 1;
+
+    [Header("学习限制")]
+    [Tooltip("关闭时表示所有职业都能学习；开启后仅 learnableClasses 列表中的职业可学习。")]
+    public bool restrictLearnableClasses = false;
+    public List<CharacterClassDefinition> learnableClasses = new List<CharacterClassDefinition>();
+
     public string description;
 
     public bool IsDamageSkill => type == SkillType.Physical || type == SkillType.Magical;
@@ -33,6 +40,25 @@ public class Skill : ScriptableObject
     public bool UsesMagicFormula => ResolveDamageType() == DamageType.Elemental;
     public bool CanBoost => allowBoost && (IsDamageSkill || IsHealSkill || IsJudgementSkill);
     public bool IsCharacterSkillCategory => type == SkillType.Buff || type == SkillType.Debuff;
+
+    public bool CanBeLearnedBy(BattleUnit unit)
+    {
+        if (unit == null)
+            return !restrictLearnableClasses;
+
+        return CanBeLearnedByClass(unit.classDefinition);
+    }
+
+    public bool CanBeLearnedByClass(CharacterClassDefinition classDefinition)
+    {
+        if (!restrictLearnableClasses)
+            return true;
+
+        if (classDefinition == null || learnableClasses == null || learnableClasses.Count == 0)
+            return false;
+
+        return learnableClasses.Contains(classDefinition);
+    }
 
     public BattleUnit ResolveTarget(BattleUnit user, BattleUnit selectedTarget)
     {

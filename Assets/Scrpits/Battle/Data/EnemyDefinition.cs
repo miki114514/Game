@@ -18,6 +18,7 @@ public class EnemyDefinition : ScriptableObject
 
     [Header("奖励")]
     [Min(0)] public int expReward = 10;
+    [Min(0)] public int jpReward = 5;
     [Min(0)] public int moneyReward = 0;
     public List<Item> guaranteedDrops = new List<Item>();
 

@@ -147,6 +147,9 @@ public class BattleUnit : MonoBehaviour
     public int currentExp = 0;
     public int expToNextLevel = 100;
 
+    [Header("职业熟练度（JP）")]
+    [Min(0)] public int currentJP = 0;
+
     [Header("敌人护盾")]
     public int maxShield = 0;
     public int currentShield = 0;
@@ -156,6 +159,9 @@ public class BattleUnit : MonoBehaviour
     [Header("战技倍率")]
     public float artsAbilityMultiplier = 1f;
     public float forcedDamageReductionMultiplier = 1f;
+
+    [Header("职业")]
+    public CharacterClassDefinition classDefinition;
 
     [Header("技能管理")]
     public List<Skill> artsList = new List<Skill>();   // 战技列表（Arts）
@@ -175,6 +181,7 @@ public class BattleUnit : MonoBehaviour
     public event Action<int, int> OnSPChanged;
     public event Action<int, int> OnBPChanged;
     public event Action<int, int> OnEXPChanged;
+    public event Action<int> OnJPChanged;
     public event Action<int, int> OnShieldChanged;
     public event Action<AttackType> OnWeaknessRevealed;
     public event Action OnWeaknessStateChanged;
@@ -229,6 +236,7 @@ public class BattleUnit : MonoBehaviour
         ResetShield();
         isDefending = false;
         forcedDamageReductionMultiplier = Mathf.Max(0f, forcedDamageReductionMultiplier);
+        SanitizeSkillListsByClass();
     }
 
     // =========================
@@ -400,6 +408,30 @@ public class BattleUnit : MonoBehaviour
         OnEXPChanged?.Invoke(currentExp, expToNextLevel);
     }
 
+    public void AddJP(int amount)
+    {
+        int safeAmount = Mathf.Max(0, amount);
+        if (safeAmount <= 0)
+            return;
+
+        currentJP = Mathf.Max(0, currentJP + safeAmount);
+        OnJPChanged?.Invoke(currentJP);
+    }
+
+    public bool TrySpendJP(int amount)
+    {
+        int safeAmount = Mathf.Max(0, amount);
+        if (safeAmount <= 0)
+            return true;
+
+        if (currentJP < safeAmount)
+            return false;
+
+        currentJP -= safeAmount;
+        OnJPChanged?.Invoke(currentJP);
+        return true;
+    }
+
     int CalculateNextLevelExp(int targetLevel)
     {
         return 100 + (targetLevel - 1) * 30;
@@ -554,9 +586,33 @@ public class BattleUnit : MonoBehaviour
     /// </summary>
     public void EquipWeapon(WeaponData weapon)
     {
+        if (!CanEquipWeapon(weapon))
+        {
+            string className = classDefinition != null ? classDefinition.GetDisplayNameOrFallback() : "无职业";
+            string weaponType = weapon != null ? weapon.weaponType.ToString() : "None";
+            Debug.LogWarning($"[Equip] {unitName}({className}) 无法装备武器类型: {weaponType}");
+            return;
+        }
+
         equippedWeapon = weapon;
         RecalculateEquipmentBonuses();
         Debug.Log($"[Equip] {unitName} 装备武器: {(weapon != null ? weapon.equipmentName : "无")}");
+    }
+
+    public bool CanEquipWeapon(WeaponData weapon)
+    {
+        if (weapon == null)
+            return true;
+
+        return CanEquipWeaponType(weapon.weaponType);
+    }
+
+    public bool CanEquipWeaponType(WeaponType weaponType)
+    {
+        if (classDefinition == null)
+            return true;
+
+        return classDefinition.CanEquipWeaponType(weaponType);
     }
 
     /// <summary>
@@ -816,6 +872,16 @@ public class BattleUnit : MonoBehaviour
     // =========================
     public void LearnSkill(Skill newSkill, bool isArts = true)
     {
+        if (newSkill == null)
+            return;
+
+        if (!CanLearnSkill(newSkill))
+        {
+            string className = classDefinition != null ? classDefinition.GetDisplayNameOrFallback() : "无职业";
+            Debug.LogWarning($"[Skill] {unitName}({className}) 无法学习技能：{newSkill.skillName}");
+            return;
+        }
+
         if (isArts)
         {
             if (!artsList.Contains(newSkill))
@@ -831,6 +897,40 @@ public class BattleUnit : MonoBehaviour
                 skillList.Add(newSkill);
                 Debug.Log($"{unitName} 学会了角色技能：{newSkill.skillName}");
             }
+        }
+    }
+
+    public bool CanLearnSkill(Skill skill)
+    {
+        if (skill == null)
+            return false;
+
+        return skill.CanBeLearnedBy(this);
+    }
+
+    public void SanitizeSkillListsByClass()
+    {
+        RemoveInvalidSkillsFromList(artsList, "战技");
+        RemoveInvalidSkillsFromList(skillList, "角色技能");
+    }
+
+    private void RemoveInvalidSkillsFromList(List<Skill> list, string listLabel)
+    {
+        if (list == null || list.Count == 0)
+            return;
+
+        for (int i = list.Count - 1; i >= 0; i--)
+        {
+            Skill skill = list[i];
+            if (skill == null)
+                continue;
+
+            if (CanLearnSkill(skill))
+                continue;
+
+            list.RemoveAt(i);
+            string className = classDefinition != null ? classDefinition.GetDisplayNameOrFallback() : "无职业";
+            Debug.LogWarning($"[Skill] {unitName}({className}) 的{listLabel}移除不匹配职业技能：{skill.skillName}");
         }
     }
 

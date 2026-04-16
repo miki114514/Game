@@ -18,6 +18,17 @@ public class PartyMemberState
     [Min(0)] public int currentSP = 0;
     [Min(0)] public int currentExp = 0;
     [Min(0)] public int expToNextLevel = 100;
+    [Min(0)] public int currentJP = 0;
+
+    [Header("已学习技能")]
+    public List<Skill> learnedArts = new List<Skill>();
+    public List<Skill> learnedCharacterSkills = new List<Skill>();
+
+    [Header("装备状态")]
+    public WeaponData equippedWeapon;
+    public ArmorData equippedHead;
+    public ArmorData equippedBody;
+    public AccessoryData[] equippedAccessories = new AccessoryData[2];
 
     public bool IsAvailableForBattle => definition != null && isUnlocked && isInActiveParty && definition.battlePrefab != null;
 
@@ -41,6 +52,21 @@ public class PartyMemberState
             currentSP = Mathf.Clamp(template.maxSP, 0, template.maxSP);
             currentExp = Mathf.Max(0, template.currentExp);
             expToNextLevel = Mathf.Max(0, template.expToNextLevel);
+            currentJP = Mathf.Max(0, template.currentJP);
+
+            CharacterClassDefinition classDefinition = template.classDefinition;
+            learnedArts = BuildSafeSkillList(template.artsList, classDefinition);
+            learnedCharacterSkills = BuildSafeSkillList(template.skillList, classDefinition);
+
+            equippedWeapon = template.equippedWeapon;
+            equippedHead = template.equippedHead;
+            equippedBody = template.equippedBody;
+            if (template.equippedAccessories != null)
+            {
+                equippedAccessories = new AccessoryData[template.equippedAccessories.Length];
+                for (int j = 0; j < template.equippedAccessories.Length; j++)
+                    equippedAccessories[j] = template.equippedAccessories[j];
+            }
         }
         else
         {
@@ -49,6 +75,9 @@ public class PartyMemberState
             currentSP = 0;
             currentExp = 0;
             expToNextLevel = 100;
+            currentJP = 0;
+            learnedArts = new List<Skill>();
+            learnedCharacterSkills = new List<Skill>();
         }
     }
 
@@ -74,6 +103,24 @@ public class PartyMemberState
         unit.currentSP = Mathf.Clamp(currentSP, 0, unit.maxSP);
         unit.currentExp = Mathf.Max(0, currentExp);
         unit.expToNextLevel = Mathf.Max(0, expToNextLevel);
+        unit.currentJP = Mathf.Max(0, currentJP);
+
+        CharacterClassDefinition classDefinition = unit.classDefinition;
+        unit.artsList = BuildSafeSkillList(learnedArts, classDefinition);
+        unit.skillList = BuildSafeSkillList(learnedCharacterSkills, classDefinition);
+
+        unit.equippedWeapon = equippedWeapon;
+        unit.equippedHead = equippedHead;
+        unit.equippedBody = equippedBody;
+
+        if (unit.equippedAccessories == null || unit.equippedAccessories.Length != equippedAccessories.Length)
+            unit.equippedAccessories = new AccessoryData[equippedAccessories.Length];
+
+        for (int i = 0; i < equippedAccessories.Length; i++)
+            unit.equippedAccessories[i] = equippedAccessories[i];
+
+        unit.RecalculateEquipmentBonuses();
+        unit.SanitizeSkillListsByClass();
     }
 
     public void SyncFromBattleUnit(BattleUnit unit)
@@ -89,6 +136,57 @@ public class PartyMemberState
         currentSP = Mathf.Clamp(unit.currentSP, 0, Mathf.Max(0, unit.maxSP));
         currentExp = Mathf.Max(0, unit.currentExp);
         expToNextLevel = Mathf.Max(0, unit.expToNextLevel);
+        currentJP = Mathf.Max(0, unit.currentJP);
+
+        CharacterClassDefinition classDefinition = unit.classDefinition;
+        learnedArts = BuildSafeSkillList(unit.artsList, classDefinition);
+        learnedCharacterSkills = BuildSafeSkillList(unit.skillList, classDefinition);
+
+        equippedWeapon = unit.equippedWeapon;
+        equippedHead = unit.equippedHead;
+        equippedBody = unit.equippedBody;
+
+        if (unit.equippedAccessories != null)
+        {
+            if (equippedAccessories == null || equippedAccessories.Length != unit.equippedAccessories.Length)
+                equippedAccessories = new AccessoryData[unit.equippedAccessories.Length];
+
+            for (int i = 0; i < unit.equippedAccessories.Length; i++)
+                equippedAccessories[i] = unit.equippedAccessories[i];
+        }
+        else
+        {
+            equippedAccessories = new AccessoryData[2];
+        }
+    }
+
+    public CharacterClassDefinition GetClassDefinition()
+    {
+        BattleUnit template = definition != null ? definition.BattleUnitTemplate : null;
+        return template != null ? template.classDefinition : null;
+    }
+
+    private static List<Skill> BuildSafeSkillList(List<Skill> source, CharacterClassDefinition classDefinition)
+    {
+        List<Skill> result = new List<Skill>();
+        if (source == null || source.Count == 0)
+            return result;
+
+        HashSet<Skill> unique = new HashSet<Skill>();
+        for (int i = 0; i < source.Count; i++)
+        {
+            Skill skill = source[i];
+            if (skill == null)
+                continue;
+
+            if (classDefinition != null && !skill.CanBeLearnedByClass(classDefinition))
+                continue;
+
+            if (unique.Add(skill))
+                result.Add(skill);
+        }
+
+        return result;
     }
 }
 

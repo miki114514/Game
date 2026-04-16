@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76690641ea2786a4daf2cebb0a009a1d, type: 3}
   m_Name: ACC_Starter_CleanseRing
   m_EditorClassIdentifier: 
-  equipmentName: ACC_Starter_CleanseRing
+  equipmentName: "\u51C0\u5316\u6212\u6307"
   description: "\u57FA\u7840\u6297\u6027\u9970\u54C1\uFF1APoison/Sleep \u6297\u6027"
   icon: {fileID: 0}
   pAtk: 0

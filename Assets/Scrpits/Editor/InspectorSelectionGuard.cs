@@ -1,43 +1,59 @@
 using System.Collections.Generic;
+using System;
 using UnityEditor;
 using UnityEngine;
 
 [InitializeOnLoad]
 public static class InspectorSelectionGuard
 {
+    private static bool sanitizeQueued;
+
     static InspectorSelectionGuard()
     {
-        Selection.selectionChanged += SanitizeSelection;
+        Selection.selectionChanged += QueueSanitizeSelection;
         EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
-        EditorApplication.hierarchyChanged += SanitizeSelection;
+        EditorApplication.hierarchyChanged += QueueSanitizeSelection;
+    }
+
+    private static void QueueSanitizeSelection()
+    {
+        if (sanitizeQueued)
+            return;
+
+        sanitizeQueued = true;
+        EditorApplication.delayCall += () =>
+        {
+            sanitizeQueued = false;
+            SanitizeSelection();
+        };
     }
 
     [MenuItem("Tools/Project/Fix Inspector Null Selection")]
     public static void SanitizeSelection()
     {
-        int[] ids = Selection.instanceIDs;
-        if (ids == null || ids.Length == 0)
+        UnityEngine.Object[] selected = Selection.objects;
+        if (selected == null || selected.Length == 0)
             return;
 
-        List<int> validIds = new List<int>(ids.Length);
-        for (int i = 0; i < ids.Length; i++)
+        List<UnityEngine.Object> validObjects = new List<UnityEngine.Object>(selected.Length);
+        for (int i = 0; i < selected.Length; i++)
         {
-            UnityEngine.Object obj = EditorUtility.InstanceIDToObject(ids[i]);
+            UnityEngine.Object obj = selected[i];
             if (obj != null)
-                validIds.Add(ids[i]);
+                validObjects.Add(obj);
         }
 
-        if (validIds.Count == ids.Length)
+        if (validObjects.Count == selected.Length)
             return;
 
-        ApplySelectionByIds(validIds);
+        ApplySelection(validObjects);
     }
 
     [MenuItem("Tools/Project/Reset Inspector State")]
     public static void ResetInspectorState()
     {
         ActiveEditorTracker.sharedTracker.isLocked = false;
-        Selection.activeObject = null;
+        Selection.objects = Array.Empty<UnityEngine.Object>();
         ActiveEditorTracker.sharedTracker.ForceRebuild();
         Debug.Log("[InspectorSelectionGuard] Inspector state has been reset.");
     }
@@ -49,23 +65,23 @@ public static class InspectorSelectionGuard
             state == PlayModeStateChange.ExitingPlayMode)
         {
             ResetInspectorState();
-            EditorApplication.delayCall += SanitizeSelection;
+            QueueSanitizeSelection();
             return;
         }
 
-        EditorApplication.delayCall += SanitizeSelection;
+        QueueSanitizeSelection();
     }
 
-    private static void ApplySelectionByIds(List<int> ids)
+    private static void ApplySelection(List<UnityEngine.Object> objects)
     {
-        if (ids == null || ids.Count == 0)
+        if (objects == null || objects.Count == 0)
         {
-            Selection.activeObject = null;
+            Selection.objects = Array.Empty<UnityEngine.Object>();
             ActiveEditorTracker.sharedTracker.ForceRebuild();
             return;
         }
 
-        Selection.instanceIDs = ids.ToArray();
+        Selection.objects = objects.ToArray();
         ActiveEditorTracker.sharedTracker.ForceRebuild();
     }
 }

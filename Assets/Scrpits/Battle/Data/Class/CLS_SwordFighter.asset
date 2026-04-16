@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3a4fa7cc6fb5a47a29e55e67808f58, type: 3}
+  m_Name: CLS_SwordFighter
+  m_EditorClassIdentifier: 
+  classId: class_swordfighter
+  displayName: "\u5251\u6597\u58EB"
+  description: "\u64C5\u957F\u8FD1\u6218\u538B\u5236\uFF0C\u7A33\u5B9A\u8F93\u51FA\u3002"
+  allowedWeaponTypes: 01000000
+  learnableArts:
+  - {fileID: 11400000, guid: d52c4f6cc01f5b541a635bf5757fbb3f, type: 2}
+  - {fileID: 11400000, guid: d1c6503cf3ba7be458e7cac6646d1145, type: 2}
+  learnableCharacterSkills: []

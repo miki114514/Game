@@ -18,11 +18,19 @@ public class EquipPageUIController : MonoBehaviour
 
     [Header("左侧角色列表")]
     [SerializeField] private RectTransform selectArrow;
+    [SerializeField] private RectTransform slotArrow;
+    [SerializeField] private RectTransform equipRowsRoot;
+    [SerializeField] private List<RectTransform> equipSlotRows = new List<RectTransform>();
     [SerializeField] private List<Image> portraitSlots = new List<Image>(4);
     [SerializeField] private Color portraitActiveColor = Color.white;
     [SerializeField] private Color portraitInactiveColor = new Color(1f, 1f, 1f, 0.35f);
+    [SerializeField] private Vector2 slotArrowOffset = new Vector2(-28f, 0f);
     [SerializeField] private KeyCode upKey = KeyCode.W;
     [SerializeField] private KeyCode downKey = KeyCode.S;
+    [SerializeField] private KeyCode confirmKey = KeyCode.Return;
+    [SerializeField] private KeyCode backKey = KeyCode.Escape;
+    [SerializeField] private EquipmentBagUIController bagController;
+    [SerializeField] private GameObject inventoryPanelRoot;
 
     [Header("角色信息")]
     [SerializeField] private TextMeshProUGUI playerNameText;
@@ -38,6 +46,10 @@ public class EquipPageUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI bodyText;
     [SerializeField] private TextMeshProUGUI accessory1Text;
     [SerializeField] private TextMeshProUGUI accessory2Text;
+
+    [Header("辅助说明")]
+    [SerializeField] private GameObject helpPrefab;
+    [SerializeField] private Vector2 helpOffset = new Vector2(0f, -8f);
 
     [Header("属性文本")]
     [SerializeField] private TextMeshProUGUI hpText;
@@ -56,7 +68,25 @@ public class EquipPageUIController : MonoBehaviour
     [SerializeField] private string unavailableText = "-";
 
     private readonly List<PartyMemberState> activeMembers = new List<PartyMemberState>();
+    private readonly Dictionary<string, BattleUnit> runtimeBattleUnits = new Dictionary<string, BattleUnit>();
+    private GameObject currentHelpInstance;
     private int selectedIndex;
+    private int selectedEquipIndex;
+    private EquipPageMode currentMode = EquipPageMode.CharacterSelect;
+    private enum EquipPageMode
+    {
+        CharacterSelect,
+        SlotSelect,
+        BagSelect
+    }
+
+    public PartyMemberState SelectedPartyMember => selectedIndex >= 0 && selectedIndex < activeMembers.Count ? activeMembers[selectedIndex] : null;
+    public bool IsPageOpened => mainMenuController != null && mainMenuController.IsPageOpened && mainMenuController.OpenedIndex == equipPageIndex;
+
+    public void RefreshSelectedMemberUI()
+    {
+        RefreshCurrentMemberUI();
+    }
 
     private void Awake()
     {
@@ -66,6 +96,7 @@ public class EquipPageUIController : MonoBehaviour
     private void OnEnable()
     {
         RefreshPartyAndUI(true);
+        EnterCharacterSelectMode();
         SyncPageVisibility();
     }
 
@@ -76,19 +107,69 @@ public class EquipPageUIController : MonoBehaviour
         if (!IsEquipPageActive())
             return;
 
-        if (activeMembers.Count <= 0)
-            return;
+        if (Input.GetKeyDown(backKey))
+        {
+            if (currentMode == EquipPageMode.BagSelect)
+            {
+                EnterSlotSelectMode();
+                return;
+            }
+            if (currentMode == EquipPageMode.SlotSelect)
+            {
+                EnterCharacterSelectMode();
+                return;
+            }
+        }
 
-        if (Input.GetKeyDown(upKey))
+        if (currentMode == EquipPageMode.CharacterSelect)
         {
-            selectedIndex = WrapIndex(selectedIndex - 1, activeMembers.Count);
-            RefreshCurrentMemberUI();
+            if (activeMembers.Count <= 0)
+                return;
+
+            if (Input.GetKeyDown(upKey))
+            {
+                selectedIndex = WrapIndex(selectedIndex - 1, activeMembers.Count);
+                RefreshCurrentMemberUI();
+            }
+            else if (Input.GetKeyDown(downKey))
+            {
+                selectedIndex = WrapIndex(selectedIndex + 1, activeMembers.Count);
+                RefreshCurrentMemberUI();
+            }
+            else if (Input.GetKeyDown(confirmKey))
+            {
+                EnterSlotSelectMode();
+            }
         }
-        else if (Input.GetKeyDown(downKey))
+        else if (currentMode == EquipPageMode.SlotSelect)
         {
-            selectedIndex = WrapIndex(selectedIndex + 1, activeMembers.Count);
-            RefreshCurrentMemberUI();
+            if (equipSlotRows.Count == 0)
+                return;
+
+            if (Input.GetKeyDown(upKey))
+            {
+                selectedEquipIndex = WrapIndex(selectedEquipIndex - 1, equipSlotRows.Count);
+                UpdateSlotArrowPosition();
+            }
+            else if (Input.GetKeyDown(downKey))
+            {
+                selectedEquipIndex = WrapIndex(selectedEquipIndex + 1, equipSlotRows.Count);
+                UpdateSlotArrowPosition();
+            }
+            else if (Input.GetKeyDown(confirmKey))
+            {
+                EnterBagSelectMode();
+            }
         }
+        else if (currentMode == EquipPageMode.BagSelect)
+        {
+            // bagController handles its own input and selection
+        }
+    }
+
+    private void OnDestroy()
+    {
+        CleanupRuntimeUnits();
     }
 
     [ContextMenu("Auto Bind References")]
@@ -104,10 +185,27 @@ public class EquipPageUIController : MonoBehaviour
                 pageCanvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
 
+        if (slotArrow == null)
+            slotArrow = FindDeepChildByName(transform, "SlotArrow") as RectTransform;
+        if (equipRowsRoot == null)
+            equipRowsRoot = FindDeepChildByName(transform, "EquipRows") as RectTransform;
+
+        if (equipSlotRows.Count == 0 && equipRowsRoot != null)
+            BuildEquipSlotRowsFromRoot();
+
+        if (bagController == null)
+            bagController = FindObjectOfType<EquipmentBagUIController>();
+
+        if (inventoryPanelRoot == null && bagController != null)
+            inventoryPanelRoot = bagController.gameObject;
+
         if (selectArrow == null)
             selectArrow = FindDeepChildByName(transform, "SelectArrow") as RectTransform;
         if (selectArrow == null)
             selectArrow = FindDeepChildByName(transform, "SeclctArrow") as RectTransform;
+
+        if (slotArrow == null)
+            slotArrow = selectArrow;
 
         if (portraitSlots.Count == 0)
         {
@@ -184,6 +282,136 @@ public class EquipPageUIController : MonoBehaviour
         RefreshCurrentMemberUI();
     }
 
+    private void BuildEquipSlotRows()
+    {
+        if (equipSlotRows.Count > 0)
+            return;
+
+        BuildEquipSlotRowsFromRoot();
+    }
+
+    private void BuildEquipSlotRowsFromRoot()
+    {
+        equipSlotRows.Clear();
+        if (equipRowsRoot == null)
+            return;
+
+        foreach (Transform child in equipRowsRoot)
+        {
+            RectTransform row = child as RectTransform;
+            if (row != null)
+                equipSlotRows.Add(row);
+        }
+    }
+
+    private void EnterCharacterSelectMode()
+    {
+        currentMode = EquipPageMode.CharacterSelect;
+        selectedEquipIndex = 0;
+        SetSlotArrowVisible(false);
+        SetLeftArrowVisible(true);
+        SetInventoryVisible(false);
+        RefreshCurrentMemberUI();
+    }
+
+    private void EnterSlotSelectMode()
+    {
+        currentMode = EquipPageMode.SlotSelect;
+        BuildEquipSlotRows();
+        selectedEquipIndex = 0;
+        SetSlotArrowVisible(true);
+        if (slotArrow != selectArrow)
+            SetLeftArrowVisible(false);
+        SetInventoryVisible(false);
+        UpdateSlotArrowPosition();
+    }
+
+    private void EnterBagSelectMode()
+    {
+        currentMode = EquipPageMode.BagSelect;
+        SetSlotArrowVisible(false);
+        SetLeftArrowVisible(false);
+        SetInventoryVisible(true);
+
+        if (bagController != null)
+        {
+            bagController.SetCategory(GetCategoryBySlotIndex(selectedEquipIndex));
+            bagController.RefreshEntries();
+            bagController.SetVisible(true);
+        }
+    }
+
+    private EquipmentCategory GetCategoryBySlotIndex(int index)
+    {
+        if (index < 0 || index >= equipSlotRows.Count)
+            return EquipmentCategory.Sword;
+
+        string name = equipSlotRows[index].name.ToLowerInvariant();
+        if (name.Contains("sword")) return EquipmentCategory.Sword;
+        if (name.Contains("lance")) return EquipmentCategory.Lance;
+        if (name.Contains("dagger")) return EquipmentCategory.Dagger;
+        if (name.Contains("axe")) return EquipmentCategory.Axe;
+        if (name.Contains("bow")) return EquipmentCategory.Bow;
+        if (name.Contains("staff")) return EquipmentCategory.Staff;
+        if (name.Contains("head")) return EquipmentCategory.Head;
+        if (name.Contains("body")) return EquipmentCategory.Body;
+        if (name.Contains("accessory")) return EquipmentCategory.Accessory;
+        return EquipmentCategory.Sword;
+    }
+
+    private void SetSlotArrowVisible(bool visible)
+    {
+        if (slotArrow == null)
+            return;
+
+        slotArrow.gameObject.SetActive(visible);
+    }
+
+    private void SetLeftArrowVisible(bool visible)
+    {
+        if (selectArrow == null)
+            return;
+
+        selectArrow.gameObject.SetActive(visible);
+    }
+
+    private void SetInventoryVisible(bool visible)
+    {
+        if (inventoryPanelRoot != null)
+            inventoryPanelRoot.SetActive(visible);
+    }
+
+    private void UpdateSlotArrowPosition()
+    {
+        if (slotArrow == null || equipSlotRows.Count == 0 || selectedEquipIndex < 0 || selectedEquipIndex >= equipSlotRows.Count)
+            return;
+
+        RectTransform target = equipSlotRows[selectedEquipIndex];
+        if (target == null)
+            return;
+
+        Vector3 worldCenter = target.TransformPoint(target.rect.center);
+        Vector3 newPos = slotArrow.position;
+        newPos.y = worldCenter.y + slotArrowOffset.y;
+        newPos.x = worldCenter.x + slotArrowOffset.x;
+        slotArrow.position = newPos;
+
+        RefreshEquipHelpForCurrentSelection();
+    }
+
+    private void RefreshEquipHelpForCurrentSelection()
+    {
+        if (activeMembers.Count <= 0 || selectedIndex < 0 || selectedIndex >= activeMembers.Count)
+        {
+            ClearHelpInstance();
+            return;
+        }
+
+        PartyMemberState state = activeMembers[selectedIndex];
+        BattleUnit unit = GetRuntimeUnitForMember(state);
+        UpdateEquipHelp(unit);
+    }
+
     private void BuildFallbackPartyMembers()
     {
         for (int i = 0; i < fallbackPartyDefinitions.Count && i < 4; i++)
@@ -206,6 +434,84 @@ public class EquipPageUIController : MonoBehaviour
         }
     }
 
+    public BattleUnit GetRuntimeUnitForSelectedMember()
+    {
+        return GetRuntimeUnitForMember(SelectedPartyMember);
+    }
+
+    public void SyncSelectedMemberFromRuntimeUnit()
+    {
+        PartyMemberState selectedMember = SelectedPartyMember;
+        BattleUnit runtimeUnit = GetRuntimeUnitForSelectedMember();
+        if (selectedMember == null || runtimeUnit == null)
+            return;
+
+        selectedMember.SyncFromBattleUnit(runtimeUnit);
+    }
+
+    public BattleUnit GetRuntimeUnitForMember(PartyMemberState memberState)
+    {
+        if (memberState == null || memberState.definition == null || memberState.definition.battlePrefab == null)
+            return null;
+
+        string key = memberState.characterId;
+        if (string.IsNullOrWhiteSpace(key))
+            key = memberState.displayName ?? memberState.definition.name;
+
+        if (runtimeBattleUnits.TryGetValue(key, out BattleUnit existingUnit) && existingUnit != null)
+        {
+            return existingUnit;
+        }
+
+        GameObject runtimeRoot = GameObject.Find("__EquipRuntimeUnits");
+        if (runtimeRoot == null)
+        {
+            runtimeRoot = new GameObject("__EquipRuntimeUnits");
+            runtimeRoot.hideFlags = HideFlags.HideAndDontSave;
+        }
+
+        GameObject runtimeUnitObject = new GameObject($"RuntimeBattleUnit_{key}");
+        runtimeUnitObject.hideFlags = HideFlags.HideAndDontSave;
+        runtimeUnitObject.transform.SetParent(runtimeRoot.transform, false);
+        runtimeUnitObject.SetActive(false);
+
+        BattleUnit runtimeUnit = runtimeUnitObject.AddComponent<BattleUnit>();
+        memberState.ApplyToBattleUnit(runtimeUnit, true);
+        runtimeUnit.unitType = UnitType.Player;
+        runtimeBattleUnits[key] = runtimeUnit;
+
+        return runtimeUnit;
+    }
+
+    private void CleanupRuntimeUnits()
+    {
+        foreach (var pair in runtimeBattleUnits)
+        {
+            if (pair.Value != null)
+            {
+                if (pair.Value.gameObject != null)
+                {
+                    if (Application.isPlaying)
+                        Destroy(pair.Value.gameObject);
+                    else
+                        DestroyImmediate(pair.Value.gameObject);
+                }
+            }
+        }
+
+        runtimeBattleUnits.Clear();
+        ClearHelpInstance();
+
+        GameObject runtimeRoot = GameObject.Find("__EquipRuntimeUnits");
+        if (runtimeRoot != null)
+        {
+            if (Application.isPlaying)
+                Destroy(runtimeRoot);
+            else
+                DestroyImmediate(runtimeRoot);
+        }
+    }
+
     private void RefreshCurrentMemberUI()
     {
         RefreshPortraitSlots();
@@ -221,7 +527,7 @@ public class EquipPageUIController : MonoBehaviour
         }
 
         PartyMemberState state = activeMembers[selectedIndex];
-        BattleUnit unit = state != null && state.definition != null ? state.definition.BattleUnitTemplate : null;
+        BattleUnit unit = GetRuntimeUnitForMember(state);
 
         if (selectArrow != null)
             selectArrow.gameObject.SetActive(true);
@@ -229,7 +535,62 @@ public class EquipPageUIController : MonoBehaviour
         UpdateArrowPosition();
         UpdateName(state);
         UpdateEquipTexts(unit);
+        UpdateEquipHelp(unit);
         UpdateStatTexts(unit);
+    }
+
+    private void UpdateEquipHelp(BattleUnit unit)
+    {
+        ClearHelpInstance();
+        if (helpPrefab == null || unit == null || equipSlotRows.Count == 0 || selectedEquipIndex < 0 || selectedEquipIndex >= equipSlotRows.Count)
+            return;
+
+        EquipmentData equipment = GetEquipmentForSlotRow(unit, selectedEquipIndex);
+        if (equipment == null || string.IsNullOrWhiteSpace(equipment.description))
+            return;
+
+        Transform selectedRow = equipSlotRows[selectedEquipIndex];
+        if (selectedRow == null)
+            return;
+
+        Transform realLabel = FindDeepChildByName(selectedRow, "Real_Label");
+        if (realLabel == null)
+            realLabel = selectedRow;
+
+        currentHelpInstance = Instantiate(helpPrefab, selectedRow, false);
+        currentHelpInstance.name = "Help_L_Instance";
+
+        RectTransform rowRect = selectedRow as RectTransform;
+        RectTransform labelRect = realLabel as RectTransform;
+        RectTransform helpRect = currentHelpInstance.GetComponent<RectTransform>();
+        if (rowRect != null && labelRect != null && helpRect != null)
+        {
+            Vector3 labelBottomLeftWorld = labelRect.TransformPoint(new Vector3(labelRect.rect.xMin, labelRect.rect.yMin, 0f));
+            Vector3 labelBottomLeftLocal = rowRect.InverseTransformPoint(labelBottomLeftWorld);
+
+            helpRect.anchorMin = new Vector2(0f, 1f);
+            helpRect.anchorMax = new Vector2(0f, 1f);
+            helpRect.pivot = new Vector2(0f, 1f);
+            helpRect.anchoredPosition = new Vector2(labelBottomLeftLocal.x + helpOffset.x, labelBottomLeftLocal.y + helpOffset.y);
+            helpRect.SetAsLastSibling();
+        }
+
+        TextMeshProUGUI helpText = currentHelpInstance.GetComponentInChildren<TextMeshProUGUI>(true);
+        if (helpText != null)
+            helpText.text = equipment.description;
+    }
+
+    private void ClearHelpInstance()
+    {
+        if (currentHelpInstance != null)
+        {
+            if (Application.isPlaying)
+                Destroy(currentHelpInstance);
+            else
+                DestroyImmediate(currentHelpInstance);
+
+            currentHelpInstance = null;
+        }
     }
 
     private void RefreshPortraitSlots()
@@ -413,6 +774,46 @@ public class EquipPageUIController : MonoBehaviour
             return equipment.equipmentName;
 
         return equipment.name;
+    }
+
+    private EquipmentData GetEquipmentForSlotRow(BattleUnit unit, int slotIndex)
+    {
+        if (unit == null || slotIndex < 0 || slotIndex >= equipSlotRows.Count)
+            return null;
+
+        string rowName = equipSlotRows[slotIndex].name.ToLowerInvariant();
+        if (rowName.Contains("sword") && unit.equippedWeapon != null && unit.equippedWeapon.weaponType == WeaponType.Sword)
+            return unit.equippedWeapon;
+        if (rowName.Contains("lance") && unit.equippedWeapon != null && unit.equippedWeapon.weaponType == WeaponType.Lance)
+            return unit.equippedWeapon;
+        if (rowName.Contains("dagger") && unit.equippedWeapon != null && unit.equippedWeapon.weaponType == WeaponType.Dagger)
+            return unit.equippedWeapon;
+        if (rowName.Contains("axe") && unit.equippedWeapon != null && unit.equippedWeapon.weaponType == WeaponType.Axe)
+            return unit.equippedWeapon;
+        if (rowName.Contains("bow") && unit.equippedWeapon != null && unit.equippedWeapon.weaponType == WeaponType.Bow)
+            return unit.equippedWeapon;
+        if (rowName.Contains("staff") && unit.equippedWeapon != null && unit.equippedWeapon.weaponType == WeaponType.Staff)
+            return unit.equippedWeapon;
+
+        if (rowName.Contains("head"))
+            return unit.equippedHead;
+        if (rowName.Contains("body"))
+            return unit.equippedBody;
+
+        if (rowName.Contains("accessory"))
+        {
+            int accessorySlot = 0;
+            int digitStart = rowName.IndexOfAny(new[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' });
+            if (digitStart >= 0)
+            {
+                if (int.TryParse(rowName.Substring(digitStart), out int parsedSlot))
+                    accessorySlot = Mathf.Max(parsedSlot - 1, 0);
+            }
+            accessorySlot = Mathf.Clamp(accessorySlot, 0, unit.equippedAccessories.Length - 1);
+            return unit.equippedAccessories.Length > accessorySlot ? unit.equippedAccessories[accessorySlot] : null;
+        }
+
+        return null;
     }
 
     private TextMeshProUGUI FindRowValueText(string rowName)

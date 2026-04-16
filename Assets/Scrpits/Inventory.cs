@@ -15,7 +15,17 @@ public class Inventory : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            return;
+        }
+
+        if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // ────────────────────────────────────────────────────────────────
@@ -135,6 +145,7 @@ public class Inventory : MonoBehaviour
     {
         if (unit == null || weapon == null) return false;
         if (!HasEquipment(weapon)) return false;
+        if (!unit.CanEquipWeapon(weapon)) return false;
 
         if (unit.equippedWeapon != null)
             AddEquipment(unit.equippedWeapon);

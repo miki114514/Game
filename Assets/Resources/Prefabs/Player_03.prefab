@@ -146,6 +146,7 @@ MonoBehaviour:
   statusImmunities: 
   artsAbilityMultiplier: 1
   forcedDamageReductionMultiplier: 1
+  classDefinition: {fileID: 11400000, guid: fbb9ca39a6924aa4197b3cad0b449c55, type: 2}
   artsList:
   - {fileID: 11400000, guid: d52c4f6cc01f5b541a635bf5757fbb3f, type: 2}
   - {fileID: 11400000, guid: 1480ea9c15efb314280fd7490633162c, type: 2}

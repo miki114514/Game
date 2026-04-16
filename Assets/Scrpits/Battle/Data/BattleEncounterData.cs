@@ -61,6 +61,7 @@ public class BattleEncounterData : ScriptableObject
 
     [Header("额外奖励")]
     [Min(0)] public int bonusExp = 0;
+    [Min(0)] public int bonusJP = 0;
     [Min(0)] public int bonusMoney = 0;
     public List<BattleRewardItemEntry> guaranteedRewardItems = new List<BattleRewardItemEntry>();
 

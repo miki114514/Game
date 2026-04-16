@@ -140,12 +140,14 @@ MonoBehaviour:
   weaponAttackEntries: []
   currentExp: 0
   expToNextLevel: 100
+  currentJP: 120
   maxShield: 0
   currentShield: 0
   weaknessTypes: 
   statusImmunities: 
   artsAbilityMultiplier: 1
   forcedDamageReductionMultiplier: 1
+  classDefinition: {fileID: 11400000, guid: 4ce991c0554b77941a10743d08c9638c, type: 2}
   artsList:
   - {fileID: 11400000, guid: d52c4f6cc01f5b541a635bf5757fbb3f, type: 2}
   - {fileID: 11400000, guid: 1480ea9c15efb314280fd7490633162c, type: 2}
