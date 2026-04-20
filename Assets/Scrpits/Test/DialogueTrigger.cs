@@ -5,12 +5,11 @@ public class DialogueTrigger : MonoBehaviour
     public DialogueSequence sequence;
     private bool triggered = false;
 
-    // 2D 触发回调
-    void OnTriggerEnter2D(Collider2D other)
+    void TryStartDialogue(GameObject otherObject, string source)
     {
-        Debug.Log($"OnTriggerEnter2D triggered by: {other.name}");
+        Debug.Log($"{source} triggered by: {otherObject.name}");
 
-        if (!other.CompareTag("Player"))
+        if (!otherObject.CompareTag("Player"))
         {
             Debug.Log("Collider 不是 Player 标签");
             return;
@@ -40,8 +39,25 @@ public class DialogueTrigger : MonoBehaviour
         triggered = true;
     }
 
+    // 2D 触发回调
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        TryStartDialogue(other.gameObject, "OnTriggerEnter2D");
+    }
+
+    // 3D 触发回调
+    void OnTriggerEnter(Collider other)
+    {
+        TryStartDialogue(other.gameObject, "OnTriggerEnter3D");
+    }
+
     void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log($"OnTriggerExit2D triggered by: {other.name}");
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        Debug.Log($"OnTriggerExit3D triggered by: {other.name}");
     }
 }

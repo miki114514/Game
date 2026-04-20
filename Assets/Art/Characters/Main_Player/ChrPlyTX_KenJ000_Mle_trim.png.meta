@@ -1,0 +1,2754 @@
+fileFormatVersion: 2
+guid: db9e23421beaba04b977e5c59a61f967
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1000
+        width: 24
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfda8e33eac4d604f91e9016886717b3
+      internalID: 1616501772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 992
+        width: 76
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70910e0dbd387f942b5439c5fe207c4c
+      internalID: 568089573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 966
+        width: 32
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f36065e79257e14fb9da528218eb0a3
+      internalID: 2068349903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_3
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 954
+        width: 40
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8295ca2d117f64984ea73d5437d5ad
+      internalID: -903149160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_4
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 954
+        width: 38
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5063285bf841a459e6400e3be1491c
+      internalID: 282978689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_5
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 954
+        width: 34
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32d6e33381d2644caeaf725d8a48e3e
+      internalID: 23421549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_6
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 954
+        width: 36
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed0249891c43c54f83d662634117e28
+      internalID: -1381480266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_7
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 954
+        width: 40
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e344e0d2bff9ef94a9fafe5499e0636d
+      internalID: 1452193502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_8
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 954
+        width: 38
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7e36aa8fdb15f40ba4105bd2d6899b
+      internalID: 2052060294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_9
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 954
+        width: 38
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036b787c3cd14da4b80fa5206227869c
+      internalID: 69696330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_10
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 954
+        width: 38
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3707993f2699e47a7bebee521dd227
+      internalID: -1078256959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_11
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 882
+        width: 40
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cae5bb0d51b424abac51685b5db9d7
+      internalID: -691978888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_12
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 882
+        width: 40
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b92da8582301b46b4adef6a2fd4cda
+      internalID: 347703181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_13
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 882
+        width: 38
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ea37fd95083b442858782342c3d4a6
+      internalID: 1371867038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_14
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 882
+        width: 38
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d469ec4b6470b444a01f6a678706f27
+      internalID: 593823772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_15
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 882
+        width: 40
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7cee7e81c7a83459a691727440a842
+      internalID: -1876605633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_16
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 882
+        width: 38
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9952556c708976f4cbb2dbffad34ed4f
+      internalID: 1220592756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_17
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 882
+        width: 42
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7a74e4afb0ebc48a525fb63df5ad5e
+      internalID: -146997894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_18
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 882
+        width: 44
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a30fdee2e11f547964232991ba4730
+      internalID: -1433422910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_19
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 880
+        width: 38
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572f8958c5b8fdb4890a47a3cea595a8
+      internalID: 1232971889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_20
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 880
+        width: 38
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fddac72a9493404a99eaa0b72e196b8
+      internalID: 656743986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_21
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 880
+        width: 56
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba026960eb5e07a4caa502f1a798c32d
+      internalID: -392178617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_22
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 806
+        width: 52
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d8eaf4ca5cc0b4cad87d6100d17ec2
+      internalID: 343320671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_23
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 806
+        width: 52
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9b868d217f3a74d8a09db92fabcc79
+      internalID: 1748129835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_24
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 806
+        width: 54
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be76f584aeb974749b479269828b6dfd
+      internalID: -1721471312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_25
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 806
+        width: 52
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1ac2378cda23046bf1d55d67b8dffa
+      internalID: -1412105974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_26
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 806
+        width: 50
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e404e84d60d0947a34b925f093a115
+      internalID: -2004121002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_27
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 806
+        width: 42
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9cea203aa45d248aff3f78635076f2
+      internalID: -2081917720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_28
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 806
+        width: 38
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffa08365c28fd5439915b88459c2e8a
+      internalID: -1896066314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_29
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 806
+        width: 54
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89831b4015e8db34c8d755ed9488f903
+      internalID: -1462289460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_30
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 806
+        width: 54
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f9276d3ad205947b01d0f2ac1a4e9d
+      internalID: -859007977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_31
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 732
+        width: 56
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ff412255614e341ab03d9058f4aab9
+      internalID: 738952617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_32
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 732
+        width: 56
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b43e7e9f7fb124691bcd2390d5ec39
+      internalID: -1834609749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_33
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 732
+        width: 52
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d22c6a37bfd764cb8e80aec37f269f
+      internalID: -2125927449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_34
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 732
+        width: 50
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa29c83b2457ff4999e58487a64ffbf
+      internalID: 1477861059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_35
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 730
+        width: 48
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f5826ace0061d4694ed60b91da1bf3
+      internalID: 563076838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_36
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 730
+        width: 48
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65ff08dc515ed441a2b5c92f60be646
+      internalID: -2071857694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_37
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 730
+        width: 36
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c6af7db89cf98489f412c437df8846
+      internalID: 851494057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_38
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 730
+        width: 38
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992151141a7c8b348ac3a72c74ac4347
+      internalID: -1677374389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_39
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 730
+        width: 42
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e936642ac99eab042a8a3214a6059803
+      internalID: 886622426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_40
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 730
+        width: 38
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0cfc16f1425e2441a18048e15018cd2
+      internalID: 170584250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_41
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 652
+        width: 34
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54f9845dd86ca6449e17adb553325f1
+      internalID: -513365440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_42
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 652
+        width: 34
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e544d9c546df918428e3369f560d845e
+      internalID: -1755990467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_43
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 652
+        width: 44
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122c00d997f181644becd810e02f8c8d
+      internalID: -1519100866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_44
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 652
+        width: 44
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b41e42769a8714e8f72f121d5c29a9
+      internalID: 716474276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_45
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 652
+        width: 46
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f887e152e3ddee4891d9a569ad06d03
+      internalID: -648618205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_46
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 652
+        width: 44
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7fcd1aff5d0faa498ba4cb2ab217230
+      internalID: -2082104506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_47
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 652
+        width: 48
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1b7df99404c7842815b63bc362c246
+      internalID: -823488731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_48
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 650
+        width: 38
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf072754f20421c4e826be81816e8590
+      internalID: -156703010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_49
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 650
+        width: 38
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60adfc842d9a81488c83f809d2da631
+      internalID: -1047724690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_50
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 650
+        width: 44
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8dab48c5d709e5498e4e7b39b2de68a
+      internalID: 839946552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_51
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 650
+        width: 44
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ffacb948fdb7d44b7cceda54ababe1
+      internalID: -46095647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_52
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 570
+        width: 38
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e49d607fdf12a438279dac358dd0ad
+      internalID: -1673991527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_53
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 570
+        width: 38
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923a0ac78146e784bb3d40ba1f48eec3
+      internalID: 1292333595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_54
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 570
+        width: 42
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0760fcee4bed8479ba1e505f7f0ee7
+      internalID: -618618235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_55
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 570
+        width: 42
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafe966f726f23d48bfd0bbaf62a245b
+      internalID: 619836467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_56
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 570
+        width: 42
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e424d94232f58f4b96f4324ca717607
+      internalID: -793005554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_57
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 570
+        width: 38
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3819253c13875af4eb17ea88a3bb8ddf
+      internalID: -743054310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_58
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 570
+        width: 38
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a731ec7f8561e4eb8161f322ba0dcf
+      internalID: 835396779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_59
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 570
+        width: 48
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116ebf2b4dd31cb42804b358892c63c7
+      internalID: -317848941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_60
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 570
+        width: 48
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4b64ea312af914b853844eb697af6b
+      internalID: 1335268627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_61
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 570
+        width: 48
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d5b8112e2d4d646bd52cf1e2f1e448
+      internalID: -1253180524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_62
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 568
+        width: 44
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364a2ee5e38cb0048b4edee222f9fc1b
+      internalID: 737374235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_63
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 486
+        width: 58
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8078b49132bd6204185047b5770a4d0f
+      internalID: 881041409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_64
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 486
+        width: 44
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a6311e1bbb8c4429d41df5f27481c2
+      internalID: -210323398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_65
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 486
+        width: 56
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0793b2ddf7437469b550a05f4a7740
+      internalID: -1185411985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_66
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 486
+        width: 44
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be06bff4d95b1fe44ac60b0df044f665
+      internalID: 1155523865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_67
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 486
+        width: 54
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e68f2a0f50b704ab151a07f4af7cd0
+      internalID: 128959751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_68
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 486
+        width: 44
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f475b3cb579c24397f9390de118661
+      internalID: -866764616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_69
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 486
+        width: 44
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351e6b780a7de914c838b5426405f9a3
+      internalID: -1861547459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_70
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 486
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7329c998f8ef811438ebcdcaddad3c8b
+      internalID: 741984342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_71
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 486
+        width: 44
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87b00fdc215a6e42895275cc2455bd5
+      internalID: -1599865599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_72
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 486
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4989da19cac9656469c61fb7ea6a53d1
+      internalID: 261969576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_73
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 404
+        width: 42
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55feeaa44dbe354584fd8d8b63e3b49
+      internalID: -764473145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_74
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 404
+        width: 40
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da643aa9f63ecb94c97589220d33d602
+      internalID: -1556108518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_75
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 404
+        width: 44
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4e88007768afc4fa0d4b45a9ab93fb
+      internalID: -673138360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_76
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 404
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5090c36787ae446ae7b6abe7f85548
+      internalID: 162038236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_77
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 404
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63805e6ebbc45624f9ed14211292f4d9
+      internalID: 203801831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_78
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 404
+        width: 44
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eca2875112c48b4fb89e526932cb696
+      internalID: -1159333685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_79
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 404
+        width: 36
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f779ff1879e618d4785ea6d68ae862a2
+      internalID: -212286881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_80
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 404
+        width: 46
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e6878773105e948bfb4042f09fd14d
+      internalID: -1729431221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_81
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 404
+        width: 48
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df15026e433c43499de78fdc01fff66
+      internalID: -1623843494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_82
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 404
+        width: 48
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2207fb9a6edc734fa7d606b69af9874
+      internalID: -1814028834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_83
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 404
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098add452b4a72344a6514bf8c24c8f6
+      internalID: 597298574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_84
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 322
+        width: 44
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a7d55bbb89c7a4cab63e5dfd57c4f6
+      internalID: 706290865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_85
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 322
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb645a0144e7aaf43b4358a7702d60be
+      internalID: -1463104680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_86
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 322
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb261666c42a0343bd5cb9a6405f107
+      internalID: -952499453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_87
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 322
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935554e251c73604180e8ece552440bf
+      internalID: -1576856664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_88
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 322
+        width: 50
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429f87c30aa10264594dfc40da71f5fb
+      internalID: 300472208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_89
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 322
+        width: 50
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44a68d10bc9807468e72604c1e23093
+      internalID: 636627899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_90
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 322
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8223cec3ce9bfd243b93ba5a467a7901
+      internalID: 1756598303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_91
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 322
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8639b20cf371c409f79692620ff24f
+      internalID: 472036627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_92
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 322
+        width: 36
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb9454740d9f38448cc657482e3f7c8
+      internalID: 1051973731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_93
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 322
+        width: 36
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8ec04084eb67a4197d084a38549df3
+      internalID: -1299093962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_94
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 322
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e61b4c5cc477a4098be312c96679d3
+      internalID: -2098510823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_95
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 240
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70366b693388ef841a62962fc1d15f66
+      internalID: -1490994743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_96
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 240
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2fcec196e73f04b81af0b24959b564
+      internalID: -320751000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_97
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 240
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21ac84aab0256042830d3b557c49312
+      internalID: 1724907795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_98
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 240
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85c78191ebd297488a2f3d6a339f541
+      internalID: 1652564378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_99
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 240
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ab997f79e39c846ae5102ebc758dc2
+      internalID: 1345734993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_100
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 240
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a345497f7622d964ba2cfbf7f36fa3ec
+      internalID: 1939992141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_101
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 240
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5a103dae9c7a946882bdf0a5c868fe
+      internalID: 475828190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_102
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 240
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e687678cacbe52438c21f3bb6aca15c
+      internalID: -1198313356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_103
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 240
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3baa5cd7b66aa4447943dc9cfb29ebd7
+      internalID: -294753632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_104
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 240
+        width: 42
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7f2cee3fc6ce14ea20e9e82c5b0de9
+      internalID: 337457945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_105
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 240
+        width: 42
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486a0e4673b59794996b656eb147d45b
+      internalID: -1305466691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_106
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 240
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71d3fb2ad3129543ba6c15a29cd7c58
+      internalID: -49913811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_107
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 158
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cb0e8dcde08484bba8d80e03aa1163
+      internalID: 173046205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_108
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 158
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2118487b0dbbbe44a86d0fb53b2ca19
+      internalID: -1042068792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_109
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 158
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906dcdd703933fa4e84bfe082b0536f1
+      internalID: 677276401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_110
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 158
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2527566518f67444ab6da85d2f763963
+      internalID: 206664675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_111
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 158
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b11caf2079a3554e8c696bbfe302346
+      internalID: 2058481246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_112
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 158
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e7f6096ea983549b42a38e50b62eaa
+      internalID: 2000351253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_113
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 158
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82589b9334039a5468368450d7b29013
+      internalID: 1284739272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_114
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 158
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313a92e037146344ba200431dfc3ba48
+      internalID: 595405678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_115
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 158
+        width: 38
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6054109781ef17b4cb799ee1f6badd50
+      internalID: 1338994453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_116
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 158
+        width: 48
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0029c88cb5b9c644c90c9117e8c58ba1
+      internalID: -1992060503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_117
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 158
+        width: 48
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2573dbf2c43e6b045bd83b922d706615
+      internalID: 1339068813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_118
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 72
+        width: 38
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28105edb0142d4444a49a8f24c7b5aae
+      internalID: 278860458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrPlyTX_KenJ000_Mle_trim_119
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 72
+        width: 36
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172ae06182c8d384cb1d790737acd830
+      internalID: 443670458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c8814424c2bf41d4080b920b81b8f3b7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChrPlyTX_KenJ000_Mle_trim_0: 1616501772
+      ChrPlyTX_KenJ000_Mle_trim_1: 568089573
+      ChrPlyTX_KenJ000_Mle_trim_10: -1078256959
+      ChrPlyTX_KenJ000_Mle_trim_100: 1939992141
+      ChrPlyTX_KenJ000_Mle_trim_101: 475828190
+      ChrPlyTX_KenJ000_Mle_trim_102: -1198313356
+      ChrPlyTX_KenJ000_Mle_trim_103: -294753632
+      ChrPlyTX_KenJ000_Mle_trim_104: 337457945
+      ChrPlyTX_KenJ000_Mle_trim_105: -1305466691
+      ChrPlyTX_KenJ000_Mle_trim_106: -49913811
+      ChrPlyTX_KenJ000_Mle_trim_107: 173046205
+      ChrPlyTX_KenJ000_Mle_trim_108: -1042068792
+      ChrPlyTX_KenJ000_Mle_trim_109: 677276401
+      ChrPlyTX_KenJ000_Mle_trim_11: -691978888
+      ChrPlyTX_KenJ000_Mle_trim_110: 206664675
+      ChrPlyTX_KenJ000_Mle_trim_111: 2058481246
+      ChrPlyTX_KenJ000_Mle_trim_112: 2000351253
+      ChrPlyTX_KenJ000_Mle_trim_113: 1284739272
+      ChrPlyTX_KenJ000_Mle_trim_114: 595405678
+      ChrPlyTX_KenJ000_Mle_trim_115: 1338994453
+      ChrPlyTX_KenJ000_Mle_trim_116: -1992060503
+      ChrPlyTX_KenJ000_Mle_trim_117: 1339068813
+      ChrPlyTX_KenJ000_Mle_trim_118: 278860458
+      ChrPlyTX_KenJ000_Mle_trim_119: 443670458
+      ChrPlyTX_KenJ000_Mle_trim_12: 347703181
+      ChrPlyTX_KenJ000_Mle_trim_13: 1371867038
+      ChrPlyTX_KenJ000_Mle_trim_14: 593823772
+      ChrPlyTX_KenJ000_Mle_trim_15: -1876605633
+      ChrPlyTX_KenJ000_Mle_trim_16: 1220592756
+      ChrPlyTX_KenJ000_Mle_trim_17: -146997894
+      ChrPlyTX_KenJ000_Mle_trim_18: -1433422910
+      ChrPlyTX_KenJ000_Mle_trim_19: 1232971889
+      ChrPlyTX_KenJ000_Mle_trim_2: 2068349903
+      ChrPlyTX_KenJ000_Mle_trim_20: 656743986
+      ChrPlyTX_KenJ000_Mle_trim_21: -392178617
+      ChrPlyTX_KenJ000_Mle_trim_22: 343320671
+      ChrPlyTX_KenJ000_Mle_trim_23: 1748129835
+      ChrPlyTX_KenJ000_Mle_trim_24: -1721471312
+      ChrPlyTX_KenJ000_Mle_trim_25: -1412105974
+      ChrPlyTX_KenJ000_Mle_trim_26: -2004121002
+      ChrPlyTX_KenJ000_Mle_trim_27: -2081917720
+      ChrPlyTX_KenJ000_Mle_trim_28: -1896066314
+      ChrPlyTX_KenJ000_Mle_trim_29: -1462289460
+      ChrPlyTX_KenJ000_Mle_trim_3: -903149160
+      ChrPlyTX_KenJ000_Mle_trim_30: -859007977
+      ChrPlyTX_KenJ000_Mle_trim_31: 738952617
+      ChrPlyTX_KenJ000_Mle_trim_32: -1834609749
+      ChrPlyTX_KenJ000_Mle_trim_33: -2125927449
+      ChrPlyTX_KenJ000_Mle_trim_34: 1477861059
+      ChrPlyTX_KenJ000_Mle_trim_35: 563076838
+      ChrPlyTX_KenJ000_Mle_trim_36: -2071857694
+      ChrPlyTX_KenJ000_Mle_trim_37: 851494057
+      ChrPlyTX_KenJ000_Mle_trim_38: -1677374389
+      ChrPlyTX_KenJ000_Mle_trim_39: 886622426
+      ChrPlyTX_KenJ000_Mle_trim_4: 282978689
+      ChrPlyTX_KenJ000_Mle_trim_40: 170584250
+      ChrPlyTX_KenJ000_Mle_trim_41: -513365440
+      ChrPlyTX_KenJ000_Mle_trim_42: -1755990467
+      ChrPlyTX_KenJ000_Mle_trim_43: -1519100866
+      ChrPlyTX_KenJ000_Mle_trim_44: 716474276
+      ChrPlyTX_KenJ000_Mle_trim_45: -648618205
+      ChrPlyTX_KenJ000_Mle_trim_46: -2082104506
+      ChrPlyTX_KenJ000_Mle_trim_47: -823488731
+      ChrPlyTX_KenJ000_Mle_trim_48: -156703010
+      ChrPlyTX_KenJ000_Mle_trim_49: -1047724690
+      ChrPlyTX_KenJ000_Mle_trim_5: 23421549
+      ChrPlyTX_KenJ000_Mle_trim_50: 839946552
+      ChrPlyTX_KenJ000_Mle_trim_51: -46095647
+      ChrPlyTX_KenJ000_Mle_trim_52: -1673991527
+      ChrPlyTX_KenJ000_Mle_trim_53: 1292333595
+      ChrPlyTX_KenJ000_Mle_trim_54: -618618235
+      ChrPlyTX_KenJ000_Mle_trim_55: 619836467
+      ChrPlyTX_KenJ000_Mle_trim_56: -793005554
+      ChrPlyTX_KenJ000_Mle_trim_57: -743054310
+      ChrPlyTX_KenJ000_Mle_trim_58: 835396779
+      ChrPlyTX_KenJ000_Mle_trim_59: -317848941
+      ChrPlyTX_KenJ000_Mle_trim_6: -1381480266
+      ChrPlyTX_KenJ000_Mle_trim_60: 1335268627
+      ChrPlyTX_KenJ000_Mle_trim_61: -1253180524
+      ChrPlyTX_KenJ000_Mle_trim_62: 737374235
+      ChrPlyTX_KenJ000_Mle_trim_63: 881041409
+      ChrPlyTX_KenJ000_Mle_trim_64: -210323398
+      ChrPlyTX_KenJ000_Mle_trim_65: -1185411985
+      ChrPlyTX_KenJ000_Mle_trim_66: 1155523865
+      ChrPlyTX_KenJ000_Mle_trim_67: 128959751
+      ChrPlyTX_KenJ000_Mle_trim_68: -866764616
+      ChrPlyTX_KenJ000_Mle_trim_69: -1861547459
+      ChrPlyTX_KenJ000_Mle_trim_7: 1452193502
+      ChrPlyTX_KenJ000_Mle_trim_70: 741984342
+      ChrPlyTX_KenJ000_Mle_trim_71: -1599865599
+      ChrPlyTX_KenJ000_Mle_trim_72: 261969576
+      ChrPlyTX_KenJ000_Mle_trim_73: -764473145
+      ChrPlyTX_KenJ000_Mle_trim_74: -1556108518
+      ChrPlyTX_KenJ000_Mle_trim_75: -673138360
+      ChrPlyTX_KenJ000_Mle_trim_76: 162038236
+      ChrPlyTX_KenJ000_Mle_trim_77: 203801831
+      ChrPlyTX_KenJ000_Mle_trim_78: -1159333685
+      ChrPlyTX_KenJ000_Mle_trim_79: -212286881
+      ChrPlyTX_KenJ000_Mle_trim_8: 2052060294
+      ChrPlyTX_KenJ000_Mle_trim_80: -1729431221
+      ChrPlyTX_KenJ000_Mle_trim_81: -1623843494
+      ChrPlyTX_KenJ000_Mle_trim_82: -1814028834
+      ChrPlyTX_KenJ000_Mle_trim_83: 597298574
+      ChrPlyTX_KenJ000_Mle_trim_84: 706290865
+      ChrPlyTX_KenJ000_Mle_trim_85: -1463104680
+      ChrPlyTX_KenJ000_Mle_trim_86: -952499453
+      ChrPlyTX_KenJ000_Mle_trim_87: -1576856664
+      ChrPlyTX_KenJ000_Mle_trim_88: 300472208
+      ChrPlyTX_KenJ000_Mle_trim_89: 636627899
+      ChrPlyTX_KenJ000_Mle_trim_9: 69696330
+      ChrPlyTX_KenJ000_Mle_trim_90: 1756598303
+      ChrPlyTX_KenJ000_Mle_trim_91: 472036627
+      ChrPlyTX_KenJ000_Mle_trim_92: 1051973731
+      ChrPlyTX_KenJ000_Mle_trim_93: -1299093962
+      ChrPlyTX_KenJ000_Mle_trim_94: -2098510823
+      ChrPlyTX_KenJ000_Mle_trim_95: -1490994743
+      ChrPlyTX_KenJ000_Mle_trim_96: -320751000
+      ChrPlyTX_KenJ000_Mle_trim_97: 1724907795
+      ChrPlyTX_KenJ000_Mle_trim_98: 1652564378
+      ChrPlyTX_KenJ000_Mle_trim_99: 1345734993
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

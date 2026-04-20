@@ -8,9 +8,12 @@ public class PlayerController : MonoBehaviour
     // ★ 新增：是否允许移动
     public bool canMove = true;
 
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+
+    [Header("动画朝向")]
+    public bool useSpriteFlipX = false;
 
     private Vector2 movement;
     private bool isRunning;
@@ -22,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -59,8 +62,8 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("MoveY", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        // 左右翻转
-        if (movement.x != 0)
+        // 当左右方向有独立动画时，不要再做flipX，否则会出现左右反转。
+        if (useSpriteFlipX && movement.x != 0)
         {
             spriteRenderer.flipX = movement.x < 0;
         }
@@ -71,7 +74,8 @@ public class PlayerController : MonoBehaviour
         if (!canMove) return;
 
         float speed = isRunning ? runSpeed : walkSpeed;
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        Vector3 moveDelta = new Vector3(movement.x, 0f, movement.y) * speed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + moveDelta);
     }
 
     // 动画事件触发脚步声
