@@ -9,8 +9,13 @@ public class SpriteBillboardY : MonoBehaviour
     [Range(-180f, 180f)] public float yawOffset;
     public bool reverseFacing;
 
+    [Header("Runtime")]
+    public bool disableDuringDialogue = true;
+
     void LateUpdate()
     {
+        if (disableDuringDialogue && DialogueManager.IsDialogueActive) return;
+
         Camera cam = targetCamera != null ? targetCamera : Camera.main;
         if (cam == null) return;
 

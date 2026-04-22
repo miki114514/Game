@@ -2,8 +2,16 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    [Header("对话")]
     public DialogueSequence sequence;
+
+    [Header("对话结束后进入战斗")]
+    public bool startBattleAfterDialogue = false;
+    public BattleEncounterData encounterToStart;
+    public string battleSceneName = "BattleSecene";
+
     private bool triggered = false;
+    private bool waitingForBattleStart = false;
 
     void TryStartDialogue(GameObject otherObject, string source)
     {
@@ -36,7 +44,53 @@ public class DialogueTrigger : MonoBehaviour
         Debug.Log($"触发对话: {sequence.name}");
         DialogueManager.Instance.StartDialogue(sequence);
 
+        if (startBattleAfterDialogue && !waitingForBattleStart)
+        {
+            waitingForBattleStart = true;
+            StartCoroutine(WaitDialogueEndThenStartBattle());
+        }
+
         triggered = true;
+    }
+
+    System.Collections.IEnumerator WaitDialogueEndThenStartBattle()
+    {
+        while (DialogueManager.IsDialogueActive)
+            yield return null;
+
+        PartyManager partyManager = PartyManager.Instance != null
+            ? PartyManager.Instance
+            : FindObjectOfType<PartyManager>();
+
+        if (partyManager != null)
+            partyManager.SetPendingEncounter(encounterToStart);
+        else
+            Debug.LogWarning("未找到 PartyManager，无法设置 pendingEncounter。战斗可能使用默认遭遇。", this);
+
+        if (string.IsNullOrWhiteSpace(battleSceneName))
+        {
+            Debug.LogError("battleSceneName 为空，无法切换到战斗场景。", this);
+            yield break;
+        }
+
+        if (!Application.CanStreamedLevelBeLoaded(battleSceneName))
+        {
+            Debug.LogError(
+                $"场景 `{battleSceneName}` 当前不可加载。请确认它已加入 Build Settings，且名称与 Inspector 中填写一致。",
+                this);
+            yield break;
+        }
+
+        if (partyManager != null)
+        {
+            bool started = partyManager.StartBattleFromCurrentScene(encounterToStart, battleSceneName);
+            if (!started)
+                Debug.LogError("进入战斗失败：PartyManager 未能启动战斗场景切换。", this);
+        }
+        else
+        {
+            Debug.LogError("未找到 PartyManager，无法执行场景冻结并进入战斗。", this);
+        }
     }
 
     // 2D 触发回调

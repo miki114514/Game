@@ -14,6 +14,10 @@ public class ReadmeEditor : Editor
     
     static string s_ReadmeSourceDirectory = "Assets/TutorialInfo";
 
+    // The bundled tutorial layout may reference old editor windows across Unity versions.
+    // Keep this disabled by default to avoid fallback window errors during startup.
+    const bool k_AutoLoadTutorialLayout = false;
+
     const float k_Space = 16f;
 
     static ReadmeEditor()
@@ -60,18 +64,35 @@ public class ReadmeEditor : Editor
 
             if (readme && !readme.loadedLayout)
             {
-                LoadLayout();
+                if (k_AutoLoadTutorialLayout)
+                    TryLoadLayout();
+
                 readme.loadedLayout = true;
+                EditorUtility.SetDirty(readme);
             }
         }
     }
 
-    static void LoadLayout()
+    static bool TryLoadLayout()
     {
+        string layoutPath = Path.Combine(Application.dataPath, "TutorialInfo/Layout.wlt");
+        if (!File.Exists(layoutPath))
+            return false;
+
         var assembly = typeof(EditorApplication).Assembly;
         var windowLayoutType = assembly.GetType("UnityEditor.WindowLayout", true);
         var method = windowLayoutType.GetMethod("LoadWindowLayout", BindingFlags.Public | BindingFlags.Static);
-        method.Invoke(null, new object[] { Path.Combine(Application.dataPath, "TutorialInfo/Layout.wlt"), false });
+
+        try
+        {
+            method.Invoke(null, new object[] { layoutPath, false });
+            return true;
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"[ReadmeEditor] Failed to load tutorial layout at '{layoutPath}'. {ex.Message}");
+            return false;
+        }
     }
 
     static Readme SelectReadme()

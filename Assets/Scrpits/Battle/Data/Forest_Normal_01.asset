@@ -20,7 +20,7 @@ MonoBehaviour:
   canEscape: 1
   isStoryBattle: 0
   backgroundPrefab: {fileID: 0}
-  battleBgm: {fileID: 0}
+  battleBgm: {fileID: 8300000, guid: 9541c3a56864fcf428acdba8dc8cf1af, type: 3}
   enemyEntries:
   - enemyDefinition: {fileID: 11400000, guid: 1921cb666f1d456489729d68d1ada9ac, type: 2}
     role: 0
@@ -39,5 +39,6 @@ MonoBehaviour:
     attackMultiplier: 1
     scaleMultiplier: 1
   bonusExp: 0
+  bonusJP: 0
   bonusMoney: 0
   guaranteedRewardItems: []

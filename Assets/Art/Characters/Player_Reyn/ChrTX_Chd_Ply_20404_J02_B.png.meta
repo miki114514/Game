@@ -1,0 +1,1214 @@
+fileFormatVersion: 2
+guid: b31af9f27bc5aa34fb14e7f3151170ab
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 264
+        width: 21
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c855fced9bf2ca46a88ae92b784594c
+      internalID: 1321326800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 264
+        width: 21
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1810257f0911300459a2d1b721ad6b90
+      internalID: -1522660114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 264
+        width: 21
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82ff48ad2c6b1c94882ef1b1314b0046
+      internalID: -704183471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_3
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 264
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143b7465e90006d44a721c75433010c8
+      internalID: -1456548285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_4
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 264
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c05e00cf0793b4ebf472d331cf1343
+      internalID: 998487589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_5
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 264
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8d142bfdcc5604baf3c8d097ec59f2
+      internalID: 1336861814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_6
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 264
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd9d32f222e41c48b3bebc6479bd30c
+      internalID: -1751696182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_7
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 264
+        width: 32
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7046bec20f93fd142810e0afb657ff4f
+      internalID: 1622516898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_8
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 264
+        width: 22
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b379ca779965648aa5ccbde1f51aa6
+      internalID: -691669984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_9
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 264
+        width: 20
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e783cf8b75a7d44596918bb84b3f53c
+      internalID: -620688502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 220
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a33d15a403ba74b9f71ce654b477b4
+      internalID: -1627015817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_11
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 221
+        width: 19
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528d995f30302fc43a79a5c3b6d74bd2
+      internalID: 2092741998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_12
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 220
+        width: 20
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88443b2882672b2488c55c467509e105
+      internalID: -323854081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_13
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 220
+        width: 22
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5752b6a365d070842b740ec357fcf1c5
+      internalID: 1483746496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_14
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 220
+        width: 18
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623d9b9f735618440ba3a6da194c4300
+      internalID: -1452987232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_15
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 220
+        width: 19
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37ea13856f37cc4098321d03a43e918
+      internalID: -11961764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_16
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 220
+        width: 17
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874c41d1cfa7cac46a7e5ad119fff38a
+      internalID: 1662507035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_17
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 220
+        width: 17
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc9ee2452ead0d4283568445530bf4b
+      internalID: -842065027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_18
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 228
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfd6a3673b44534d8ca8e5d816b6a93
+      internalID: 1548737530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_19
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 228
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8b6cfd1e5d3ce428986d73f8662c87
+      internalID: 1169636075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_20
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 176
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979dfbc15af4c994bae74e3d2eca20b2
+      internalID: -2004087091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_21
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 176
+        width: 32
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa615757f0875374a907ad2a6068d677
+      internalID: -1786053071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_22
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 176
+        width: 30
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21a81d0a4d3d084f9016e3eea10b0eb
+      internalID: -1798038008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_23
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 176
+        width: 31
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdadcc46232cec34a8a758e31773dbe8
+      internalID: 546975766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_24
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 176
+        width: 37
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ee2965a29f23d4ebe727fdc1cf3bb4
+      internalID: 2099282291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_25
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 132
+        width: 38
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb74b04f4b75ef4fa4fd1d632aadc85
+      internalID: -310713821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_26
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 132
+        width: 37
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469585fe40dd8e84ca12bccfe4a65e90
+      internalID: -1066518014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_27
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 133
+        width: 34
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a216514571111374f8ddfc908c0419ef
+      internalID: 1718607470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_28
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 132
+        width: 18
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad17b6049253b1a46abef0d48579a444
+      internalID: 59877853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_29
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 140
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0839d590c29def4692bc7dad4550dd4
+      internalID: -1400698689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_30
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 88
+        width: 19
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df7fa26ba03bb849a0bccbc49ecde7c
+      internalID: 120926183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_31
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 88
+        width: 30
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ab4c71a219a69479e5cf49331eca55
+      internalID: -217021682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_32
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 88
+        width: 31
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffa36e7337036e4a9ca41877825794b
+      internalID: 1514999495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_33
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 88
+        width: 31
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6fb00e68f773074e89daa40a9c805f7
+      internalID: -407848286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_34
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 88
+        width: 31
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8997bf4b445468449ce324f0c3d37e9
+      internalID: 1291644374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_35
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 44
+        width: 31
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f246ced9e5b1ddb4c84aecaf09f020af
+      internalID: 668431489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_36
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 44
+        width: 31
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ae5f8f5aa7db34a8de0536f54c816b
+      internalID: 1499541659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_37
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 44
+        width: 30
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d08d2e7920eb24d8704af42d4136fe
+      internalID: 1923698020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_38
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 44
+        width: 18
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcbe219df43eb44babae1d659058e31
+      internalID: 111431674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_39
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 52
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8c68b98f3e9814cbb208ecac383408
+      internalID: 116785004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_40
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 17
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952ec8ffc101c0341ab05d38c9f5caf8
+      internalID: -1047881848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_41
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 0
+        width: 17
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca852e671934004cb1b70149ec391b7
+      internalID: 1482763852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_42
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 17
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6671a224a4abfa64197c05e49cf25102
+      internalID: -552972152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_43
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 17
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdff343f2cc63754a9cba03bdeb835c4
+      internalID: 212121898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_44
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 22
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81219e9664756104b96e5ae096876e20
+      internalID: -995935952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_45
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 0
+        width: 21
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721b50c403c9f064bb2e3727f038a5ad
+      internalID: -1590802837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_46
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 21
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a3e92aa5527b94c8dce636ecb81092
+      internalID: -1199597202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_47
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 23
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3910ce26f6af75242abd77e29ce99fa8
+      internalID: -1379501925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_48
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 0
+        width: 24
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd47574f294da649ac024a95f860edd
+      internalID: 162677826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChrTX_Chd_Ply_20404_J02_B_49
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 0
+        width: 24
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fca7596e6a8cd4f93f1bfa43d955ac
+      internalID: -626343603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2ad2585656c083b458807b463cab4baa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChrTX_Chd_Ply_20404_J02_B_0: 1321326800
+      ChrTX_Chd_Ply_20404_J02_B_1: -1522660114
+      ChrTX_Chd_Ply_20404_J02_B_10: -1627015817
+      ChrTX_Chd_Ply_20404_J02_B_11: 2092741998
+      ChrTX_Chd_Ply_20404_J02_B_12: -323854081
+      ChrTX_Chd_Ply_20404_J02_B_13: 1483746496
+      ChrTX_Chd_Ply_20404_J02_B_14: -1452987232
+      ChrTX_Chd_Ply_20404_J02_B_15: -11961764
+      ChrTX_Chd_Ply_20404_J02_B_16: 1662507035
+      ChrTX_Chd_Ply_20404_J02_B_17: -842065027
+      ChrTX_Chd_Ply_20404_J02_B_18: 1548737530
+      ChrTX_Chd_Ply_20404_J02_B_19: 1169636075
+      ChrTX_Chd_Ply_20404_J02_B_2: -704183471
+      ChrTX_Chd_Ply_20404_J02_B_20: -2004087091
+      ChrTX_Chd_Ply_20404_J02_B_21: -1786053071
+      ChrTX_Chd_Ply_20404_J02_B_22: -1798038008
+      ChrTX_Chd_Ply_20404_J02_B_23: 546975766
+      ChrTX_Chd_Ply_20404_J02_B_24: 2099282291
+      ChrTX_Chd_Ply_20404_J02_B_25: -310713821
+      ChrTX_Chd_Ply_20404_J02_B_26: -1066518014
+      ChrTX_Chd_Ply_20404_J02_B_27: 1718607470
+      ChrTX_Chd_Ply_20404_J02_B_28: 59877853
+      ChrTX_Chd_Ply_20404_J02_B_29: -1400698689
+      ChrTX_Chd_Ply_20404_J02_B_3: -1456548285
+      ChrTX_Chd_Ply_20404_J02_B_30: 120926183
+      ChrTX_Chd_Ply_20404_J02_B_31: -217021682
+      ChrTX_Chd_Ply_20404_J02_B_32: 1514999495
+      ChrTX_Chd_Ply_20404_J02_B_33: -407848286
+      ChrTX_Chd_Ply_20404_J02_B_34: 1291644374
+      ChrTX_Chd_Ply_20404_J02_B_35: 668431489
+      ChrTX_Chd_Ply_20404_J02_B_36: 1499541659
+      ChrTX_Chd_Ply_20404_J02_B_37: 1923698020
+      ChrTX_Chd_Ply_20404_J02_B_38: 111431674
+      ChrTX_Chd_Ply_20404_J02_B_39: 116785004
+      ChrTX_Chd_Ply_20404_J02_B_4: 998487589
+      ChrTX_Chd_Ply_20404_J02_B_40: -1047881848
+      ChrTX_Chd_Ply_20404_J02_B_41: 1482763852
+      ChrTX_Chd_Ply_20404_J02_B_42: -552972152
+      ChrTX_Chd_Ply_20404_J02_B_43: 212121898
+      ChrTX_Chd_Ply_20404_J02_B_44: -995935952
+      ChrTX_Chd_Ply_20404_J02_B_45: -1590802837
+      ChrTX_Chd_Ply_20404_J02_B_46: -1199597202
+      ChrTX_Chd_Ply_20404_J02_B_47: -1379501925
+      ChrTX_Chd_Ply_20404_J02_B_48: 162677826
+      ChrTX_Chd_Ply_20404_J02_B_49: -626343603
+      ChrTX_Chd_Ply_20404_J02_B_5: 1336861814
+      ChrTX_Chd_Ply_20404_J02_B_6: -1751696182
+      ChrTX_Chd_Ply_20404_J02_B_7: 1622516898
+      ChrTX_Chd_Ply_20404_J02_B_8: -691669984
+      ChrTX_Chd_Ply_20404_J02_B_9: -620688502
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

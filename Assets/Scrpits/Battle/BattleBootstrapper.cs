@@ -1,6 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemySpawnPointFilter
+{
+    All,
+    NormalSlot,
+    AddSlot,
+    BossSlot
+}
+
 [DefaultExecutionOrder(-500)]
 public class BattleBootstrapper : MonoBehaviour
 {
@@ -24,6 +32,19 @@ public class BattleBootstrapper : MonoBehaviour
     public bool usePendingEncounterFromPartyManager = true;
     public bool clearRuntimeRootsBeforeSpawn = true;
 
+    [Header("战斗音乐")]
+    public AudioSource battleBgmSource;
+    [Range(0f, 1f)] public float battleBgmVolume = 1f;
+    public bool stopBattleBgmOnBattleEnd = true;
+
+    [Header("调试可视化")]
+    public bool drawSpawnPointGizmos = true;
+    [Min(0.05f)] public float spawnPointGizmoRadius = 0.25f;
+    public bool drawAllEnemyLayouts = false;
+    public EnemySpawnPointFilter enemySpawnPointFilter = EnemySpawnPointFilter.All;
+    public Color playerSpawnColor = new Color(0.2f, 0.8f, 1f, 1f);
+    public Color enemySpawnColor = new Color(1f, 0.35f, 0.25f, 1f);
+
     private bool battlePrepared = false;
     private bool resultHandled = false;
 
@@ -39,6 +60,54 @@ public class BattleBootstrapper : MonoBehaviour
     public void PrepareBattleNow()
     {
         PrepareBattle(true);
+    }
+
+    [ContextMenu("Debug/Log Spawn Points")]
+    public void LogSpawnPointsForDebug()
+    {
+        ResolveReferences();
+
+        List<Transform> playerSpawns = GetOrderedChildren(playerSpawnPointsRoot);
+        if (playerSpawns.Count == 0)
+        {
+            Debug.LogWarning("[BattleBootstrapper] 未找到玩家出生点。", this);
+        }
+        else
+        {
+            for (int i = 0; i < playerSpawns.Count; i++)
+            {
+                Transform point = playerSpawns[i];
+                Debug.Log($"[BattleBootstrapper] PlayerSpawn[{i}] {point.name} pos={point.position}", point);
+            }
+        }
+
+        List<Transform> enemyLayouts = GetOrderedChildren(enemyLayoutTemplatesRoot);
+        if (enemyLayouts.Count == 0)
+        {
+            Debug.LogWarning("[BattleBootstrapper] 未找到敌方布局根节点。", this);
+            return;
+        }
+
+        for (int i = 0; i < enemyLayouts.Count; i++)
+        {
+            Transform layoutRoot = enemyLayouts[i];
+            List<Transform> slots = GetOrderedChildren(layoutRoot);
+
+            if (slots.Count == 0)
+            {
+                Debug.LogWarning($"[BattleBootstrapper] 布局 {layoutRoot.name} 下没有槽位。", layoutRoot);
+                continue;
+            }
+
+            for (int j = 0; j < slots.Count; j++)
+            {
+                Transform slot = slots[j];
+                if (!ShouldDrawEnemySlot(slot))
+                    continue;
+
+                Debug.Log($"[BattleBootstrapper] EnemyLayout={layoutRoot.name} Slot[{j}] {slot.name} pos={slot.position}", slot);
+            }
+        }
     }
 
     public bool PrepareBattle(bool forceRebuild = false)
@@ -60,6 +129,8 @@ public class BattleBootstrapper : MonoBehaviour
             Debug.LogError("[BattleBootstrapper] 未配置 BattleEncounterData，也没有来自 PartyManager 的 pendingEncounter。", this);
             return false;
         }
+
+        PlayEncounterBgm(encounter);
 
         List<PartyMemberState> activeParty = ResolveActivePartyMembers();
         if (activeParty.Count == 0)
@@ -102,10 +173,18 @@ public class BattleBootstrapper : MonoBehaviour
         BattleEncounterData encounter = ResolveEncounter();
 
         if (isVictory)
+        {
             ApplyVictoryRewards(sourceManager, encounter);
+
+            if (partyManager != null)
+                partyManager.ReturnFromBattleToExploration();
+        }
 
         if (partyManager != null)
             partyManager.SyncPartyStateFromBattle(sourceManager.players);
+
+        if (stopBattleBgmOnBattleEnd)
+            StopEncounterBgm();
 
         Debug.Log(isVictory
             ? "[BattleBootstrapper] 已同步胜利结算结果回 PartyManager。"
@@ -158,6 +237,63 @@ public class BattleBootstrapper : MonoBehaviour
 
         if (enemyUnitRoot == null)
             enemyUnitRoot = FindOrCreateChild(runtimeRoot, "EnemyUnits");
+    }
+
+    void OnValidate()
+    {
+        battleBgmVolume = Mathf.Clamp01(battleBgmVolume);
+
+        if (battleBgmSource != null)
+            ApplyBattleBgmSettings();
+    }
+
+    public void SetBattleBgmVolume(float volume)
+    {
+        battleBgmVolume = Mathf.Clamp01(volume);
+        ApplyBattleBgmSettings();
+    }
+
+    void PlayEncounterBgm(BattleEncounterData encounter)
+    {
+        if (encounter == null || encounter.battleBgm == null)
+            return;
+
+        if (battleBgmSource == null)
+            battleBgmSource = GetComponent<AudioSource>();
+
+        if (battleBgmSource == null)
+            battleBgmSource = gameObject.AddComponent<AudioSource>();
+
+        ApplyBattleBgmSettings();
+
+        if (battleBgmSource.clip == encounter.battleBgm && battleBgmSource.isPlaying)
+            return;
+
+        battleBgmSource.Stop();
+        battleBgmSource.clip = encounter.battleBgm;
+        battleBgmSource.Play();
+
+        Debug.Log($"[BattleBootstrapper] 播放遭遇战斗音乐：{encounter.battleBgm.name}", this);
+    }
+
+    void ApplyBattleBgmSettings()
+    {
+        if (battleBgmSource == null)
+            return;
+
+        battleBgmSource.playOnAwake = false;
+        battleBgmSource.loop = true;
+        battleBgmSource.spatialBlend = 0f;
+        battleBgmSource.volume = battleBgmVolume;
+    }
+
+    void StopEncounterBgm()
+    {
+        if (battleBgmSource == null)
+            return;
+
+        if (battleBgmSource.isPlaying)
+            battleBgmSource.Stop();
     }
 
     void ClearRuntimeRoots()
@@ -437,6 +573,115 @@ public class BattleBootstrapper : MonoBehaviour
                 Destroy(child);
             else
                 DestroyImmediate(child);
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        if (!drawSpawnPointGizmos)
+            return;
+
+        ResolveReferences();
+
+        DrawPlayerSpawnGizmos();
+        DrawEnemySpawnGizmos();
+    }
+
+    void DrawPlayerSpawnGizmos()
+    {
+        List<Transform> playerSpawns = GetOrderedChildren(playerSpawnPointsRoot);
+        if (playerSpawns.Count == 0)
+            return;
+
+        Color oldColor = Gizmos.color;
+        Gizmos.color = playerSpawnColor;
+
+        for (int i = 0; i < playerSpawns.Count; i++)
+        {
+            Transform point = playerSpawns[i];
+            if (point == null)
+                continue;
+
+            Gizmos.DrawSphere(point.position, spawnPointGizmoRadius);
+            Gizmos.DrawLine(point.position, point.position + point.forward * (spawnPointGizmoRadius * 2f));
+        }
+
+        Gizmos.color = oldColor;
+    }
+
+    void DrawEnemySpawnGizmos()
+    {
+        if (enemyLayoutTemplatesRoot == null)
+            return;
+
+        List<Transform> layoutsToDraw = new List<Transform>();
+
+        if (drawAllEnemyLayouts)
+        {
+            layoutsToDraw = GetOrderedChildren(enemyLayoutTemplatesRoot);
+        }
+        else
+        {
+            BattleEncounterData encounter = ResolveEncounter();
+            Transform activeLayout = encounter != null ? FindLayoutRoot(encounter.layoutTemplateType) : null;
+            if (activeLayout != null)
+                layoutsToDraw.Add(activeLayout);
+            else
+                layoutsToDraw = GetOrderedChildren(enemyLayoutTemplatesRoot);
+        }
+
+        if (layoutsToDraw.Count == 0)
+            return;
+
+        Color oldColor = Gizmos.color;
+        Gizmos.color = enemySpawnColor;
+
+        for (int i = 0; i < layoutsToDraw.Count; i++)
+        {
+            Transform layout = layoutsToDraw[i];
+            if (layout == null)
+                continue;
+
+            List<Transform> slots = GetOrderedChildren(layout);
+            for (int j = 0; j < slots.Count; j++)
+            {
+                Transform slot = slots[j];
+                if (slot == null)
+                    continue;
+
+                if (!ShouldDrawEnemySlot(slot))
+                    continue;
+
+                Gizmos.DrawWireSphere(slot.position, spawnPointGizmoRadius);
+                Gizmos.DrawLine(slot.position, slot.position + slot.forward * (spawnPointGizmoRadius * 2f));
+            }
+        }
+
+        Gizmos.color = oldColor;
+    }
+
+    bool ShouldDrawEnemySlot(Transform slot)
+    {
+        if (slot == null)
+            return false;
+
+        if (enemySpawnPointFilter == EnemySpawnPointFilter.All)
+            return true;
+
+        string slotName = slot.name;
+        if (string.IsNullOrWhiteSpace(slotName))
+            return false;
+
+        switch (enemySpawnPointFilter)
+        {
+            case EnemySpawnPointFilter.NormalSlot:
+                return slotName.StartsWith("Slot_", System.StringComparison.OrdinalIgnoreCase);
+            case EnemySpawnPointFilter.AddSlot:
+                return slotName.StartsWith("AddSlot_", System.StringComparison.OrdinalIgnoreCase);
+            case EnemySpawnPointFilter.BossSlot:
+                return slotName.Equals("BossSlot", System.StringComparison.OrdinalIgnoreCase);
+            default:
+                return true;
         }
     }
 }

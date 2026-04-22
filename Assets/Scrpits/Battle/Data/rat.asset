@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0199fe3e716da62489971300bd5ec583, type: 3}
   m_Name: rat
   m_EditorClassIdentifier: 
-  enemyId: rat
+  enemyId: mus
   displayName: "\u9F20\u4EBA"
   description: "\u68EE\u6797\u4E2D\u7684\u4F4E\u4EF7\u6742\u5175\uFF0C\u6570\u91CF\u591A\uFF0C\u901F\u5EA6\u5FEB"
   battlePrefab: {fileID: 8898164235960423267, guid: 1354f46dac2f073448175052c321426b,
     type: 3}
-  portrait: {fileID: -1413800207, guid: 0732ac0635d4fff47b1add81e4cc15e7, type: 3}
   isBoss: 0
   sizeType: 0
   expReward: 12
+  jpReward: 5
   moneyReward: 3
   guaranteedDrops: []

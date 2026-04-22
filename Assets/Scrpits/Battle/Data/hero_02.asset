@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: hero_02
   m_EditorClassIdentifier: 
   characterId: hero_02
-  displayName: "\u8FC5\u5203"
-  description: "\u9AD8\u901F\u5355\u4F53\u8F93\u51FA\u4E0E\u7834\u9632\u89D2\u8272"
+  displayName: "\u83B1\u6069"
+  description: "\u8089\u76FE\u578B\u89D2\u8272"
   battlePrefab: {fileID: 3239970247520232798, guid: 7caf5b87a1aa34147b8b5efd7feef4b8,
     type: 3}
-  portrait: {fileID: -1843883318, guid: aaa987e6d69647c4d8951bb78f5c60f3, type: 3}
   startsUnlocked: 1
   startsInActiveParty: 1
   defaultFormationIndex: 1

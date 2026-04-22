@@ -59,7 +59,7 @@ public class BattleManager : MonoBehaviour
     // ── TurnOrderUIManager 需要的对外属性 ──────────────
     public int CurrentTurnIndexInRound => currentTurnIndexInRound;
     public IReadOnlyList<BattleUnit> CurrentOrderList => turnOrderSystem.CurrentOrder;
-    public IReadOnlyList<BattleUnit> NextOrderList    => turnOrderSystem.NextOrder;
+    public IReadOnlyList<BattleUnit> NextOrderList => turnOrderSystem.NextOrder;
 
     [Header("目标选择")]
     public GameObject enemySelectArrowPrefab;
@@ -935,6 +935,7 @@ public class BattleManager : MonoBehaviour
 
         unit.InitializeBattleState();
         unit.ClearAllStatusEffects();
+        unit.PlayBattlePresentation(true);
 
         if (!preserveCurrentResources)
             return;

@@ -114,6 +114,24 @@ public static class BattleUnitDefinitionUtility
             : new List<StatusEffectType>();
 
         target.tachie = source.tachie;
+        target.idleAnimationSource = source.idleAnimationSource;
+        target.battleAnimator = null;
+        target.idleAnimationStateName = source.idleAnimationStateName;
+        target.randomizeAnimatorIdleStartTime = source.randomizeAnimatorIdleStartTime;
+        target.idleAnimationFrames = source.idleAnimationFrames != null
+            ? new List<Sprite>(source.idleAnimationFrames)
+            : new List<Sprite>();
+        target.idleAnimationFrameInterval = source.idleAnimationFrameInterval;
+        target.idleAnimationLoop = source.idleAnimationLoop;
+        target.randomizeIdleStartFrame = source.randomizeIdleStartFrame;
+        target.playBattleEnterAnimation = source.playBattleEnterAnimation;
+        target.enterAnimationStateName = source.enterAnimationStateName;
+        target.randomizeEnterAnimationStartTime = source.randomizeEnterAnimationStartTime;
+        target.waitForEnterAnimationToFinish = source.waitForEnterAnimationToFinish;
+        target.enterAnimationFallbackDuration = source.enterAnimationFallbackDuration;
+        target.playBattleEnterMove = source.playBattleEnterMove;
+        target.enterMoveDistance = source.enterMoveDistance;
+        target.enterMoveDuration = source.enterMoveDuration;
 
         target.artsAbilityMultiplier = source.artsAbilityMultiplier;
         target.forcedDamageReductionMultiplier = source.forcedDamageReductionMultiplier;

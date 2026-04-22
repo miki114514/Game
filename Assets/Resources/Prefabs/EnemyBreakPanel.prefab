@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
+  fixedTargetUnit: {fileID: 0}
   visibilityMode: 0
   followWorldTarget: 1
   worldOffset: {x: 0, y: 2, z: 0}
@@ -310,8 +311,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u5F31\u70B9"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 45474b7ff6e6f424b9351bbd409b78a0, type: 2}
-  m_sharedMaterial: {fileID: -8821383429395994804, guid: 45474b7ff6e6f424b9351bbd409b78a0,
+  m_fontAsset: {fileID: 11400000, guid: a190d88f063e9334f8cc8f2c1b7db7bb, type: 2}
+  m_sharedMaterial: {fileID: 5415551033365766485, guid: a190d88f063e9334f8cc8f2c1b7db7bb,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

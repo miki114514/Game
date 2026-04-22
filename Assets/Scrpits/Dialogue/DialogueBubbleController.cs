@@ -157,7 +157,15 @@ public class DialogueBubbleController : MonoBehaviour
         isComplete = false;
 
         if (string.IsNullOrEmpty(fullText))
+        {
+            isTyping = false;
+            isComplete = true;
+
+            if (nextIcon != null)
+                nextIcon.gameObject.SetActive(true);
+
             yield break;
+        }
 
         int totalChars = fullText.Length;
         float interval = duration / totalChars;

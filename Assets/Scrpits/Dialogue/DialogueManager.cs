@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
+    public static bool IsDialogueActive => Instance != null && Instance.currentSequence != null;
 
     [Header("UI")]
     public Canvas uiCanvas;
@@ -27,8 +29,28 @@ public class DialogueManager : MonoBehaviour
     private Dictionary<GameObject, string> playingDialogueAnimations =
         new Dictionary<GameObject, string>();
 
+    // 记录角色位移协程，确保同一角色的新位移会覆盖旧位移
+    private Dictionary<GameObject, Coroutine> playingMovementCoroutines =
+        new Dictionary<GameObject, Coroutine>();
+
+    // 记录每个角色最后朝向，和玩家移动动画逻辑保持一致
+    private Dictionary<GameObject, Vector2> lastFacingDirections =
+        new Dictionary<GameObject, Vector2>();
+
+    private struct MovementAnimatorParamSupport
+    {
+        public bool hasMoveX;
+        public bool hasMoveY;
+        public bool hasSpeed;
+        public bool hasIsRunning;
+    }
+
+    private Dictionary<Animator, MovementAnimatorParamSupport> movementAnimatorParamCache =
+        new Dictionary<Animator, MovementAnimatorParamSupport>();
+
     private DialogueSequence currentSequence;
     private int dialogueIndex = -1;
+    private int dialogueLineToken = 0;
 
     // ★玩家引用
     private PlayerController player;
@@ -48,8 +70,15 @@ public class DialogueManager : MonoBehaviour
         if (Input.GetKeyDown(skipKey))
         {
             DialogueLine currentLine = currentSequence.lines[dialogueIndex];
+            bool currentLineShouldShowBubble = ShouldShowBubble(currentLine);
 
-            GameObject character = GameObject.Find(currentLine.characterName);
+            if (!currentLineShouldShowBubble)
+            {
+                NextDialogue();
+                return;
+            }
+
+            GameObject character = FindCharacterByName(currentLine.characterName);
 
             if (character != null && activeBubbles.ContainsKey(character))
             {
@@ -109,10 +138,17 @@ public class DialogueManager : MonoBehaviour
     // -------------------- 播放下一句 --------------------
     void NextDialogue()
     {
-        // ★恢复角色动画
-        RestoreCharactersAnimation();
+        // 执行上一句设置为“句后”的角色显隐。
+        if (currentSequence != null && dialogueIndex >= 0 && dialogueIndex < currentSequence.lines.Length)
+        {
+            ApplyVisibilityChanges(currentSequence.lines[dialogueIndex], DialogueVisibilityTiming.AfterLine);
+        }
+
+        // 进入下一句前，先稳定清理上一句遗留气泡。
+        ClearAllActiveBubbles();
 
         dialogueIndex++;
+        dialogueLineToken++;
 
         if (currentSequence == null || dialogueIndex >= currentSequence.lines.Length)
         {
@@ -133,73 +169,56 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        ApplyVisibilityChanges(line, DialogueVisibilityTiming.BeforeLine);
+
         // 查找角色
-        GameObject character = GameObject.Find(line.characterName);
+        GameObject character = FindCharacterByName(line.characterName);
         if (character == null)
         {
             Debug.LogError("找不到角色: " + line.characterName);
+            NextDialogue();
             return;
         }
 
-        // ★播放角色动画
+        // 进入新句时，先取消该角色上一句可能仍在运行的位移协程，避免旧回调污染当前句。
+        StopMovementCoroutine(character);
+
         Animator animator = character.GetComponent<Animator>();
-        if (animator != null && !string.IsNullOrEmpty(line.animationName))
+        int expectedDialogueIndex = dialogueIndex;
+        int expectedLineToken = dialogueLineToken;
+        bool shouldShowBubble = ShouldShowBubble(line);
+
+        bool shouldDelayBubbleAndVoice =
+            shouldShowBubble && line.enableMovement && line.showBubbleAndVoiceAfterMovement;
+
+        Action onMovementCompleted = null;
+        if (shouldDelayBubbleAndVoice)
         {
-            // 记录角色原动画（只记录一次）
-            if (!originalAnimations.ContainsKey(character))
+            onMovementCompleted = () =>
             {
-                AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
-                originalAnimations[character] = state.shortNameHash.ToString();
-            }
+                bool stillSameLine =
+                    currentSequence != null &&
+                    dialogueIndex == expectedDialogueIndex &&
+                    dialogueLineToken == expectedLineToken;
 
-            playingDialogueAnimations[character] = line.animationName;
-
-            animator.Play(line.animationName, 0, 0f);
+                if (stillSameLine)
+                    ShowBubbleForLine(line, character);
+            };
         }
 
-        // 查找 Anchor
-        Transform anchor = character.transform.Find("Anchor");
-        if (anchor == null)
+        // 有移动时：先移动（播移动动画），移动结束后再播放指定动画。
+        // 无移动时：直接播放指定动画。
+        TryMoveCharacter(line, character, animator, onMovementCompleted);
+
+        if (!line.enableMovement)
         {
-            Debug.LogError("角色没有 Anchor！");
-            return;
+            PlayDialogueAnimation(character, animator, line.animationName);
         }
 
-        // 如果角色已有气泡 → 删除
-        if (activeBubbles.ContainsKey(character))
+        if (shouldShowBubble && !shouldDelayBubbleAndVoice)
         {
-            Destroy(activeBubbles[character]);
+            ShowBubbleForLine(line, character);
         }
-
-        // 创建对应类型的气泡
-        GameObject prefab = GetBubblePrefab(line.bubbleType);
-        GameObject bubbleObj = Instantiate(prefab, uiCanvas.transform);
-
-        bubbleObj.SetActive(true);
-
-        DialogueBubbleController bubbleCtrl = bubbleObj.GetComponent<DialogueBubbleController>();
-        if (bubbleCtrl == null)
-        {
-            Debug.LogError("气泡预制体缺少 DialogueBubbleController！");
-            return;
-        }
-
-        // 显示气泡
-        bubbleCtrl.Show();
-
-        // 跟随角色
-        bubbleCtrl.FollowTarget(anchor, line.offset);
-
-        // 自动判断尾巴方向
-        TailDirection dir = GetDirectionFromOffset(line.offset);
-        bubbleCtrl.SetTailDirection(dir);
-
-        // 设置文字 + 音频 + 打字机
-        bubbleCtrl.SetText(line);
-
-        activeBubbles[character] = bubbleObj;
-
-        Debug.Log($"✅ 气泡已生成：{bubbleObj.name}，父对象：{bubbleObj.transform.parent.name}");
     }
 
     // -------------------- 获取气泡Prefab --------------------
@@ -250,6 +269,8 @@ public class DialogueManager : MonoBehaviour
         // ★恢复动画
         RestoreCharactersAnimation();
 
+        StopAllMovementCoroutines();
+
         // ★ 玩家移动控制：恢复移动
         if (player != null)
         {
@@ -264,6 +285,438 @@ public class DialogueManager : MonoBehaviour
         activeBubbles.Clear();
         currentSequence = null;
         dialogueIndex = -1;
+    }
+
+    void TryMoveCharacter(DialogueLine line, GameObject character, Animator animator, Action onMovementCompleted)
+    {
+        if (line == null || character == null || !line.enableMovement)
+            return;
+
+        Transform characterTransform = character.transform;
+        Vector3 startPos = characterTransform.position;
+        Vector3 targetPos = line.useRelativeMovement
+            ? startPos + line.moveOffset
+            : line.moveTargetWorldPosition;
+
+        if (!line.useRelativeMovement &&
+            line.moveTargetWorldPosition == Vector3.zero &&
+            line.moveOffset != Vector3.zero)
+        {
+            targetPos = startPos + line.moveOffset;
+            Debug.LogWarning($"{line.characterName} 当前句使用绝对位移，但 Move Target World Position 为 (0,0,0) 且 Move Offset 不为 0。已自动回退为相对位移，避免角色意外回到世界原点。\n如果你需要绝对位移，请填写有效世界坐标。\n");
+        }
+
+        float duration = Mathf.Max(0f, line.moveDuration);
+
+        if (playingMovementCoroutines.TryGetValue(character, out Coroutine running))
+        {
+            if (running != null)
+                StopCoroutine(running);
+
+            playingMovementCoroutines.Remove(character);
+        }
+
+        Vector3 delta = targetPos - startPos;
+        bool useDialogueAnimationDuringMovement =
+            line.useDialogueAnimationDuringMovement && !string.IsNullOrEmpty(line.animationName);
+
+        if (line.useDialogueAnimationDuringMovement && string.IsNullOrEmpty(line.animationName))
+        {
+            Debug.LogWarning($"{line.characterName} 启用了 useDialogueAnimationDuringMovement，但 Animation Name 为空，将回退为移动动画参数驱动。\n请在该句填写 Animation Name。\n");
+        }
+
+        // 参数驱动移动前，先释放该角色上一句的对话动画覆盖，避免旧固定状态吞掉跑步/行走动画。
+        if (!useDialogueAnimationDuringMovement)
+        {
+            ReleaseDialogueAnimationOverride(character, animator);
+        }
+
+        if (duration <= 0f)
+        {
+            characterTransform.position = targetPos;
+            ApplyMovementAnimation(animator, delta, false, character, line.moveStyle);
+            PlayDialogueAnimation(character, animator, line.animationName);
+            onMovementCompleted?.Invoke();
+            return;
+        }
+
+        Coroutine moveCoroutine = StartCoroutine(
+            MoveCharacterRoutine(
+                character,
+                animator,
+                targetPos,
+                duration,
+                line.animationName,
+                line.moveStyle,
+                useDialogueAnimationDuringMovement,
+                onMovementCompleted
+            )
+        );
+        playingMovementCoroutines[character] = moveCoroutine;
+    }
+
+    System.Collections.IEnumerator MoveCharacterRoutine(
+        GameObject character,
+        Animator animator,
+        Vector3 targetPos,
+        float duration,
+        string pendingDialogueAnimation,
+        DialogueMoveStyle moveStyle,
+        bool useDialogueAnimationDuringMovement,
+        Action onMovementCompleted
+    )
+    {
+        if (character == null)
+            yield break;
+
+        Transform characterTransform = character.transform;
+        Vector3 startPos = characterTransform.position;
+        Vector3 moveDelta = targetPos - startPos;
+
+        if (useDialogueAnimationDuringMovement)
+        {
+            PlayDialogueAnimation(character, animator, pendingDialogueAnimation);
+        }
+        else
+        {
+            ApplyMovementAnimation(animator, moveDelta, true, character, moveStyle);
+        }
+
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            if (character == null)
+                yield break;
+
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            characterTransform.position = Vector3.Lerp(startPos, targetPos, t);
+            yield return null;
+        }
+
+        if (character != null)
+            characterTransform.position = targetPos;
+
+        if (!useDialogueAnimationDuringMovement)
+        {
+            ApplyMovementAnimation(animator, moveDelta, false, character, moveStyle);
+        }
+
+        playingMovementCoroutines.Remove(character);
+
+        if (character != null && !useDialogueAnimationDuringMovement)
+            PlayDialogueAnimation(character, animator, pendingDialogueAnimation);
+
+        onMovementCompleted?.Invoke();
+    }
+
+    void ShowBubbleForLine(DialogueLine line, GameObject character)
+    {
+        if (line == null || character == null)
+            return;
+
+        Transform anchor = character.transform.Find("Anchor");
+        if (anchor == null)
+        {
+            Debug.LogError("角色没有 Anchor！");
+            return;
+        }
+
+        if (activeBubbles.ContainsKey(character))
+        {
+            Destroy(activeBubbles[character]);
+        }
+
+        GameObject prefab = GetBubblePrefab(line.bubbleType);
+        GameObject bubbleObj = Instantiate(prefab, uiCanvas.transform);
+        bubbleObj.SetActive(true);
+
+        DialogueBubbleController bubbleCtrl = bubbleObj.GetComponent<DialogueBubbleController>();
+        if (bubbleCtrl == null)
+        {
+            Debug.LogError("气泡预制体缺少 DialogueBubbleController！");
+            return;
+        }
+
+        bubbleCtrl.Show();
+        bubbleCtrl.FollowTarget(anchor, line.offset);
+
+        TailDirection dir = GetDirectionFromOffset(line.offset);
+        bubbleCtrl.SetTailDirection(dir);
+
+        bubbleCtrl.SetText(line);
+
+        activeBubbles[character] = bubbleObj;
+
+        Debug.Log($"✅ 气泡已生成：{bubbleObj.name}，父对象：{bubbleObj.transform.parent.name}");
+    }
+
+    void StopAllMovementCoroutines()
+    {
+        foreach (var pair in playingMovementCoroutines)
+        {
+            if (pair.Value != null)
+                StopCoroutine(pair.Value);
+        }
+
+        playingMovementCoroutines.Clear();
+    }
+
+    void ClearAllActiveBubbles()
+    {
+        foreach (var pair in activeBubbles)
+        {
+            if (pair.Value != null)
+            {
+                Destroy(pair.Value);
+            }
+        }
+
+        activeBubbles.Clear();
+    }
+
+    void StopMovementCoroutine(GameObject character)
+    {
+        if (character == null)
+            return;
+
+        if (!playingMovementCoroutines.TryGetValue(character, out Coroutine running))
+            return;
+
+        if (running != null)
+            StopCoroutine(running);
+
+        playingMovementCoroutines.Remove(character);
+    }
+
+    void ReleaseDialogueAnimationOverride(GameObject character, Animator animator)
+    {
+        if (character == null)
+            return;
+
+        bool hadDialogueOverride = playingDialogueAnimations.Remove(character);
+        if (!hadDialogueOverride)
+            return;
+
+        ClearCharacterExternalAnimationControl(character);
+
+        if (animator == null)
+            return;
+
+        if (!originalAnimations.TryGetValue(character, out string originalAnimHash))
+            return;
+
+        if (string.IsNullOrEmpty(originalAnimHash))
+            return;
+
+        if (int.TryParse(originalAnimHash, out int hash))
+        {
+            animator.Play(hash, 0, 0f);
+        }
+    }
+
+    bool ShouldShowBubble(DialogueLine line)
+    {
+        if (line == null || !line.enableBubble)
+            return false;
+
+        bool hasText = !string.IsNullOrWhiteSpace(line.text);
+        return hasText || line.showBubbleWhenTextEmpty;
+    }
+
+    void ApplyVisibilityChanges(DialogueLine line, DialogueVisibilityTiming timing)
+    {
+        if (line == null || line.visibilityChanges == null || line.visibilityChanges.Length == 0)
+            return;
+
+        for (int i = 0; i < line.visibilityChanges.Length; i++)
+        {
+            DialogueVisibilityChange change = line.visibilityChanges[i];
+            if (change == null || change.timing != timing)
+                continue;
+
+            if (string.IsNullOrWhiteSpace(change.characterName))
+                continue;
+
+            GameObject targetCharacter = FindCharacterByName(change.characterName);
+            if (targetCharacter == null)
+            {
+                Debug.LogWarning($"显隐目标不存在: {change.characterName}");
+                continue;
+            }
+
+            if (change.setVisible)
+            {
+                if (!targetCharacter.activeSelf)
+                    targetCharacter.SetActive(true);
+            }
+            else
+            {
+                StopMovementCoroutine(targetCharacter);
+
+                if (activeBubbles.TryGetValue(targetCharacter, out GameObject bubble))
+                {
+                    if (bubble != null)
+                        Destroy(bubble);
+
+                    activeBubbles.Remove(targetCharacter);
+                }
+
+                ClearCharacterExternalAnimationControl(targetCharacter);
+                playingDialogueAnimations.Remove(targetCharacter);
+                originalAnimations.Remove(targetCharacter);
+
+                if (targetCharacter.activeSelf)
+                    targetCharacter.SetActive(false);
+            }
+        }
+    }
+
+    GameObject FindCharacterByName(string characterName)
+    {
+        if (string.IsNullOrWhiteSpace(characterName))
+            return null;
+
+        GameObject foundActive = GameObject.Find(characterName);
+        if (foundActive != null)
+            return foundActive;
+
+        Transform[] allTransforms = Resources.FindObjectsOfTypeAll<Transform>();
+        for (int i = 0; i < allTransforms.Length; i++)
+        {
+            Transform transform = allTransforms[i];
+            if (transform == null)
+                continue;
+
+            GameObject go = transform.gameObject;
+            if (go == null || !go.scene.IsValid())
+                continue;
+
+            if (go.name == characterName)
+                return go;
+        }
+
+        return null;
+    }
+
+    void PlayDialogueAnimation(GameObject character, Animator animator, string animationName)
+    {
+        if (character == null || animator == null || string.IsNullOrEmpty(animationName))
+            return;
+
+        ClearCharacterExternalAnimationControl(character);
+
+        if (!originalAnimations.ContainsKey(character))
+        {
+            AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
+            originalAnimations[character] = state.shortNameHash.ToString();
+        }
+
+        playingDialogueAnimations[character] = animationName;
+        animator.Play(animationName, 0, 0f);
+    }
+
+    void ApplyMovementAnimation(Animator animator, Vector3 worldDelta, bool moving, GameObject character, DialogueMoveStyle moveStyle)
+    {
+        if (animator == null || character == null)
+            return;
+
+        MovementAnimatorParamSupport support = GetMovementAnimatorParamSupport(animator);
+
+        Vector2 currentFacing = GetLastFacing(character);
+        Vector2 moveDir = ConvertWorldDeltaToMoveVector(worldDelta);
+
+        if (moveDir.sqrMagnitude > 0.0001f)
+        {
+            moveDir.Normalize();
+            currentFacing = moveDir;
+            lastFacingDirections[character] = currentFacing;
+        }
+
+        bool isRunning = moving && moveStyle == DialogueMoveStyle.Run;
+
+        PlayerController characterPlayerController = character.GetComponent<PlayerController>();
+        if (characterPlayerController != null)
+        {
+            characterPlayerController.SetExternalAnimationControl(currentFacing, moving ? 1f : 0f, isRunning);
+        }
+
+        if (support.hasIsRunning)
+            animator.SetBool("isRunning", isRunning);
+
+        if (support.hasMoveX)
+            animator.SetFloat("MoveX", currentFacing.x);
+
+        if (support.hasMoveY)
+            animator.SetFloat("MoveY", currentFacing.y);
+
+        if (support.hasSpeed)
+            animator.SetFloat("Speed", moving ? 1f : 0f);
+    }
+
+    Vector2 ConvertWorldDeltaToMoveVector(Vector3 worldDelta)
+    {
+        float vertical = Mathf.Abs(worldDelta.z) >= Mathf.Abs(worldDelta.y)
+            ? worldDelta.z
+            : worldDelta.y;
+
+        return new Vector2(worldDelta.x, vertical);
+    }
+
+    void ClearCharacterExternalAnimationControl(GameObject character)
+    {
+        if (character == null)
+            return;
+
+        PlayerController characterPlayerController = character.GetComponent<PlayerController>();
+        if (characterPlayerController != null)
+        {
+            characterPlayerController.ClearExternalAnimationControl();
+        }
+    }
+
+    Vector2 GetLastFacing(GameObject character)
+    {
+        if (character == null)
+            return Vector2.down;
+
+        if (lastFacingDirections.TryGetValue(character, out Vector2 facing))
+            return facing;
+
+        lastFacingDirections[character] = Vector2.down;
+        return Vector2.down;
+    }
+
+    MovementAnimatorParamSupport GetMovementAnimatorParamSupport(Animator animator)
+    {
+        if (animator == null)
+            return default;
+
+        if (movementAnimatorParamCache.TryGetValue(animator, out MovementAnimatorParamSupport support))
+            return support;
+
+        support = new MovementAnimatorParamSupport();
+        AnimatorControllerParameter[] parameters = animator.parameters;
+
+        for (int i = 0; i < parameters.Length; i++)
+        {
+            AnimatorControllerParameter parameter = parameters[i];
+
+            if (parameter.type == AnimatorControllerParameterType.Float)
+            {
+                if (parameter.name == "MoveX") support.hasMoveX = true;
+                else if (parameter.name == "MoveY") support.hasMoveY = true;
+                else if (parameter.name == "Speed") support.hasSpeed = true;
+            }
+            else if (parameter.type == AnimatorControllerParameterType.Bool)
+            {
+                if (parameter.name == "isRunning") support.hasIsRunning = true;
+            }
+        }
+
+        movementAnimatorParamCache[animator] = support;
+        return support;
     }
 
     // -------------------- 根据offset自动判断尾巴方向 --------------------

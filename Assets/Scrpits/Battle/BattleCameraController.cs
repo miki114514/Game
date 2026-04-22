@@ -78,6 +78,8 @@ public class BattleCameraController : MonoBehaviour
     private float _defaultFieldOfView;
 
     private Vector3 _overviewLookPoint;
+    private Vector3 _resolvedOverviewPosition;
+    private float _resolvedOverviewBackOffset;
     private float _resolvedOverviewOrthoSize;
     private float _resolvedOverviewFieldOfView;
 
@@ -248,14 +250,18 @@ public class BattleCameraController : MonoBehaviour
             if (unit == null || !unit.gameObject.activeInHierarchy)
                 continue;
 
+            if (!TryGetUnitRenderBounds(unit, out Bounds unitBounds))
+                continue;
+
             if (!hasBounds)
             {
-                bounds = new Bounds(unit.transform.position, Vector3.zero);
+                bounds = unitBounds;
                 hasBounds = true;
             }
             else
             {
-                bounds.Encapsulate(unit.transform.position);
+                bounds.Encapsulate(unitBounds.min);
+                bounds.Encapsulate(unitBounds.max);
             }
         }
 
@@ -265,21 +271,56 @@ public class BattleCameraController : MonoBehaviour
         if (overviewAnchor == null)
             _overviewLookPoint = bounds.center + overviewWorldOffset;
 
-        float halfWidth = bounds.size.x * 0.5f + overviewPadding;
-        float halfHeight = bounds.size.y * 0.5f + overviewPadding;
-
         if (targetCamera.orthographic)
         {
+            Vector3[] corners = GetBoundsCorners(bounds);
             float aspect = Mathf.Max(0.1f, targetCamera.aspect);
-            float heightFromWidth = halfWidth / aspect;
-            _resolvedOverviewOrthoSize = Mathf.Max(_defaultOrthoSize, overviewOrthoSize, halfHeight, heightFromWidth);
+            Quaternion invRotation = Quaternion.Inverse(_defaultRotation);
+            float maxAbsX = 0f;
+            float maxAbsY = 0f;
+
+            foreach (Vector3 corner in corners)
+            {
+                Vector3 local = invRotation * (corner - _defaultPosition);
+                maxAbsX = Mathf.Max(maxAbsX, Mathf.Abs(local.x));
+                maxAbsY = Mathf.Max(maxAbsY, Mathf.Abs(local.y));
+            }
+
+            float requiredVertical = maxAbsY + overviewPadding;
+            float requiredByWidth = (maxAbsX + overviewPadding) / aspect;
+            _resolvedOverviewOrthoSize = Mathf.Max(_defaultOrthoSize, overviewOrthoSize, requiredVertical, requiredByWidth);
+            _resolvedOverviewPosition = _defaultPosition;
+            _resolvedOverviewBackOffset = 0f;
         }
         else
         {
-            float spread = Mathf.Max(bounds.size.x, bounds.size.y);
-            float t = Mathf.InverseLerp(2f, 12f, spread + overviewPadding);
-            float computedFov = Mathf.Lerp(focusFieldOfView, overviewFieldOfView, Mathf.Clamp01(t));
-            _resolvedOverviewFieldOfView = Mathf.Max(_defaultFieldOfView, computedFov);
+            Vector3[] corners = GetBoundsCorners(bounds);
+            Quaternion invRotation = Quaternion.Inverse(_defaultRotation);
+            float aspect = Mathf.Max(0.1f, targetCamera.aspect);
+            float minZ = float.MaxValue;
+
+            foreach (Vector3 corner in corners)
+            {
+                Vector3 local = invRotation * (corner - _defaultPosition);
+                minZ = Mathf.Min(minZ, local.z);
+            }
+
+            float minSafeZ = targetCamera.nearClipPlane + 0.25f;
+            _resolvedOverviewBackOffset = Mathf.Max(0f, minSafeZ - minZ);
+
+            float requiredTanHalfVertical = 0f;
+            foreach (Vector3 corner in corners)
+            {
+                Vector3 local = invRotation * (corner - _defaultPosition);
+                float z = Mathf.Max(0.01f, local.z + _resolvedOverviewBackOffset);
+                float byHeight = (Mathf.Abs(local.y) + overviewPadding) / z;
+                float byWidth = (Mathf.Abs(local.x) + overviewPadding) / (z * aspect);
+                requiredTanHalfVertical = Mathf.Max(requiredTanHalfVertical, byHeight, byWidth);
+            }
+
+            float computedFov = Mathf.Rad2Deg * 2f * Mathf.Atan(requiredTanHalfVertical);
+            _resolvedOverviewFieldOfView = Mathf.Max(_defaultFieldOfView, overviewFieldOfView, computedFov);
+            _resolvedOverviewPosition = _defaultPosition - (_defaultRotation * Vector3.forward) * _resolvedOverviewBackOffset;
         }
     }
 
@@ -289,6 +330,8 @@ public class BattleCameraController : MonoBehaviour
             ? overviewAnchor.position + overviewWorldOffset
             : transform.position + transform.forward * 10f + overviewWorldOffset;
 
+        _resolvedOverviewPosition = _defaultPosition;
+        _resolvedOverviewBackOffset = 0f;
         _resolvedOverviewOrthoSize = Mathf.Max(overviewOrthoSize, _defaultOrthoSize);
         _resolvedOverviewFieldOfView = Mathf.Max(overviewFieldOfView, _defaultFieldOfView);
     }
@@ -402,11 +445,64 @@ public class BattleCameraController : MonoBehaviour
     Vector3 GetDesiredPositionForCurrentMode()
     {
         if (_mode == CameraMode.Overview)
-            return ClampPosition(_defaultPosition);
+            return ClampPosition(_resolvedOverviewPosition);
 
         Vector3 delta = (_focusPoint - _overviewLookPoint) * focusFollowWeight;
-        Vector3 desired = _defaultPosition + delta;
+        Vector3 desired = _resolvedOverviewPosition + delta;
         return ClampPosition(desired);
+    }
+
+    bool TryGetUnitRenderBounds(BattleUnit unit, out Bounds bounds)
+    {
+        bounds = default;
+        if (unit == null)
+            return false;
+
+        Renderer[] renderers = unit.GetComponentsInChildren<Renderer>(true);
+        bool hasRendererBounds = false;
+
+        foreach (Renderer renderer in renderers)
+        {
+            if (renderer == null || !renderer.enabled)
+                continue;
+
+            if (!hasRendererBounds)
+            {
+                bounds = renderer.bounds;
+                hasRendererBounds = true;
+            }
+            else
+            {
+                bounds.Encapsulate(renderer.bounds.min);
+                bounds.Encapsulate(renderer.bounds.max);
+            }
+        }
+
+        if (!hasRendererBounds)
+        {
+            bounds = new Bounds(unit.transform.position, Vector3.one * 0.5f);
+            return true;
+        }
+
+        return true;
+    }
+
+    Vector3[] GetBoundsCorners(Bounds bounds)
+    {
+        Vector3 min = bounds.min;
+        Vector3 max = bounds.max;
+
+        return new Vector3[]
+        {
+            new Vector3(min.x, min.y, min.z),
+            new Vector3(min.x, min.y, max.z),
+            new Vector3(min.x, max.y, min.z),
+            new Vector3(min.x, max.y, max.z),
+            new Vector3(max.x, min.y, min.z),
+            new Vector3(max.x, min.y, max.z),
+            new Vector3(max.x, max.y, min.z),
+            new Vector3(max.x, max.y, max.z),
+        };
     }
 
     Quaternion GetDesiredRotationForCurrentMode()

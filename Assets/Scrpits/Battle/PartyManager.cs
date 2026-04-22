@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class PartyMemberState
@@ -193,6 +194,13 @@ public class PartyMemberState
 [DefaultExecutionOrder(-1000)]
 public class PartyManager : MonoBehaviour
 {
+    [Serializable]
+    private struct SceneRootActivationSnapshot
+    {
+        public GameObject root;
+        public bool wasActive;
+    }
+
     public static PartyManager Instance { get; private set; }
 
     [Header("角色数据库")]
@@ -205,10 +213,15 @@ public class PartyManager : MonoBehaviour
 
     [Header("战斗流程")]
     public BattleEncounterData pendingEncounter;
+    [SerializeField] private string activeBattleSceneName;
 
     [Header("队伍运行时数据（调试）")]
     [SerializeField] private int partyMoney = 0;
     [SerializeField] private List<PartyMemberState> partyMembers = new List<PartyMemberState>();
+
+    private Scene explorationSceneBeforeBattle;
+    private bool isBattleTransitionInProgress;
+    private readonly List<SceneRootActivationSnapshot> suspendedSceneRoots = new List<SceneRootActivationSnapshot>();
 
     public int PartyMoney => partyMoney;
     public IReadOnlyList<PartyMemberState> PartyMembers => partyMembers;
@@ -319,6 +332,48 @@ public class PartyManager : MonoBehaviour
         pendingEncounter = encounter;
     }
 
+    public bool StartBattleFromCurrentScene(BattleEncounterData encounter, string battleSceneName)
+    {
+        if (isBattleTransitionInProgress)
+        {
+            Debug.LogWarning("[PartyManager] 当前正在进行场景切换，无法重复进入战斗。", this);
+            return false;
+        }
+
+        if (!string.IsNullOrWhiteSpace(activeBattleSceneName))
+        {
+            Debug.LogWarning("[PartyManager] 已处于战斗场景流程中。", this);
+            return false;
+        }
+
+        if (string.IsNullOrWhiteSpace(battleSceneName))
+        {
+            Debug.LogError("[PartyManager] battleSceneName 为空，无法进入战斗。", this);
+            return false;
+        }
+
+        if (!Application.CanStreamedLevelBeLoaded(battleSceneName))
+        {
+            Debug.LogError($"[PartyManager] 场景 `{battleSceneName}` 不可加载，请确认已加入 Build Settings。", this);
+            return false;
+        }
+
+        SetPendingEncounter(encounter);
+        StartCoroutine(LoadBattleSceneAdditiveRoutine(battleSceneName));
+        return true;
+    }
+
+    public void ReturnFromBattleToExploration(string battleSceneNameHint = null)
+    {
+        if (isBattleTransitionInProgress)
+        {
+            Debug.LogWarning("[PartyManager] 当前正在进行场景切换，无法执行返回探索。", this);
+            return;
+        }
+
+        StartCoroutine(UnloadBattleSceneAndResumeRoutine(battleSceneNameHint));
+    }
+
     public void ClearPendingEncounter()
     {
         pendingEncounter = null;
@@ -372,5 +427,110 @@ public class PartyManager : MonoBehaviour
             if (b == null) return -1;
             return a.formationIndex.CompareTo(b.formationIndex);
         });
+    }
+
+    System.Collections.IEnumerator LoadBattleSceneAdditiveRoutine(string battleSceneName)
+    {
+        isBattleTransitionInProgress = true;
+        explorationSceneBeforeBattle = SceneManager.GetActiveScene();
+
+        SuspendSceneRoots(explorationSceneBeforeBattle);
+
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(battleSceneName, LoadSceneMode.Additive);
+        if (loadOperation == null)
+        {
+            Debug.LogError($"[PartyManager] 加载战斗场景失败：{battleSceneName}", this);
+            RestoreSuspendedSceneRoots();
+            isBattleTransitionInProgress = false;
+            yield break;
+        }
+
+        yield return loadOperation;
+
+        Scene battleScene = SceneManager.GetSceneByName(battleSceneName);
+        if (!battleScene.IsValid() || !battleScene.isLoaded)
+        {
+            Debug.LogError($"[PartyManager] 战斗场景加载后无效：{battleSceneName}", this);
+            RestoreSuspendedSceneRoots();
+            isBattleTransitionInProgress = false;
+            yield break;
+        }
+
+        SceneManager.SetActiveScene(battleScene);
+        activeBattleSceneName = battleScene.name;
+        isBattleTransitionInProgress = false;
+
+        Debug.Log($"[PartyManager] 已进入战斗场景：{activeBattleSceneName}（探索场景状态已冻结）。", this);
+    }
+
+    System.Collections.IEnumerator UnloadBattleSceneAndResumeRoutine(string battleSceneNameHint)
+    {
+        isBattleTransitionInProgress = true;
+
+        string sceneNameToUnload = !string.IsNullOrWhiteSpace(activeBattleSceneName)
+            ? activeBattleSceneName
+            : battleSceneNameHint;
+
+        if (!string.IsNullOrWhiteSpace(sceneNameToUnload))
+        {
+            Scene battleScene = SceneManager.GetSceneByName(sceneNameToUnload);
+            if (battleScene.IsValid() && battleScene.isLoaded)
+            {
+                AsyncOperation unloadOperation = SceneManager.UnloadSceneAsync(battleScene);
+                if (unloadOperation != null)
+                    yield return unloadOperation;
+            }
+        }
+
+        if (explorationSceneBeforeBattle.IsValid() && explorationSceneBeforeBattle.isLoaded)
+            SceneManager.SetActiveScene(explorationSceneBeforeBattle);
+
+        RestoreSuspendedSceneRoots();
+        activeBattleSceneName = string.Empty;
+        ClearPendingEncounter();
+        isBattleTransitionInProgress = false;
+
+        Debug.Log("[PartyManager] 已退出战斗并恢复探索场景状态。", this);
+    }
+
+    void SuspendSceneRoots(Scene scene)
+    {
+        suspendedSceneRoots.Clear();
+
+        if (!scene.IsValid() || !scene.isLoaded)
+            return;
+
+        GameObject[] roots = scene.GetRootGameObjects();
+        for (int i = 0; i < roots.Length; i++)
+        {
+            GameObject root = roots[i];
+            if (root == null)
+                continue;
+
+            SceneRootActivationSnapshot snapshot = new SceneRootActivationSnapshot
+            {
+                root = root,
+                wasActive = root.activeSelf
+            };
+
+            suspendedSceneRoots.Add(snapshot);
+
+            if (root.activeSelf)
+                root.SetActive(false);
+        }
+    }
+
+    void RestoreSuspendedSceneRoots()
+    {
+        for (int i = 0; i < suspendedSceneRoots.Count; i++)
+        {
+            SceneRootActivationSnapshot snapshot = suspendedSceneRoots[i];
+            if (snapshot.root == null)
+                continue;
+
+            snapshot.root.SetActive(snapshot.wasActive);
+        }
+
+        suspendedSceneRoots.Clear();
     }
 }

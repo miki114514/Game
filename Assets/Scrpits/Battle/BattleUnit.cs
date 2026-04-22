@@ -27,6 +27,13 @@ public enum ElementType
     Dark
 }
 
+public enum BattleIdleAnimationSource
+{
+    SpriteFrames,
+    AnimatorState,
+    Auto
+}
+
 /// <summary>
 /// 扁平化弱点枚举：供敌人弱点列表与 Break UI 映射使用。
 /// 保留 Strike / Pierce 作为旧数据兼容项。
@@ -77,6 +84,35 @@ public class BattleUnit : MonoBehaviour
     [Header("头像")]
     [Tooltip("角色立绘素材，将自动裁剪头部区域生成 Portrait 头像")]
     public Sprite tachie;
+
+    [Header("战斗待机动画")]
+    [Tooltip("选择待机动画来源：SpriteFrames=逐帧切图，AnimatorState=播放 Animator 状态，Auto=优先 Animator，失败回退逐帧/静态图")]
+    public BattleIdleAnimationSource idleAnimationSource = BattleIdleAnimationSource.SpriteFrames;
+    [Tooltip("不指定时会自动从自身或子物体查找 Animator")]
+    public Animator battleAnimator;
+    [Tooltip("Animator 待机状态名，支持完整路径，如 Base Layer.Idle")]
+    public string idleAnimationStateName;
+    public bool randomizeAnimatorIdleStartTime = true;
+
+    [Tooltip("留空时默认使用挂载的 SpriteRenderer 当前图片")]
+    public List<Sprite> idleAnimationFrames = new List<Sprite>();
+    [Min(0.01f)] public float idleAnimationFrameInterval = 0.16f;
+    public bool idleAnimationLoop = true;
+    public bool randomizeIdleStartFrame = true;
+    [Tooltip("不指定时会自动从自身或子物体查找 SpriteRenderer")]
+    public SpriteRenderer battleSpriteRenderer;
+
+    [Header("战斗入场动画")]
+    public bool playBattleEnterAnimation = true;
+    [Tooltip("Animator 入场状态名，支持完整路径，如 Base Layer.BU_Shulk_Enter")]
+    public string enterAnimationStateName;
+    public bool randomizeEnterAnimationStartTime = false;
+    [Tooltip("勾选后会等待入场动画首轮播放完毕再切换到待机")]
+    public bool waitForEnterAnimationToFinish = true;
+    [Min(0f)] public float enterAnimationFallbackDuration = 0.35f;
+    public bool playBattleEnterMove = true;
+    [Min(0f)] public float enterMoveDistance = 3.5f;
+    [Min(0.01f)] public float enterMoveDuration = 0.35f;
 
     [Header("头像裁剪参数")]
     public bool adaptiveCropByOpaqueBounds = true;
@@ -190,6 +226,16 @@ public class BattleUnit : MonoBehaviour
     private int breakSkipTurnCount = 0;
     private bool isDefending = false;
     private bool hasEnteredTurnOnce = false;
+    private Sprite defaultIdleSprite;
+    private int currentIdleFrameIndex = -1;
+    private float idleAnimationElapsed = 0f;
+    private bool hasIdleAnimationFrames = false;
+    private bool isUsingAnimatorIdle = false;
+    private bool isPlayingEnterAnimation = false;
+    private bool hasPlayedBattlePresentation = false;
+    private Vector3 spawnPoint;
+    private Vector3 battlePresentationAnchorPosition;
+    private Coroutine battlePresentationCoroutine;
 
     public bool IsDefending => isDefending;
     public int CurrentBP => currentBP;
@@ -218,6 +264,379 @@ public class BattleUnit : MonoBehaviour
     {
         _generatedPortrait = null;
         InitializeBattleState();
+        EnsureAnimationReferences();
+        spawnPoint = transform.position;
+        battlePresentationAnchorPosition = transform.position;
+    }
+
+    void Update()
+    {
+        if (isPlayingEnterAnimation)
+            return;
+
+        TickIdleAnimation();
+    }
+
+    void EnsureAnimationReferences()
+    {
+        if (battleAnimator == null)
+            battleAnimator = GetComponentInChildren<Animator>();
+
+        if (battleSpriteRenderer == null)
+            battleSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    }
+
+    System.Collections.IEnumerator PlayEnterAnimationThenIdleRoutine()
+    {
+        bool hasEnterAnimator = TryPlayEnterAnimation(out float enterAnimDuration);
+        bool hasEnterMove = TrySetupEnterMove(out Vector3 moveStartPos, out Vector3 moveTargetPos, out float moveDuration);
+
+        float waitDuration = 0f;
+        if (waitForEnterAnimationToFinish && hasEnterAnimator)
+            waitDuration = Mathf.Max(waitDuration, enterAnimDuration);
+        if (hasEnterMove)
+            waitDuration = Mathf.Max(waitDuration, moveDuration);
+
+        if (hasEnterMove)
+            transform.position = moveStartPos;
+
+        if (waitDuration > 0f)
+        {
+            isPlayingEnterAnimation = true;
+
+            float elapsed = 0f;
+            // Additive scene loading can produce a very large first-frame deltaTime.
+            // Yield once so the unit is rendered at the entry start position before interpolation begins.
+            yield return null;
+
+            while (elapsed < waitDuration)
+            {
+                // Clamp time step to avoid jumping to target in one frame after scene transitions.
+                float step = Mathf.Min(Time.deltaTime, 0.05f);
+                if (step <= 0f)
+                {
+                    yield return null;
+                    continue;
+                }
+
+                elapsed += step;
+                if (hasEnterMove)
+                {
+                    float t = Mathf.Clamp01(elapsed / moveDuration);
+                    transform.position = Vector3.Lerp(moveStartPos, moveTargetPos, t);
+                }
+
+                yield return null;
+            }
+
+            if (hasEnterMove)
+                transform.position = moveTargetPos;
+
+            isPlayingEnterAnimation = false;
+        }
+        else if (hasEnterMove)
+        {
+            transform.position = moveTargetPos;
+        }
+
+        InitializeIdleAnimation();
+    }
+
+    public void PlayBattlePresentation(bool forceRestart)
+    {
+        if (!isActiveAndEnabled)
+            return;
+
+        EnsureAnimationReferences();
+
+        if (forceRestart)
+        {
+            if (battlePresentationCoroutine != null)
+            {
+                StopCoroutine(battlePresentationCoroutine);
+                battlePresentationCoroutine = null;
+            }
+
+            hasPlayedBattlePresentation = false;
+            isPlayingEnterAnimation = false;
+            // 重启时先将单位归位到出生点，避免动画中途打断时捕获到偏移位置
+            transform.position = spawnPoint;
+            battlePresentationAnchorPosition = spawnPoint;
+        }
+
+        if (hasPlayedBattlePresentation)
+            return;
+
+        battlePresentationCoroutine = StartCoroutine(PlayBattlePresentationRoutine());
+    }
+
+    System.Collections.IEnumerator PlayBattlePresentationRoutine()
+    {
+        hasPlayedBattlePresentation = true;
+        yield return PlayEnterAnimationThenIdleRoutine();
+        battlePresentationCoroutine = null;
+    }
+
+    void InitializeIdleAnimation()
+    {
+        isUsingAnimatorIdle = false;
+        EnsureAnimationReferences();
+
+        if (TryPlayAnimatorIdle())
+        {
+            isUsingAnimatorIdle = true;
+            return;
+        }
+
+        if (battleSpriteRenderer == null)
+            return;
+
+        defaultIdleSprite = battleSpriteRenderer.sprite;
+        hasIdleAnimationFrames = HasValidIdleAnimationFrames();
+        currentIdleFrameIndex = -1;
+        idleAnimationElapsed = 0f;
+
+        if (!hasIdleAnimationFrames)
+        {
+            battleSpriteRenderer.sprite = defaultIdleSprite;
+            return;
+        }
+
+        int firstIndex = randomizeIdleStartFrame
+            ? GetRandomValidIdleFrameIndex()
+            : GetFirstValidIdleFrameIndex();
+
+        if (firstIndex < 0)
+        {
+            hasIdleAnimationFrames = false;
+            battleSpriteRenderer.sprite = defaultIdleSprite;
+            return;
+        }
+
+        ApplyIdleFrame(firstIndex);
+    }
+
+    void TickIdleAnimation()
+    {
+        if (isUsingAnimatorIdle || battleSpriteRenderer == null || !hasIdleAnimationFrames)
+            return;
+
+        float frameInterval = Mathf.Max(0.01f, idleAnimationFrameInterval);
+        idleAnimationElapsed += Time.deltaTime;
+        if (idleAnimationElapsed < frameInterval)
+            return;
+
+        idleAnimationElapsed -= frameInterval;
+
+        int nextIndex = idleAnimationLoop
+            ? GetNextValidIdleFrameIndex(currentIdleFrameIndex, true)
+            : GetNextValidIdleFrameIndex(currentIdleFrameIndex, false);
+
+        if (nextIndex >= 0)
+            ApplyIdleFrame(nextIndex);
+    }
+
+    bool HasValidIdleAnimationFrames()
+    {
+        if (idleAnimationFrames == null || idleAnimationFrames.Count == 0)
+            return false;
+
+        for (int i = 0; i < idleAnimationFrames.Count; i++)
+        {
+            if (idleAnimationFrames[i] != null)
+                return true;
+        }
+
+        return false;
+    }
+
+    int GetFirstValidIdleFrameIndex()
+    {
+        if (idleAnimationFrames == null)
+            return -1;
+
+        for (int i = 0; i < idleAnimationFrames.Count; i++)
+        {
+            if (idleAnimationFrames[i] != null)
+                return i;
+        }
+
+        return -1;
+    }
+
+    int GetRandomValidIdleFrameIndex()
+    {
+        if (idleAnimationFrames == null || idleAnimationFrames.Count == 0)
+            return -1;
+
+        List<int> validIndices = new List<int>();
+        for (int i = 0; i < idleAnimationFrames.Count; i++)
+        {
+            if (idleAnimationFrames[i] != null)
+                validIndices.Add(i);
+        }
+
+        if (validIndices.Count == 0)
+            return -1;
+
+        int picked = UnityEngine.Random.Range(0, validIndices.Count);
+        return validIndices[picked];
+    }
+
+    int GetNextValidIdleFrameIndex(int currentIndex, bool wrap)
+    {
+        if (idleAnimationFrames == null || idleAnimationFrames.Count == 0)
+            return -1;
+
+        for (int i = currentIndex + 1; i < idleAnimationFrames.Count; i++)
+        {
+            if (idleAnimationFrames[i] != null)
+                return i;
+        }
+
+        if (!wrap)
+            return -1;
+
+        for (int i = 0; i <= currentIndex && i < idleAnimationFrames.Count; i++)
+        {
+            if (idleAnimationFrames[i] != null)
+                return i;
+        }
+
+        return -1;
+    }
+
+    void ApplyIdleFrame(int frameIndex)
+    {
+        if (battleSpriteRenderer == null || idleAnimationFrames == null)
+            return;
+
+        if (frameIndex < 0 || frameIndex >= idleAnimationFrames.Count)
+            return;
+
+        Sprite frame = idleAnimationFrames[frameIndex];
+        if (frame == null)
+            return;
+
+        battleSpriteRenderer.sprite = frame;
+        currentIdleFrameIndex = frameIndex;
+    }
+
+    bool TryPlayEnterAnimation(out float duration)
+    {
+        duration = 0f;
+
+        if (!playBattleEnterAnimation)
+            return false;
+
+        if (battleAnimator == null)
+        {
+            Debug.LogWarning($"[BattleUnit] {unitName} 未找到 Animator，跳过入场动画。", this);
+            return false;
+        }
+
+        if (string.IsNullOrWhiteSpace(enterAnimationStateName))
+        {
+            Debug.LogWarning($"[BattleUnit] {unitName} 未配置 Enter State Name，跳过入场动画。", this);
+            return false;
+        }
+
+        string trimmedStateName = enterAnimationStateName.Trim();
+        if (!HasAnimatorState(trimmedStateName))
+        {
+            Debug.LogWarning($"[BattleUnit] {unitName} 找不到入场状态 `{trimmedStateName}`，跳过入场动画。", this);
+            return false;
+        }
+
+        float startTime = randomizeEnterAnimationStartTime ? UnityEngine.Random.value : 0f;
+        battleAnimator.Play(trimmedStateName, -1, startTime);
+        battleAnimator.Update(0f);
+
+        AnimatorStateInfo stateInfo = battleAnimator.GetCurrentAnimatorStateInfo(0);
+        duration = Mathf.Max(enterAnimationFallbackDuration, stateInfo.length);
+        return true;
+    }
+
+    bool TrySetupEnterMove(out Vector3 startPos, out Vector3 targetPos, out float duration)
+    {
+        targetPos = spawnPoint;   // 始终以 Awake 时记录的出生点为落点
+        startPos = targetPos;
+        duration = Mathf.Max(0.01f, enterMoveDuration);
+
+        if (!playBattleEnterAnimation || !playBattleEnterMove)
+            return false;
+
+        float distance = Mathf.Max(0f, enterMoveDistance);
+        if (distance <= 0f)
+            return false;
+
+        Vector3 dir = unitType == UnitType.Player ? Vector3.right : Vector3.left;
+        startPos = targetPos + dir * distance;
+        return true;
+    }
+
+    bool TryPlayAnimatorIdle()
+    {
+        if (!ShouldUseAnimatorIdle())
+            return false;
+
+        if (battleAnimator == null)
+        {
+            Debug.LogWarning($"[BattleUnit] {unitName} 未找到 Animator，待机动画回退到 Sprite。", this);
+            return false;
+        }
+
+        if (string.IsNullOrWhiteSpace(idleAnimationStateName))
+        {
+            Debug.LogWarning($"[BattleUnit] {unitName} 未配置 Idle State Name，待机动画回退到 Sprite。", this);
+            return false;
+        }
+
+        string trimmedStateName = idleAnimationStateName.Trim();
+        if (!HasAnimatorState(trimmedStateName))
+        {
+            Debug.LogWarning($"[BattleUnit] {unitName} 找不到待机状态 `{trimmedStateName}`，待机动画回退到 Sprite。", this);
+            return false;
+        }
+
+        float startTime = randomizeAnimatorIdleStartTime ? UnityEngine.Random.value : 0f;
+        battleAnimator.Play(trimmedStateName, -1, startTime);
+        battleAnimator.Update(0f);
+        return true;
+    }
+
+    bool ShouldUseAnimatorIdle()
+    {
+        if (idleAnimationSource == BattleIdleAnimationSource.AnimatorState)
+            return true;
+
+        if (idleAnimationSource == BattleIdleAnimationSource.Auto)
+            return true;
+
+        return false;
+    }
+
+    bool HasAnimatorState(string stateName)
+    {
+        if (battleAnimator == null || string.IsNullOrWhiteSpace(stateName))
+            return false;
+
+        int fullHash = Animator.StringToHash(stateName);
+        for (int i = 0; i < battleAnimator.layerCount; i++)
+        {
+            if (battleAnimator.HasState(i, fullHash))
+                return true;
+        }
+
+        for (int i = 0; i < battleAnimator.layerCount; i++)
+        {
+            string layerQualifiedName = battleAnimator.GetLayerName(i) + "." + stateName;
+            int hash = Animator.StringToHash(layerQualifiedName);
+            if (battleAnimator.HasState(i, hash))
+                return true;
+        }
+
+        return false;
     }
 
     public void InitializeBattleState()

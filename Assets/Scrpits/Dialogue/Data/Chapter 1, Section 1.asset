@@ -1,0 +1,414 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc76937bbc916e4ca6b50984c2a9afa, type: 3}
+  m_Name: Chapter 1, Section 1
+  m_EditorClassIdentifier: 
+  lines:
+  - characterName: Shulk
+    text: "\u4E03\u4E00\u5F0F\u673A\u795E\u5175!"
+    bubbleType: 1
+    offset: {x: 0, y: 3, z: 0}
+    typewriterDuration: 2
+    voiceClip: {fileID: 8300000, guid: 9d99b1851a512fb4d9a406400d75ba26, type: 3}
+    animationName: Player_CrossArms
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 1
+    moveDuration: 1
+    useRelativeMovement: 1
+    moveOffset: {x: -2.4, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 1
+    visibilityChanges:
+    - characterName: Ryen
+      setVisible: 0
+      timing: 0
+    - characterName: Mus_01
+      setVisible: 0
+      timing: 0
+  - characterName: Shulk
+    text: "\u8FD9\u4E1C\u897F\u7684\u5149\u5B66\u8BA1"
+    bubbleType: 0
+    offset: {x: -2, y: 2.5, z: 0}
+    typewriterDuration: 1.5
+    voiceClip: {fileID: 8300000, guid: 80830afc163702446b44efa1f084c0ce, type: 3}
+    animationName: Player_Seek_Left
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.3
+    useRelativeMovement: 1
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u5E94\u8BE5\u80FD\u7528\u5728\u9632\u7A7A\u70AE\u7684\u7784\u51C6\u4E0A"
+    bubbleType: 0
+    offset: {x: -3, y: 2.5, z: 0}
+    typewriterDuration: 2
+    voiceClip: {fileID: 0}
+    animationName: Player_Seek_Left
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.3
+    useRelativeMovement: 1
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u4E0D\u884C\u554A\uFF0C\u5F7B\u5E95\u574F\u4E86"
+    bubbleType: 0
+    offset: {x: -2, y: 2.5, z: 0}
+    typewriterDuration: 3
+    voiceClip: {fileID: 8300000, guid: a6eee66b7643db342b307627ae468274, type: 3}
+    animationName: Player_Seek_Left
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.3
+    useRelativeMovement: 1
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u5173\u8282\u90E8\u5206 \u2014\u2014"
+    bubbleType: 0
+    offset: {x: -2, y: 2.5, z: 0}
+    typewriterDuration: 2
+    voiceClip: {fileID: 0}
+    animationName: Player_Seek_Left
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.3
+    useRelativeMovement: 1
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u90FD\u5F2F\u6210\u5708\u4E86"
+    bubbleType: 0
+    offset: {x: -1.5, y: 3, z: 0}
+    typewriterDuration: 1.2
+    voiceClip: {fileID: 0}
+    animationName: Player_CloseEyes_Left
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.3
+    useRelativeMovement: 1
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u8FD9\u6837\u5B50\u53EF\u7528\u4E0D\u4E86"
+    bubbleType: 0
+    offset: {x: -1.5, y: 3, z: 0}
+    typewriterDuration: 3
+    voiceClip: {fileID: 0}
+    animationName: Player_Relax
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.3
+    useRelativeMovement: 1
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: ...
+    bubbleType: 2
+    offset: {x: 2, y: 2, z: 0}
+    typewriterDuration: 1
+    voiceClip: {fileID: 0}
+    animationName: Player_Sleep
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 1
+    useRelativeMovement: 1
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 1
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u662F\u516D\u4E5D\u5F0F\uFF01"
+    bubbleType: 1
+    offset: {x: 0, y: 3, z: 0}
+    typewriterDuration: 1
+    voiceClip: {fileID: 8300000, guid: 80830afc163702446b44efa1f084c0ce, type: 3}
+    animationName: Player_Point_Right
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 1
+    useRelativeMovement: 1
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 1
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u8FD9\u5BB6\u4F19\u7684\u88C5\u7532 \u2014\u2014"
+    bubbleType: 0
+    offset: {x: 0, y: 3, z: 0}
+    typewriterDuration: 1.2
+    voiceClip: {fileID: 0}
+    animationName: Player_Seek_Right
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 1
+    moveDuration: 1
+    useRelativeMovement: 1
+    moveOffset: {x: 3.5, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 1
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 1
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u8BB0\u5F97\u6B63\u597D\u80FD\u62FF\u6765\u505A\u76FE\u724C"
+    bubbleType: 0
+    offset: {x: 0, y: 2.5, z: 0}
+    typewriterDuration: 2
+    voiceClip: {fileID: 0}
+    animationName: Player_Seek_Right
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 1
+    useRelativeMovement: 0
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 1
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u770B\u770B\u80FD\u4E0D\u80FD\u6252\u4E0B\u6765\u5E26\u56DE\u53BB"
+    bubbleType: 0
+    offset: {x: 0, y: 3, z: 0}
+    typewriterDuration: 2
+    voiceClip: {fileID: 0}
+    animationName: Player_Seek_Right
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.5
+    useRelativeMovement: 1
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u554A\uFF01"
+    bubbleType: 1
+    offset: {x: 0, y: 3, z: 0}
+    typewriterDuration: 0.5
+    voiceClip: {fileID: 0}
+    animationName: Player_Backstep_Right
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 1
+    moveDuration: 0.5
+    useRelativeMovement: 1
+    moveOffset: {x: -1, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 1
+    showBubbleAndVoiceAfterMovement: 1
+    visibilityChanges:
+    - characterName: 69type
+      setVisible: 0
+      timing: 0
+    - characterName: Mus_01
+      setVisible: 1
+      timing: 1
+  - characterName: Ryen
+    text: 
+    bubbleType: 1
+    offset: {x: 0, y: 3, z: 0}
+    typewriterDuration: 1
+    voiceClip: {fileID: 0}
+    animationName: Ryen_EnterBattle_Right
+    enableBubble: 0
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 1
+    moveDuration: 0.5
+    useRelativeMovement: 1
+    moveOffset: {x: 4, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 1
+    showBubbleAndVoiceAfterMovement: 1
+    visibilityChanges:
+    - characterName: Ryen
+      setVisible: 1
+      timing: 0
+  - characterName: Ryen
+    text: "\u4FEE\u5C14\u514B\uFF01"
+    bubbleType: 1
+    offset: {x: 0, y: 2.5, z: 0}
+    typewriterDuration: 1
+    voiceClip: {fileID: 8300000, guid: 42ab8401f06169d45869d34cd01fb350, type: 3}
+    animationName: Ryen_Battle_Right
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.5
+    useRelativeMovement: 0
+    moveOffset: {x: 4, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u83B1\u6069\uFF01\uFF1F"
+    bubbleType: 1
+    offset: {x: 0, y: 3.5, z: 0}
+    typewriterDuration: 1
+    voiceClip: {fileID: 8300000, guid: 5b4507193fc8e7441abff4fb9793c460, type: 3}
+    animationName: Player_Battle_Right
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.5
+    useRelativeMovement: 0
+    moveOffset: {x: 4, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u8FD9\u5BB6\u4F19\u2014\u2014"
+    bubbleType: 0
+    offset: {x: 0, y: 3.5, z: 0}
+    typewriterDuration: 1
+    voiceClip: {fileID: 0}
+    animationName: Player_Battle_Right
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.5
+    useRelativeMovement: 0
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u85CF\u5728\u6B8B\u9AB8\u91CC\u9762\u5417\uFF1F"
+    bubbleType: 2
+    offset: {x: 0, y: 3.5, z: 0}
+    typewriterDuration: 1
+    voiceClip: {fileID: 0}
+    animationName: Player_Battle_Right
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.5
+    useRelativeMovement: 0
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Ryen
+    text: "\u6211\u6765\u5438\u5F15\u6CE8\u610F"
+    bubbleType: 0
+    offset: {x: 0, y: 3, z: 0}
+    typewriterDuration: 1
+    voiceClip: {fileID: 0}
+    animationName: Ryen_TakeAxe_Right
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.5
+    useRelativeMovement: 0
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Ryen
+    text: "\u4F60\u6765\u6253\u5012\u8FD9\u5BB6\u4F19"
+    bubbleType: 0
+    offset: {x: 0, y: 3, z: 0}
+    typewriterDuration: 1
+    voiceClip: {fileID: 0}
+    animationName: Ryen_TakeAxe_Right
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.5
+    useRelativeMovement: 0
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges: []
+  - characterName: Shulk
+    text: "\u597D\uFF0C\u6211\u4EEC\u4E0A\uFF01"
+    bubbleType: 0
+    offset: {x: 0, y: 3, z: 0}
+    typewriterDuration: 1
+    voiceClip: {fileID: 0}
+    animationName: Player_TakeSword
+    enableBubble: 1
+    showBubbleWhenTextEmpty: 0
+    enableMovement: 0
+    moveDuration: 0.5
+    useRelativeMovement: 0
+    moveOffset: {x: 0, y: 0, z: 0}
+    moveTargetWorldPosition: {x: 0, y: 0, z: 0}
+    moveStyle: 0
+    useDialogueAnimationDuringMovement: 0
+    showBubbleAndVoiceAfterMovement: 0
+    visibilityChanges:
+    - characterName: Ryen
+      setVisible: 0
+      timing: 1
+    - characterName: Mus_01
+      setVisible: 0
+      timing: 1
