@@ -115,6 +115,14 @@ MonoBehaviour:
   randomizeEnterAnimationStartTime: 0
   waitForEnterAnimationToFinish: 1
   enterAnimationFallbackDuration: 0.35
+  playBattleEnterMove: 1
+  enterMoveDistance: 3.5
+  enterMoveDuration: 0.35
+  playBattleActionAnimation: 1
+  normalAttackAnimationStateName: Base Layer.BU_Shulk_Attack
+  randomizeNormalAttackAnimationStartTime: 0
+  normalAttackAnimationFallbackDuration: 0.35
+  autoReturnToIdleAfterAction: 1
   adaptiveCropByOpaqueBounds: 1
   alphaThreshold: 0.1
   headSearchPortion: 0.62
@@ -165,8 +173,9 @@ MonoBehaviour:
   classDefinition: {fileID: 11400000, guid: 4ce991c0554b77941a10743d08c9638c, type: 2}
   artsList:
   - {fileID: 11400000, guid: d52c4f6cc01f5b541a635bf5757fbb3f, type: 2}
-  - {fileID: 11400000, guid: 1480ea9c15efb314280fd7490633162c, type: 2}
-  skillList: []
+  - {fileID: 0}
+  skillList:
+  - {fileID: 11400000, guid: 835923357f7957d4d949e3cc830dc5ac, type: 2}
   equippedWeapon: {fileID: 0}
   equippedHead: {fileID: 0}
   equippedBody: {fileID: 0}

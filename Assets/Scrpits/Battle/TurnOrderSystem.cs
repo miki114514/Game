@@ -67,6 +67,32 @@ public class TurnOrderSystem
     }
 
     // -------------------------------------------------------
+    // 强制下轮指定阵营先行动（无视双方速度先后）
+    // -------------------------------------------------------
+    public void ForceNextRoundFactionPriority(List<BattleUnit> aliveUnits, UnitType priorityUnitType)
+    {
+        List<BattleUnit> computed = ComputeOrder(aliveUnits);
+        List<BattleUnit> priority = new List<BattleUnit>(computed.Count);
+        List<BattleUnit> others = new List<BattleUnit>(computed.Count);
+
+        for (int i = 0; i < computed.Count; i++)
+        {
+            BattleUnit unit = computed[i];
+            if (unit == null)
+                continue;
+
+            if (unit.unitType == priorityUnitType)
+                priority.Add(unit);
+            else
+                others.Add(unit);
+        }
+
+        priority.AddRange(others);
+        _nextRoundOrder = priority;
+        LogOrder("【强制】下轮行动顺序（阵营先手）", _nextRoundOrder);
+    }
+
+    // -------------------------------------------------------
     // 单位阵亡，从两轮顺序中移除
     // -------------------------------------------------------
     public void RemoveUnit(BattleUnit unit)

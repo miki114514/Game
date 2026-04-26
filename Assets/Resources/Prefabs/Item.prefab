@@ -327,7 +327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b091ca8d2d81274dabf14102cf4f5fc, type: 2}
   m_sharedMaterial: {fileID: 3970419179599777226, guid: 7b091ca8d2d81274dabf14102cf4f5fc,
@@ -522,10 +522,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7b091ca8d2d81274dabf14102cf4f5fc, type: 2}
-  m_sharedMaterial: {fileID: 3970419179599777226, guid: 7b091ca8d2d81274dabf14102cf4f5fc,
+  m_fontAsset: {fileID: 11400000, guid: 04c039101ddc1c54d923481183d607ec, type: 2}
+  m_sharedMaterial: {fileID: -2670624772896011784, guid: 04c039101ddc1c54d923481183d607ec,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

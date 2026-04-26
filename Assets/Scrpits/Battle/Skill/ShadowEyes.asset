@@ -28,9 +28,13 @@ MonoBehaviour:
   roundsPerBoost: 1
   costSP: 0
   baseMultiplier: 1
+  animationStateSearchController: {fileID: 0}
+  animationStateName: 
+  randomizeAnimationStartTime: 0
+  animationFallbackDuration: 0.35
   triggerChance: 100
   judgementEffect: 10
-  judgementRounds: 1
+  judgementRounds: 2
   restrictLearnableClasses: 1
   learnableClasses:
   - {fileID: 11400000, guid: 4ce991c0554b77941a10743d08c9638c, type: 2}

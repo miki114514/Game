@@ -6,6 +6,8 @@ using TMPro;
 
 public class CommandMenuUi : MonoBehaviour
 {
+    private const float DisabledCommandAlpha = 0.35f;
+
     [Header("UI元素")]
     public List<GameObject> baseList;
     public List<GameObject> selectList;
@@ -123,6 +125,12 @@ public class CommandMenuUi : MonoBehaviour
     {
         BattleCommand selectedCommand = commandList[currentIndex];
 
+        if (!IsCommandSelectable(selectedCommand))
+        {
+            Debug.Log($"[CommandMenuUi] 指令不可用，忽略确认: {selectedCommand}");
+            return;
+        }
+
         if (selectedCommand == BattleCommand.Skill ||
             selectedCommand == BattleCommand.Arts ||
             selectedCommand == BattleCommand.Item ||
@@ -179,6 +187,12 @@ public class CommandMenuUi : MonoBehaviour
     #region 次级菜单逻辑
     void OpenSubMenu(BattleCommand cmd)
     {
+        if (!IsCommandSelectable(cmd))
+        {
+            Debug.Log($"[CommandMenuUi] 指令不可用，阻止打开次级菜单: {cmd}");
+            return;
+        }
+
         inSubMenu = true;
         mainIndex = currentIndex;
 
@@ -204,6 +218,16 @@ public class CommandMenuUi : MonoBehaviour
         else
         {
             subCommands = GenerateSubCommands(cmd);
+
+            if (subCommands == null || subCommands.Count == 0)
+            {
+                Debug.LogWarning($"[CommandMenuUi] {cmd} 无可用次级指令，已取消打开次级菜单");
+                inSubMenu = false;
+                if (canvasGroup != null)
+                    canvasGroup.alpha = 1f;
+                return;
+            }
+
             subIndex = 0;
 
             if (subCommandPanelUi != null)
@@ -267,7 +291,15 @@ public class CommandMenuUi : MonoBehaviour
                 break;
             case BattleCommand.Skill:
                 foreach (var sk in unit.skillList)
+                {
+                    if (sk == null)
+                        continue;
+
+                    if (!battleManager.CanUseCharacterSkillThisBattle(unit, sk))
+                        continue;
+
                     list.Add(new SubCommand(sk.skillName, sk, null, false, SubCommandEntryType.CharacterSkill));
+                }
                 break;
             case BattleCommand.Item:
                 foreach (var item in battleManager.GetUsableItems())
@@ -339,9 +371,14 @@ public class CommandMenuUi : MonoBehaviour
         {
             bool isSelected = (i == currentIndex);
             bool isActive = i < commandList.Count;
+            bool commandSelectable = isActive && IsCommandSelectable(commandList[i]);
+            float targetAlpha = commandSelectable ? 1f : DisabledCommandAlpha;
 
             baseList[i].SetActive(isActive && !isSelected);
             selectList[i].SetActive(isActive && isSelected);
+
+            ApplyCommandSlotAlpha(baseList[i], targetAlpha);
+            ApplyCommandSlotAlpha(selectList[i], targetAlpha);
 
             if (i < commandList.Count)
             {
@@ -351,12 +388,15 @@ public class CommandMenuUi : MonoBehaviour
                 if (textComp != null)
                 {
                     textComp.text = displayText;
-                    textComp.alpha = 1f; // 确保文字可见
+                    textComp.alpha = targetAlpha;
                 }
 
                 var selText = selectList[i].GetComponentInChildren<TextMeshProUGUI>();
                 if (selText != null)
+                {
                     selText.text = displayText;
+                    selText.alpha = targetAlpha;
+                }
             }
         }
     }
@@ -382,7 +422,10 @@ public class CommandMenuUi : MonoBehaviour
 
                 var selText = selectList[i].GetComponentInChildren<TextMeshProUGUI>();
                 if (selText != null)
+                {
                     selText.text = subCommands[i].name;
+                    selText.alpha = 1f;
+                }
             }
         }
     }
@@ -477,5 +520,49 @@ public class CommandMenuUi : MonoBehaviour
             Vector3 targetPos = selectList[currentIndex].transform.position + (Vector3)arrowOffset;
             arrow.position = Vector3.Lerp(arrow.position, targetPos, Time.deltaTime * 10f);
         }
+    }
+
+    bool IsCommandSelectable(BattleCommand command)
+    {
+        if (command != BattleCommand.Skill)
+            return true;
+
+        return HasAnyUsableExclusiveCharacterSkill();
+    }
+
+    bool HasAnyUsableExclusiveCharacterSkill()
+    {
+        if (battleManager == null)
+            return false;
+
+        BattleUnit unit = battleManager.CurrentUnit;
+        if (unit == null || unit.skillList == null || unit.skillList.Count == 0)
+            return false;
+
+        for (int i = 0; i < unit.skillList.Count; i++)
+        {
+            Skill skill = unit.skillList[i];
+            if (skill == null)
+                continue;
+
+            bool isExclusive = skill.limitUseOncePerBattle;
+            if (!isExclusive)
+                continue;
+
+            if (battleManager.CanUseCharacterSkillThisBattle(unit, skill))
+                return true;
+        }
+
+        return false;
+    }
+
+    void ApplyCommandSlotAlpha(GameObject slot, float alpha)
+    {
+        if (slot == null)
+            return;
+
+        CanvasGroup group = slot.GetComponent<CanvasGroup>();
+        if (group != null)
+            group.alpha = alpha;
     }
 }

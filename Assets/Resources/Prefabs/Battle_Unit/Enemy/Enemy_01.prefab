@@ -110,6 +110,19 @@ MonoBehaviour:
   idleAnimationLoop: 1
   randomizeIdleStartFrame: 1
   battleSpriteRenderer: {fileID: 0}
+  playBattleEnterAnimation: 1
+  enterAnimationStateName: Base Layer.BU_Mus_Enter
+  randomizeEnterAnimationStartTime: 0
+  waitForEnterAnimationToFinish: 1
+  enterAnimationFallbackDuration: 0.35
+  playBattleEnterMove: 1
+  enterMoveDistance: 3.5
+  enterMoveDuration: 0.35
+  playBattleActionAnimation: 1
+  normalAttackAnimationStateName: Base Layer.BU_Mus_Attack
+  randomizeNormalAttackAnimationStartTime: 0
+  normalAttackAnimationFallbackDuration: 0.35
+  autoReturnToIdleAfterAction: 1
   adaptiveCropByOpaqueBounds: 1
   alphaThreshold: 0.1
   headSearchPortion: 0.62

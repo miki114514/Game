@@ -132,6 +132,11 @@ public static class BattleUnitDefinitionUtility
         target.playBattleEnterMove = source.playBattleEnterMove;
         target.enterMoveDistance = source.enterMoveDistance;
         target.enterMoveDuration = source.enterMoveDuration;
+        target.playBattleActionAnimation = source.playBattleActionAnimation;
+        target.normalAttackAnimationStateName = source.normalAttackAnimationStateName;
+        target.randomizeNormalAttackAnimationStartTime = source.randomizeNormalAttackAnimationStartTime;
+        target.normalAttackAnimationFallbackDuration = source.normalAttackAnimationFallbackDuration;
+        target.autoReturnToIdleAfterAction = source.autoReturnToIdleAfterAction;
 
         target.artsAbilityMultiplier = source.artsAbilityMultiplier;
         target.forcedDamageReductionMultiplier = source.forcedDamageReductionMultiplier;

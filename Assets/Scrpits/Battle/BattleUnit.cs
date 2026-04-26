@@ -114,6 +114,15 @@ public class BattleUnit : MonoBehaviour
     [Min(0f)] public float enterMoveDistance = 3.5f;
     [Min(0.01f)] public float enterMoveDuration = 0.35f;
 
+    [Header("战斗行动动画")]
+    public bool playBattleActionAnimation = true;
+    [Tooltip("Animator 普通攻击状态名，支持完整路径，如 Base Layer.BU_Shulk_Attack")]
+    public string normalAttackAnimationStateName;
+    public bool randomizeNormalAttackAnimationStartTime = false;
+    [Min(0f)] public float normalAttackAnimationFallbackDuration = 0.35f;
+    [Tooltip("勾选后在行动动画结束时自动切回待机")]
+    public bool autoReturnToIdleAfterAction = true;
+
     [Header("头像裁剪参数")]
     public bool adaptiveCropByOpaqueBounds = true;
     [Range(0f, 1f)] public float alphaThreshold = 0.1f;
@@ -232,15 +241,20 @@ public class BattleUnit : MonoBehaviour
     private bool hasIdleAnimationFrames = false;
     private bool isUsingAnimatorIdle = false;
     private bool isPlayingEnterAnimation = false;
+    private bool isPlayingActionAnimation = false;
     private bool hasPlayedBattlePresentation = false;
     private Vector3 spawnPoint;
     private Vector3 battlePresentationAnchorPosition;
     private Coroutine battlePresentationCoroutine;
+    private Coroutine actionAnimationCoroutine;
 
     public bool IsDefending => isDefending;
     public int CurrentBP => currentBP;
     public int MaxBP => maxBP;
     public float LevelMultiplier => BattleFormula.GetLevelMultiplier(level);
+    public Vector3 SpawnPoint => spawnPoint;
+    public bool IsBattlePresentationPlaying => battlePresentationCoroutine != null || isPlayingEnterAnimation;
+    public bool IsActionAnimationPlaying => isPlayingActionAnimation;
 
     // ── 装备加成后有效属性上限 ──
     /// <summary>含装备 HP 加成的最大 HP</summary>
@@ -271,7 +285,7 @@ public class BattleUnit : MonoBehaviour
 
     void Update()
     {
-        if (isPlayingEnterAnimation)
+        if (isPlayingEnterAnimation || isPlayingActionAnimation)
             return;
 
         TickIdleAnimation();
@@ -359,6 +373,14 @@ public class BattleUnit : MonoBehaviour
 
             hasPlayedBattlePresentation = false;
             isPlayingEnterAnimation = false;
+            isPlayingActionAnimation = false;
+
+            if (actionAnimationCoroutine != null)
+            {
+                StopCoroutine(actionAnimationCoroutine);
+                actionAnimationCoroutine = null;
+            }
+
             // 重启时先将单位归位到出生点，避免动画中途打断时捕获到偏移位置
             transform.position = spawnPoint;
             battlePresentationAnchorPosition = spawnPoint;
@@ -375,6 +397,121 @@ public class BattleUnit : MonoBehaviour
         hasPlayedBattlePresentation = true;
         yield return PlayEnterAnimationThenIdleRoutine();
         battlePresentationCoroutine = null;
+    }
+
+    public void PlayNormalAttackAnimation(int repeatCount = 1)
+    {
+        if (!playBattleActionAnimation)
+            return;
+
+        int safeRepeatCount = Mathf.Max(1, repeatCount);
+
+        if (safeRepeatCount > 1)
+        {
+            if (actionAnimationCoroutine != null)
+            {
+                StopCoroutine(actionAnimationCoroutine);
+                actionAnimationCoroutine = null;
+            }
+
+            actionAnimationCoroutine = StartCoroutine(PlayRepeatedNormalAttackAnimationRoutine(safeRepeatCount));
+            return;
+        }
+
+        bool played = TryPlayActionAnimation(
+            normalAttackAnimationStateName,
+            randomizeNormalAttackAnimationStartTime,
+            normalAttackAnimationFallbackDuration,
+            $"普通攻击（{unitName}）",
+            out float duration);
+
+        if (played)
+            BeginActionAnimationCooldown(duration);
+        else if (string.IsNullOrWhiteSpace(normalAttackAnimationStateName))
+            Debug.LogWarning($"[BattleUnit] {unitName} 未配置普通攻击动画状态名。", this);
+    }
+
+    System.Collections.IEnumerator PlayRepeatedNormalAttackAnimationRoutine(int repeatCount)
+    {
+        isPlayingActionAnimation = true;
+
+        bool hasPlayedAny = false;
+
+        for (int i = 0; i < repeatCount; i++)
+        {
+            bool played = TryPlayActionAnimation(
+                normalAttackAnimationStateName,
+                randomizeNormalAttackAnimationStartTime,
+                normalAttackAnimationFallbackDuration,
+                $"普通攻击第 {i + 1}/{repeatCount} 段（{unitName}）",
+                out float duration);
+
+            if (!played)
+            {
+                if (!hasPlayedAny && string.IsNullOrWhiteSpace(normalAttackAnimationStateName))
+                    Debug.LogWarning($"[BattleUnit] {unitName} 未配置普通攻击动画状态名。", this);
+
+                break;
+            }
+
+            hasPlayedAny = true;
+
+            float waitDuration = Mathf.Max(0f, duration);
+            float elapsed = 0f;
+
+            while (elapsed < waitDuration)
+            {
+                float step = Mathf.Min(Time.deltaTime, 0.05f);
+                if (step <= 0f)
+                {
+                    yield return null;
+                    continue;
+                }
+
+                elapsed += step;
+                yield return null;
+            }
+        }
+
+        isPlayingActionAnimation = false;
+        actionAnimationCoroutine = null;
+
+        if (autoReturnToIdleAfterAction)
+            InitializeIdleAnimation();
+    }
+
+    public void PlaySkillAnimationWithFallback(Skill skill)
+    {
+        if (!playBattleActionAnimation)
+            return;
+
+        bool played = false;
+        float duration = 0f;
+
+        if (skill != null && !string.IsNullOrWhiteSpace(skill.animationStateName))
+        {
+            played = TryPlayActionAnimation(
+                skill.animationStateName,
+                skill.randomizeAnimationStartTime,
+                skill.animationFallbackDuration,
+                $"技能 {skill.skillName}（{unitName}）",
+                out duration);
+        }
+
+        if (!played)
+        {
+            played = TryPlayActionAnimation(
+                normalAttackAnimationStateName,
+                randomizeNormalAttackAnimationStartTime,
+                normalAttackAnimationFallbackDuration,
+                $"技能动画回退普通攻击（{unitName}）",
+                out duration);
+        }
+
+        if (played)
+            BeginActionAnimationCooldown(duration);
+        else
+            Debug.LogWarning($"[BattleUnit] {unitName} 技能 `{skill?.skillName ?? "<null>"}` 未找到可用动画，且普通攻击动画回退失败。", this);
     }
 
     void InitializeIdleAnimation()
@@ -605,6 +742,70 @@ public class BattleUnit : MonoBehaviour
         return true;
     }
 
+    bool TryPlayActionAnimation(string stateName, bool randomizeStartTime, float fallbackDuration, string context, out float duration)
+    {
+        duration = 0f;
+
+        EnsureAnimationReferences();
+
+        if (battleAnimator == null)
+        {
+            Debug.LogWarning($"[BattleUnit] {context} 失败：未找到 Animator。", this);
+            return false;
+        }
+
+        if (string.IsNullOrWhiteSpace(stateName))
+            return false;
+
+        string trimmedStateName = stateName.Trim();
+        if (!HasAnimatorState(trimmedStateName))
+        {
+            Debug.LogWarning($"[BattleUnit] {context} 失败：找不到状态 `{trimmedStateName}`。", this);
+            return false;
+        }
+
+        float startTime = randomizeStartTime ? UnityEngine.Random.value : 0f;
+        battleAnimator.Play(trimmedStateName, -1, startTime);
+        battleAnimator.Update(0f);
+
+        AnimatorStateInfo stateInfo = battleAnimator.GetCurrentAnimatorStateInfo(0);
+        duration = Mathf.Max(fallbackDuration, stateInfo.length);
+        return true;
+    }
+
+    void BeginActionAnimationCooldown(float duration)
+    {
+        if (actionAnimationCoroutine != null)
+            StopCoroutine(actionAnimationCoroutine);
+
+        actionAnimationCoroutine = StartCoroutine(ReturnToIdleAfterActionRoutine(Mathf.Max(0f, duration)));
+    }
+
+    System.Collections.IEnumerator ReturnToIdleAfterActionRoutine(float duration)
+    {
+        isPlayingActionAnimation = true;
+
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            float step = Mathf.Min(Time.deltaTime, 0.05f);
+            if (step <= 0f)
+            {
+                yield return null;
+                continue;
+            }
+
+            elapsed += step;
+            yield return null;
+        }
+
+        isPlayingActionAnimation = false;
+        actionAnimationCoroutine = null;
+
+        if (autoReturnToIdleAfterAction)
+            InitializeIdleAnimation();
+    }
+
     bool ShouldUseAnimatorIdle()
     {
         if (idleAnimationSource == BattleIdleAnimationSource.AnimatorState)
@@ -669,6 +870,9 @@ public class BattleUnit : MonoBehaviour
         Debug.Log($"{unitName} 受到伤害: {damage}");
 
         OnHPChanged?.Invoke(currentHP, EffectiveMaxHP);
+
+        if (unitType == UnitType.Enemy && currentHP <= 0 && gameObject.activeSelf)
+            gameObject.SetActive(false);
     }
 
     // =========================
@@ -1556,6 +1760,17 @@ public class BattleUnit : MonoBehaviour
         ApplyStatusEffect(new StatusEffect(StatusEffectType.Break, -1));
         OnShieldChanged?.Invoke(currentShield, maxShield);
         Debug.Log($"[Break] {unitName} 进入 Break，需跳过 {breakSkipTurnCount} 次行动");
+    }
+
+    public bool ForceBreakNow(int skipTurns)
+    {
+        if (unitType != UnitType.Enemy || maxShield <= 0 || isBreak)
+            return false;
+
+        currentShield = 0;
+        OnShieldChanged?.Invoke(currentShield, maxShield);
+        EnterBreak(skipTurns);
+        return true;
     }
 
     public bool ConsumeBreakActionSkip()

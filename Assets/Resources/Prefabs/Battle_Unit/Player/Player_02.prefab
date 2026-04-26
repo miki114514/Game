@@ -115,6 +115,14 @@ MonoBehaviour:
   randomizeEnterAnimationStartTime: 0
   waitForEnterAnimationToFinish: 1
   enterAnimationFallbackDuration: 0.35
+  playBattleEnterMove: 1
+  enterMoveDistance: 3.5
+  enterMoveDuration: 0.35
+  playBattleActionAnimation: 1
+  normalAttackAnimationStateName: Base Layer.BU_Ryen_Attack
+  randomizeNormalAttackAnimationStartTime: 0
+  normalAttackAnimationFallbackDuration: 0.35
+  autoReturnToIdleAfterAction: 1
   adaptiveCropByOpaqueBounds: 1
   alphaThreshold: 0.1
   headSearchPortion: 0.62
@@ -149,9 +157,9 @@ MonoBehaviour:
   critRate: 10
   evasion: 5
   normalAttackDamageType: 0
-  normalAttackWeaponType: 1
+  normalAttackWeaponType: 4
   normalAttackElementType: 0
-  normalAttackType: 1
+  normalAttackType: 9
   weaponAttackEntries: []
   currentExp: 0
   expToNextLevel: 100
@@ -164,7 +172,8 @@ MonoBehaviour:
   forcedDamageReductionMultiplier: 1
   classDefinition: {fileID: 11400000, guid: fbb9ca39a6924aa4197b3cad0b449c55, type: 2}
   artsList: []
-  skillList: []
+  skillList:
+  - {fileID: 11400000, guid: a4c444fe739ca614c8a8a856dfeb4679, type: 2}
   equippedWeapon: {fileID: 0}
   equippedHead: {fileID: 0}
   equippedBody: {fileID: 0}

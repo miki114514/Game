@@ -3,6 +3,12 @@ using UnityEngine;
 
 public enum SkillType { Physical, Magical, Heal, Buff, Debuff, Judgement }
 public enum SkillTargetType { EnemySingle, AllySingle, Self }
+public enum CharacterSkillMechanic
+{
+    None,
+    NextRoundAlliesActFirst,
+    ForceBreakOnDamagedShieldEnemy
+}
 
 [CreateAssetMenu(fileName = "NewSkill", menuName = "Battle/Skill")]
 public class Skill : ScriptableObject
@@ -23,6 +29,15 @@ public class Skill : ScriptableObject
     public int roundsPerBoost = 1;
     public int costSP;
     public float baseMultiplier = 1f;
+
+    [Header("技能动画")]
+    [Tooltip("用于在 Inspector 中搜索动画状态名（仅编辑辅助，不参与运行时播放）。")]
+    public RuntimeAnimatorController animationStateSearchController;
+    [Tooltip("施放该技能时播放的 Animator 状态名。留空则回退到施法者的普通攻击动画。")]
+    public string animationStateName;
+    public bool randomizeAnimationStartTime = false;
+    [Min(0f)] public float animationFallbackDuration = 0.35f;
+
     [Range(0, 100)] public int triggerChance = 100;
     public StatusEffectType judgementEffect = StatusEffectType.None;
     public int judgementRounds = 1;
@@ -31,6 +46,14 @@ public class Skill : ScriptableObject
     [Tooltip("关闭时表示所有职业都能学习；开启后仅 learnableClasses 列表中的职业可学习。")]
     public bool restrictLearnableClasses = false;
     public List<CharacterClassDefinition> learnableClasses = new List<CharacterClassDefinition>();
+
+    [Header("角色专属机制")]
+    [Tooltip("该技能是否为每场战斗仅可使用一次的专属技能。")]
+    public bool limitUseOncePerBattle = false;
+    [Tooltip("该技能触发的专属机制。")]
+    public CharacterSkillMechanic characterSkillMechanic = CharacterSkillMechanic.None;
+    [Tooltip("勾选后仅执行专属机制，不再走通用伤害/治疗/异常流程。")]
+    public bool mechanicOnly = true;
 
     public string description;
 
@@ -135,6 +158,25 @@ public class Skill : ScriptableObject
 
         if (resolvedTarget == null)
             return;
+
+        if (characterSkillMechanic != CharacterSkillMechanic.None)
+        {
+            bool executed = battleManager != null
+                && battleManager.TryExecuteCharacterSkillMechanic(this, user, resolvedTarget, boostLevel);
+
+            if (executed)
+            {
+                user.UseSP(costSP);
+                return;
+            }
+
+            if (mechanicOnly)
+            {
+                user.UseSP(costSP);
+                Debug.Log($"{user.unitName} 使用 {skillName}，但当前没有满足条件的目标，技能未产生效果。", this);
+                return;
+            }
+        }
 
         if (IsDamageSkill)
         {

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1c65e0984cc26459c13a779e6302df, type: 3}
+  m_Name: VisionOfTheFuture
+  m_EditorClassIdentifier: 
+  skillName: "\u672A\u6765\u89C6"
+  type: 0
+  damageType: 0
+  weaponType: 0
+  elementType: 0
+  attackType: 0
+  requiredWeaponType: 0
+  countBothWeaknessesSeparately: 0
+  targetType: 2
+  hitCount: 1
+  allowBoost: 0
+  boostAddsHitCount: 0
+  boostExtendsDuration: 0
+  roundsPerBoost: 1
+  costSP: 0
+  baseMultiplier: 1
+  animationStateSearchController: {fileID: 9100000, guid: 2588d4e0c92818f4eac0c93a5bcafd14,
+    type: 2}
+  animationStateName: Base Layer.BU_Shulk_Skill
+  randomizeAnimationStartTime: 0
+  animationFallbackDuration: 0.35
+  triggerChance: 100
+  judgementEffect: -1
+  judgementRounds: 1
+  restrictLearnableClasses: 0
+  learnableClasses: []
+  limitUseOncePerBattle: 1
+  characterSkillMechanic: 1
+  mechanicOnly: 1
+  description: "\u5F3A\u5236\u6539\u5199\u4E0B\u4E00\u8F6E\u6392\u5E8F\uFF0C\u8BA9\u65BD\u6CD5\u8005\u540C\u9635\u8425\u5728\u524D"

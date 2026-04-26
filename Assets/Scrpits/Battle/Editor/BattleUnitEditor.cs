@@ -34,14 +34,26 @@ public class BattleUnitEditor : Editor
         "battleSpriteRenderer",
     };
 
+    static readonly string[] actionAnimFieldNames = new[]
+    {
+        "playBattleActionAnimation",
+        "normalAttackAnimationStateName",
+        "randomizeNormalAttackAnimationStartTime",
+        "normalAttackAnimationFallbackDuration",
+        "autoReturnToIdleAfterAction",
+    };
+
     SerializedProperty idleAnimationSourceProp;
     SerializedProperty battleAnimatorProp;
     SerializedProperty idleAnimationStateNameProp;
     SerializedProperty playBattleEnterAnimationProp;
     SerializedProperty enterAnimationStateNameProp;
+    SerializedProperty playBattleActionAnimationProp;
+    SerializedProperty normalAttackAnimationStateNameProp;
 
     string idleStateSearchText = string.Empty;
     string enterStateSearchText = string.Empty;
+    string attackStateSearchText = string.Empty;
 
     void OnEnable()
     {
@@ -50,6 +62,8 @@ public class BattleUnitEditor : Editor
         idleAnimationStateNameProp = serializedObject.FindProperty("idleAnimationStateName");
         playBattleEnterAnimationProp = serializedObject.FindProperty("playBattleEnterAnimation");
         enterAnimationStateNameProp = serializedObject.FindProperty("enterAnimationStateName");
+        playBattleActionAnimationProp = serializedObject.FindProperty("playBattleActionAnimation");
+        normalAttackAnimationStateNameProp = serializedObject.FindProperty("normalAttackAnimationStateName");
     }
 
     public override void OnInspectorGUI()
@@ -57,9 +71,10 @@ public class BattleUnitEditor : Editor
         serializedObject.Update();
 
         // 排除脚本字段和整个待机动画区块，在合适位置手动插入
-        var excludes = new List<string>(enterAnimFieldNames.Length + idleAnimFieldNames.Length + 1) { "m_Script" };
+        var excludes = new List<string>(enterAnimFieldNames.Length + idleAnimFieldNames.Length + actionAnimFieldNames.Length + 1) { "m_Script" };
         excludes.AddRange(enterAnimFieldNames);
         excludes.AddRange(idleAnimFieldNames);
+        excludes.AddRange(actionAnimFieldNames);
         DrawPropertiesExcluding(serializedObject, excludes.ToArray());
 
         EditorGUILayout.Space(4f);
@@ -70,6 +85,10 @@ public class BattleUnitEditor : Editor
         EditorGUILayout.Space(4f);
         EditorGUILayout.LabelField("战斗待机动画", EditorStyles.boldLabel);
         DrawIdleAnimationBlock();
+
+        EditorGUILayout.Space(4f);
+        EditorGUILayout.LabelField("战斗行动动画", EditorStyles.boldLabel);
+        DrawActionAnimationBlock();
 
         serializedObject.ApplyModifiedProperties();
     }
@@ -154,6 +173,33 @@ public class BattleUnitEditor : Editor
             if (p != null)
                 EditorGUILayout.PropertyField(p, true);
         }
+    }
+
+    void DrawActionAnimationBlock()
+    {
+        EditorGUILayout.PropertyField(playBattleActionAnimationProp, new GUIContent("Play Battle Action Animation"));
+
+        if (playBattleActionAnimationProp == null || !playBattleActionAnimationProp.boolValue)
+            return;
+
+        DrawAnimatorStatePicker(
+            normalAttackAnimationStateNameProp,
+            ref attackStateSearchText,
+            "Normal Attack State Name",
+            "搜索普通攻击动画名",
+            "匹配普通攻击动画");
+
+        SerializedProperty randomStartProp = serializedObject.FindProperty("randomizeNormalAttackAnimationStartTime");
+        if (randomStartProp != null)
+            EditorGUILayout.PropertyField(randomStartProp, new GUIContent("Randomize Normal Attack Animation Start Time"));
+
+        SerializedProperty fallbackProp = serializedObject.FindProperty("normalAttackAnimationFallbackDuration");
+        if (fallbackProp != null)
+            EditorGUILayout.PropertyField(fallbackProp, new GUIContent("Normal Attack Animation Fallback Duration"));
+
+        SerializedProperty autoReturnProp = serializedObject.FindProperty("autoReturnToIdleAfterAction");
+        if (autoReturnProp != null)
+            EditorGUILayout.PropertyField(autoReturnProp, new GUIContent("Auto Return To Idle After Action"));
     }
 
     void DrawAnimatorStatePicker(

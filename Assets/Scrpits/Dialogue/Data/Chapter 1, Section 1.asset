@@ -37,6 +37,12 @@ MonoBehaviour:
     - characterName: Mus_01
       setVisible: 0
       timing: 0
+    - characterName: 71type
+      setVisible: 1
+      timing: 0
+    - characterName: 69type
+      setVisible: 1
+      timing: 0
   - characterName: Shulk
     text: "\u8FD9\u4E1C\u897F\u7684\u5149\u5B66\u8BA1"
     bubbleType: 0

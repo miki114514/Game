@@ -9001,6 +9001,11 @@ MonoBehaviour:
     type: 3}
   confirmSubCommandPanelPrefab: {fileID: 7452763341342691973, guid: a4afe5269615fed4180a550131f13deb,
     type: 3}
+  enablePlayerTurnStepMove: 1
+  playerTurnStepDistance: 3
+  playerTurnStepDuration: 0.35
+  playerTurnReturnDuration: 0.22
+  commandActionEndDelay: 0.05
   currentUnit: {fileID: 0}
   selectedBoostLevel: 0
   enemySelectArrowPrefab: {fileID: 6215686195812506736, guid: 97c7989b6d4e14e4aadaa6f5a2b529e9,
@@ -11300,7 +11305,7 @@ Transform:
   m_GameObject: {fileID: 779701768}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -17344,7 +17349,7 @@ Transform:
   m_GameObject: {fileID: 1272877291}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.87, y: 0, z: -5.99}
+  m_LocalPosition: {x: -6.39, y: 0, z: -5.99}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:

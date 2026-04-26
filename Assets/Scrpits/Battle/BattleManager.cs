@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Conditional = System.Diagnostics.ConditionalAttribute;
 using UnityEngine;
 using BattleSystem;
 using PlayerCommand;
@@ -26,6 +27,14 @@ public class BattleManager : MonoBehaviour
     public GameObject commandMenuPrefab;
     public GameObject subCommandPanelPrefab;
     public GameObject confirmSubCommandPanelPrefab;
+
+    [Header("玩家回合位移")]
+    public bool enablePlayerTurnStepMove = true;
+    [Min(0f)] public float playerTurnStepDistance = 0.45f;
+    [Min(0.01f)] public float playerTurnStepDuration = 0.18f;
+    [Min(0.01f)] public float playerTurnReturnDuration = 0.16f;
+    [Min(0f)] public float commandActionEndDelay = 0.02f;
+    [Min(0.1f)] public float actionAnimationWaitTimeout = 8f;
 
     private CommandMenuUi currentCommandMenuUi;
     private SubCommandPanelUi currentSubCommandPanelUi;
@@ -73,6 +82,9 @@ public class BattleManager : MonoBehaviour
 
     private bool waitConfirmRelease = false;
     private bool hasReportedBattleEnd = false;
+    private readonly Dictionary<BattleUnit, Vector3> playerTurnStepAnchorPositions = new Dictionary<BattleUnit, Vector3>();
+    private readonly Dictionary<BattleUnit, HashSet<Skill>> oncePerBattleSkillUsage = new Dictionary<BattleUnit, HashSet<Skill>>();
+    private bool isExecutingPlayerCommandFlow = false;
 
     void Start()
     {
@@ -120,9 +132,60 @@ public class BattleManager : MonoBehaviour
         ResetBattle();
         statusUIManager?.InitStatusUI(this, players);
         statusUIManager?.InitEnemyBreakUI(this, enemies);
+        StartCoroutine(BeginTurnFlowAfterPresentationCoroutine());
+        Debug.Log("[BattleManager] 战斗初始化完成");
+    }
+
+    IEnumerator BeginTurnFlowAfterPresentationCoroutine()
+    {
+        yield return WaitForBattlePresentationCompletionCoroutine();
+
         InitTurnOrder();
         turnOrderUIManager?.Init(this);
-        Debug.Log("[BattleManager] 战斗初始化完成");
+    }
+
+    IEnumerator WaitForBattlePresentationCompletionCoroutine()
+    {
+        // 真实等待所有单位入场结束，避免首回合位移被入场协程覆盖。
+        const float timeoutSeconds = 8f;
+        float elapsed = 0f;
+
+        while (IsAnyBattlePresentationPlaying())
+        {
+            elapsed += Time.deltaTime;
+            if (elapsed >= timeoutSeconds)
+            {
+                UnityEngine.Debug.LogWarning("[BattleManager] 等待入场演出超时，已强制进入回合流程");
+                break;
+            }
+
+            yield return null;
+        }
+    }
+
+    bool IsAnyBattlePresentationPlaying()
+    {
+        if (players != null)
+        {
+            for (int i = 0; i < players.Count; i++)
+            {
+                BattleUnit player = players[i];
+                if (player != null && player.IsBattlePresentationPlaying)
+                    return true;
+            }
+        }
+
+        if (enemies != null)
+        {
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                BattleUnit enemy = enemies[i];
+                if (enemy != null && enemy.IsBattlePresentationPlaying)
+                    return true;
+            }
+        }
+
+        return false;
     }
 
     void EnsureStatusUIManager()
@@ -208,9 +271,58 @@ public class BattleManager : MonoBehaviour
         Debug.Log("[BattleManager] 开始回合: " + currentUnit.unitName);
 
         if (currentUnit.unitType == UnitType.Player)
-            EnterCommandSelect();
+            StartCoroutine(PlayerTurnEnterCommandSelectCoroutine(currentUnit));
         else
             StartCoroutine(EnemyTurnCoroutine(currentUnit));
+    }
+
+    IEnumerator PlayerTurnEnterCommandSelectCoroutine(BattleUnit playerUnit)
+    {
+        if (playerUnit == null)
+            yield break;
+
+        // 每次玩家行动前先回到锚点，避免位移在多回合中累积。
+        Vector3 anchorPosition = GetOrCreatePlayerTurnStepAnchorPosition(playerUnit);
+        playerUnit.transform.position = anchorPosition;
+        DevLogTurnStepMeta($"TurnEnter | Unit={playerUnit.unitName} | enablePlayerTurnStepMove={enablePlayerTurnStepMove} | playerTurnStepDistance={playerTurnStepDistance:0.###} | playerTurnStepDuration={playerTurnStepDuration:0.###}");
+
+        if (!enablePlayerTurnStepMove)
+        {
+            DevLogTurnStepMeta($"ForwardSkip | Unit={playerUnit.unitName} | Reason=enablePlayerTurnStepMove is false");
+            EnterCommandSelect();
+            yield break;
+        }
+
+        float distance = playerTurnStepDistance > 0.001f ? playerTurnStepDistance : 0.45f;
+        float duration = playerTurnStepDuration > 0.001f ? playerTurnStepDuration : 0.18f;
+        if (distance <= 0f)
+        {
+            DevLogTurnStepMeta($"ForwardSkip | Unit={playerUnit.unitName} | Reason=distance <= 0 | resolvedDistance={distance:0.###}");
+            EnterCommandSelect();
+            yield break;
+        }
+
+        state = BattleState.Busy;
+
+        Vector3 startPos = playerUnit.transform.position;
+        Vector3 moveDir = ResolvePlayerTurnStepDirection(playerUnit);
+        Vector3 targetPos = startPos + moveDir * distance;
+        DevLogTurnStep("ForwardStart", playerUnit, startPos, targetPos, anchorPosition);
+
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            playerUnit.transform.position = Vector3.Lerp(startPos, targetPos, t);
+            yield return null;
+        }
+
+        playerUnit.transform.position = targetPos;
+        DevLogTurnStep("ForwardEnd", playerUnit, startPos, playerUnit.transform.position, anchorPosition);
+
+        if (state != BattleState.End && currentUnit == playerUnit)
+            EnterCommandSelect();
     }
 
     /// <summary>处理回合开始的持续伤害（Poison / Burn），返回存活否</summary>
@@ -370,6 +482,13 @@ public class BattleManager : MonoBehaviour
         if (state == BattleState.Busy || state == BattleState.TargetSelect)
             return;
 
+        if (cmd == BattleCommand.Skill && skill != null && !CanUseCharacterSkillThisBattle(currentUnit, skill))
+        {
+            Debug.Log($"[BattleManager] {skill.skillName} 为每场一次技能，当前战斗已使用");
+            EnterCommandSelect(false);
+            return;
+        }
+
         pendingCommand = cmd;
         pendingSkill = skill;
         pendingItem = item;
@@ -421,6 +540,16 @@ public class BattleManager : MonoBehaviour
         if (selectableEnemies.Count == 0)
         {
             Debug.Log("[BattleManager] 没有可选目标");
+
+            if (pendingCommand == BattleCommand.Skill
+                && pendingSkill != null
+                && pendingSkill.characterSkillMechanic == CharacterSkillMechanic.ForceBreakOnDamagedShieldEnemy)
+            {
+                Debug.Log($"[BattleManager] {pendingSkill.skillName} 当前无已削盾目标，按空效果执行以结束回合");
+                ExecuteCommand(currentUnit, pendingCommand, pendingSkill, pendingItem, null);
+                yield break;
+            }
+
             state = BattleState.CommandSelect;
             yield break;
         }
@@ -480,17 +609,34 @@ public class BattleManager : MonoBehaviour
 
     public void ExecuteCommand(BattleUnit unit, BattleCommand cmd, Skill skill, Item item, BattleUnit target)
     {
+        if (unit == null)
+            return;
+
+        if (unit.unitType == UnitType.Player && isExecutingPlayerCommandFlow)
+            return;
+
+        StartCoroutine(ExecuteCommandFlowCoroutine(unit, cmd, skill, item, target));
+    }
+
+    IEnumerator ExecuteCommandFlowCoroutine(BattleUnit unit, BattleCommand cmd, Skill skill, Item item, BattleUnit target)
+    {
+        bool isPlayerUnit = unit != null && unit.unitType == UnitType.Player;
+        if (isPlayerUnit)
+            isExecutingPlayerCommandFlow = true;
+
         state = BattleState.Busy;
 
         Debug.Log($"[BattleManager] 执行命令: {cmd}, 施法者: {unit.name}, 目标: {(target != null ? target.name : "无")}");
 
         int runtimeBoostLevel = 0;
+        float actionWaitSeconds = 0f;
 
         switch (cmd)
         {
             case BattleCommand.Attack:
                 runtimeBoostLevel = ConsumeSelectedBoost(unit, cmd, skill);
                 BasicAttack(unit, target, runtimeBoostLevel);
+                actionWaitSeconds = EstimateAttackActionDuration(unit, runtimeBoostLevel);
                 break;
             case BattleCommand.Skill:
             case BattleCommand.Arts:
@@ -504,32 +650,164 @@ public class BattleManager : MonoBehaviour
                     Debug.LogWarning($"[BattleManager] {unit.unitName} 没有选择技能，命令取消");
                     break;
                 }
+                if (cmd == BattleCommand.Skill && !CanUseCharacterSkillThisBattle(unit, skill))
+                {
+                    Debug.Log($"[BattleManager] {unit.unitName} 的专属技能 {skill.skillName} 本战已使用，命令取消");
+                    break;
+                }
                 if (!unit.HasEnoughSP(skill.costSP))
                 {
                     Debug.Log($"[BattleManager] {unit.unitName} 的 SP 不足，无法使用 {skill.skillName}（需要 {skill.costSP}，当前 {unit.currentSP}）");
                     break;
                 }
                 runtimeBoostLevel = ConsumeSelectedBoost(unit, cmd, skill);
+                if (cmd == BattleCommand.Skill)
+                    RegisterCharacterSkillUsage(unit, skill);
+                unit.PlaySkillAnimationWithFallback(skill);
                 skill.Execute(this, unit, target, runtimeBoostLevel);
+                actionWaitSeconds = EstimateSkillActionDuration(unit, skill);
                 break;
             case BattleCommand.Item:
                 UseItem(unit, item, target);
+                actionWaitSeconds = 0.08f;
                 break;
             case BattleCommand.Defend:
                 unit.SetDefending(true);
                 Debug.Log($"[BattleManager] {unit.unitName} 进入防御姿态");
+                actionWaitSeconds = 0.08f;
                 break;
             case BattleCommand.Run:
+                actionWaitSeconds = 0.08f;
                 break;
         }
 
         if (!IsBoostableCommand(cmd, skill))
             ResetSelectedBoost();
 
+        yield return WaitForCommandActionCompletionCoroutine(unit, cmd, skill, actionWaitSeconds);
+
+        if (isPlayerUnit)
+            yield return ReturnPlayerToAnchorCoroutine(unit);
+
         CheckBattleEnd();
 
         if (state != BattleState.End)
             AdvanceTurn();
+
+        if (isPlayerUnit)
+            isExecutingPlayerCommandFlow = false;
+    }
+
+    float EstimateAttackActionDuration(BattleUnit attacker, int boostLevel)
+    {
+        if (attacker == null || !attacker.playBattleActionAnimation)
+            return 0f;
+
+        int totalHits = BattleFormula.GetBoostedAttackHitCount(boostLevel);
+        float perHit = Mathf.Max(0f, attacker.normalAttackAnimationFallbackDuration);
+        return Mathf.Max(0f, totalHits) * perHit;
+    }
+
+    float EstimateSkillActionDuration(BattleUnit unit, Skill skill)
+    {
+        if (unit == null || !unit.playBattleActionAnimation)
+            return 0f;
+
+        if (skill != null && !string.IsNullOrWhiteSpace(skill.animationStateName))
+            return Mathf.Max(0f, skill.animationFallbackDuration);
+
+        return Mathf.Max(0f, unit.normalAttackAnimationFallbackDuration);
+    }
+
+    IEnumerator WaitForCommandActionCompletionCoroutine(BattleUnit unit, BattleCommand cmd, Skill skill, float estimatedWaitSeconds)
+    {
+        float extraDelay = Mathf.Max(0f, commandActionEndDelay);
+        if (unit == null)
+        {
+            float noUnitWait = Mathf.Max(0f, estimatedWaitSeconds) + extraDelay;
+            if (noUnitWait > 0f)
+                yield return new WaitForSeconds(noUnitWait);
+            yield break;
+        }
+
+        bool isActionCommand = cmd == BattleCommand.Attack || cmd == BattleCommand.Skill || cmd == BattleCommand.Arts;
+        bool shouldTrackActionAnimation = isActionCommand && unit.playBattleActionAnimation;
+
+        if (shouldTrackActionAnimation)
+        {
+            float timeout = Mathf.Max(0.1f, actionAnimationWaitTimeout);
+            float elapsed = 0f;
+
+            // 等一帧，确保 Animator 播放状态与标记已同步。
+            yield return null;
+
+            while (unit != null && unit.IsActionAnimationPlaying)
+            {
+                elapsed += Time.deltaTime;
+                if (elapsed >= timeout)
+                {
+                    Debug.LogWarning($"[BattleManager] 等待 {unit.unitName} 行动动画结束超时（{timeout:0.##}s），已继续流程");
+                    break;
+                }
+
+                yield return null;
+            }
+
+            if (extraDelay > 0f)
+                yield return new WaitForSeconds(extraDelay);
+
+            yield break;
+        }
+
+        float fallbackWait = Mathf.Max(0f, estimatedWaitSeconds) + extraDelay;
+        if (fallbackWait > 0f)
+            yield return new WaitForSeconds(fallbackWait);
+    }
+
+    IEnumerator ReturnPlayerToAnchorCoroutine(BattleUnit playerUnit)
+    {
+        if (playerUnit == null)
+            yield break;
+
+        Vector3 targetAnchor = GetOrCreatePlayerTurnStepAnchorPosition(playerUnit);
+        float duration = Mathf.Max(0.01f, playerTurnReturnDuration);
+        Vector3 startPos = playerUnit.transform.position;
+        DevLogTurnStep("ReturnStart", playerUnit, startPos, targetAnchor, targetAnchor);
+
+        if (Vector3.Distance(startPos, targetAnchor) <= 0.0001f)
+        {
+            playerUnit.transform.position = targetAnchor;
+            DevLogTurnStep("ReturnEnd", playerUnit, startPos, playerUnit.transform.position, targetAnchor);
+            yield break;
+        }
+
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            playerUnit.transform.position = Vector3.Lerp(startPos, targetAnchor, t);
+            yield return null;
+        }
+
+        playerUnit.transform.position = targetAnchor;
+        DevLogTurnStep("ReturnEnd", playerUnit, startPos, playerUnit.transform.position, targetAnchor);
+    }
+
+    [Conditional("UNITY_EDITOR"), Conditional("DEVELOPMENT_BUILD")]
+    void DevLogTurnStep(string phase, BattleUnit unit, Vector3 startPos, Vector3 endPos, Vector3 anchorPos)
+    {
+        if (unit == null)
+            return;
+
+        UnityEngine.Debug.Log(
+            $"[TurnStep] {phase} | Unit={unit.unitName} | Start={startPos} | End={endPos} | Anchor={anchorPos} | CurrentState={state}");
+    }
+
+    [Conditional("UNITY_EDITOR"), Conditional("DEVELOPMENT_BUILD")]
+    void DevLogTurnStepMeta(string message)
+    {
+        UnityEngine.Debug.Log($"[TurnStep] {message}");
     }
 
     void UseItem(BattleUnit user, Item item, BattleUnit target)
@@ -546,6 +824,8 @@ public class BattleManager : MonoBehaviour
             return;
 
         int totalHits = BattleFormula.GetBoostedAttackHitCount(boostLevel);
+        attacker.PlayNormalAttackAnimation(totalHits);
+
         int successHits = 0;
         int totalDamage = 0;
 
@@ -624,6 +904,43 @@ public class BattleManager : MonoBehaviour
         Debug.Log("[BattleManager] 下一行动单位: " + currentUnit.unitName);
         turnOrderUIManager?.RefreshCurrentOrder(currentTurnIndexInRound);
         StartTurn();
+    }
+
+    Vector3 GetOrCreatePlayerTurnStepAnchorPosition(BattleUnit playerUnit)
+    {
+        if (playerUnit == null)
+            return Vector3.zero;
+
+        if (playerTurnStepAnchorPositions.TryGetValue(playerUnit, out Vector3 anchorPosition))
+            return anchorPosition;
+
+        anchorPosition = playerUnit.transform.position;
+        playerTurnStepAnchorPositions[playerUnit] = anchorPosition;
+        return anchorPosition;
+    }
+
+    Vector3 ResolvePlayerTurnStepDirection(BattleUnit playerUnit)
+    {
+        if (playerUnit == null)
+            return Vector3.right;
+
+        List<BattleUnit> aliveEnemies = enemies != null
+            ? enemies.FindAll(e => e != null && e.currentHP > 0)
+            : null;
+
+        if (aliveEnemies != null && aliveEnemies.Count > 0)
+        {
+            float avgEnemyX = 0f;
+            for (int i = 0; i < aliveEnemies.Count; i++)
+                avgEnemyX += aliveEnemies[i].transform.position.x;
+
+            avgEnemyX /= aliveEnemies.Count;
+            float deltaX = avgEnemyX - playerUnit.transform.position.x;
+            if (Mathf.Abs(deltaX) > 0.001f)
+                return deltaX > 0f ? Vector3.right : Vector3.left;
+        }
+
+        return Vector3.right;
     }
 
     List<BattleUnit> GetAllAliveUnits()
@@ -789,16 +1106,118 @@ public class BattleManager : MonoBehaviour
         bool targetAllies = skill.targetType == SkillTargetType.AllySingle;
         bool actingPlayer = actingUnit.unitType == UnitType.Player;
 
+        List<BattleUnit> result;
+
         if (targetAllies)
         {
-            return actingPlayer
+            result = actingPlayer
                 ? players.FindAll(unit => unit.currentHP > 0)
                 : enemies.FindAll(unit => unit.currentHP > 0);
         }
+        else
+        {
+            result = actingPlayer
+                ? enemies.FindAll(unit => unit.currentHP > 0)
+                : players.FindAll(unit => unit.currentHP > 0);
+        }
 
-        return actingPlayer
-            ? enemies.FindAll(unit => unit.currentHP > 0)
-            : players.FindAll(unit => unit.currentHP > 0);
+        if (skill.characterSkillMechanic == CharacterSkillMechanic.ForceBreakOnDamagedShieldEnemy)
+            result = result.FindAll(IsForceBreakEligibleTarget);
+
+        return result;
+    }
+
+    public bool CanUseCharacterSkillThisBattle(BattleUnit user, Skill skill)
+    {
+        if (user == null || skill == null)
+            return false;
+
+        if (!skill.limitUseOncePerBattle)
+            return true;
+
+        if (!oncePerBattleSkillUsage.TryGetValue(user, out HashSet<Skill> usedSkills) || usedSkills == null)
+            return true;
+
+        return !usedSkills.Contains(skill);
+    }
+
+    void RegisterCharacterSkillUsage(BattleUnit user, Skill skill)
+    {
+        if (user == null || skill == null || !skill.limitUseOncePerBattle)
+            return;
+
+        if (!oncePerBattleSkillUsage.TryGetValue(user, out HashSet<Skill> usedSkills) || usedSkills == null)
+        {
+            usedSkills = new HashSet<Skill>();
+            oncePerBattleSkillUsage[user] = usedSkills;
+        }
+
+        usedSkills.Add(skill);
+    }
+
+    public bool TryExecuteCharacterSkillMechanic(Skill skill, BattleUnit user, BattleUnit target, int runtimeBoostLevel)
+    {
+        if (skill == null || user == null)
+            return false;
+
+        switch (skill.characterSkillMechanic)
+        {
+            case CharacterSkillMechanic.NextRoundAlliesActFirst:
+                return TryApplyNextRoundFactionPriority(user);
+
+            case CharacterSkillMechanic.ForceBreakOnDamagedShieldEnemy:
+                return TryApplyForceBreakOnDamagedShieldEnemy(target);
+
+            default:
+                return false;
+        }
+    }
+
+    bool TryApplyNextRoundFactionPriority(BattleUnit user)
+    {
+        if (user == null)
+            return false;
+
+        List<BattleUnit> aliveUnits = GetAllAliveUnits();
+        if (aliveUnits.Count == 0)
+            return false;
+
+        turnOrderSystem.ForceNextRoundFactionPriority(aliveUnits, user.unitType);
+        turnOrderUIManager?.RefreshNextOrder();
+        Debug.Log($"[BattleManager] {user.unitName} 触发专属机制：下回合 {user.unitType} 阵营优先行动");
+        return true;
+    }
+
+    bool TryApplyForceBreakOnDamagedShieldEnemy(BattleUnit target)
+    {
+        if (!IsForceBreakEligibleTarget(target))
+            return false;
+
+        int skipTurns = CalculateBreakSkipTurns(target);
+        bool forced = target.ForceBreakNow(skipTurns);
+        if (!forced)
+            return false;
+
+        Debug.Log($"[BattleManager] {target.unitName} 被专属机制强制 Break（无视剩余护盾）");
+        turnOrderSystem.RecalculateNextRound(GetAllAliveUnits());
+        turnOrderUIManager?.RefreshNextOrder();
+        turnOrderUIManager?.RefreshStateMarks();
+        return true;
+    }
+
+    public bool IsForceBreakEligibleTarget(BattleUnit target)
+    {
+        if (target == null)
+            return false;
+
+        if (target.unitType != UnitType.Enemy)
+            return false;
+
+        if (target.currentHP <= 0 || target.isBreak || target.maxShield <= 0)
+            return false;
+
+        // 仅允许“已被削盾但尚未 Break”的目标。
+        return target.currentShield > 0 && target.currentShield < target.maxShield;
     }
 
     void CheckBattleEnd()
@@ -903,6 +1322,8 @@ public class BattleManager : MonoBehaviour
     public void ResetBattle()
     {
         ResetSelectedBoost();
+        playerTurnStepAnchorPositions.Clear();
+        oncePerBattleSkillUsage.Clear();
 
         foreach (var p in players)
         {
@@ -928,6 +1349,9 @@ public class BattleManager : MonoBehaviour
         if (unit == null)
             return;
 
+        if (!unit.gameObject.activeSelf)
+            unit.gameObject.SetActive(true);
+
         int savedHP = unit.currentHP;
         int savedSP = unit.currentSP;
         int savedExp = unit.currentExp;
@@ -936,6 +1360,9 @@ public class BattleManager : MonoBehaviour
         unit.InitializeBattleState();
         unit.ClearAllStatusEffects();
         unit.PlayBattlePresentation(true);
+
+        if (unit.unitType == UnitType.Player)
+            playerTurnStepAnchorPositions[unit] = unit.SpawnPoint;
 
         if (!preserveCurrentResources)
             return;
